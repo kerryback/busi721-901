@@ -1,0 +1,11 @@
+[Stock Returns](slides/b01-stock-returns.html)
+
+[Visualizing Returns](slides/b02-visualizing-returns.html)
+
+[Returns at Different Frequencies](slides/b03-returns-at-different-frequencies.html)
+
+[Time Varying Volatility](slides/b04-time-varying-volatility.html)
+
+[Geometric Average Returns](slides/geometric-average-returns.html)
+
+[Simulating Returns](b06-simulating-returns.html)

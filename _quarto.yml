@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: ""
+
+  navbar:
+    background: "#00205B"
+    search: true
+    left:
+
+      - text: "Home"
+        file: index.qmd
+
+      - text: "Time and Money"
+        file: timevalue.qmd
+
+      - text: "Risk and Returns"
+        file: returns.qmd
+        
+      - text: "Asset Classes"
+        file: assetclasses.qmd
+
+
+            
+          
+    
+     
+format: 
+  html:
+    theme: cyborg
+    scss: styles.css
+    # toc: true
+
+
+
