@@ -1,2 +1,2 @@
-[Funds](slides/c01-funds.html)
+[Trees and Nets](01.html)
 
