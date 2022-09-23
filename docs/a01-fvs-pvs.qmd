@@ -86,7 +86,7 @@ which is $1.08^2$.
 
 - We call \$$1.08^n$ the future value of \$1 at 8\% for $n$ years.
 - More generally, \$$(1+r)^n$ is the future value of \$1 at a rate of return of $r$.
-- If we start with $x$ dollars, we will have $(1+r)^nx$ dollars after $n$ years at 8\%, so $(1+r)^nx$ is the future value of $x$.
+- If we start with $x$ dollars, we will have $(1+r)^nx$ dollars after $n$, so $(1+r)^nx$ is the future value of $x$.
 - Similarly, we call $x$ the present value of $(1+r)^nx$.  
 - Equivalently, for any $y$, we call $y/(1+r)^n$ the present value of $y$.
 
