@@ -73,7 +73,7 @@ Due to exponential growth, the investment period and rate of return matter a lot
 - at 8%, doubling the investment horizon from 15 to 30 years implies the growth in the account increases from $2.17 to $9.06 (more than quadrupling).
 - at a 30 year horizon, changing the rate of return from 4% to 8% implies the growth in the account increases from $2.24 to $9.06 (more than quadrupling).
 
-## Calclating the account growth
+## Calculating the account growth
 
 With 1 year at 8%, $1 \rightarrow 1.08$.  After a 2nd year, we have
 $$ 1.08 + (0.08 \times 1.08) = (1 \times 1.08) + (0.08 \times 1.08) $$ 
@@ -177,11 +177,13 @@ $$(1+r)^n, \ldots (1+r)^{n-m}$$
 
 ``` p
 import numpy as np
+
 n = 10
 m = 4
 r = 0.08
 x0, x1, x2, x3, x4 = 100, 120, 130, 140, 150
 x = np.array([x0, x1, x2, x3, x4])
+
 fvFactors = (1+r)**np.arange(n, n-m-1, -1)
 total = np.sum(x*fvFactors)
 ```
@@ -217,10 +219,12 @@ $$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
 
 ``` p
 import numpy as np
+
 n = 4
 r = 0.08
 y1, y2, y3, y4 = 100, 120, 130, 140, 150
 y = np.array([y1, y2, y3, y4])
+
 pvFactors = (1+r)**np.arange(-1, -n-1, -1)
 total = np.sum(y*pvFactors)
 ```
