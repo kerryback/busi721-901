@@ -1,0 +1,29 @@
+---
+title:  "Time and Money:<br>Retirement Planning"
+author: <br>Kerry Back<br><br>BUSI 520, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+ 
+## Overview
+
+<br>
+
+- Let's track a retirement account balance monthly.
+- For simplicity, assume the return is the same each month.
+
+## Our goal
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/2139731/images/9558894/sleepingwell.jpg">

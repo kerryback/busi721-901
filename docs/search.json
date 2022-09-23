@@ -7,13 +7,6 @@
     "text": "import numpy as np"
   },
   {
-    "objectID": "01.html#section-1",
-    "href": "01.html#section-1",
-    "title": "Trees and Nets",
-    "section": "",
-    "text": "y = 2*3"
-  },
-  {
     "objectID": "01.html#decision-tree",
     "href": "01.html#decision-tree",
     "title": "Trees and Nets",
@@ -88,7 +81,7 @@
     "href": "01.html#neural-net-output-function",
     "title": "Trees and Nets",
     "section": "Neural net output function",
-    "text": "Neural net output function\nFor regression problems, the output function is linear \\[ y = b+w_1x_1 + \\cdots + w_nx_n\\].\n\nFor classification, there is a linear function for each class and the output is the set of probabilities \\(e^{y_i}/\\sum e^{y_j}\\)."
+    "text": "Neural net output function\nFor regression problems, the output function is linear\n\\[ y = b+w_1x_1 + \\cdots + w_nx_n\\].\n\nFor classification, there is a linear function for each class and the output is the set of probabilities \\(e^{y_i}/\\sum e^{y_j}\\)."
   },
   {
     "objectID": "01.html#deep-learning",
@@ -96,5 +89,124 @@
     "title": "Trees and Nets",
     "section": "Deep learning",
     "text": "Deep learning\n\nDeep learning means a neural network with many layers. It is behind facial recognition, self-driving cars, …\nNeed specialized library, probably TensorFlow (from Google) or PyTorch (from Facebook), and probably need graphical processing units (GPUs) – i.e., run on video cards\nHands-On Machine Learning with Scikit-Learn and TensorFlow\nDeep Learning for Coders with fastai and PyTorch (also fastai website)"
+  },
+  {
+    "objectID": "01.html",
+    "href": "01.html",
+    "title": "Trees and Nets",
+    "section": "",
+    "text": "import numpy as np\n\n\n\n\n\n\n\nSplit sample sucessively into smaller subsamples by answering “yes-no” questions.\nEach question is based on a single variable: is it above a threshold?\nSplit a specified number of times (depth). Final subsamples are called leaves.\nFor regression problems, the prediction for each observation is the mean of the training observations that end up in the same leaf.\nFor classification problems the prediction is the category that occurs most frequently in the leaf.\n\n\n\n\n\n\n\n\n\nAt each step, the algorithm chooses a variable and threshold to split on.\nIn a regression problem, the standard decision criterion is SSE.\n\nError = actual - mean of subset\nOutliers tend to get separated into their own subsets (less so for SAE)\n\nThere are also other relatively standard criteria, for example in scikit-learn.\n\n\n\n\n\nLet \\(k\\) = number of classes. Suppose a split results in \\(n\\) observations in a subset. Let \\(x_i=\\) fraction in class \\(i\\).\nDefault criterion for scikit-learn is Gini = \\(1 - \\sum_{i=1}^k x_i^2\\)\nIf we consider \\(\\sum x_i^2\\) subject to \\(\\sum x_i=n\\), the value is maximized at \\(x_i=1/n\\) and minimized at boundaries: some \\(x_i=1\\) and others equal 0.\n\nSo, maximizing Gini means trying to create “pure” subsets (all of same type).\nThere are also other standard criteria, for example entropy and log loss.\n\n\n\n\n\nMultiple trees fit to random data\nData for each tree is a bootstrapped sample:\n\nrandom selection of rows (with replacement)\nsame size as original sample\n\nPrediction is average of predictions of the trees\nHyperparameters = number of trees and depth of trees\n\n\n\n\n\nBoosting means combining models, for example trees.\nPrediction is sum of individual predictions.\nGradient boosting fits second model to errors of first, third to errors of first two combined, …\nAdaptive boosting fits original target but overweights errors from prior model\nLearning rate (weight to put on new model) is a hyperparameter"
+  },
+  {
+    "objectID": "a01-fvs-pvs.html",
+    "href": "a01-fvs-pvs.html",
+    "title": "Time and Money:Future and Present Values",
+    "section": "",
+    "text": "If invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#section",
+    "href": "a01-fvs-pvs.html#section",
+    "title": "Time and Money:Future and Present Values",
+    "section": "",
+    "text": "Due to exponential growth, the investment period and rate of return matter a lot!\n\nat 8%, doubling the investment horizon from 15 to 30 years implies the growth in the account increases from $2.17 to $9.06 (more than quadrupling).\nat a 30 year horizon, changing the rate of return from 4% to 8% implies the growth in the account increases from $2.24 to $9.06 (more than quadrupling)."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#calclating-the-account-growth",
+    "href": "a01-fvs-pvs.html#calclating-the-account-growth",
+    "title": "Time and Money:Future and Present Values",
+    "section": "Calclating the account growth",
+    "text": "Calclating the account growth\n\nWith 1 year at 8%, \\(1 \\rightarrow 1.08\\). After a 2nd year, we have\n\n\\[ 1.08 + (0.08 \\times 1.08) = (1 \\times 1.08) + (0.08 \\times 1.08) \\]\n\n\nwhich is \\(1.08^2\\).\n\n\n After \\(n\\) years at 8%, \\(1 \\rightarrow 1.08^n\\)."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#future-values-and-present-values",
+    "href": "a01-fvs-pvs.html#future-values-and-present-values",
+    "title": "Time and Money:Future and Present Values",
+    "section": "Future values and present values",
+    "text": "Future values and present values\n\nWe call $\\(1.08^n\\) the future value of $1 at 8% for \\(n\\) years.\nMore generally, if we start with \\(x\\) dollars, we will have \\(1.08^nx\\) dollars after \\(n\\) years at 8%, so \\(1.08^nx\\) is the future value of \\(x\\).\nSimilarly, we call \\(x\\) the present value of \\(1.08^nx\\).\n\nEquivalently, for any \\(y\\), we call \\(y/1.08^n\\) the present value of \\(y\\)."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#future-and-present-value-factors",
+    "href": "a01-fvs-pvs.html#future-and-present-value-factors",
+    "title": "Time and Money:Future and Present Values",
+    "section": "Future and present value factors",
+    "text": "Future and present value factors\n\n\nWe go from present \\(x\\) to future \\(y\\) by multiplying by \\(1.08^n\\), so we call \\(1.08^n\\) the future value factor.\nMore generally, \\((1+r)^n\\) is the future value factor.\nSimilarly, we go from future \\(y\\) to present \\(x\\) by multiplying by \\(1/1.08^n\\), so we call \\(1/1.08^n = 1/(1+r)^n\\) the present value factor."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#present-value-factors",
+    "href": "a01-fvs-pvs.html#present-value-factors",
+    "title": "Time and Money:Future and Present Values",
+    "section": "Present value factors",
+    "text": "Present value factors\nPV factors (also called discount factors) are smaller when the horizon is longer or the rate of return is larger."
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#fv-of-multiple-cash-flows",
+    "href": "a01-fvs-pvs.html#fv-of-multiple-cash-flows",
+    "title": "Time and Money:Future and Present Values",
+    "section": "FV of multiple cash flows",
+    "text": "FV of multiple cash flows\n\nSuppose we invest \\(x_0\\) dollars today, another \\(x_1\\) dollars in 1 year, etc. for \\(m\\) years and earn \\(r\\) per year.\n\nWhat will we have in \\(n \\ge m\\) years?\n\\(x_0 \\rightarrow (1+r)^nx_0\\)\n\\(x_1 \\rightarrow (1+r)^{n-1}x_1\\)\n\\(\\ldots, x_m \\rightarrow (1+r)^{n-m}x_m\\)\nSo, we end up with\n\n\n\\[(1+r)^n x_0 + \\cdots + (1+r)^{n-m}x_m\\]"
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#pv-of-multiple-cash-flows",
+    "href": "a01-fvs-pvs.html#pv-of-multiple-cash-flows",
+    "title": "Time and Money:Future and Present Values",
+    "section": "PV of multiple cash flows",
+    "text": "PV of multiple cash flows\n\nSuppose we want to spend \\(y_1\\) dollars in 1 year, \\(y_2\\) dollars in 2 years, and so on for \\(n\\) years.\nIf we want to finance this from existing savings, how much do we need to have, assuming we earn \\(r\\) each year?\nWe need \\(y_1/(1+r)\\) to finance \\(y_1\\) in 1 year.\nWe need \\(y_2/(1+r)^2\\) to finance \\(y_2\\) in 2 years.\nEtc., so we need\n\n\n\\[\\frac{y_1}{1+r} + \\cdots + \\frac{y_n}{(1+r)^n}\\]"
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#pv-and-fv-factors-with-numpy",
+    "href": "a01-fvs-pvs.html#pv-and-fv-factors-with-numpy",
+    "title": "Time and Money:Future and Present Values",
+    "section": "PV and FV factors with numpy",
+    "text": "PV and FV factors with numpy\nimport numpy as np\n\nm = 10\nn = 15\nr = 0.08\n\nfvFactors = (1+r)**np.arange(n, n-m-1, -1)\npvFactors = (1+r)**np.arange(-1, -n-1, -1)\nfvFactors are\n\\[(1+r)^n, \\ldots (1+r)^{n-m}\\]\npvFactors are\n\\[\\frac{1}{1+r}, \\ldots, \\frac{1}{(1+r)^n}\\]"
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#fv-of-multiple-cash-flows-1",
+    "href": "a01-fvs-pvs.html#fv-of-multiple-cash-flows-1",
+    "title": "Time and Money:Future and Present Values",
+    "section": "FV of multiple cash flows",
+    "text": "FV of multiple cash flows\nimport numpy as np\nn = 10\nm = 4\nr = 0.08\nx0, x1, x2, x3, x4 = 100, 120, 130, 140, 150\nx = np.array([x0, x1, x2, x3, x4])\nfvFactors = (1+r)**np.arange(n, n-m-1, -1)\ntotal = np.sum(x*fvFactors)"
+  },
+  {
+    "objectID": "a01-fvs-pvs.html#pv-of-multiple-cash-flows-1",
+    "href": "a01-fvs-pvs.html#pv-of-multiple-cash-flows-1",
+    "title": "Time and Money:Future and Present Values",
+    "section": "PV of multiple cash flows",
+    "text": "PV of multiple cash flows\nimport numpy as np\nm = 4\nr = 0.08\ny1, y2, y3, y4 = 100, 120, 130, 140, 150\ny = np.array([y1, y2, y3, y4])\npvFactors = (1+r)**np.arange(-1, -m-1, -1)\ntotal = np.sum(y*pvFactors)"
+  },
+  {
+    "objectID": "a02-retirement-planning.html",
+    "href": "a02-retirement-planning.html",
+    "title": "Time and Money:Retirement Planning",
+    "section": "",
+    "text": "Let’s track a retirement account balance monthly.\nFor simplicity, assume the return is the same each month."
+  },
+  {
+    "objectID": "a02-retirement-planning.html#our-goal",
+    "href": "a02-retirement-planning.html#our-goal",
+    "title": "Time and Money:Retirement Planning",
+    "section": "Our goal",
+    "text": "Our goal"
+  },
+  {
+    "objectID": "returns.html",
+    "href": "returns.html",
+    "title": "",
+    "section": "",
+    "text": "Visualizing Returns\nReturns at Different Frequencies\nTime Varying Volatility\nGeometric Average Returns\nSimulating Returns"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Modern Investments: Theory, Data, and Practice\nCourse mybinder link to be added."
+  },
+  {
+    "objectID": "timevalue.html",
+    "href": "timevalue.html",
+    "title": "",
+    "section": "",
+    "text": "Retirement Planning"
   }
 ]

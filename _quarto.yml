@@ -1,9 +1,10 @@
 project:
   type: website
   output-dir: docs
-  render: 
-    - 01.qmd
-
+  render:
+    - index.qmd
+    - timevalue.qmd
+  
 website:
   title: ""
 
@@ -18,11 +19,7 @@ website:
       - text: "Time and Money"
         file: timevalue.qmd
 
-      - text: "Risk and Returns"
-        file: returns.qmd
-
-      - text: "Asset Classes"
-        file: assetclasses.qmd
+      
 
 
             
