@@ -75,35 +75,20 @@ Due to exponential growth, the investment period and rate of return matter a lot
 
 ## Calclating the account growth
 
-<br>
-
 With 1 year at 8%, $1 \rightarrow 1.08$.  After a 2nd year, we have
-
-. . .
-
 $$ 1.08 + (0.08 \times 1.08) = (1 \times 1.08) + (0.08 \times 1.08) $$ 
-
-. . .
-
 which is $1.08^2$.
 
-. . .
-
-<br><br>
-After $2$ years at 8%, $1.08^2 + 0.08\times 1.08^2 = 1.08^3$
-
-. . .
-
-<br><br>
-After $n$ years at 8%, $1 \rightarrow 1.08^n$.
+- After $2$ years at 8%, $1.08^2 + 0.08\times 1.08^2 = 1.08^3$
+- After $n$ years at 8%, $1 \rightarrow 1.08^n$.
 
 ## Future values and present values
 
 - We call \$$1.08^n$ the future value of \$1 at 8\% for $n$ years.
 - More generally, \$$(1+r)^n$ is the future value of \$1 at a rate of return of $r$.
 - If we start with $x$ dollars, we will have $(1+r)^nx$ dollars after $n$ years at 8\%, so $(1+r)^nx$ is the future value of $x$.
-- Similarly, we call $x$ the present value of $(1+r)nx$.  
-- Equivalently, for any $y$, we call $y/(1+r))^n$ the present value of $y$.
+- Similarly, we call $x$ the present value of $(1+r)^nx$.  
+- Equivalently, for any $y$, we call $y/(1+r)^n$ the present value of $y$.
 
 ## Future and present value factors
 
@@ -171,19 +156,8 @@ fig.show()
 
 $$(1+r)^n x_0 + \cdots + (1+r)^{n-m}x_m$$
 
-## PV of multiple cash flows
 
-- Suppose we want to spend $y_1$ dollars in 1 year, $y_2$ dollars in 2 years, and so on for $n$ years.
-- If we want to finance this from existing savings, how much do we need to have, assuming we earn $r$ each year?
-- We need $y_1/(1+r)$ to finance $y_1$ in 1 year.
-- We need $y_2/(1+r)^2$ to finance $y_2$ in 2 years.
-- Etc., so we need
-
-. . .
-
-$$\frac{y_1}{1+r} + \cdots + \frac{y_n}{(1+r)^n}$$
-
-## PV and FV factors with numpy
+## FV factors with numpy
 
 ``` p
 import numpy as np
@@ -193,13 +167,11 @@ n = 15
 r = 0.08
 
 fvFactors = (1+r)**np.arange(n, n-m-1, -1)
-pvFactors = (1+r)**np.arange(-1, -n-1, -1)
 ```
 
 fvFactors are
 $$(1+r)^n, \ldots (1+r)^{n-m}$$
-pvFactors are
-$$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
+
 
 ## FV of multiple cash flows
 
@@ -216,13 +188,40 @@ total = np.sum(x*fvFactors)
 
 ## PV of multiple cash flows
 
+- Suppose we want to spend $y_1$ dollars in 1 year, $y_2$ dollars in 2 years, and so on for $n$ years.
+- If we want to finance this from existing savings, how much do we need to have, assuming we earn $r$ each year?
+- We need $y_1/(1+r)$ to finance $y_1$ in 1 year.
+- We need $y_2/(1+r)^2$ to finance $y_2$ in 2 years.
+- Etc., so we need
+
+. . .
+
+$$\frac{y_1}{1+r} + \cdots + \frac{y_n}{(1+r)^n}$$
+
+## PV factors with numpy
+
 ``` p
 import numpy as np
-m = 4
+
+n = 15
+r = 0.08
+
+pvFactors = (1+r)**np.arange(-1, -n-1, -1)
+```
+
+pvFactors are
+$$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
+
+
+## PV of multiple cash flows
+
+``` p
+import numpy as np
+n = 4
 r = 0.08
 y1, y2, y3, y4 = 100, 120, 130, 140, 150
 y = np.array([y1, y2, y3, y4])
-pvFactors = (1+r)**np.arange(-1, -m-1, -1)
+pvFactors = (1+r)**np.arange(-1, -n-1, -1)
 total = np.sum(y*pvFactors)
 ```
 

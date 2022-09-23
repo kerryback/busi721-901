@@ -1,4 +1,4 @@
-[Future and Present Values](a01-fvs-pvs.html)
+[Present and Future Values](a01-fvs-pvs.html)
 
 [Retirement Planning](a02-retirement-planning.html)
 
