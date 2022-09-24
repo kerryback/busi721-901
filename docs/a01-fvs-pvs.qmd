@@ -24,6 +24,8 @@ If invested funds earn a stable rate of return and funds are not withdrawn, then
 . . .
 
 ```{python}
+#| code-fold: true
+
 import plotly.graph_objects as go
 import numpy as np
 
@@ -105,6 +107,7 @@ PV factors (also called discount factors) are smaller when the horizon is longer
 . . .
 
 ```{python}
+
 import plotly.graph_objects as go
 import numpy as np
 
