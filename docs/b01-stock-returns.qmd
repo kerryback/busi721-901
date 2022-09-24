@@ -1,0 +1,264 @@
+---
+title:  "BUSI 721:<br>Data Driven Finance I"
+author: <br>Kerry Back <br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Daily Returns 
+
+Let's compute close-to-close daily stock returns.  
+
+From close one day to close the next.
+
+Let P~t~ denote the price at close on day t. 
+
+. . .
+
+![](WallStreet.jpg){width=18%}
+
+If there are no dividends, then the gain on day t is $P_t - P_{t-1}$.
+ 
+. . .
+
+The return per $1 invested in a share at close on t-1 is
+$$
+  \frac{P_t~-P_{t-1}}{P_{t-1}}\ = \frac{P_t}{P_{t-1}} -1
+$$
+
+## What about dividends?  A Chevron announcement
+![](ChAnnouncement.PNG)
+https://www.chevron.com/newsroom/2021/Q3/chevron-announces-2Q-2021-quarterly-dividend
+
+## Nasdaq's statement that appeared Aug 17, 2021
+Chevron Corporation (CVX) will begin trading ex-dividend on August 18, 2021. A cash dividend payment of $1.34 per share is scheduled to be paid on September 10, 2021. Shareholders who purchased CVX prior to the ex-dividend date are eligible for the cash dividend payment.
+
+. . . 
+
+**Three Dates:** \
+August 18: (begins trading ex-dividend) \
+August 19: (shareholders of record receive the dividend) \
+September 10: (dividend is paid)
+
+## Ex-Dividend Days
+
+If you buy on Aug 18, you are not entitled to the dividend.
+
+Purchase Aug 17 or before (and hold through close Aug 17) 
+→ will be shareholder of record on Aug 19 \
+→ receive dividend on Sept 10
+
+. . . 
+
+**Why Aug 17 → Aug 19?**
+
+. . . 
+
+T+2 settlement
+
+#
+
+How to compute daily returns in August? \
+Where does the dividend go?
+(Or does it go in September?)
+
+. . . 
+
+**Treat the dividend** \
+**as if it were paid on the ex date (Aug 18)**
+
+. . . 
+
+Aug 18 return = return from close Aug 17 to close Aug 18 is \
+
+$$
+  \frac{1.34+P_{Aug18}-P_{Aug17}}{P_{Aug17}}\ 
+$$
+
+## August Return
+
+In Module 1, we discussed compounding.  An investment starting from $1 grows over a period of time to
+
+$$
+  (1+r_1)(1+r_2)...(1+r_N)
+$$
+
+The rate of return over that period as
+
+$$
+  (1+r_1)(1+r_2)...(1+r_N)-1
+$$
+
+Likewise, we calculate the Aug return for CVX as the product of 1 + daily returns (minus 1).
+
+## 
+If there were no dividends, then the return on each day t is 
+
+$$
+  r_t = \frac{P_{t}}{P_{t-1}}-1 → 1 + r_t = \frac{P_{t}}{P_{t-1}}\ 
+$$
+
+. . .
+
+                                     →
+
+$$
+  (1+r_1)(1+r_2)...(1+r_{N-1})(1+r_N)=\frac{P_{1}}{P_{0}}\frac{P_{2}}{P_{1}}...\frac{P_{N-1}}{P_{N-2}}\frac{P_{N}}{P_{N-1}}=\frac{P_{N}}{P_{0}}
+$$ 
+
+Interpret 0 = last trading day of July,
+
+N = last trading day of Aug.
+
+#
+
+Because Chevron went ex-dividend on Aug 18,
+1 +  Aug 18 return is the sum of two terms
+
+$$
+  \frac{1.34}{P_{Aug17}} and \frac{P_{Aug18}}{P_{Aug17}}
+$$ 
+
+. . .
+
+Therefore the product of 1 + returns is the sum of two terms.  The term involving the dividend 1.34 simplifies to
+
+$$
+  \frac{1.34 x \frac{P_N}{P_{Aug18}}}{P_{0}}
+$$ 
+
+. . .
+
+The numerator is what you would have if you received the dividend on Aug 18, invested it at the close in new shares, and held until the end of Aug.
+
+## Conclusion
+
+![](Calendar_D.jpg){width=10%} Daily return treats the dividend as being received on the ex-dividend day even though it is not received until later. 
+
+. . .
+
+![](Calendar.jpg){width=10%} Monthly return from compounding daily returns treats the dividend as being received on the ex-dividend day and reinvested in new shares on that day.
+
+. . .
+
+![](Calendar_Y.jpg){width=10%}Annual returns are computed the same way - by compounding close-to-close daily returns.
+
+## Split-Adjusted Prices
+![](Split.webp){width=20%}
+
+Data vendors routinely compute split-adjusted prices.
+
+If a company does a 2-for-1 share split, then each shareholder gets 1 new share for each of her existing shares.  Shares are worth roughly half as much.
+
+Vendors scale down old prices in the same ratio for comparability to new prices.
+
+# 
+**Yahoo's Adjusted Prices**
+
+finance.yahoo.com is a good source for data, and there are python libraries that interface with its API.
+
+Yahoo's adjusted closing prices are adjusted for splits and also adjusted for dividends on each ex date.
+
+. . .
+
+On Aug 18, 2021, the Aug 17 price was adjusted as
+
+$$
+  {\hat{P}_{Aug17}}={P_{Aug17}}-1.34
+$$ 
+
+. . .
+
+The idea is that 1.34 of the value of CVX at close on Aug 17 was the value of the dividend.
+
+The adjusted price was the value on Aug 17 without right to the dividend.
+
+#  
+All prior adjusted prices were re-adjusted on Aug 18 by the factor 
+$$
+  {\hat{P}_{Aug17}}/{P_{Aug17}}
+$$ 
+
+The result is that on days t are not ex days, 
+$$
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}}=1+r_t
+$$ 
+
+. . .
+
+On ex days,
+
+$$
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t}
+$$ 
+
+. . .
+
+$$
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t}≈\frac{P_{t}+D_t}{P_{t-1}}
+$$ 
+
+# 
+**Example:** CVX on Aug 18, 2021:
+
+$$
+  \frac{P_{t}}{P_{t-1}-D_t}=-0.0271
+$$ 
+
+$$
+  \frac{P_{t}+D_t}{P_{t-1}}=-0.0267
+$$ 
+
+#
+**Getting Returns from Yahoo**
+``` p
+!pip install --upgrade pandas-datareader
+
+from pandas_datareader import DataReader as pdr
+price = pdr('cvx', 'yahoo', start=2010)['Adj Close']
+
+ret_daily = price.pct_change()
+
+ret_monthly = price.resample('M').last().pct_change()
+ret_monthly.index = ret_monthly.index.to_period('M')
+
+ret_annual = price.resample('Y').last().pct_change()
+ret_annual.index = ret_annual.index.to_period('Y')
+
+```
+#
+**Comments**
+
+<sub> 1. % change in monthly or annual yahoo-adjusted closing prices is equivalent to compounding yahoo daily returns.
+
+. . .
+
+<sub> 2. pdr retrieves open, high, low, close, and volume columns too.  We just kept the adjusted close.
+
+. . .
+
+<sub> 3. The data frame created by pdr is indexed by dates in datetime format.
+
+. . .
+
+<sub> 4. Converting the dates for monthly and annual returns to period format is optional.
+
+. . .
+
+<sub> 5. You can input multiple tickers in a list to pdr.  You get a data frame with multi-indexed columns, tickers being the inside index.  The same code produces data frames of returns with tickers being columns.
+
+. . .
+
+<sub> 6. pdr works with other data sources too, including Federal Reserve Economic Data.
