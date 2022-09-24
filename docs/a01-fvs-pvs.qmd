@@ -185,7 +185,7 @@ x0, x1, x2, x3, x4 = 100, 120, 130, 140, 150
 x = np.array([x0, x1, x2, x3, x4])
 
 fvFactors = (1+r)**np.arange(n, n-m-1, -1)
-total = np.sum(x*fvFactors)
+fv = np.sum(x*fvFactors)
 ```
 
 ## PV of multiple cash flows
@@ -226,6 +226,6 @@ y1, y2, y3, y4 = 100, 120, 130, 140, 150
 y = np.array([y1, y2, y3, y4])
 
 pvFactors = (1+r)**np.arange(-1, -n-1, -1)
-total = np.sum(y*pvFactors)
+pv = np.sum(y*pvFactors)
 ```
 
