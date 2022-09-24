@@ -27,7 +27,7 @@ Let P~t~ denote the price at close on day t.
 
 . . .
 
-![](WallStreet.jpg){width=18%}
+<p align="center"><img width="200" height="200" src="WallStreet.jpg"> </p>
 
 If there are no dividends, then the gain on day t is $P_t - P_{t-1}$.
  
@@ -156,7 +156,7 @@ The numerator is what you would have if you received the dividend on Aug 18, inv
 ![](Calendar_Y.jpg){width=10%}Annual returns are computed the same way - by compounding close-to-close daily returns.
 
 ## Split-Adjusted Prices
-![](Split.webp){width=20%}
+<p align="center"><img width="200" height="200" src="Split.webp"> </p>
 
 Data vendors routinely compute split-adjusted prices.
 
