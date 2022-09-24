@@ -7,6 +7,7 @@ execute:
   jupyter: python3
 format: 
   revealjs:
+    highlight-style: monokai
     code-fold: true
     slide-number: true
     preview-links: true
