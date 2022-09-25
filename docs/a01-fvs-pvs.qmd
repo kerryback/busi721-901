@@ -226,7 +226,7 @@ import numpy as np
 
 n = 4
 r = 0.08
-y1, y2, y3, y4 = 100, 120, 130, 140, 150
+y1, y2, y3, y4 = 120, 130, 140, 150
 y = np.array([y1, y2, y3, y4])
 
 pvFactors = (1+r)**np.arange(-1, -n-1, -1)
