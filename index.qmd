@@ -4,7 +4,7 @@
 
 [Modern Investments: Theory, Data, and Practice](https://mi.bbcx-investments.com/index.html)
 
-[Course Code Binder](https://mybinder.org/v2/gh/kerryback/2022-721.git/HEAD)
+[Course Code Binder](https://mybinder.org/v2/gh/kerryback/2022-721-binder.git/HEAD)
 
 
 
