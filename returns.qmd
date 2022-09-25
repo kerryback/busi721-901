@@ -1,4 +1,4 @@
-[Stock Returns](slides/b01-stock-returns.html)
+[Stock Returns](b01-stock-returns.html)
 
 [Visualizing Returns](slides/b02-visualizing-returns.html)
 
