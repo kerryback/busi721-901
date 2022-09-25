@@ -157,7 +157,7 @@ $$
 On ex days,
 
 $$
-  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t}
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t} = 1 + \hat{r}_t
 $$ 
 
 
@@ -165,11 +165,11 @@ $$
 ## CVX on Aug 18, 2021
 
 $$
-  \frac{P_{t}}{P_{t-1}-D_t}=-0.0271
+  \hat{r}_t = \frac{P_{t}}{P_{t-1}-D_t} - 1=-0.0271
 $$ 
 
 $$
-  \frac{P_{t}+D_t}{P_{t-1}}=-0.0267
+  r_t = \frac{P_{t}+D_t}{P_{t-1}} - 1 =-0.0267
 $$ 
 
 ## Getting Returns from Yahoo
