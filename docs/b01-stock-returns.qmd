@@ -241,6 +241,8 @@ ret_annual.index = ret_annual.index.to_period('Y')
 #
 **Comments**
 
+. . .
+
 <sub> 1. % change in monthly or annual yahoo-adjusted closing prices is equivalent to compounding yahoo daily returns.
 
 . . .
