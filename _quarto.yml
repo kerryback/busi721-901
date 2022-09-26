@@ -22,19 +22,12 @@ website:
 
       - text: "Returns"
         file: returns.qmd
-
-      
-
-
-            
-          
-    
      
 format: 
   html:
     theme: cyborg
     scss: styles.css
-    # toc: true
+    
 
 
 
