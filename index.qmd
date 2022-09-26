@@ -1,4 +1,4 @@
-## BUSI 721<br>Data Driven Finance<br>Rice University<br>Fall 2022
+## BUSI 721<br>Data Driven Finance I<br>Rice University<br>Fall 2022
 
 [BBCX Investments Library](https://bbcx-investments.com)
 
