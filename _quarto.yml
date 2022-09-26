@@ -5,6 +5,10 @@ project:
     - index.qmd
     - timevalue.qmd
     - returns.qmd
+    - asset_classes.qmd
+    - portfolios.qmd
+    - portfolios_capm.qmd
+    - corporate.qmd
   
 website:
   title: ""
@@ -22,6 +26,18 @@ website:
 
       - text: "Returns"
         file: returns.qmd
+        
+      - text: "Asset Classes"
+        file: asset_classes.qmd
+        
+      - text: "Portfolios"
+        file: portfolios.qmd
+        
+      - text: "Portfolios and the CAPM"
+        file: portfolios_capm.qmd
+        
+      - text: "Corporate Investment"
+        file: corporate.qmd
      
 format: 
   html:

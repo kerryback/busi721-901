@@ -73,6 +73,8 @@ fig.show()
 
 Due to exponential growth, the investment period and rate of return matter a lot!
 
+<br>
+
 - at 8%, doubling the investment horizon from 15 to 30 years implies the growth in the account increases from $2.17 to $9.06 (more than quadrupling).
 - at a 30 year horizon, changing the rate of return from 4% to 8% implies the growth in the account increases from $2.24 to $9.06 (more than quadrupling).
 

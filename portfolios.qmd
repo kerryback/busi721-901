@@ -1,0 +1,11 @@
+[Diversification](slides/d01-diversification.html)
+
+[Estimating Parameters](slides/d02-estimating-parameters.html)
+
+[Expected Return and Risk](slides/d03-expected-return-and-risk.html)
+
+[Short Sales](slides/d04-short-sales.html)
+
+[Efficient Frontier](slides/d05-efficient-frontier.html)
+
+[Preferences](slides/d06-preferences.html)

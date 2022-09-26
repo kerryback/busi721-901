@@ -208,5 +208,33 @@
     "title": "",
     "section": "",
     "text": "Inflation\nRetirement Planning\nRetirement Simulation\nPerpetuities and Annuities\nAmortization"
+  },
+  {
+    "objectID": "portfolios.html",
+    "href": "portfolios.html",
+    "title": "",
+    "section": "",
+    "text": "Estimating Parameters\nExpected Return and Risk\nShort Sales\nEfficient Frontier\nPreferences"
+  },
+  {
+    "objectID": "portfolios_capm.html",
+    "href": "portfolios_capm.html",
+    "title": "",
+    "section": "",
+    "text": "Portfolio Constraints\nPortfolios of Stocks, Bonds, and Gold\nAlphas and Betas\nCapital Asset Pricing Model"
+  },
+  {
+    "objectID": "corporate.html",
+    "href": "corporate.html",
+    "title": "",
+    "section": "",
+    "text": "Visualizing Returns\nReturns at Different Frequencies\nTime Varying Volatility\nGeometric Average Returns\nSimulating Returns"
+  },
+  {
+    "objectID": "asset_classes.html",
+    "href": "asset_classes.html",
+    "title": "",
+    "section": "",
+    "text": "Bonds\nBond Prices and Yields\nOther Asset Classes\nCorrelations of Asset classes"
   }
 ]

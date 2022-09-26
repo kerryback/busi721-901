@@ -1,13 +1,13 @@
 [Present and Future Values](a01-fvs-pvs.html)
 
-[Inflation]()
+[Inflation](slides/a07-inflation.html)
 
 [Retirement Planning](a02-retirement-planning.html)
 
-[Retirement Simulation]()
+[Retirement Simulation](slides/b06-simulating-returns.html)
 
-[Perpetuities and Annuities]()
+[Perpetuities and Annuities](slides/a06-perpetuities.html)
 
-[Amortization]()
+[Amortization](slides/a05-amortization.html)
 
 

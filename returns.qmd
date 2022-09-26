@@ -4,7 +4,7 @@
 
 [Returns at Different Frequencies](slides/b03-returns-at-different-frequencies.html)
 
-[Time Varying Volatility](slides/b-4-time-varying-volatility.html)
+[Time Varying Volatility](slides/b04-time-varying-volatility.html)
 
 [Geometric Average Returns](slides/b05-geometric-average-returns.html)
 
