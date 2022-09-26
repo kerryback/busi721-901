@@ -7,6 +7,7 @@ execute:
   jupyter: python3
 format: 
   revealjs:
+    highlight-style: vim-dark
     code-fold: true
     slide-number: true
     preview-links: true
@@ -28,5 +29,10 @@ format:
 
 <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/2139731/images/9558894/sleepingwell.jpg">
 
+## Our goal
 
+![](images/sleepingwell.jpg)
 
+## Success!
+
+![](images/richinshades.jpg)
