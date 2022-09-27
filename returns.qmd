@@ -1,6 +1,6 @@
 [Stock Returns](b01-stock-returns.html)
 
-[Visualizing Returns](slides/b02-visualizing-returns.html)
+[Visualizing Returns](b02-visualizing-returns.html)
 
 [Returns at Different Frequencies](slides/b03-returns-at-different-frequencies.html)
 
