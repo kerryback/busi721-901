@@ -1,0 +1,220 @@
+---
+title:  "Visualizing Returns"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+<p align=center> Let's look at the history of stock market returns - either the U.S. market as a whole or individual stocks or funds. </p> \
+<p align=center> **We'll do this with several different plot types:**  </p> \
+<p align=center> -scatter plot of returns by year \
+- box plot of annual returns \
+- accumulation (1+r~1~)⋯(1+r~n~) by year \
+- accumulation by year with log scale \
+<img src="images/wall-street-stock-exchange-2021-09-04-08-12-31-utc.jpg" height=400 width=800> </p> 
+
+
+## Box Plot
+
+:::::::::::::: {.columns}
+::: {.column width="100%"}
+- Box contains 25th percentile through 75th percentile 
+
+- Median is indicated in the box 
+- Fences extend 1.5 times inter-quartile range from 25th and 75th percentiles or to the most extreme observation if that is closer to the box (inter-quartile range = 75th percentile - 25th percentile)
+- Points outside the fences are outliers (if you simulate data from a normal distribution, there will typically be very few points outside the fences)
+:::
+::::::::::::::
+
+## Investment Library Rice
+
+## 
+<p align=center> Market data is from [Kenneth French's data library](
+https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) </p>
+
+<br/>
+
+<p align=center> Value-weighted return of all **NYSE, AMEX, and Nasdaq** stocks from CRSP
+
+(Center for Research in Security Prices at U of Chicago) \ </p>
+<br/>
+```python  
+from pandas_datareader import DataReader as pdr
+df = pdr('F-F_Research_Data_Factors','famafrench', start=1927)[1]
+mkt = df['Mkt-RF'] + df['RF']
+mkt /= 100
+```
+## 
+To see all of the filenames in French's data library: \
+
+```python
+from pandas_datareader.famafrench import get_available_datasets as gad
+gad()
+```
+<br/><br/>
+pdr downloads each file as a dictionary.  Each contains a 'DESCR' key.  The value of that key is a string that explains the other key/value pairs in the dictionary.
+
+``` p
+filename = 'F-F_Research_Data_Factors'
+dct = pdr(filename, 'famafrench', 1927)
+print(dct['DESCR'])
+```
+
+## Accumulation Point 
+:::::::::::::: {.columns}
+::: {.column width="100%"}
+- It is easy to plot what $1 would grow to after *n* periods: 
+$$
+  (1+r_1)⋯(1+r_{\text{n}})
+$$ 
+
+- But, when the time period is long, it may be hard to see what happened in the early years, due to exponential growth.
+:::
+::::::::::::::
+
+## Example 
+<br/><br/>
+ Let's look at accumulations from two hypothetical stocks. 
+<br/><br/>
+ It will appear that stock 2 did nothing before 2000 and earned a lot less than stock 1 even after 2000.
+ <br/><br/>
+<p align=center> But the returns are </p> \
+
+- stock 1: 10% per year 
+- stock 1: 2% per year until 2000 and 10% afterwards
+
+## Example 
+
+```{python}
+#| code-fold: true
+
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import matplotlib.axes as ax
+import numpy as np
+import pandas as pd
+
+x = pd.Series(range(1970,2021))
+
+s1 = [1,1.1,1.21,	1.331,	1.4641,	1.61051,	1.771561,	1.9487171,	2.14358881,	2.357947691,	2.59374246,	2.853116706,	3.138428377,	3.452271214,	3.797498336,	4.177248169,	4.594972986,	5.054470285,	5.559917313,	6.115909045,	6.727499949,	7.400249944,	8.140274939,	8.954302433,	9.849732676,	10.83470594,	11.91817654,	13.10999419,	14.42099361,	15.86309297,	17.44940227,	19.1943425,	21.11377675,	23.22515442,	25.54766986,	28.10243685,	30.91268053,	34.00394859,	37.40434344,	41.14477779,	45.25925557,	49.78518112,	54.76369924,	60.24006916,	66.26407608,	72.89048369,	80.17953205,	88.19748526,	97.01723378,	106.7189572, 117.3908529]
+
+s2 = [1,	1.02,	1.0404,	1.061208,	1.08243216,	1.104080803,	1.126162419,	1.148685668,	1.171659381,	1.195092569,	1.21899442,	1.243374308,	1.268241795,	1.29360663,	1.319478763,	1.345868338,	1.372785705,	1.400241419,	1.428246248,	1.456811173,	1.485947396,	1.515666344,	1.545979671,	1.576899264,	1.608437249,	1.640605994,	1.673418114,	1.706886477,	1.741024206,	1.77584469,	1.811361584,	1.992497743,	2.191747517,	2.410922268,	2.652014495,	2.917215945,	3.208937539,	3.529831293,	3.882814423,	4.271095865,	4.698205451,	5.168025996,	5.684828596,	6.253311456,	6.878642601,	7.566506861,	8.323157547,	9.155473302,	10.07102063,	11.0781227,	12.18593497]
+
+plt.plot(x, s1, label = "stock 1")
+plt.plot(x, s2, label = "stock 2")
+plt.xlabel('date')
+plt.ylabel('Dollars')
+plt.title('Accumulation from $1 (Normal Scale)')
+plt.legend(loc="upper left")
+plt.grid()
+plt.show()
+
+```
+
+
+## Log Plots 
+
+Consider a function of time *y(t)*. From calculus, 
+
+$$
+  \text{d}logy(t)∝\frac{\text{d}y(t)}{logy(t)}= \text{% change in y}
+$$ 
+where ∝ is = for the natural logarithm. 
+
+. . .
+
+So a plot of log*y(t)* reveals the percent changes.
+
+## Same Example
+<p align=center> Plotting the base 10 logarithm of accumulation: </p>
+
+```{python}
+#| code-fold: true
+
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import matplotlib.axes as ax
+import numpy as np
+import pandas as pd
+import math
+
+x = pd.Series(range(1970,2021))
+
+s1 = [1,1.1,1.21,	1.331,	1.4641,	1.61051,	1.771561,	1.9487171,	2.14358881,	2.357947691,	2.59374246,	2.853116706,	3.138428377,	3.452271214,	3.797498336,	4.177248169,	4.594972986,	5.054470285,	5.559917313,	6.115909045,	6.727499949,	7.400249944,	8.140274939,	8.954302433,	9.849732676,	10.83470594,	11.91817654,	13.10999419,	14.42099361,	15.86309297,	17.44940227,	19.1943425,	21.11377675,	23.22515442,	25.54766986,	28.10243685,	30.91268053,	34.00394859,	37.40434344,	41.14477779,	45.25925557,	49.78518112,	54.76369924,	60.24006916,	66.26407608,	72.89048369,	80.17953205,	88.19748526,	97.01723378,	106.7189572, 117.3908529] 
+
+s1_log=np.log10(s1)
+
+s2 = [1,	1.02,	1.0404,	1.061208,	1.08243216,	1.104080803,	1.126162419,	1.148685668,	1.171659381,	1.195092569,	1.21899442,	1.243374308,	1.268241795,	1.29360663,	1.319478763,	1.345868338,	1.372785705,	1.400241419,	1.428246248,	1.456811173,	1.485947396,	1.515666344,	1.545979671,	1.576899264,	1.608437249,	1.640605994,	1.673418114,	1.706886477,	1.741024206,	1.77584469,	1.811361584,	1.992497743,	2.191747517,	2.410922268,	2.652014495,	2.917215945,	3.208937539,	3.529831293,	3.882814423,	4.271095865,	4.698205451,	5.168025996,	5.684828596,	6.253311456,	6.878642601,	7.566506861,	8.323157547,	9.155473302,	10.07102063,	11.0781227,	12.18593497]
+
+s2_log=np.log10(s2)
+
+plt.plot(x, s1_log, label = "stock 1")
+plt.plot(x, s2_log, label = "stock 2")
+plt.xlabel('date')
+plt.ylabel('Base 10 Logarithm of Dollars')
+plt.title('Accumulation from $1 (Log Plot 1)')
+plt.legend(loc="upper left")
+plt.grid()
+plt.show()
+
+```
+
+## 
+The exact same plot, but replace 1 on the y axis with $10^{1}$ and replace 2 with $10^{2}$. 
+<br/><br/>
+This means the y axis is in $.
+
+
+```{python}
+#| code-fold: true
+
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import matplotlib.axes as ax
+import numpy as np
+import pandas as pd
+import math
+
+x = pd.Series(range(1970,2021))
+
+s1 = [1,1.1,1.21,	1.331,	1.4641,	1.61051,	1.771561,	1.9487171,	2.14358881,	2.357947691,	2.59374246,	2.853116706,	3.138428377,	3.452271214,	3.797498336,	4.177248169,	4.594972986,	5.054470285,	5.559917313,	6.115909045,	6.727499949,	7.400249944,	8.140274939,	8.954302433,	9.849732676,	10.83470594,	11.91817654,	13.10999419,	14.42099361,	15.86309297,	17.44940227,	19.1943425,	21.11377675,	23.22515442,	25.54766986,	28.10243685,	30.91268053,	34.00394859,	37.40434344,	41.14477779,	45.25925557,	49.78518112,	54.76369924,	60.24006916,	66.26407608,	72.89048369,	80.17953205,	88.19748526,	97.01723378,	106.7189572, 117.3908529] 
+
+s1_log=(np.log10(s1))
+
+s2 = [1,	1.02,	1.0404,	1.061208,	1.08243216,	1.104080803,	1.126162419,	1.148685668,	1.171659381,	1.195092569,	1.21899442,	1.243374308,	1.268241795,	1.29360663,	1.319478763,	1.345868338,	1.372785705,	1.400241419,	1.428246248,	1.456811173,	1.485947396,	1.515666344,	1.545979671,	1.576899264,	1.608437249,	1.640605994,	1.673418114,	1.706886477,	1.741024206,	1.77584469,	1.811361584,	1.992497743,	2.191747517,	2.410922268,	2.652014495,	2.917215945,	3.208937539,	3.529831293,	3.882814423,	4.271095865,	4.698205451,	5.168025996,	5.684828596,	6.253311456,	6.878642601,	7.566506861,	8.323157547,	9.155473302,	10.07102063,	11.0781227,	12.18593497]
+
+s2_log=(np.log10(s2)) 
+
+
+plt.plot(x, s1_log, label = "stock 1")
+plt.plot(x, s2_log, label = "stock 2")
+plt.xlabel('date')
+plt.ylabel('Dollars')
+plt.yticks([0,1,2], ['$10^{0}$', '$10^{1}$', '$10^{2}$'])
+plt.title('Accumulation from $1 (Log Plot 2)')
+plt.legend(loc="upper left")
+plt.grid()
+plt.show()
+
+```
+
+## Log Plots with Pandas 
+
+Suppose ret is a Series of returns in decimal form indexed by date.
+``` p
+(1+ret).cumprod().plot(logy=True)
+```
+
+## Investment Library Rice 
