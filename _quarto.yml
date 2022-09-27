@@ -8,14 +8,16 @@ project:
     - asset_classes.qmd
     - portfolios.qmd
     - portfolios_capm.qmd
+    - out_of_sample.qmd
     - corporate.qmd
   
 website:
   title: ""
+  search: false
 
   navbar:
     background: "#00205B"
-    search: true
+    search: false
     left:
 
       - text: "Home"
@@ -35,6 +37,9 @@ website:
         
       - text: "Portfolios and the CAPM"
         file: portfolios_capm.qmd
+
+      - text: "Portfolio Performance"
+        file: out_of_sample.qmd
         
       - text: "Corporate Investment"
         file: corporate.qmd

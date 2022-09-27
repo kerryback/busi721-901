@@ -6,5 +6,30 @@
 
 [Course Code Binder](https://mybinder.org/v2/gh/kerryback/2022-721-binder.git/HEAD)
 
+<hr>
+
+This course is an introduction to investments, including the analysis of corporate investment projects.  We begin with foundational issues such as retirement planning and mortgage calculations, then move on to the history of returns of different asset classes, and then study how to construct efficient portfolios of assets.  The course is bookended by concepts pertaining to the financial analysis of corporate projects - net present value, internal rate of return, return on capital employed, etc.
+
+Our analysis tool throughout the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.  Some of what we will cover - for example, backtesting portfolio strategies - is impractical to do in a spreadsheet program.  Code will be posted at the "Course Code Binder" link above.
+
+The "Investments Library" linked above is a collection of web pages that illustrate financial concepts.  We will use it extensively.  Many of the pages contain links to Jupyter notebooks that supplement the code in the binder.  The "Modern Investments" link above is to the beginnings of a textbook.  It should be a useful supplement to the course slides for part of the course.  The slides are linked through the navigation bar at the top of the page.
+
+Grades will be based on weekly assignments and a take-home final exam.
+
+#### Honor Code
+
+The Rice University honor code applies to all work in this course.  Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other. 
+
+#### Disability Accommodations
+
+Any student with a documented disability requiring accommodations in this course is encouraged to
+contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations
+regarding assignments or the final exam must be made in advance. Students with disabilities
+should also contact Disability Support Services in the Allen Center.
+
+
+
+
+
 
 
