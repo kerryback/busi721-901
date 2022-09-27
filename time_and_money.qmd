@@ -10,6 +10,3 @@
 
 [Amortization](slides/a05-amortization.html)
 
-[Internal Rate of Return](slides/a04-irr.html)
-
-

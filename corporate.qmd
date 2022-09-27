@@ -1,2 +1,2 @@
-[]()
+[NPV and IRR](slides/a04-irr.html)
 

@@ -8,7 +8,7 @@ project:
     - asset_classes.qmd
     - portfolios.qmd
     - portfolios_capm.qmd
-    - out_of_sample.qmd
+    - factor_investing.qmd
     - corporate.qmd
   
 website:
@@ -38,8 +38,8 @@ website:
       - text: "Portfolios and the CAPM"
         file: portfolios_capm.qmd
 
-      - text: "Portfolio Performance"
-        file: out_of_sample.qmd
+      - text: "Factor Investing"
+        file: factor_investing.qmd
         
       - text: "Corporate Investment"
         file: corporate.qmd

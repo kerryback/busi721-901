@@ -228,7 +228,7 @@
     "href": "corporate.html",
     "title": "",
     "section": "",
-    "text": "Visualizing Returns\nReturns at Different Frequencies\nTime Varying Volatility\nGeometric Average Returns\nSimulating Returns"
+    "text": "NPV and IRR"
   },
   {
     "objectID": "asset_classes.html",
@@ -242,6 +242,6 @@
     "href": "time_and_money.html",
     "title": "",
     "section": "",
-    "text": "Inflation\nRetirement Planning\nRetirement Simulation\nPerpetuities and Annuities\nAmortization\nInternal Rate of Return"
+    "text": "Inflation\nRetirement Planning\nRetirement Simulation\nPerpetuities and Annuities\nAmortization"
   }
 ]
