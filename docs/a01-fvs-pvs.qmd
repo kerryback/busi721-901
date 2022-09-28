@@ -175,6 +175,8 @@ r = 0.08
 fvFactors = (1+r)**np.arange(n, n-m-1, -1)
 ```
 
+<br>
+
 fvFactors are
 $$(1+r)^n, \ldots (1+r)^{n-m}$$
 

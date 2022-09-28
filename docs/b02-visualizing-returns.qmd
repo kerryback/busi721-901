@@ -211,5 +211,5 @@ fig.show()
 # 
 
 <p align=center> 
-<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
 </p>
