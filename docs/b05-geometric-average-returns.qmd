@@ -1,0 +1,89 @@
+---
+title:  "Risk and Returns: Geometric Average Returns"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+# 
+
+<p align=center>
+<img style="float: right;" src="images/question-mark-7123855_1920.jpg" height=300 width=400 > Tesla went down 50% between Nov 2021 and May 2022. \
+
+It then went up 50% between May 2022 and Aug 2022.\
+
+Were Tesla shareholders back to even?
+</p></p>
+
+#
+
+For each $100 of Tesla stock, shareholders experienced 
+
+100 → 50 → 75
+
+. . .
+
+They lost 25%, even though the arithmetic average return was zero.
+
+. . .
+
+So, lose 50% and make 50% → lose 25%.  Suppose you \
+- make 50% and then lose 50%? \
+- lose 50% and then make 100%? \
+- make 100% and then lose 50%?
+
+# Geometric Average Return
+
+Given returns $r_1, \cdots, r_n,$ \
+the geometric average return is the number *r* such that \
+
+
+$(1+r)^{n}=(1+r_1)\cdots(1+r_{n})$
+
+So earning *r* each period produces the same accumulation as the actual returns $r_1, \cdots, r_n.$
+
+. . .
+
+We solve for it as
+
+$$r=[(1+r_1)\cdots(1+r_n)]^{1/n}-1$$
+
+#
+
+The geometric average return is **always less** than the arithmetic average return. 
+<p align=center>
+<img src="images/EPoint.png" height=300 width=300> </p>
+
+. . . 
+
+<p align=center> **Examples** </p>
+
+make 50% and lose 50% → geometric average is \ 
+$$\sqrt{1.5 x 0.5}-1=-0.134$$
+
+. . .  
+
+make 100% and lose 50% → geometric average is \ 
+$$\sqrt{2 x 0.5}-1=0$$
+
+## 2D
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## 2E
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
