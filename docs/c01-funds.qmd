@@ -1,0 +1,202 @@
+---
+title:  "Asset Classes: Funds"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Mutual Funds 
+
+:::: {.columns}
+::: {.column width="100%"}
+- Easy way to get diversification
+- Can also perhaps benefit from professional active management
+
+- Can usually invest directly with no need for a brokerage account 
+
+- Over 7,000 U.S. mutual funds $∼$ number of U.S. stocks
+:::
+
+::::
+
+. . .
+
+<p align=center> <img src="images/mutual-fund-6465452_1920.png" height=350 width=350></p>
+
+## Net Asset Value
+
+:::: {.columns}
+::: {.column width="100%"}
+- NAV (net asset value per share) is calculated daily after close of trading.
+- Equals value of portfolio less any expenses not yet paid divided by number of shares outstanding.
+- Invest money $\rightarrow$ get shares in fund at next end-of-day NAV 
+- Withdraw money $\rightarrow$ sell shares at next end-of-day NAV.
+:::
+
+::::
+
+## Why Next-End-of-Day NAV?
+
+If you could buy/redeem shares at a prior NAV (e.g., Wed night at Wed close) then you could
+
+:::: {.columns}
+::: {.column width="100%"}
+- Profit by investing when prices are up in after-hours future trading or trading in Asia, indicating that true values are higher than prices used to compute the NAV,
+- Profit by redeeming shares when prices are down in after-hours or Asian trading, indicating that prices used to compute the NAV are higher than true values.
+:::
+
+::::
+
+## Example
+
+Invest $10,000 on Wed night, Thursday end-of-day NAV = $250, get 40 shares
+
+\# of shares can be fractional
+
+:::: {.columns}
+::: {.column width="100%"}
+- Fund $\uparrow$.  Withdraw $6,000.
+- Next end-of-day NAV is $300.
+- Cancels 20 shares.  Still have 20 shares (worth $6,000).
+:::
+
+::::
+
+## Active and Passive Funds
+
+:::: {.columns}
+::: {.column width="100%"}
+- Passive funds track an index.  They do not try to "beat the market."  They have low expenses.
+- Active funds try to beat the market or their market sector by choosing the best stocks.  They have higher expenses.
+- There is some evidence that active fund managers can pick good stocks.  But there is little evidence of extra returns to investors, after payment of managers' fees.
+:::
+
+::::
+
+## Some Famous Funds 
+
+Vanguard | Fidelity
+- | - 
+![alt](images/vanguard.jpeg) | ![alt](images/fidelity-logo3jpg-38115c537742751f.webp)
+
+## Some U.S. Stock Indexes
+
+:::: {.columns}
+::: {.column width="100%"}
+- Dow Jones = 30 stocks
+- S&P 100 ~ 50% of U.S. stock market capitalization
+- S&P 500 ~ 80% of U.S. stock market capitalization
+- Russell 1000
+- Russell 3000
+- Russell 2000 = Russell 3000 excluding Russell 1000, small-cap index
+- Wilshire 5000
+:::
+
+::::
+
+. . .
+
+% change in index is % increase/decrease in total value of companies in the index (except for Dow)
+
+% change in index does not include dividend return
+
+## Many of the 7,000+ U.S. mutual funds hold assets other than U.S. stocks such as:
+
+
+:::: {.columns}
+::: {.column width="100%"}
+
+- corporate bond funds 
+- municipal bond funds 
+- U.S. government bond funds 
+- global bond funds 
+- global stock funds 
+- emerging market funds 
+- REIT funds (real estate) 
+- money market funds \
+$\cdots$
+
+:::
+
+::::
+
+## Exchange Traded Funds (ETFs)
+
+ETFs were invented in 1990. There are now $∼$ 3,000 U.S. ETFs.
+
+ETFs are listed on stock exchanges and trade like stocks.  You buy/sell them through your broker.
+
+<p align=center>
+<img src="images/1_Lyh_HmK5PMTHskEsstC8dA.jpeg" height=250 width=500> </p>
+
+. . .
+
+Another easy way to get diversification. Lower fees than mutual funds.
+
+. . .
+
+ETFs calculate NAVs daily, but you do not buy/sell at the NAV.  You buy/sell at the price determined by the market.
+
+## Types of ETFs
+
+:::: {.columns}
+::: {.column width="100%"}
+
+- Stocks - U.S., global 
+- municipal bond funds 
+- U.S. government bond funds 
+- global bond funds 
+- global stock funds 
+- emerging market funds 
+- REIT funds (real estate) 
+- money market funds \
+$\cdots$
+
+:::
+
+::::
+
+. . .
+
+**Levered** = 2 or 3 times return \
+**Inverse** = minus the return or levered return
+
+## Market Prices of ETFs
+
+The market price of an ETF will be close to its NAV.
+
+*When the price* is **lower**, authorized participants (APs) **buy** *shares* at the low prices, redeem them with the ETF sponsor for a piece of the ETF portfolio, and sell the assets at the higher NAV.
+
+. . .
+
+Buying shares causes *ETF prices* $\uparrow$.
+
+. . .
+
+*When the ETF price is* **higher** than the NAV , APs do the opposite: buy assets of the type held by the ETF and turn them in for new shares, then **sell** *the shares*.
+
+. . .
+
+Selling shares causes ETF prices $\downarrow$.
+
+## Transparency of ETF Strategies
+
+Because of the mechanism for APs to redeem or acquire shares, an ETF's portfolio must be transparent. 
+
+So, active strategies of the type typical for mutual funds (who only report portfolios quarterly) are not possible.
+
+. . .
+
+Nevertheless, complex strategies are possible.  For example, some ETFs focus on "quality stocks" or high momentum stocks or the like.
