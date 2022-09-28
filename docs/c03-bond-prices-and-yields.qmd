@@ -1,0 +1,107 @@
+---
+title:  "Asset Classes: Bond Prices and Yields"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Coupons vs Yields 
+
+The coupon rate of a bond is set at the time of its issue.
+
+However, what one anticipates earning on a bond varies with the market price.
+
+ 
+:::: {.columns}
+::: {.column width="100%"}
+- Price < par $\Rightarrow$ coupon + capital gain
+- Price > par $\Rightarrow$ coupon - capital loss
+:::
+
+::::
+
+. . .
+
+What one would earn per year on a bond if held to maturity (assuming no default) is called the **bond yield**.
+
+#
+
+A **bond yield** is calculated as the internal rate of return on the bond, if purchased at the market price and held to maturity, assuming no default.
+
+Because it assumes no default, it is sometimes called the **promised yield**.
+
+:::: {.columns}
+::: {.column width="100%"}
+- Recall that the internal rate of return is the discount rate that makes the $\text{NPV} = 0$.
+- Because bonds usually pay semi-annual coupons, the convention in calculating yields is to use semi-annual compounding. 
+- So, we calculate a semi-annual rate $\text{r}$ that makes $\text{NPV}=0$ and the yield is y=2r.
+- **Higher price $\Leftrightarrow$ Lower yield and vice versa.**
+:::
+::::
+
+## Calculating Yields 
+
+:::: {.columns}
+::: {.column width="100%"}
+- Consider a bond that pays coupon cc semi-annually and has face value of 100.
+- Let $n$ denote the number of coupon payments remaining and $\text{P}$ the bond price.
+- Suppose the next coupon payment is six months away. 
+:::
+::::
+
+. . .
+
+The yield is $\text{y}$ that satisfies
+
+$$P=\frac{c}{1+y/2}+\frac{c}{(1+y/2)^2}+\cdots+\frac{c+100}{(1+y/2)^n}$$
+
+## 8A
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+#
+
+:::: {.columns}
+::: {.column width="106%"}
+- Yields are market-determined interest rates.
+- Interest rates vary over time.
+- At a point in time, interest rates vary by maturity and by credit quality.
+- Variation by maturity can be seen from Treasury yields.
+- Variation by credit quality can be seen from corporate yields.
+- Corporate and other bonds are rated:\
+1.AAA=best quality\
+2.AA\
+3.A\
+4.BBB=worst investment grade\
+5.BB=best non-investment grade\
+6.B\
+7.CCC\
+8.$\ldots$
+:::
+::::
+
+## 8B
+
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## 8C
+
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>

@@ -1,0 +1,116 @@
+---
+title:  "Asset Classes: Other Assets"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Real Estate 
+
+Many people have substantial real estate investments via home ownership or perhaps owning rental properties.
+
+It is also possible to invest in real estate in the stock market via REITS (real estate investment trusts).
+
+<p align=center> <img src="images/mortgage-4137485_1920.jpg" height=200 width=200></p>
+
+:::: {.columns}
+::: {.column width="100%"}
+- Equity REITS
+- Mortgage REITS
+:::
+
+::::
+
+. . .
+
+Or, you can diversify across REITS by investing in a REIT ETF.
+
+## Commodities 
+
+**Metals** - gold, silver, $\ldots$
+
+**Energy** - crude oil, natural gas, $\ldots$
+
+**Agriculture** - corn, wheat, $\ldots$
+
+Individuals can invest in commodities through futures contracts, by investing in a managed futures fund, or through ETFs.
+
+## Futures Contracts
+
+:::: {.columns}
+::: {.column width="100%"}
+- A futures contract is a commitment to buy/sell in the future at a pre-determined price (the futures price).
+- The futures price is determined in the market.
+- People who buy the futures make a profit when the futures price goes up.
+- People who sell it make a profit when the futures price falls.
+:::
+
+::::
+
+## Example
+
+In July, you buy a soybean contract on the CME (Chicago Mercantile Exchange) for November delivery at a price of $15 per bushel.
+
+A contract is for 5,000 bushels.  
+
+<p align=center> <img src="images/Soybean.jpg" height=200 width=200></p>
+
+. . .
+
+Suppose the price of the November contract rises to $17 in August and you sell the contract.
+
+. . .
+
+You made $17 - $15 = $2 per bushel on 5,000 bushels = $10,000.
+
+## Managed Futures
+
+Managed futures funds buy and sell contracts based on market conditions and their projections of the market.
+
+Usually the strategies are based on price momentum, hoping to ride price waves up or down.
+
+. . .
+
+If you invest in a managed futures fund, you are really investing in traders, not in commodities.
+
+## Commodity ETFs
+
+Some commodity ETFs own the commodity - for example, some gold funds.
+
+. . .
+
+Others - for example, oil funds - hold futures contracts (they buy the futures so they profit if the futures price increases).
+
+. . .
+
+We'll discuss the structure of futures-based ETFs in more detail later.
+
+## Currencies
+
+You can invest in foreign currencies by buying futures contracts or through an ETF.
+
+<p align=center> <img src="images/currency-1680786_1280.png" height=200 width=250></p>
+
+You can also bet on the dollar with futures contracts or through an ETF.
+
+. . .
+
+You bet on the dollar by betting against a foreign currency or a group of foreign currencies.
+
+. . .
+
+"Dollar bullish" ETFs are bets on the dollar.
+
+
