@@ -1,0 +1,126 @@
+---
+title:  "Mortgage Payments, etc."
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Questions about loans
+
+- I know how much I want to borrow and for how many years and what the rate will be.  What will my payment be?
+- I know how much I can afford to pay and for how many years the loan will be and what the rate will be.  How much can I borrow?
+- I know how much I want to borrow and what I can afford to pay and for how many years the loan will be.  What rate do I need to get?
+
+#
+
+- Suppose we borrow for $T$ years at an annual rate of $r$ with monthly payments.
+- Our monthly rate will be $r_m = r/12$.
+- Each month, we incur interest equal to $r_m$ times the beginning-of-month balance.  
+- Our payment goes first to interest, then the remainder to principal, reducing the outstanding balance.
+- Next month's interest charge is smaller, so more goes towards principal.
+- The last payment is equal to the beginning-of-month balance plus interest on the balance.
+
+#
+
+- Call the amount borrowed (principal of the loan) $B$ and the payment $P$.
+- What we owe just after the first payment is
+$(1+r_m)B-P$.
+- What we owe just after the second payment is
+ 
+ . . .
+
+$$(1+r_m)((1+r_m)B - P) - P$$
+
+- This is $(1+r_m)^2 B - (1+r_m)P - P$, which is the future value of the amount borrowed minus the future value of the payments (as of the end of the second month).
+
+- Because the loan is eventually paid off, the future value of the amount borrowed equals the future value of the payments as of the end of the last month.
+
+## Present values
+
+- Because future values are equal, present values are also equal.
+- The present value of the amount borrowed is just the amount (prinicpal).
+- So loan terms are related by Principal = PV of payments.
+- With a monthly payment of $P$, a monthly rate of $r_m$, and a loan term of $T$ years, the PV of payments is
+
+. . .
+
+$$P \times \left(\frac{1}{1+r_m} + \frac{1}{(1+r_m)^2} + \cdots + \frac{1}{(1+r_m)^{12 \times T}}\right)$$
+
+## Annuity factor
+
+- The sum of PV factors is called the annuity factor AF.
+- So, Principal = Payment $\times$ AF.
+- There is a simpler formula for the annuity factor (sum of a finite number of terms of a geometric series):
+
+. . .
+
+$$\text{AF} = \frac{1}{r_m}\left(1 - \frac{1}{(1+r_m)^{12 \times T}}\right)$$
+
+- It is not necessary to remember the AF formula.
+
+## Balloon payments
+
+- A loan might have a balloon payment, meaning a lump sum payment at the end.
+- Loan terms are related by Principal = PV of monthly payments + PV of balloon
+- PV of balloon is
+
+. . .
+
+$$\frac{\text{Balloon}}{(1+r_m)^{12 \times T}}$$
+
+## Numpy financial
+
+- You may need to do 
+<br>[pip install numpy-financial]{style="font-family:courier; font-weight:bold"}
+- Convention is that payments, including balloon, are negative.
+- Principal received is positive.  It is called [pv]{style="font-family:courier; font-weight:bold"}.
+- Ballon is called [fv]{style="font-family:courier; font-weight:bold"}.
+- Functions are [rate, pmt, pv, fv]{style="font-family:courier; font-weight:bold"}.
+- Same functions are in Excel.
+
+## Example
+
+
+```p
+import numpy_financial as npf
+ 
+nper = 30 * 12       # 30 year loan
+principal = 400000   # borrow $400,000
+pmt = -1500          # pay $1,500 per month
+rate = 0.04 / 12     # annual rate is 4%
+balloon = 0          # no balloon
+```
+
+. . .
+
+We'll calculate each of the last four, one at a time, given the other inputs.
+
+#
+
+```p
+# Question 1: what will my payment be?
+PMT = npf.pmt(rate=rate, nper=nper, pv=principal, fv=balloon)
+ 
+# Question 2: how much can I borrow?
+PRINCIPAL = npf.pv(rate=rate, nper=nper, pmt=pmt, fv=balloon)
+
+# Question 3: what will my rate be?
+RATE = npf.rate(nper=nper, pv=principal, pmt=pmt, fv=balloon)
+
+# And, how much of a balloon do I need?
+BALLOON = npf.fv(rate=rate, nper=nper, pmt=pmt, pv=principal)
+```
+
+If BALLOON>0, you overpaid the bank and should get money back.

@@ -1,0 +1,239 @@
+---
+title:  "Inflation and Real Returns"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Exponential growth
+
+If invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially.
+
+. . .
+
+```{python}
+#| code-fold: true
+
+import plotly.graph_objects as go
+import numpy as np
+
+trace1= go.Scatter(
+    x=np.arange(31), 
+    y=1.08**np.arange(31),
+    mode="lines",
+    name="8%"
+)
+
+trace2 = go.Scatter(
+    x=np.arange(31), 
+    y=1.04**np.arange(31),
+    mode="lines",
+    name="4%"
+)
+
+fig = go.Figure()
+fig.add_trace(trace1)
+fig.add_trace(trace2)
+string = "year %{x}<br>balance = $%{y:.2f}"
+fig.update_traces(hovertemplate=string)
+fig.update_layout(
+    template="none",
+    xaxis_title="Year",
+    yaxis_title="Account Balance",
+    yaxis_tickprefix="$", 
+    yaxis_tickformat=",.0f",
+    legend=dict(
+        yanchor="top", 
+        y=0.99, 
+        xanchor="left", 
+        x=0.01
+    )
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+fig.layout.template = "plotly_dark"
+
+fig.show()
+```
+
+##
+
+Due to exponential growth, the investment period and rate of return matter a lot!
+
+<br>
+
+- at 8%, doubling the investment horizon from 15 to 30 years implies the growth in the account increases from $2.17 to $9.06 (more than quadrupling).
+- at a 30 year horizon, changing the rate of return from 4% to 8% implies the growth in the account increases from $2.24 to $9.06 (more than quadrupling).
+
+## Calculating the account growth
+
+With 1 year at 8%, $1 \rightarrow 1.08$.  After a 2nd year, we have
+$$ 1.08 + (0.08 \times 1.08) = (1 \times 1.08) + (0.08 \times 1.08) $$ 
+which is $1.08^2$.
+
+- After $2$ years at 8%, $1.08^2 + 0.08\times 1.08^2 = 1.08^3$
+- After $n$ years at 8%, $1 \rightarrow 1.08^n$.
+
+## Future values and present values
+
+- We call \$$1.08^n$ the future value of \$1 at 8\% for $n$ years.
+- More generally, \$$(1+r)^n$ is the future value of \$1 at a rate of return of $r$.
+- If we start with $x$ dollars, we will have $(1+r)^nx$ dollars after $n$ years, so $(1+r)^nx$ is the future value of $x$.
+- Similarly, we call $x$ the present value of $(1+r)^nx$.  
+- Equivalently, for any $y$, we call $y/(1+r)^n$ the present value of $y$.
+
+## Future and present value factors
+
+<br>
+
+- We go from present $x$ to future $y$ by multiplying by $(1+r)^n$, so we call $(1+r)^n$ the future value factor.
+- We go from future $y$ to present $x$ by multiplying by $1/(1+r)^n$, so we call $1/(1+r)^n$ the present value factor.
+
+## Present value factors
+
+PV factors (also called discount factors) are smaller when the horizon is longer or the rate of return is larger.
+
+. . .
+
+```{python}
+
+import plotly.graph_objects as go
+import numpy as np
+
+trace1= go.Scatter(
+    x=np.arange(31), 
+    y=1.08**(-np.arange(31)),
+    mode="lines",
+    name="8%"
+)
+trace2 = go.Scatter(
+    x=np.arange(31), 
+    y=1.04**(-np.arange(31)),
+    mode="lines",
+    name="4%"
+)
+fig = go.Figure()
+fig.add_trace(trace1)
+fig.add_trace(trace2)
+string = "year %{x}<br>PV factor = %{y:.1%}"
+fig.update_traces(hovertemplate=string)
+fig.update_layout(
+    template="none",
+    xaxis_title="Year",
+    yaxis_title="PV Factor",
+    yaxis_tickformat=".0%",
+    legend=dict(
+        yanchor="top", 
+        y=0.99, 
+        xanchor="right", 
+        x=0.99
+        )
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+fig.layout.template = "plotly_dark"
+fig.show()
+```
+
+## FV of multiple cash flows
+
+- Suppose we invest $x_0$ dollars today, another $x_1$ dollars in 1 year, etc. for $m$ years and earn $r$ per year.  
+- What will we have in $n \ge m$ years?
+- $x_0 \rightarrow (1+r)^nx_0$
+- $x_1 \rightarrow (1+r)^{n-1}x_1$
+- $\ldots, x_m \rightarrow (1+r)^{n-m}x_m$
+- So, we end up with
+
+. . .
+
+$$(1+r)^n x_0 + \cdots + (1+r)^{n-m}x_m$$
+
+
+## FV factors with numpy
+
+``` p
+import numpy as np
+
+m = 10
+n = 15
+r = 0.08
+
+fvFactors = (1+r)**np.arange(n, n-m-1, -1)
+```
+
+<br>
+
+fvFactors are
+$$(1+r)^n, \ldots (1+r)^{n-m}$$
+
+
+## FV of multiple cash flows
+
+``` p
+import numpy as np
+
+n = 10
+m = 4
+r = 0.08
+x0, x1, x2, x3, x4 = 100, 120, 130, 140, 150
+x = np.array([x0, x1, x2, x3, x4])
+
+fvFactors = (1+r)**np.arange(n, n-m-1, -1)
+fv = np.sum(x*fvFactors)
+```
+
+## PV of multiple cash flows
+
+- Suppose we want to spend $y_1$ dollars in 1 year, $y_2$ dollars in 2 years, and so on for $n$ years.
+- If we want to finance this from existing savings, how much do we need to have, assuming we earn $r$ each year?
+- We need $y_1/(1+r)$ to finance $y_1$ in 1 year.
+- We need $y_2/(1+r)^2$ to finance $y_2$ in 2 years.
+- Etc., so we need
+
+. . .
+
+$$\frac{y_1}{1+r} + \cdots + \frac{y_n}{(1+r)^n}$$
+
+## PV factors with numpy
+
+``` p
+import numpy as np
+
+n = 15
+r = 0.08
+
+pvFactors = (1+r)**np.arange(-1, -n-1, -1)
+```
+
+pvFactors are
+$$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
+
+
+## PV of multiple cash flows
+
+``` p
+import numpy as np
+
+n = 4
+r = 0.08
+y1, y2, y3, y4 = 120, 130, 140, 150
+y = np.array([y1, y2, y3, y4])
+
+pvFactors = (1+r)**np.arange(-1, -n-1, -1)
+pv = np.sum(y*pvFactors)
+```
+

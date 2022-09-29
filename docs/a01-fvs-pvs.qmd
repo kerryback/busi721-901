@@ -84,8 +84,19 @@ With 1 year at 8%, $1 \rightarrow 1.08$.  After a 2nd year, we have
 $$ 1.08 + (0.08 \times 1.08) = (1 \times 1.08) + (0.08 \times 1.08) $$ 
 which is $1.08^2$.
 
-- After $2$ years at 8%, $1.08^2 + 0.08\times 1.08^2 = 1.08^3$
-- After $n$ years at 8%, $1 \rightarrow 1.08^n$.
+<br>
+
+- After $3$ years at 8%: $1.08^2 + 0.08\times 1.08^2 = 1.08^3$
+- After $n$ years at 8%: $1.08^n$.
+
+## Interest on interest
+
+- Why is growth exponential?
+- $1.08^2 = (1+0.08)^2 = 1 + 2 \times 0.08 + 0.08^2$
+- $1.08^3 = 1 + 3 \times 0.08 + 3 \times 0.08^2 + 0.08^3$
+- $3 \times 0.08$ is linear growth
+- The interest on interest terms $3 \times 0.08^2 + 0.08^3$ are responsible for exponential growth
+- Those terms eventually add up to large numbers!
 
 ## Future values and present values
 
