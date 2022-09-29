@@ -19,7 +19,7 @@ format:
 
 ## Example
 
-```{.python code-line-numbers="1-6|8-10"}
+```{.p code-line-numbers="1-6|8-9|10"}
 R = 30*12      # 30 years until retirement
 T = 60*12      # 60 total years
 g = 0.002      # deposit is 0.2% larger each month

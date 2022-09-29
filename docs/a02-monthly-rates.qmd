@@ -22,10 +22,10 @@ format:
 - If we earn $r_m$ each month, then \$1 will grow in a year to \$$(1+r_m)^{12}$.
 - So, the annual return (gain per \$1) is
 $r_a = (1+r_m)^{12}-1$.
-- We can reverse this to compute the monthly return from the annual return as
-$r_m = (1+r_a)^{1/12} - 1$.
 - For example, 1\% per month corresponds to
 12.68\% per year.
+- We can reverse this to compute the monthly return from the annual return as
+$r_m = (1+r_a)^{1/12} - 1$.
 - 12\% per year corresponds to 0.95\% per month.
 
 ## Bank rates

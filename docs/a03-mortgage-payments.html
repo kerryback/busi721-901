@@ -1289,6 +1289,20 @@ display: none;
 </ul>
 </div>
 </section>
+<section id="future-values" class="slide level2">
+<h2>Future values</h2>
+<ul>
+<li class="fragment">The balance after the last payment is zero.</li>
+<li class="fragment">So, for future values as of the loan maturity,</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[0 = \text{FV(Principal)} - \text{FV(Payments)}\]</span></p>
+</div>
+<div class="fragment">
+<p>Equivalently,</p>
+<p><span class="math display">\[\text{FV(Principal)} = \text{FV(Payments)}\]</span></p>
+</div>
+</section>
 <section id="present-values" class="slide level2">
 <h2>Present values</h2>
 <ul>
@@ -1352,7 +1366,7 @@ display: none;
 </section></section>
 <section id="section-2" class="title-slide slide level1 center">
 <h1></h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource p number-lines code-with-copy"><code class="sourceCode pascal"><span id="cb2-1"><a href="#cb2-1"></a><span class="st"># </span>Question <span class="dv">1</span>: what will my payment be?</span>
+<div class="sourceCode" id="cb2" data-code-line-numbers="1-2|4-5|7-8|10-11"><pre class="sourceCode numberSource p number-lines code-with-copy"><code class="sourceCode pascal"><span id="cb2-1"><a href="#cb2-1"></a><span class="st"># </span>Question <span class="dv">1</span>: what will my payment be?</span>
 <span id="cb2-2"><a href="#cb2-2"></a>PMT = npf.pmt(rate=rate, nper=nper, pv=principal, fv=balloon)</span>
 <span id="cb2-3"><a href="#cb2-3"></a> </span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="st"># </span>Question <span class="dv">2</span>: how much can I borrow?</span>

@@ -47,6 +47,21 @@ $$(1+r_m)((1+r_m)B - P) - P$$
 
 - Because the loan is eventually paid off, the future value of the amount borrowed equals the future value of the payments as of the end of the last month.
 
+## Future values
+
+- The balance after the last payment is zero.
+- So, for future values as of the loan maturity,
+
+. . .
+
+$$0 = \text{FV(Principal)} - \text{FV(Payments)}$$
+
+. . .
+
+Equivalently,
+
+$$\text{FV(Principal)} = \text{FV(Payments)}$$
+
 ## Present values
 
 - Because future values are equal, present values are also equal.
@@ -109,7 +124,7 @@ We'll calculate each of the last four, one at a time, given the other inputs.
 
 #
 
-```p
+```{.p code-line-numbers="1-2|4-5|7-8|10-11"}
 # Question 1: what will my payment be?
 PMT = npf.pmt(rate=rate, nper=nper, pv=principal, fv=balloon)
  
