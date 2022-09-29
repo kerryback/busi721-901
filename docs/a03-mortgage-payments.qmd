@@ -98,11 +98,11 @@ $$\frac{\text{Balloon}}{(1+r_m)^{12 \times T}}$$
 ## Numpy financial
 
 - You may need to do 
-<br>[pip install numpy-financial]{style="font-family:courier; font-weight:bold"}
+<br>[pip install numpy-financial]{style="font-family:courier; font-weight:bold; color:tomato;"}
 - Convention is that payments, including balloon, are negative.
-- Principal received is positive.  It is called [pv]{style="font-family:courier; font-weight:bold"}.
-- Ballon is called [fv]{style="font-family:courier; font-weight:bold"}.
-- Functions are [rate, pmt, pv, fv]{style="font-family:courier; font-weight:bold"}.
+- Principal received is positive.  It is called [pv]{style="font-family:courier; font-weight:bold; color:tomato;"}.
+- Ballon is called [fv]{style="font-family:courier; font-weight:bold; color:tomato;"}.
+- Functions are [rate, pmt, pv, fv]{style="font-family:courier; font-weight:bold; color:tomato;"}.
 - Same functions are in Excel.
 
 ## Example
