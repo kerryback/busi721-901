@@ -1,0 +1,104 @@
+---
+title:  "Portfolios: Short Sales"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Short Sales
+
+It is possible to sell before you buy.
+
+You need to borrow the asset the want to sell and return it later.
+
+This is called selling short or going short.
+
+<p align=center> <img src="images/shopping-7277456_1280.png" height=200 width=300></p>
+
+. . .
+
+**Long = asset** (own something) \
+**short = liability** (owe something)
+
+. . .
+
+Always hope to buy low and sell high. But can do it in the opposite order: sell high and then buy low. \
+
+. . .
+
+Risk is it will $\uparrow$ and you sell high and buy higher!
+
+## Shorting to Hedge
+
+Sometimes short to make a bet on something falling. \
+Sometimes short as part of a hedge.
+
+**Example:** optimistic that Chevron will do well among oil companies, but not sure what price of oil will do.
+
+<p align=center> <img src="images/gas-station-1275484_1920.jpg" height=200 width=300></p>
+
+. . .
+
+**Strategy:** buy Chevron and short Exxon-Mobil or short oil index.
+
+. . .
+
+You make the difference in returns.
+
+## Example
+
+Invest $10,000.  Buy $10,000 of CVX, short $10,000 of XOM.
+
+:::: {.columns}
+::: {.column width="100%"}
+- **Assets:** 10,000 CVX, 10,000 cash
+- **Liabilities:** 10,000 XOM
+- **Equity:** 10,000 
+:::
+::::
+
+. . .
+
+CVX $\uparrow$ 20%, XOM $\uparrow$ 10%
+
+:::: {.columns}
+::: {.column width="100%"}
+- **Assets:** 12,000 CVX, 10,000 cash
+- **Liabilities:** 11,000 XOM
+- **Equity:** 11,000
+:::
+::::
+
+## Some Issues 
+
+Have to pay stock borrowing fee (usually small)
+
+Will not get full interest on short-sale proceeds.
+
+:::: {.columns}
+::: {.column width="100%"}
+- In example, \$10,000 $\rightarrow$ buy CVX.
+- Shorting XOM $\rightarrow$ $10,000 cash.
+- Cash is held as collateral against short sale.
+:::
+::::
+
+. . .
+
+Margin requirements: 
+
+$$\sum_{i=1}^n \lvert{w_{i}}\lvert \leq 2$$
+
+summing over risky assets.  So, must invest $10,000 to put on $10,000 long position and $10,000 short position.
