@@ -1,0 +1,157 @@
+---
+title:  "Portfolios: Diversification"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Portfolio Returns
+
+Consider a $100,000 portfolio with 40% invested in one asset (Asset A) and 60% in a second asset (Asset B).
+
+<p align=center> <img src="images/dollar-4859143_1280.png" height=250 width=400></p>
+
+
+:::: {.columns}
+::: {.column width="100%"}
+- Suppose A $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
+- Suppose B $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
+- $100,000 $\rightarrow$ $114,000
+- So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
+:::
+
+::::
+
+## Notation 
+
+
+$r_{A}$ and $r_{B}$ denote the returns of A and B, and $\bar{r}_{A}$ and $\bar{r}_{B}$ denote their means (expected returns).
+
+$w_{A}$ and $w_{B}$ denote portfolio weights = allocations
+
+(like 0.4 and 0.6).
+
+. . .
+
+Portfolio return is $r_{p}=w_{A}r_{A}+w_{B}r_{B}$
+
+. . .
+
+In general, $r_{p}=\sum_{i=1}^n w_ir_i$ and weights sum to 1.
+
+
+#
+
+**The Mean Portfolio Return is . . .**
+
+$$\bar{r}_p=w_{A}\bar{r}_A+w_{B}\bar{r}_B$$
+
+In general, $\bar{r}_p=\sum_{i=1}^n w_i\bar{r}_i$ 
+
+## Portfolio Variance
+
+Variance means squared deviation from mean, so
+
+$$var(r_{p})=E[(r_{p}-\bar{r}_p)^2]$$
+
+. . .
+
+A line of algebra shows that the deviation from the mean $r_{p}-\bar{r}_{p}$ is a weighted average of deviations from means:
+
+$$r_{p}-\bar{r}_{p}=w_{A}(r_{A}-\bar{r}_A)+w_{B}(r_{B}-\bar{r}_B)$$
+
+. . .
+
+So, the squared deviation is
+
+$$\small w^{2}_{A}(r_{A}-\bar{r}_{A})^2+w^{2}_{B}(r_{B}-\bar{r}_{B})^2+2w_{A}w_{B}(r_{A}-\bar{r}_{A})(r_{B}-\bar{r}_{B})$$
+
+. . .
+
+Taking the expectation, the first two terms are variances and the third is a covariance.
+
+## Portfolio Variance with Two Assets 
+
+$$\small var(r_{p})=w^2_{A}var(r_{A})+w^2_{B}var(r_{B})+2w_{A}w_{B}cov(r_{A},r_{B})$$
+
+:::: {.columns}
+::: {.column width="100%"}
+- $var(r_{p})$ is smaller when the covariance is smaller.
+- Covariance is correlation times product of standard deviations, so $var(r_{p})$ is smaller when the covariance is smaller.
+:::
+::::
+
+
+## Portfolio Variance with n Assets
+
+$$\small var(r_{p})=\sum_{i=1}^n w_{i}^2var(r_i)+2\sum_{i=1}^n \sum_{j=i+1}^n w_{i}w_{j}cov(r_{i},r_{j})$$
+
+There are $\frac{n(n-1)}{2}$ covariance terms. 
+
+
+## A Simple Case 
+
+$n$ assets, all variances are the same = $\sigma^2$, \
+all correlations are the same = $\rho$, \
+all weights = $\frac{1}{n}$.
+
+<p align=center> <img src="images/puzzle-2500328_1920.jpg" height=200 width=500></p>
+
+. . .
+
+$$\small var(r_{p})=\sum_{i=1}^n (\frac{1}{n})^2\sigma^2+2\sum_{i=1}^n \sum_{j=i+1}^n (\frac{1}{n})^2\rho\sigma^2$$
+
+. . .
+
+$$\small var(r_{p})=\frac{1}{n}\sigma^2+\frac{n-1}{n}\rho\sigma^2 \rightarrow \rho\sigma^2$$
+
+## 3C
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## 2A
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## Portfolio Std Dev < Weighted Average of Asset Std Devs
+
+$$\small (w_{A}\sigma_{A}+w_{B}\sigma_{B})^2=w_{A}^2\sigma_{A}^2+w_{B}^2\sigma_{B}^2+2w_{A}w_{B}\sigma_{A}\sigma_{B}$$
+
+same as $var_{p}$ except no correlation in the last term. So,  
+$$(w_{A}\sigma_{A}+w_{B}\sigma_{B})^2>var(r_{p})$$
+
+## Some Diversification Usually Lowers Risk
+
+Compare holding only asset B to holding some mix of A and B. 
+
+. . .
+
+Substitute $w_{B}=(1-w_{A})$. Variance in general is 
+
+$$\small w_{A}^2\sigma_{A}^2+(1-w_{A})^2\sigma_{B}^2+2w_{A}(1-w_{A})\rho\sigma_{A}\sigma_{B}$$
+
+. . .
+
+Derivative with respect to $w_{A}$ evaluated at $w_{A}$=0:
+
+$$\small 2w_{A}\sigma^2_{A}-2(1-w_{A})\sigma^2_{B}+2(1-2w_{A})\rho\sigma_{A}\sigma_{B}=-2\sigma^2_{B}+2\rho\sigma_{A}\sigma_{B}$$
+
+. . .
+
+Risk is **lowered** by $w_{A}$ $\uparrow$ when $\rho\sigma_{A}<\sigma_{B}$
