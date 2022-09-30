@@ -19,7 +19,7 @@ website:
     background: "#00205B"
     search: false
     left:
-
+       
       - text: "Home"
         file: index.qmd
 

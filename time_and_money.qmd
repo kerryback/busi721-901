@@ -1,12 +1,12 @@
 [Present and Future Values](a01-fvs-pvs.html)
 
-[Inflation](slides/a07-inflation.html)
+[Monthly Rates, etc.](a02-monthly-rates.html)
 
-[Retirement Planning](a02-retirement-planning.html)
+[Mortgage Payments etc.](a03-mortgage-payments.html)
 
-[Retirement Simulation](slides/b06-simulating-returns.html)
+[Inflation and Real Returns](a04-inflation.html)
 
-[Perpetuities and Annuities](slides/a06-perpetuities.html)
+[Retirement Planning](a05-retirement-planning.html)
 
-[Amortization](slides/a05-amortization.html)
+[Time-Varying Returns](a06-different-returns.html)
 
