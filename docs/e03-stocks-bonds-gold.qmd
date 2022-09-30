@@ -1,0 +1,59 @@
+---
+title:  "Portfolios and CAPM: Stocks, Bonds and Gold"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+#
+Let's calculate optimal portfolios for
+**stocks, treasury bonds, corporate bonds, and gold**
+based on historical means and covariances.
+
+We'll look at indices from 1968 and ETFS from 2004.
+
+
+<p float="left">
+  <img src="images/report-3183779_1920.jpg" width="250" />
+  <img src="images/im-140375.jpeg" width="250" /> 
+  <img src="images/is-it-worth-investing-in-corporate-bonds-the-pros-and-cons.jpeg" width="250" />
+  <img src="images/gold-163519_1280.jpg" width="250" />
+</p>
+
+
+## Invest in Treasuries?
+
+:::: {.columns}
+::: {.column width="100%"}
+- An important fact is that the correlation between Treasuries and stocks (and corporates) was positive in the last century and has been strongly negative in this century.
+- inflation shocks $\rightarrow$ **positive correlation**
+- macro crisis shocks $\rightarrow$ negative correlation
+- Treasuries are a **good investment** if they hedge stocks (and corporates) but a bad investment otherwise (due to low average returns).
+- So last century data ⇒ short Treasuries
+- This century data ⇒ large Treasury investments
+:::
+::::
+
+## 3N
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## 3O
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
