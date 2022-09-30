@@ -1,11 +1,9 @@
 [Stock Returns](b01-stock-returns.html)
 
-[Visualizing Returns](b02-visualizing-returns.html)
+[Annual Returns](b02-annual-returns.html)
 
-[Returns at Different Frequencies](slides/b03-returns-at-different-frequencies.html)
+[Daily Returns](b03-daily-returns.html)
 
-[Time Varying Volatility](slides/b04-time-varying-volatility.html)
+[Geometric Average Returns](b04-geometric-average-returns.html)
 
-[Geometric Average Returns](slides/b05-geometric-average-returns.html)
-
-[Simulating Returns](slides/b06-simulating-returns.html)
+[Long-Run Risk](slides/b06-simulating-returns.html)

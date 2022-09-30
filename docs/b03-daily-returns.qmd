@@ -1,0 +1,263 @@
+---
+title:  "Daily Returns"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+
+## Daily SPY returns
+
+```{python}
+
+from pandas_datareader import DataReader as pdr
+import plotly.graph_objects as go
+import numpy as np
+
+spy = pdr('SPY', 'yahoo', start=1990)['Adj Close']
+spy = spy.pct_change().dropna()
+spy.index = spy.index.astype(str)
+spy = spy.reset_index()
+spy.columns = ['date', 'ret']
+
+trace = go.Scatter(
+    x=spy.date,
+    y=spy.ret,
+        hovertemplate="%{x}<br>%{y:.1%}<extra></extra>",
+    name="",
+    )
+fig = go.Figure(trace)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="",
+    yaxis_title="",
+    yaxis_tickformat=".0%",
+  )
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+
+fig.show()
+```
+
+<br>
+
+SPY = S&P 500 ETF
+
+
+## Box and density plots of daily SPY returns
+
+::: {.panel-tabset}
+
+## Box plot
+
+```{python}
+
+#| panel: input
+#| layout-ncol: 2
+
+trace = go.Box(
+    x=spy.ret,
+    text=spy.date,
+    hovertemplate="%{text}<extra></extra>",
+    name="",
+    )
+fig = go.Figure(trace)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Daily Return",
+    yaxis_title="",
+    xaxis_tickformat=".0%",
+    yaxis_tickformat="",
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+
+fig.show()
+```
+
+## Density plot
+
+```{python}
+
+from scipy.stats import norm
+from scipy.stats import gaussian_kde as kde
+
+density = kde(spy.ret)
+
+m = spy.ret.mean()
+s = spy.ret.std()
+grid = np.linspace(m - 4 * s, m + 4 * s, 201)
+
+trace1 = go.Scatter(
+  x=grid,
+  y=density(grid),
+  mode="lines",
+  name="actual"
+)
+
+trace2 = go.Scatter(
+  x=grid, 
+  y=norm.pdf(grid, loc=m, scale=s), 
+  mode="lines", 
+  name="normal"
+)
+fig = go.Figure()
+fig.add_trace(trace1)
+fig.add_trace(trace2)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Daily Return",
+    yaxis_title="",
+    xaxis_tickformat=".0%",
+    yaxis_tickformat="",
+     legend=dict(
+        yanchor="top", 
+        y=0.99, 
+        xanchor="right", 
+        x=0.99
+    ),
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+
+fig.show()
+```
+Normal distribution has same mean and std dev as actual
+
+:::
+
+## Autocorrelations
+
+- Autocorrelation is the correlation of a time series with its own lagged values.
+- Autocorrelation at lag 1 tells us whether the current value predicts the next one.
+- For monthly data, autocorrelation might be high at lag 12 (seasonality).
+
+## Autocorrelations of daily SPY returns
+
+```{python}
+
+from statsmodels.graphics.tsaplots import plot_acf
+import matplotlib.pyplot as plt
+plt.style.use('classic')
+_ = plot_acf(spy.ret)
+```
+
+
+## Does today's return predict tomorrow's?
+
+```{python}
+
+import statsmodels.formula.api as smf
+
+spy['lag'] = spy.ret.shift()
+spy = spy.dropna()
+
+trace = go.Scatter(
+  x=spy.lag,
+  y=spy.ret,
+  text=spy.date,
+  mode="markers",
+  hovertemplate="%{text}<extra></extra>",
+  showlegend=False,
+)
+fig = go.Figure(trace)
+
+result = smf.ols("ret ~ lag", data=spy).fit()
+predict = result.params['Intercept'] + result.params['lag']*spy.lag
+
+trace = go.Scatter(
+  x=spy.lag,
+  y=predict,
+  mode="lines",
+  name="regression line"
+)
+
+fig.add_trace(trace)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Lagged Return",
+    yaxis_title="Return",
+    xaxis_tickformat=".0%",
+    yaxis_tickformat=".0%",
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+fig.show()
+```
+
+No, the autocorrelation is almost zero.
+
+## Autocorrelations of absolute returns
+
+```{python}
+_ = plot_acf(spy.ret.abs())
+```
+
+
+## Does today's absolute return predict tomorrow's?
+
+```{python}
+
+spy['absret'] = spy.ret.abs()
+spy['abslag'] = spy.lag.abs()
+
+trace = go.Scatter(
+  x=spy.abslag,
+  y=spy.absret,
+  text=spy.date,
+  mode="markers",
+  hovertemplate="%{text}<extra></extra>",
+  showlegend=False,
+)
+fig = go.Figure(trace)
+
+result = smf.ols("absret ~ abslag", data=spy).fit()
+spy['predict'] = result.params['Intercept'] + result.params['abslag']*spy.abslag
+spy = spy.sort_values(by="abslag")
+
+trace = go.Scatter(
+  x=spy.abslag,
+  y=spy.predict,
+  mode="lines",
+  name="regression line"
+)
+
+fig.add_trace(trace)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Lagged Absolute Return",
+    yaxis_title="Absolute Return",
+    xaxis_tickformat=".0%",
+    yaxis_tickformat=".0%",
+)
+fig.update_xaxes(title_font_size=24, rangemode="tozero")
+fig.update_yaxes(title_font_size=24, rangemode="tozero")
+fig.update_layout(font_size=20)
+fig.show()
+```
+Yes, volatility is persistent.
+
+# 
+
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/frequencies"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+

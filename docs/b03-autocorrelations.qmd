@@ -1,0 +1,107 @@
+---
+title:  "Risk and Returns: Different Frequencies"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+# 
+
+<p align=center> Daily returns compound to monthly returns, and monthly returns compound to annual returns. </p>
+
+<p align=center> But daily, monthly, and annual return distributions have different properties. </p>
+
+::: {layout="[[1,1,1]]"}
+
+
+![](images/calendar-152134_1280.png)
+
+![](images/calendar-152139_1280.png)
+
+![](images/calendar-2497192_1280.png)
+
+:::
+
+. . .
+
+<p align=center> Annual returns are approximately normally distributed, but daily and monthly returns are not. </p>
+
+# 
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## Moments of Returns
+
+- Mean: $E[r]$ where *E* means expected value
+- Variance: $E[r-\bar{r}]$ where $\bar{r}=E[r]=mean$
+- Standard deviation:$\sqrt{variance}$
+- Skewness: $E[(r-\bar{r})^3]/\sigma^{3}$ where $\sigma=$ std dev.
+- Kurtosis: $E[(r-\bar{r})^4]/\sigma^{4}-3$ \ 
+
+. . .
+
+For normal distributions, skewness = kurtosis = 0.
+
+. . .
+
+<br><br>
+<p align=center> 
+Higher powers place greater weight on outliers. \
+Outliers to the left (low) ⇒ negative skewness. \
+Outliers to the right (high) ⇒ positive skewness. \
+Outliers ⇒ positive kurtosis. </p>
+
+## Skewness and Kurtosis with Pandas
+
+``` p
+import pandas as pd
+from scipy.stats import norm
+
+x = pd.Series(norm.rvs(loc=0, scale=1, size=100))
+print('skewness is', x.skew())
+print('kurtosis is', x.kurt())
+```
+
+## Daily, Monthly, and Annual Market Returns
+``` p
+from pandas_datareader import DataReader as pdr
+daily = 'F-F_Research_Data_Factors_daily'
+daily = pdr(daily, 'famafrench', 1927)[0]
+daily = daily['Mkt-RF'] + daily['RF']
+
+monthly = pdr('F-F_Research_Data_Factors', 'famafrench', 1927)[0]
+annual = pdr('F-F_Research_Data_Factors', 'famafrench', 1927)[1]
+monthly = monthly['Mkt-RF'] + monthly['RF']
+annual = annual['Mkt-RF'] + annual['RF']
+
+print('daily skew and kurt are', daily.skew(), daily.kurt())
+print('monthly skew and kurt are', monthly.skew(), monthly.kurt())
+print('annual skew and kurt are', annual.skew(), annual.kurt())
+```
+
+. . .
+
+Results: \
+(i) skewness is small \
+(ii) kurtosis is small for annual returns \
+(iii) kurtosis is high for monthly and very high for daily returns
+
+#
+<p align=center>  When were the two best days? \
+What was the next-to-worst month? </p>
+<p align=center> 
+<a href="http://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
