@@ -362,7 +362,7 @@ fig.update_layout(font_size=20)
 
 fig.show()
 ```
-Normal distribution has same mean and std dev as actual returns
+Normal distribution has same mean and std dev as actual
 :::
 
 

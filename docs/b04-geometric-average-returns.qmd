@@ -110,9 +110,9 @@ $$\sqrt{2 \times 0.5}-1=0$$
 
 - Recall that compounding continuously at rate $z$ means \$1 will grow to $e^z$ in one year.
 - If the actual return is $r$, then the corresponding continuously compounded return is $\log (1+r)$, because compounding continuously at rate $\log (1+r)$ means \$1 will grow to $e^{\log (1+r)} = 1+r$.
-- If you make 50% and then lose 50%, then the continuously compounded returns are $\log(1.5)$ and $\log(0.5)$ and the average of these is negative.
-- If you make 100% and then lose 50%, then the continuously compounded returns are
-$\log(2)$ and $\log(0.5)$ and the average of these is zero.
+- Make 50% and lose 50% $\Rightarrow$ continuously compounded returns are $\log(1.5)$ and $\log(0.5)$ and average $<0$.
+- Make 100% and lose 50% $\Rightarrow$ continuously compounded returns are
+$\log(2)$ and $\log(0.5)$ and average $=0$.
 
 
 #
