@@ -73,25 +73,20 @@ Chevron Corporation (CVX) will begin trading ex-dividend on August 18, 2021. A c
 
 #
 
-- How to compute daily returns in August? \
-- Where does the dividend go?
-- Or does it go in September?
-- If you buy at close on Aug 17 and sell at close on Aug 18, you get the Aug 18 price plus the dividend in September, so the dividend is part of your return.
-- If you buy at close on any other day and sell at close on the following day, the dividend is **not** part of your return.
-- The dividend goes on the ex day.  CVX Aug 18 return is $(P_{\text{Aug18}} + 1.34 - P_{\text{Aug17}})/P_{\text{Aug17}}$.
+- For computing returns, the dividend goes on the ex day.  
+- The close Aug 17 to close Aug 18 return for CVX is calculated as $(P_{\text{Aug18}} + 1.34 - P_{\text{Aug17}})/P_{\text{Aug17}}$.
+- We compound daily returns to get weekly, monthly, or annual returns:
 
-## Compounding returns
-
-We can compound daily returns to get weekly, monthly, or annual returns.
+. . .
 
 $$
-  (1+r_1)(1+r_2)...(1+r_N)-1
+  (1+r_1)(1+r_2)...(1+r_T)-1
 $$
 <br>
 
 . . . 
 
-If we put the dividend on the ex-day, the weekly, etc. returns are as if the dividend was received on the ex day and reinvested in new shares.
+- The weekly, etc. returns are as if the dividend was received on the ex day and reinvested in new shares.
 
 
 
@@ -140,7 +135,7 @@ $$
 
 . . .
 
-- The idea is that 1.34 of the value of CVX at close on Aug 17 was the value of the dividend.
+- \$1.34 of the value of CVX at close on Aug 17 was the value of the dividend.
 The adjusted price is the value without right to the dividend.
 
 #  
@@ -149,7 +144,8 @@ $$
   {\hat{P}_{\text{Aug17}}}/{P_{\text{Aug17}}}
 $$ 
 
-The result is that on days t are not ex days, 
+Previous price ratios are therefore unchanged:
+
 $$
   \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}}=1+r_t
 $$ 
@@ -159,24 +155,40 @@ $$
 On ex days,
 
 $$
-  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t} = 1 + \hat{r}_t
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}-D_t} 
 $$ 
 
 
 
 ## CVX on Aug 18, 2021
 
-$$
-  \hat{r}_t = \frac{P_{t}}{P_{t-1}-D_t} - 1=-0.0271
-$$ 
+. . .
+
+
+The return calculated the usual way is:
 
 $$
-  r_t = \frac{P_{t}+D_t}{P_{t-1}} - 1 =-0.0267
+  \frac{P_{\text{Aug18}}+1.34}{P_{\text{Aug17}}} - 1 =-0.0267
 $$ 
+
+. . .
+
+The % change in Yahoo's adjusted close is
+
+$$
+  \frac{\hat{P}_{\text{Aug18}}}{\frac{P_{\text{Aug18}}}{P_{\text{Aug17}}-1.34} - 1=-0.0271
+$$ 
+
 
 ## Getting Returns from Yahoo
 
-``` p
+<br>
+
+Install pandas-datareader or, on colab, upgrade it.
+
+<br>
+
+```{.p code-line-numbers="1-5|6"}
 !pip install --upgrade pandas-datareader
 
 from pandas_datareader import DataReader as pdr
@@ -187,18 +199,20 @@ ret_daily = price.pct_change()
 
 ## Compounding Yahoo returns
 
+<br>
 
 Can get monthly or annual return as % change in monthly or annual Yahoo-adjusted closing prices -  equivalent to compounding Yahoo daily returns.
 
 . . .
 
-```p
+<br>
+
+```{.p code-line-numbers="1-3|5-7"}
 price = pdr('cvx', 'yahoo', start=2010)['Adj Close']
 ret_monthly = price.resample('M').last().pct_change()
 ret_annual = price.resample('Y').last().pct_change()
 
 # change datetime to monthly or annual (optional)
-
 ret_monthly.index = ret_monthly.index.to_period('M')
 ret_annual.index = ret_annual.index.to_period('Y')
 ```
