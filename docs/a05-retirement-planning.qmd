@@ -17,6 +17,12 @@ format:
     incremental: true
 ---
 
+#
+
+<p align=center>
+<img src="images/retirement-concept-2021-08-28-19-21-53-utc.jpg" height=600>
+</p>
+
  
 #
 
@@ -25,9 +31,15 @@ format:
 ::: {.column width=40}
 <br>
 
-- Let's track a retirement account balance monthly.
-- For simplicity, assume the return is the same each month.
-- We'll first track it in a loop, then use future values.
+Let's track a retirement account balance monthly.
+
+<br>
+
+For simplicity, assume the return is the same each month.
+
+<br>
+
+We'll first track it in a loop, then use future values.
 :::
 
 ::: {.column width=60}
@@ -74,6 +86,7 @@ $$B_R = (1+r)^R B_0 + (1+r)^{R-1} D_1  + \cdots +  D_R$$
 - The ending balance is
 
 . . .
+
 $$(1+r)^T B_0 + (1+r)^{T-1}D_1 + \cdots + (1+r)^{T-R}D_R$$
 
 . . .
