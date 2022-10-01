@@ -1,3 +1,5 @@
+[Stock Markets](c01-stock-market.html)
+
 [Stock Returns](b01-stock-returns.html)
 
 [Annual Returns](b02-annual-returns.html)
@@ -6,4 +8,4 @@
 
 [Geometric Average Returns](b04-geometric-average-returns.html)
 
-[Long-Run Risk](slides/b06-simulating-returns.html)
+[Long-Run Risk](b05-long-run-risks.html)

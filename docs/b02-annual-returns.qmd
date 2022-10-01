@@ -383,7 +383,7 @@ _ = plot_acf(spy.ret)
 ```
 
 
-## Does this year's return predict next year's?
+## Does last year's return predict this year's?
 
 ```{python}
 
@@ -426,7 +426,6 @@ fig.update_yaxes(title_font_size=24)
 fig.update_layout(font_size=20)
 fig.show()
 ```
-
 No, the autocorrelation is almost zero.
 
 # 

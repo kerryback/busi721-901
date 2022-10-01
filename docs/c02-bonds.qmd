@@ -1,6 +1,6 @@
 ---
-title:  "Asset Classes: Bonds"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+title:  "Bonds"
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
 output-dir: docs
 execute:
   echo: false
@@ -19,100 +19,126 @@ format:
 
 ## Bonds 
 
-:::: {.columns}
-::: {.column width="100%"}
-- Pay a specified coupon at regular intervals (usually semi-annually).
-- Plus pay face value (= par value) at maturity.  Last payment is coupon plus face.
-- Issued at market prices.  Usually coupon is set so they can be issued roughly at face value.
-- When market rates are high, coupons are set high. When market rates are low, coupons are set low.
-:::
+Pay a specified coupon at regular intervals (usually semi-annually).
+And pay face value (= par value) at maturity.  Last payment is coupon plus face.
 
-::::
+```{python}
+import numpy as np
+import plotly.graph_objects as go
 
-. . .
+year = np.arange(0.5, 10.5, 0.5)
+payment = 3*np.ones(10)
+payment[-1] += 100
 
-<p align=center> <img src="images/gray-goose.jpeg" height=300 width=400></p>
+trace=go.Bar(
+  x=year,
+  y=payment,
+)
+fig = go.Figure(trace)
+fig.update_layout(
+    template="plotly_dark",
+    title="5-year 6% bond with semi-annual coupons (per $100 face)",
+    xaxis_title="Year",
+    yaxis_title="Coupons and Face Value",
+    yaxis_tickprefix="$"
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+fig.show()
+```
+
 
 ## Treasury Auctions
 
-The U.S. Treasury borrows money by issuing bonds of various maturities at regular intervals.   They solicit bids of the form
+ - The U.S. Treasury borrows money by auctioning bonds of various maturities at regular intervals.   
+ - They solicit bids from primary dealers of the form
+"I will buy x bonds at face value if the coupon is at least y."
 
-"I will pay face value if the coupon is at least $\text{x}$."
+- Bidders willing to accept low coupons get their bids filled, and the coupon set on all of the bonds is the lowest that will sell the entire issue.
 
-Bidders willing to accept low coupons get their bids filled, and the coupon paid is the lowest that will sell the entire issue.
+## Treasury Direct
 
-. . .
+- Individuals can buy bonds at auction via Treasury Direct with simpler bids: 
 
-- Individuals can buy bonds at auction via Treasury Direct with simpler bids: "I want xx number of bonds."
+  - "I want x number of bonds."
 
-- These "noncompetitive" bids are filled first and then the coupon is determined by the competitive bids.
+- These "noncompetitive" bids are filled first.
+
+- You can also buy bonds at Treasury Direct outside of the auction framework.
 
 ## Treasury Inflation Protected Securities (TIPS)
 
+:::: {.columns}
+
+::: {.column width=50}
 The face value of a TIPs is adjusted for inflation.
 
-<p align=center> <img src="images/tips.jpg" height=200 width=200></p>
-
-. . .
+<br>
 
 The coupons are a fixed percentage of the face value, so they rise with inflation too.
 
-. . .
+<br>
 
-The result is that the income you get from a TIPS is fixed in constant dollars.
+So the income you get from a TIPS is fixed in constant dollars.
+:::
 
-## 8D
+::: {.column width=50}
 
-<p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
-</p>
-
-## How Corporate Bonds are Issued 
-
-Usually hire an investment bank, who assesses demand from pension funds, insurance companies, brokerages, $\ldots$
-
-Investment bank advises on the coupon needed to sell the bonds at par.
-
-. . .
-
-Investment bank will distribute. It may guarantee sale to company or make "best efforts."
-
-## Corporate Bond Provisions
-
-:::: {.columns}
-::: {.column width="100%"}
-- Bonds often contain some covenants that restrict the company from doing certain things - for example, a change of ownership, issuing more debt, or paying "excessive" dividends.
-- Bonds may be subordinated -  some bonds issued by a company may be subordinated to other bonds of the same company, meaning that the latter get paid first in bankruptcy.
-- Bonds may be callable, meaning that the company has a right to prepay - usually only after some time has passed and usually at some penalty.
-- Bonds may also be puttable, meaning that the investor has the right to demand immediate payment in some circumstances.
+<p align=center> <img src="images/tips.jpg" height=600></p>
 :::
 
 ::::
+
+## How Corporates and Municipals are Issued 
+
+- Usually hire an investment bank, who assesses demand from pension funds, insurance companies, brokerages, $\ldots$
+
+- Investment bank advises on the coupon needed to sell the bonds near par.
+
+- Investment bank will distribute. It may guarantee sale to company or make "best efforts."
+
+
+## Bond provisions
+
+- Companies and also other issuers typically have many different issues outstanding -- issued at different dates with different coupons.
+
+- Bonds may have covenants that, for example,
+  - prohibit the issuance of more debt, or
+  - require a minimum income-to-interest ratio, etc.
+ 
+- Bonds may also have options for prepayment, at the company's discretion or at investors' discretion.
+
+## Subordination
+
+- Subordinated (junior) means not getting paid in bankruptcy unless all more senior bonds are paid.
+
+- Junior/senior depends on bond provisions, not time of issue.
+
+- All bonds are typically subordinated to any bank debt.
+
+## Municipal bonds
+
+- Municipal bonds in the U.S. are exempt from federal income tax.
+- Municipal bonds are also exempt from state income taxes in the state of issue.
+- So, NY investors want to hold NY municipals, California investors want to hold California municipals.
+- Municipals are issued by states, cities, counties, school boards, fire districts, ...
+- Tax increment financing allows limited use of municipal bonds to back private investments: sports stadiums, etc.
+
+## Bond trading
+
+- The bond market is largely an institutional market.  Trades are large and made through dealers.
+- Securities dealers are like car dealers
+  - Stand ready to buy or sell
+  - Try to sell at a higher price than they buy
+- An individual can trade bonds through a broker, even one-stop online through a broker/dealer.
+- But it is hard to know if you are getting a good price.
+- Usually better to invest in bonds through a mutual fund or ETF.
+
 
 ## Asset Backed Securities
 
-:::: {.columns}
-::: {.column width="100%"}
+
 - Asset backed securities are bonds that are issued by a trust and are to be repaid from income generated by assets held by the trust.
 - A major category is mortgage-backed securities, including those issued by FNMA, GNMA, and FHLMC, better known as Fannie Mae , Ginnie Mae, and Freddie Mac.
-- There are also securities backed by auto loans, credit card receivables, etc.
-:::
-
-::::
-
-## Bond Trading
-
-:::: {.columns}
-::: {.column width="100%"}
-The bond market is largely an institutional market, with trades being made in large quantities through dealers.
-
-- Security dealers are like car dealers, standing ready to buy or sell and profiting from the spread. 
-- Dealers publish indicative prices but direct contact (phone or electronic) must be made to get firm quotes.
-
-:::
-
-::::
-
-. . .
-
-Generally, the best way for an individual to own bonds is through a mutual fund or ETF.
+- There are also securities backed by auto loans, credit card receivables, bank loans to companies, and other bonds.
