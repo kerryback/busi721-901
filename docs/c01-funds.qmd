@@ -1,10 +1,11 @@
 ---
 title:  "Funds"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice UniversityKerry Back<br><br>
 output-dir: docs
 execute:
   echo: false
   jupyter: python3
+  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -106,7 +107,6 @@ Active funds try to beat the market or their market sector by choosing the best 
 - % change in index does not include dividend return
 
 
-::::
 
 ## Exchange Traded Funds (ETFs)
 

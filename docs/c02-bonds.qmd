@@ -5,6 +5,7 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
+  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -40,7 +41,9 @@ fig.update_layout(
     title="5-year 6% bond with semi-annual coupons (per $100 face)",
     xaxis_title="Year",
     yaxis_title="Coupons and Face Value",
-    yaxis_tickprefix="$"
+    yaxis_tickprefix="$",
+    width=1040,
+    height=520,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -77,18 +80,16 @@ The face value of a TIPs is adjusted for inflation.
 <br>
 
 The coupons are a fixed percentage of the face value, so they rise with inflation too.
+:::
+::: {.column width=50}
+<p align=center> <img src="images/tips.jpg" height=400></p>
+:::
+::::
 
-<br>
+. . .
 
 So the income you get from a TIPS is fixed in constant dollars.
-:::
 
-::: {.column width=50}
-
-<p align=center> <img src="images/tips.jpg" height=600></p>
-:::
-
-::::
 
 ## How Corporates and Municipals are Issued 
 
@@ -133,7 +134,7 @@ So the income you get from a TIPS is fixed in constant dollars.
   - Try to sell at a higher price than they buy
 - An individual can trade bonds through a broker, even one-stop online through a broker/dealer.
 - But it is hard to know if you are getting a good price.
-- Usually better to invest in bonds through a mutual fund or ETF.
+- Usually better to invest  through mutual funds or ETFs.
 
 
 ## Asset Backed Securities

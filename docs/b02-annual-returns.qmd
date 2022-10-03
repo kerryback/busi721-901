@@ -1,10 +1,11 @@
 ---
 title:  Annual Returns
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
 output-dir: docs
 execute:
   echo: false
   jupyter: python3
+  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -44,6 +45,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="",
     yaxis_tickformat=".0%",
+    width=1040,
+    height=520,
   )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -59,6 +62,7 @@ SPY = S&P 500 ETF
 ##  Compounded SPY returns
 
 ```{python}
+#| column: page
 
 compound = (1+spy.ret).cumprod()
 
@@ -74,6 +78,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation from $1",
     yaxis_tickformat=".0f",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -102,6 +108,8 @@ value of $1 investment with dividends reinvested
 ## Plot of the Example 
 
 ```{python}
+#| column: page
+
 r1 = np.cumprod([1] + 51*[1.1])
 r2 = np.cumprod([1] + 30*[1.02] + 21*[1.1])
 years = np.arange(1970, 2022)
@@ -131,6 +139,8 @@ fig.update_layout(
     yaxis_title="Accumulation",
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -149,6 +159,8 @@ fig.show()
 ## Log (base 10) of accumulation
 
 ```{python}
+#| column: page
+
 r1 = np.log10(np.cumprod([1] + 51*[1.1]))
 r2 = np.log10(np.cumprod([1] + 30*[1.02] + 21*[1.1]))
 years = np.arange(1970, 2022)
@@ -177,6 +189,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Log of Accumulation",
     yaxis_tickformat=",.1f",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -194,6 +208,8 @@ fig.show()
 ## Map $y$ tick labels to dollars
 
 ```{python}
+#| column: page
+
 r1 = np.cumprod([1] + 51*[1.1])
 r2 = np.cumprod([1] + 30*[1.02] + 21*[1.1])
 years = np.arange(1970, 2022)
@@ -222,6 +238,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation ($)",
     yaxis_tickformat=",.0f",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -243,7 +261,7 @@ fig.show()
 ##  Compounded SPY returns on log scale
 
 ```{python}
-#| panel: input
+#| column: page
 
 trace = go.Scatter(
     x=spy.date,
@@ -257,6 +275,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation from $1",
     yaxis_tickformat=".0f",
+    width=1040,
+    height=520,
     yaxis = dict(
         tickmode = 'array',
         tickvals = [2, 5, 10, 16],
@@ -276,13 +296,13 @@ value of $1 investment with dividends reinvested
 
 ## Box Plot
 
-- Box contains 25th percentile through 75th percentile 
+- Box contains 25th percentile through 75th percentile.
 
-- Median is indicated as a line in the box 
-- Fences extend 1.5 times inter-quartile range from 25th and 75th percentiles or to the most extreme observation if that is closer to the box 
+- Median is indicated as a line in the box.
+- Fences extend 1.5 times inter-quartile range from 25th and 75th percentiles or to the most extreme observation if that is closer to the box. 
     - inter-quartile range = 75th minus 25th percentile)
-- Points outside the fences are outliers 
-    - if you simulate data from a normal distribution, there will typically be very few points outside the fences
+- Points outside the fences are outliers. 
+    - If you simulate data from a normal distribution, there will typically be very few points outside the fences.
 
 ## Box and density plots of annual SPY returns
 
@@ -290,6 +310,7 @@ value of $1 investment with dividends reinvested
 
 ## Box plot
 ```{python}
+#| column: page
 
 trace = go.Box(
     x=spy.ret,
@@ -304,6 +325,8 @@ fig.update_layout(
     xaxis_title="Annual Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
+    width=1040,
+    height=520,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -315,8 +338,8 @@ fig.show()
 ## Density plot
 
 ```{python}
-#| panel: input
-#| 
+#| column: page
+
 
 from scipy.stats import norm
 from scipy.stats import gaussian_kde as kde
@@ -349,6 +372,8 @@ fig.update_layout(
     yaxis_title="",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
+    width=1040,
+    height=520,
      legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -375,17 +400,25 @@ Normal distribution has same mean and std dev as actual
 ## Autocorrelations of annual SPY returns
 
 ```{python}
+#| column: page
 
 from statsmodels.graphics.tsaplots import plot_acf
 import matplotlib.pyplot as plt
 plt.style.use('classic')
-_ = plot_acf(spy.ret)
+plt.rcParams.update({'font.size': 26})
+fig = plot_acf(spy.ret)
+plt.xlabel("Year")
+plt.ylabel("Autocorrelation")
+plt.title("")
+
+_ = fig.set_size_inches(18,9)
 ```
 
 
 ## Does last year's return predict this year's?
 
 ```{python}
+#| column: page
 
 import statsmodels.formula.api as smf
 
@@ -420,6 +453,8 @@ fig.update_layout(
     yaxis_title="Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
+    width=1040,
+    height=520,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)

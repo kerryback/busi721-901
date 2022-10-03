@@ -1,4 +1,9 @@
-[Stock Markets](c01-stock-market.html)
+:::: {.columns}
+
+::: {.column width=50} 
+Part I
+
+[Stock Markets](b01-stock-market.html)
 
 [Stock Returns](b01-stock-returns.html)
 
@@ -9,3 +14,25 @@
 [Geometric Average Returns](b04-geometric-average-returns.html)
 
 [Long-Run Risk](b05-long-run-risks.html)
+:::
+
+::: {.column width=50}
+Part II
+
+[Leverage](c01-leverage.html)
+
+[Selling Short](d04-short-sales.html)
+
+[Funds](c01-funds.html)
+
+[Bonds](c02-bonds.html)
+
+[Bond Prices and Yields](c03-bond-prices-and-yields.html)
+
+[Other Assets](c04-other-assets.html)
+
+
+
+:::
+
+::::

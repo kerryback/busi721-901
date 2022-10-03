@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.0.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,15 +11,10 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 </style>
 
 
@@ -70,19 +65,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./time_and_money.html" aria-current="page">Time and Money</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./returns.html">Returns</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./asset_classes.html">Asset Classes</a>
+    <a class="nav-link" href="./returns.html">Assets and Returns</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./portfolios.html">Portfolios</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./portfolios_capm.html">Portfolios and the CAPM</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./factor_investing.html">Factor Investing</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./corporate.html">Corporate Investment</a>
@@ -181,8 +167,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

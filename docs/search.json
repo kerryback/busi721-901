@@ -193,14 +193,14 @@
     "href": "returns.html",
     "title": "",
     "section": "",
-    "text": "Stock Returns\nAnnual Returns\nDaily Returns\nGeometric Average Returns\nLong-Run Risk"
+    "text": "Part I\nStock Markets\nStock Returns\nAnnual Returns\nDaily Returns\nGeometric Average Returns\nLong-Run Risk\n\nPart II\nLeverage\nSelling Short\nFunds\nBonds\nBond Prices and Yields\nOther Assets"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "BBCX Investments Library\nModern Investments: Theory, Data, and Practice\nCourse Code Binder\n\n\n\nKerry Back J. Howard Creekmore Professor of Finance and Professor of Economics kerryback@gmail.com\n\n\n\nThis course is an introduction to investments, including the analysis of corporate investment projects. We begin with foundational issues such as retirement planning and mortgage calculations, then move on to the history of returns of different asset classes, then study how to construct efficient portfolios of assets, and then look at stock characteristics (“factors”) that have been found to have some predictive power for returns. The course is bookended by concepts pertaining to the financial analysis of corporate projects - net present value, internal rate of return, return on capital employed, etc.\nOur analysis tool throughout the course will be python. Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss. Some of what we will cover – for example, forming portfolios of stocks based on factors – is impractical to do in a spreadsheet program. Code will be posted at the “Course Code Binder” link above.\nThe “Investments Library” linked above is a collection of web pages that illustrate financial concepts. We will use it extensively. Many of the pages contain links to Jupyter notebooks that supplement the code in the binder. The “Modern Investments” link above is to the beginnings of a textbook. It should be a useful supplement to the course slides for part of the course. The slides are linked through the navigation bar at the top of the page.\nGrades will be based on weekly assignments and a take-home final exam.\n\n\n\nThe Rice University honor code applies to all work in this course. Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other.\n\n\n\nAny student with a documented disability requiring accommodations in this course is encouraged to contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations regarding assignments or the final exam must be made in advance. Students with disabilities should also contact Disability Support Services in the Allen Center."
+    "text": "BBCX Investments Library\nModern Investments: Theory, Data, and Practice\nCourse Code Binder\n\n\n\nKerry Back J. Howard Creekmore Professor of Finance and Professor of Economics kerryback@gmail.com\n\n\n\nThis course is an introduction to investments, including the analysis of corporate investment projects. We begin with foundational issues such as retirement planning and mortgage calculations. The next part of the course describes markets, assets, and properties of returns. We then study study how to construct efficient portfolios of assets. The final part of the course pertains to the financial analysis of corporate projects.\nOur analysis tool throughout the course will be python. Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss. Code will be posted at the “Course Code Binder” link above.\nThe “Investments Library” linked above is a collection of web pages that illustrate financial concepts. We will use it throughout the course. Many of the pages contain links to Jupyter notebooks that supplement the code in the binder. The “Modern Investments” link above is to the beginnings of a textbook. It should be a useful supplement to the course slides for part of the course. The slides are linked through the navigation bar at the top of the page.\nGrades will be based on weekly assignments and a take-home final exam.\n\n\n\nThe Rice University honor code applies to all work in this course. Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other.\n\n\n\nAny student with a documented disability requiring accommodations in this course is encouraged to contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations regarding assignments or the final exam must be made in advance. Students with disabilities should also contact Disability Support Services in the Allen Center."
   },
   {
     "objectID": "timevalue.html",
@@ -214,7 +214,7 @@
     "href": "portfolios.html",
     "title": "",
     "section": "",
-    "text": "Estimating Parameters\nExpected Return and Risk\nShort Sales\nEfficient Frontier\nPreferences"
+    "text": "Part I\nDiversification\nExpected Return and Risk\nEfficient Frontier\nAlphas and Betas\nCapital Asset Pricing Model\n\nPart II\nPreferences\nDifferent Borrowing and Saving Rates\nPortfolio Constraints\nStocks, Bonds, and Gold\nEstimating Parameters"
   },
   {
     "objectID": "portfolios_capm.html",
@@ -228,7 +228,7 @@
     "href": "corporate.html",
     "title": "",
     "section": "",
-    "text": "NPV and IRR"
+    "text": "Part I\nNPV and IRR\nIncome vs Cash Flow\nReturn on Capital Employed\nFinancial Statements\nCapital Budgeting Exercises\nSneaker Case\n\nPart II\nTwo Stage Valuation Model"
   },
   {
     "objectID": "asset_classes.html",
@@ -243,5 +243,19 @@
     "title": "",
     "section": "",
     "text": "Monthly Rates, etc.\nMortgage Payments etc.\nInflation and Real Returns\nRetirement Planning\nTime-Varying Returns"
+  },
+  {
+    "objectID": "returns.html#stylefloat-right",
+    "href": "returns.html#stylefloat-right",
+    "title": "",
+    "section": "{style=float right}",
+    "text": "{style=float right}\nDaily Returns\nGeometric Average Returns\nLong-Run Risk"
+  },
+  {
+    "objectID": "returns.html#section-1",
+    "href": "returns.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "Daily Returns\nGeometric Average Returns\nLong-Run Risk"
   }
 ]

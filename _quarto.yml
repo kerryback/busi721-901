@@ -5,10 +5,7 @@ project:
     - index.qmd
     - time_and_money.qmd
     - returns.qmd
-    - asset_classes.qmd
     - portfolios.qmd
-    - portfolios_capm.qmd
-    - factor_investing.qmd
     - corporate.qmd
   
 website:
@@ -26,21 +23,12 @@ website:
       - text: "Time and Money"
         file: time_and_money.qmd
 
-      - text: "Returns"
+      - text: "Assets and Returns"
         file: returns.qmd
-        
-      - text: "Asset Classes"
-        file: asset_classes.qmd
-        
+                
       - text: "Portfolios"
         file: portfolios.qmd
-        
-      - text: "Portfolios and the CAPM"
-        file: portfolios_capm.qmd
-
-      - text: "Factor Investing"
-        file: factor_investing.qmd
-        
+              
       - text: "Corporate Investment"
         file: corporate.qmd
      

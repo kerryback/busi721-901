@@ -1,2 +1,30 @@
-[NPV and IRR](slides/a04-irr.html)
+:::: {.columns}
+
+::: {.column width=50}
+Part I
+
+[NPV and IRR](f01-npv-irr.html)
+
+[Income vs Cash Flow](f02-cash-flow.html)
+
+[Return on Capital Employed](f03-roce.html)
+
+[Financial Statements](f04-statements.html)
+
+[Capital Budgeting Exercises](f05-exercises.html)
+
+[Sneaker Case](f06-sneaker.html)
+
+:::
+
+
+
+::: {.column width=50}
+Part II
+
+[Two Stage Valuation Model](g01-two-stage.html)
+
+:::
+
+::::
 
