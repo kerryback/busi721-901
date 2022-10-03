@@ -44,6 +44,8 @@ format:
 The bid-ask spread is 180.02--180.03.
 
 
+
+
 ## Institutional trading
 
 - Mutual funds etc. typically execute trades over several days, trading a small amount at a time, to minimize the price impacts of their trades.

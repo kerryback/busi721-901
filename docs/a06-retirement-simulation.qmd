@@ -109,6 +109,6 @@ print(BT.describe(percentiles=[0.1, 0.25, 0.5, 0.75, 0.9]).iloc[1:].round(2))
 # 
 
 <p align=center> 
-<a href="https://bbcx-investments.com/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://bbcx-investments.com/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg" style="width:4in;"></a>
 </p>
 
