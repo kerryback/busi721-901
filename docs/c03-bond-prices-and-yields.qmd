@@ -188,7 +188,7 @@ fig.show()
   - BB=best non-investment grade (= junk = high-yield)
   - B
   - etc.
-- And there are +'s and -'s.  Moody's uses baa instead of BBB, etc.
+- There are +'s and -'s.  Moody's uses baa instead of BBB, etc.
 
 ## Credit spreads
 
@@ -220,7 +220,7 @@ trace1 = go.Scatter(
   x=df.date,
   y=df.BBB,
   mode="lines",
-  hovertemplate="%{y.1%}",
+  hovertemplate="%{y:.1%}",
   name="BBB"
 )
 
@@ -228,7 +228,7 @@ trace2 = go.Scatter(
   x=df.date,
   y=df.A,
   mode="lines",
-  hovertemplate="%{y.1%}",
+  hovertemplate="%{y:.1%}",
   name="A"
 )
 
@@ -236,7 +236,7 @@ trace3 = go.Scatter(
   x=df.date,
   y=df.AA,
   mode="lines",
-  hovertemplate="%{y.1%}",
+  hovertemplate="%{y:.1%}",
   name="AA"
 )
 
@@ -244,7 +244,7 @@ trace4 = go.Scatter(
   x=df.date,
   y=df.AAA,
   mode="lines",
-  hovertemplate="%{y.1%}",
+  hovertemplate="%{y:.1%}",
   name="AAA"
 )
 
