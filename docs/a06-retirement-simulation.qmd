@@ -74,9 +74,13 @@ fig.update_layout(font_size=20)
 fig.show()
 ```
 
-## Distribution of ending balances
+## Distribution of ending balances <a href="https://bbcx-investments.com/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
+<hr>
 
 ```{python}
+
+#| column: page
 
 from scipy.stats import norm
 import pandas as pd
@@ -106,9 +110,8 @@ BT = FVB + FVD - FVW
 print(BT.describe(percentiles=[0.1, 0.25, 0.5, 0.75, 0.9]).iloc[1:].round(2))
 ```
 
-# 
 
-<p align=center> 
-<a href="https://bbcx-investments.com/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg" style="width:4in;"></a>
-</p>
+
+
+
 
