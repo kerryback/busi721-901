@@ -43,10 +43,12 @@ The return per $1 invested in a share at close on t-1 is
 $$(P_t - P_{t-1}) / P_{t-1}$$
 
 
-## What about dividends?  A Chevron announcement
+## What about dividends?  CVX in Fall 2021
 
-[Chevron's Fall 2021 Dividend](
-https://www.chevron.com/newsroom/2021/Q3/chevron-announces-2Q-2021-quarterly-dividend)
+<br><br>
+
+<p align=center>
+<a href="https://www.chevron.com/newsroom/2021/Q3/chevron-announces-2Q-2021-quarterly-dividend"><img src="images/CVX.png" style="width:3in;" align=center> </a> </p>
 
 ## Nasdaq's statement
 
@@ -177,7 +179,7 @@ $$
 The % change in Yahoo's adjusted close is
 
 $$
-  \frac{\hat{P}_{\text{Aug18}}}{\frac{P_{\text{Aug18}}}{P_{\text{Aug17}}-1.34} - 1=-0.0271
+\frac{P_{\text{Aug18}}}{P_{\text{Aug17}}-1.34} - 1=-0.0271
 $$ 
 
 

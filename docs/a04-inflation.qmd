@@ -62,7 +62,8 @@ in date 0 dollars.
 - The \$100 grew to \$110, and the cost of the item went to \$107, so at the end of the year you could buy 1 and have \$3 left over, which would buy 3/107 units.
 - Your buying power grew by $3/107$.  This is your [real rate of return]{style="color:tomato; font-weight:bold;"}.
 
-## 
+## General formula <a href="https://bbcx-investments.com/borrowing-saving/inflation"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
 - The general formula for the real rate of return $r^*$ is 
 
 . . .
@@ -77,8 +78,3 @@ where r= (nominal) rate of return and i=inflation rate.
 
 $$(1+r_1^*) \cdots (1+r_n^*) = \frac{(1+r_1)\cdots (1+r_T)}{(1+i_1) \cdots (1+i_T)}$$
 
-# 
-
-<p align=center> 
-<a href="http://bbcx-investments.com/borrowing-saving/inflation"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
-</p>

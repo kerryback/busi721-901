@@ -234,7 +234,9 @@ pvFactors are
 $$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
 
 
-## PV of multiple cash flows
+## PV of multiple cash flows <a href="https://bbcx-investments.com/borrowing-saving/npv"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
+<br>
 
 ``` {.p code-line-numbers=1-2|3-4|6|7}
 n = 4
