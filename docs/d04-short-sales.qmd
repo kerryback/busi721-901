@@ -29,18 +29,13 @@ format:
 - Long = own something (asset)
 - Short = owe something (liability)
 
-## Example
+## Example  <a href=https://www.youtube.com/embed/x2J9s4HMJCY"><img src="images/youtube2.jpg" style="height:0.5in;" align="right"></a>
 
 - Borrow and sell 100 shares of ABC, which is trading at $60
 - ABC drops to $40 and you buy back and return the shares (cover the short).  
 - You  bought at $40 and sold at $60, so you made $20 per share.
 - Risk is that ABC $\uparrow$ and you have to buy back at more than $60
 
-# 
-
-<p align=center> 
-<a href="https://www.youtube.com/embed/x2J9s4HMJCY"><img src="images/SEC.svg" style="width:4in;"></a>
-</p>
 
 ## Shorting to Hedge
 

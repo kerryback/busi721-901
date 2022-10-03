@@ -55,18 +55,15 @@ The bid-ask spread is 180.02--180.03.
   -  opportunities that may only exist for only a millisecond and only earn a penny a share or less
 
 
-## Internalization and payment for order flow
+## Internalization and payment for order flow <a href="https://www.youtube.com/embed/2HSWM3fKldY"><img src="images/youtube2.jpg" style="height:0.5in;" align="right"></a>
+
 
 - Retail orders are primarily executed on  Alternative Trading Systems rather than the limit order book.
 - Your broker/dealer may execute your order itself, to earn the bid-ask spread.
 - Or your broker may send your order to another institution in exchange for a "kickback" of part of the spread.
 - You are nevertheless supposed to get the National Best Bid or Offer (NBBO).
 
-# 
 
-<p align=center> 
-<a href="https://www.youtube.com/embed/2HSWM3fKldY"><img src="images/SEC.svg" alt="HTML tutorial" style="width:4in;"></a>
-</p>
 
 
 
