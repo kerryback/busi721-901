@@ -20,21 +20,17 @@ format:
 
 :::: {.columns}
 ::: {.column width="30%"}
-
 <br><br>
 Investing borrowed money is called leverage.
 
-
 :::
-::: {.column width="70%"}
+::: {.column width="70%"} 
+:::{.fragment .fade-up}
 ![](images/leverage.jpg)
+Your own money gains extra force.
+:::
 :::
 ::::
-
-. . .
-
-
-Your own money gains extra force.
 
 . . .
 

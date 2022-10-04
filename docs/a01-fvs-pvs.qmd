@@ -22,8 +22,6 @@ format:
 
 If invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially.
 
-. . .
-
 ```{python}
 #| code-fold: true
 #| column: page
@@ -56,6 +54,8 @@ fig.update_layout(
     yaxis_title="Account Balance",
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -150,6 +150,8 @@ fig.update_layout(
     xaxis_title="Year",
     yaxis_title="PV Factor",
     yaxis_tickformat=".0%",
+    width=1040,
+    height=520,
     legend=dict(
         yanchor="top", 
         y=0.99, 

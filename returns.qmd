@@ -5,15 +5,15 @@ Part I
 
 [Stock Markets](b01-stock-market.html)
 
-[Stock Returns](b01-stock-returns.html)
+[Stock Returns](b02-stock-returns.html)
 
-[Annual Returns](b02-annual-returns.html)
+[Annual Returns](b03-annual-returns.html)
 
-[Daily Returns](b03-daily-returns.html)
+[Daily Returns](b04-daily-returns.html)
 
-[Geometric Average Returns](b04-geometric-average-returns.html)
+[Geometric Average Returns](b05-geometric-average-returns.html)
 
-[Long-Run Risk](b05-long-run-risks.html)
+[Long-Run Risk](b06-long-run-risks.html)
 :::
 
 ::: {.column width=50}
@@ -21,15 +21,16 @@ Part II
 
 [Leverage](c01-leverage.html)
 
-[Selling Short](d04-short-sales.html)
+[Selling Short](c02-short-sales.html)
 
-[Funds](c01-funds.html)
+[Funds](c03
+-funds.html)
 
-[Bonds](c02-bonds.html)
+[Bonds](c04-bonds.html)
 
-[Bond Prices and Yields](c03-bond-prices-and-yields.html)
+[Bond Prices and Yields](c05-bond-prices-and-yields.html)
 
-[Other Assets](c04-other-assets.html)
+[Other Assets](c06-other-assets.html)
 
 
 

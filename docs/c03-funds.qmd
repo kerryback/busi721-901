@@ -1,0 +1,149 @@
+---
+title:  "Funds"
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Mutual Funds 
+
+- Easy way to get diversification
+- Can also perhaps benefit from professional active management
+
+- Can usually invest directly with no need for a brokerage account 
+
+- Over 7,000 U.S. mutual funds $∼$ number of U.S. stocks
+
+- Mutual funds for stocks, bonds, international stocks, real estate, ...
+
+
+## Net Asset Value
+
+
+- NAV (net asset value per share) is calculated daily after close of trading.
+- Equals value of portfolio less any expenses not yet paid divided by number of shares outstanding
+- Invest money $\rightarrow$ get shares in fund at next end-of-day NAV 
+- Withdraw money $\rightarrow$ sell shares at next end-of-day NAV
+
+
+## Example
+
+- Invest $10,000 Thursday end-of-day NAV = $250, get 40 shares
+
+- \# of shares can be fractional
+- Fund $\uparrow$, withdraw $6,000, next end-of-day NAV = $300
+  - $6,000 / $300 = 20 shares that are redeemed
+  - Still have 20 shares, worth 20 $\times$ \$300 = \$6,000
+
+
+
+## Active and Passive Funds
+
+:::: {.columns}
+
+::: {.column}
+Passive funds track an index.  They do not try to "beat the market."  They have low expenses. 
+:::
+
+::: {.column}
+![](images/vanguard.jpeg)
+::: 
+
+::::
+
+. . .
+
+:::: {.columns}
+
+::: {.column}
+Active funds try to beat the market or their market sector by choosing the best stocks.  They have higher expenses.
+:::
+
+::: {.column}
+<br>
+![](images/fidelity-logo3jpg-38115c537742751f.webp)
+:::
+
+::::
+
+## Evidence on active funds
+
+
+- There is some evidence that active fund managers can beat the market before payment of fees.  
+
+- But there is little evidence of extra returns to investors, after payment of managers' fees.
+
+- There is also little evidence of repeat performance, except that the worst funds after fees tend to remain the worst.
+
+
+## Some U.S. Stock Indexes
+
+
+- Dow Jones = 30 stocks
+- S&P 100 ~ 50% of U.S. stock market capitalization
+- S&P 500 ~ 80% of U.S. stock market capitalization
+- Russell 1000
+- Russell 3000
+- Russell 2000 = Russell 3000 excluding Russell 1000, small-cap index
+- Wilshire 5000
+
+## How do stock indexes work?
+
+- % change in index is % increase/decrease in total value of companies in the index (except for Dow)
+
+- % change in index does not include dividend return
+
+
+
+## Exchange Traded Funds (ETFs)
+
+- ETFs were invented in 1990. There are now ~ 3,000 U.S. ETFs.
+
+- ETFs are listed on stock exchanges and trade like stocks.  You buy/sell them through your broker.
+
+- Another easy way to get diversification.  And lower fees than mutual funds.
+
+- There are ETFs for stocks, bonds, international stocks, real estate, currencies, commodities
+
+- ETFs calculate NAVs daily, but you do not buy/sell at the NAV.  You buy/sell at the price determined by the market.
+
+## How do ETFs work?
+
+- ETFs are not open to new cash investments.
+- Neither can anyone withdraw cash from them.
+- They *are* open to exchanges with *authorized participants (APs)*.
+  - APs deliver baskets of assets and receive ETF shares when ETF market price is higher than NAV.
+  - APs deliver shares and receive baskets of assets when ETF market price is lower than NAV.
+  - This activity moves the ETF market price towards NAV.
+
+## Futures based ETFs
+
+- Commodity ETFs generally hold futures contracts on the commodity instead of the physical commodity. 
+- An example is USO (U.S. Oil).
+- A counter-example is GLD, which holds gold bars.
+- There are also ETFs that take positions in stock index futures to deliver
+  - multiples (2-to-1 or 3-to-1) of the stock index return (levered ETFs)
+  - the negative of the stock index return (inverse ETFs) or multiples of the negative (levered inverse ETFs)
+
+
+
+## Transparency of ETF Strategies
+
+- Because of the mechanism for APs to redeem or acquire shares, an ETF's portfolio must be transparent. 
+
+- So, active strategies of the type typical for mutual funds (who only report portfolios quarterly) are not possible.
+
+- Nevertheless, complex strategies are possible.  For example, some ETFs focus on "quality" stocks or "high momentum" stocks or the like (factor ETFs).
