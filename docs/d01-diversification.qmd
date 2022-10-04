@@ -1,6 +1,6 @@
 ---
-title:  "Portfolios: Diversification"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+title:  "Diversification"
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
 output-dir: docs
 execute:
   echo: false
@@ -17,74 +17,149 @@ format:
     incremental: true
 ---
 
-## Portfolio Returns
-
-Consider a $100,000 portfolio with 40% invested in one asset (Asset A) and 60% in a second asset (Asset B).
-
-<p align=center> <img src="images/dollar-4859143_1280.png" height=250 width=400></p>
-
+## Why diversify your investments?
 
 :::: {.columns}
-::: {.column width="100%"}
-- Suppose A $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
-- Suppose B $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
-- $100,000 $\rightarrow$ $114,000
-- So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
+::: {.column-width="50%"}
+- What is the risk of one coin flip for $10?
+  - The mean outcome is zero.
+  - The possible deviations from the mean are +10 and -10.
 :::
-
+::: {.column-width="50%"}
+- What is the risk of two coin flips for $5 each?
+  - The mean outcome is zero.
+  - The possible deviations are 
+    - +10 (prob 1/4), 
+    - -10 (prob 1/4) and 
+    - [0 (prob 1/2)]{style="color:tomato; font-weight:bold;"}.
+:::
 ::::
 
-## Notation 
+ 
+## More baskets is better
+
+![](images/eggsinbaskets.jpg)
+
+## Variance and standard deviation
+ 
+- Variance is expected squared deviation from mean
+  - Flipping once for \$10 $\Rightarrow$ variance = 100
+  - Flipping twice for \$5 $\Rightarrow$ variance = (1/4) $\times$ 100 + (1/4) $\times$ 100 = 50
+- Standard deviation is square root of variance
+  - Flipping once for \$10 $\Rightarrow$ std dev = 10
+  - Flipping twice for \$5 $\Rightarrow$ std dev = 7.07
+
+## Investment interpretation
+
+- Suppose we start with $100 before we flip
+- There are two independent assets, each with possible returns of $\pm$ 10%
+  - Flipping once for \$10 $\sim$ putting all \$100 in a single asset
+  - Flipping twice for \$5 $\sim$ putting \$50 in each
+- Call the assets 1 and 2 with random returns $r_1$ and $r_2$
+- The portfolio return $r_p = (1/2) r_1 + (1/2) r_2$ is less risky than either $r_1$ or $r_2$.
 
 
-$r_{A}$ and $r_{B}$ denote the returns of A and B, and $\bar{r}_{A}$ and $\bar{r}_{B}$ denote their means (expected returns).
+## Portfolio Returns
 
-$w_{A}$ and $w_{B}$ denote portfolio weights = allocations
+- Consider a $100,000 portfolio with 40%  in one asset (Asset 1) and 60% in a second (Asset 2).
+- Suppose asset 1 $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
+- Suppose asset 2 $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
+- $100,000 $\rightarrow$ $114,000
+- So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
+- The portfolio return is $r_p = w_1r_1 + w_2r_2$ where $w_i$ is the fraction of the portfolio invested in asset $i$.
 
-(like 0.4 and 0.6).
+## Expected portfolio return
+
+- $\bar{r}_1$ = expected return of asset 1
+- $\bar{r}_2$ = expected return of asset 2
+- The expected portfolio return is
 
 . . .
 
-Portfolio return is $r_{p}=w_{A}r_{A}+w_{B}r_{B}$
+$$ \bar{r}_p = w_1 \bar{r}_1 + w_2 \bar{r}_2$$
+
+## Portfolio variance 
+
+- The deviation of the portfolio return from its mean is
 
 . . .
 
-In general, $r_{p}=\sum_{i=1}^n w_ir_i$ and weights sum to 1.
+$$w_1r_1 + w_2r_2 - (w_1 \bar{r}_1 +w_2\bar{r}_2)$$
 
+- This equals
+
+. . .
+
+$$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
+
+- $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is the sum of [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"},
+ [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"}, and [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"}.
 
 #
 
-**The Mean Portfolio Return is . . .**
-
-$$\bar{r}_p=w_{A}\bar{r}_A+w_{B}\bar{r}_B$$
-
-In general, $\bar{r}_p=\sum_{i=1}^n w_i\bar{r}_i$ 
-
-## Portfolio Variance
-
-Variance means squared deviation from mean, so
-
-$$var(r_{p})=E[(r_{p}-\bar{r}_p)^2]$$
+- Expected value of [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"} is [$w_1^2 \text{var}(r_1)$]{style="color:green;"}.
+- Expected value of [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"} is [$w_2^2 \text{var}(r_2)$]{style="color:purple;"}.
+- Expected value of [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"} is [$2w_1w_2\text{cov}(r_1,r_2)$]{style="color:red;"}.
+- Portfolio variance is
 
 . . .
 
-A line of algebra shows that the deviation from the mean $r_{p}-\bar{r}_{p}$ is a weighted average of deviations from means:
+$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)$$
 
-$$r_{p}-\bar{r}_{p}=w_{A}(r_{A}-\bar{r}_A)+w_{B}(r_{B}-\bar{r}_B)$$
+
+## 2 Coin Flips Example
+
+- std dev $r_1 = 10\text{%}$ $\Rightarrow$ var $r_1 = 100\text{%}^2$
+- std dev $r_2 = 10\text{%}$ $\Rightarrow$ var $r_2 = 100\text{%}^2$
+- coin flips are independent, so cov $= 0$
+- with weights = 1/2, portfolio variance is
 
 . . .
 
-So, the squared deviation is
+$$\left(\frac{1}{2}\right)^2 100\text{%}^2 + \left(\frac{1}{2}\right)^2 100\text{%}^2 = 50\text{%}^2$$
 
-$$\small w^{2}_{A}(r_{A}-\bar{r}_{A})^2+w^{2}_{B}(r_{B}-\bar{r}_{B})^2+2w_{A}w_{B}(r_{A}-\bar{r}_{A})(r_{B}-\bar{r}_{B})$$
+- portfolio std dev is $\sqrt{50}\text{%}= 7.07\text{%}$
 
-. . .
+#
 
-Taking the expectation, the first two terms are variances and the third is a covariance.
+```{python}
+from pandas_datareader import DataReader as pdr
+import plotly.express as px
+rets = pdr(['cvx', 'aapl'], "yahoo", start=2016)['Adj Close']  
+rets = rets.resample('M').last().pct_change().dropna() 
+rets.index = rets.index.to_period('M').astype(str)
+rets = rets.reset_index()
+rets.columns = ['date', 'CVX', 'AAPL'] 
 
-## Portfolio Variance with Two Assets 
+fig = px.scatter(
+        rets,
+        x="CVX",
+        y="AAPL",
+        trendline="ols",
+        hover_data=dict(AAPL=False, CVX=False, date=False),
+        hover_name="date",
+    )
 
-$$\small var(r_{p})=w^2_{A}var(r_{A})+w^2_{B}var(r_{B})+2w_{A}w_{B}cov(r_{A},r_{B})$$
+fig.update_traces(
+        marker=dict(size=12, line=dict(width=2, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
+    )
+    fig.update_yaxes(tickformat=".0%")
+    fig.update_xaxes(tickformat=".0%")
+
+    result = sm.OLS(df.ret, sm.add_constant(df.mkt)).fit()
+    alpha = round(100*100*result.params["const"], 2)
+    beta = round(result.params["mkt"], 2)
+    indx = [
+        ticker + " Alpha (bps)",
+        ticker + " Beta",
+    ]
+fig.show()
+print("std dev of APPL is", rets.AAPL.std())
+```
+
+
+#
 
 :::: {.columns}
 ::: {.column width="100%"}
