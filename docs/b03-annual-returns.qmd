@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -46,8 +45,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="",
     yaxis_tickformat=".0%",
-    width=1040,
-    height=520,
+    width=1000,
+    height=460,
   )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -79,8 +78,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation from $1",
     yaxis_tickformat=".0f",
-    width=1040,
-    height=520,
+    width=1000,
+    height=460,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -140,7 +139,7 @@ fig.update_layout(
     yaxis_title="Accumulation",
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
-    width=1040,
+    width=1000,
     height=520,
     legend=dict(
         yanchor="top", 
@@ -190,7 +189,7 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Log of Accumulation",
     yaxis_tickformat=",.1f",
-    width=1040,
+    width=1000,
     height=520,
     legend=dict(
         yanchor="top", 
@@ -239,7 +238,7 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation ($)",
     yaxis_tickformat=",.0f",
-    width=1040,
+    width=1000,
     height=520,
     legend=dict(
         yanchor="top", 
@@ -276,8 +275,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="Accumulation from $1",
     yaxis_tickformat=".0f",
-    width=1040,
-    height=520,
+    width=1000,
+    height=460,
     yaxis = dict(
         tickmode = 'array',
         tickvals = [2, 5, 10, 16],
@@ -305,7 +304,7 @@ value of $1 investment with dividends reinvested
 - Points outside the fences are outliers. 
     - If you simulate data from a normal distribution, there will typically be very few points outside the fences.
 
-## Box and density plots of annual SPY returns <a href="https://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Box and density plots of annual SPY returns <a href="https://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 ::: {.panel-tabset}
 
@@ -326,8 +325,8 @@ fig.update_layout(
     xaxis_title="Annual Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
-    width=1040,
-    height=520,
+    width=1000,
+    height=500,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -373,8 +372,8 @@ fig.update_layout(
     yaxis_title="",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
-    width=1040,
-    height=520,
+    width=1000,
+    height=420,
      legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -422,6 +421,10 @@ _ = fig.set_size_inches(18,9)
 #| column: page
 
 import statsmodels.formula.api as smf
+import plotly.io as pio
+plotly_template = pio.templates["plotly_dark"]
+colors = plotly_template.layout.colorway
+blue = colors[0]
 
 spy['lag'] = spy.ret.shift()
 spy = spy.dropna()
@@ -433,6 +436,7 @@ trace = go.Scatter(
   mode="markers",
   hovertemplate="%{text}<extra></extra>",
   showlegend=False,
+  marker=dict(size=15)
 )
 fig = go.Figure(trace)
 
@@ -443,7 +447,8 @@ trace = go.Scatter(
   x=spy.lag,
   y=predict,
   mode="lines",
-  name="regression line"
+  name="regression line",
+  line=dict(color=blue)
 )
 
 fig.add_trace(trace)
@@ -454,7 +459,7 @@ fig.update_layout(
     yaxis_title="Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
-    width=1040,
+    width=1000,
     height=520,
 )
 fig.update_xaxes(title_font_size=24)

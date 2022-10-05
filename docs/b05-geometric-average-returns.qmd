@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -90,7 +89,7 @@ The geometric average return is **always less** than the arithmetic average retu
 <p align=center>
 <img src="images/EPoint.png" height=300 width=300> </p>
 
-## Examples <a href=http://bbcx-investments.com/risk/geometric"><img src="images/Rice_Owl.jpg"  style="width:.75in;" align="right"></a>
+## Examples <a href=http://bbcx-investments.com/risk/geometric"><img src="images/Rice_Owl.jpg"  style="width:.65in;" align="right"></a>
 
 - make 50% and lose 50% → geometric average is  
 
@@ -106,8 +105,9 @@ $$\sqrt{2 \times 0.5}-1=0$$
 
 ## Averaging continuously compounded returns
 
-- Recall that compounding continuously at rate $z$ means \$1 will grow to $e^z$ in one year.
-- If the actual return is $r$, then the corresponding continuously compounded return is $\log (1+r)$, because compounding continuously at rate $\log (1+r)$ means \$1 will grow to $e^{\log (1+r)} = 1+r$.
+- Compounding continuously at rate $z$ $\Rightarrow$ \$1 $\rightarrow e^z$ in a year.
+- Actual return is $r$ $\Rightarrow$ continuously compounded return is $\log (1+r)$
+  - because compounding continuously at rate $\log (1+r)$ means \$1 $\rightarrow e^{\log (1+r)} = 1+r$.
 - Make 50% and lose 50% $\Rightarrow$ continuously compounded returns are $\log(1.5)$ and $\log(0.5)$ and average $<0$.
 - Make 100% and lose 50% $\Rightarrow$ continuously compounded returns are
 $\log(2)$ and $\log(0.5)$ and average $=0$.

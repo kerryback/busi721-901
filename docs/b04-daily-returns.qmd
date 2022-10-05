@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -43,8 +42,8 @@ fig.update_layout(
     xaxis_title="",
     yaxis_title="",
     yaxis_tickformat=".0%",
-    width=1040,
-    height=520,
+    width=1000,
+    height=500,
   )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -54,7 +53,7 @@ fig.show()
 SPY = S&P 500 ETF
 
 
-## Box and density plots of daily SPY returns <a href="https://bbcx-investments.com/risk/frequency"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Box and density plots of daily SPY returns <a href="https://bbcx-investments.com/risk/frequency"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 ::: {.panel-tabset}
 
@@ -76,8 +75,8 @@ fig.update_layout(
     yaxis_title="",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
-    width=1040,
-    height=520,
+    width=980,
+    height=440,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -115,8 +114,8 @@ fig.update_layout(
     yaxis_title="",
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
-    width=1040,
-    height=520,
+    width=1000,
+    height=420,
      legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -181,8 +180,8 @@ fig.update_layout(
     yaxis_title="Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
-    width=1040,
-    height=520,
+    width=1000,
+    height=500,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
@@ -209,6 +208,12 @@ _ = plt.title("")
 ## Does today's absolute return predict tomorrow's?
 
 ```{python}
+
+import plotly.io as pio
+plotly_template = pio.templates["plotly_dark"]
+colors = plotly_template.layout.colorway
+blue = colors[0]
+
 spy['absret'] = spy.ret.abs()
 spy['abslag'] = spy.lag.abs()
 trace = go.Scatter(
@@ -218,6 +223,7 @@ trace = go.Scatter(
   mode="markers",
   hovertemplate="%{text}<extra></extra>",
   showlegend=False,
+  marker=dict(size=10)
 )
 fig = go.Figure(trace)
 result = smf.ols("absret ~ abslag", data=spy).fit()
@@ -227,7 +233,8 @@ trace = go.Scatter(
   x=spy.abslag,
   y=spy.predict,
   mode="lines",
-  name="regression line"
+  name="regression line",
+  line=dict(color=blue)
 )
 fig.add_trace(trace)
 fig.update_layout(
@@ -236,8 +243,8 @@ fig.update_layout(
     yaxis_title="Absolute Return",
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
-    width=1040,
-    height=520,
+    width=1000,
+    height=500,
 )
 fig.update_xaxes(title_font_size=24, rangemode="tozero")
 fig.update_yaxes(title_font_size=24, rangemode="tozero")
