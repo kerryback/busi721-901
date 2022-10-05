@@ -10,6 +10,7 @@ format:
   revealjs:
     highlight-style: monokai
     code-fold: true
+    scrollable: true
     slide-number: true
     preview-links: true
     self-contained: true
@@ -54,8 +55,8 @@ fig.update_layout(
     yaxis_title="Account Balance",
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
-    width=1040,
-    height=520,
+    width=1000,
+    height=480,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -150,8 +151,8 @@ fig.update_layout(
     xaxis_title="Year",
     yaxis_title="PV Factor",
     yaxis_tickformat=".0%",
-    width=1040,
-    height=520,
+    width=1000,
+    height=480,
     legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -171,8 +172,7 @@ fig.show()
 - Suppose we invest $x_0$ dollars today, another $x_1$ dollars in 1 year, etc. for $m$ years and earn $r$ per year.  
 - What will we have in $n \ge m$ years?
 - $x_0 \rightarrow (1+r)^nx_0$
-- $x_1 \rightarrow (1+r)^{n-1}x_1$
-- $\ldots, x_m \rightarrow (1+r)^{n-m}x_m$
+- $x_1 \rightarrow (1+r)^{n-1}x_1$, $\ldots, x_m \rightarrow (1+r)^{n-m}x_m$
 - So, we end up with
 
 . . .
@@ -215,9 +215,7 @@ fv = np.sum(x*fvFactors)
 
 - Suppose we want to spend $y_1$ dollars in 1 year, $y_2$ dollars in 2 years, and so on for $n$ years.
 - If we want to finance this from existing savings, how much do we need to have, assuming we earn $r$ each year?
-- We need $y_1/(1+r)$ to finance $y_1$ in 1 year.
-- We need $y_2/(1+r)^2$ to finance $y_2$ in 2 years.
-- Etc., so we need
+- We need $y_1/(1+r)$ to finance $y_1$ in 1 year, $y_2/(1+r)^2$ to finance $y_2$ in 2 years, etc., so we need
 
 . . .
 

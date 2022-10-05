@@ -5,9 +5,11 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
+  cache: true
 format: 
   revealjs:
     highlight-style: monokai
+    scrollable: true
     code-fold: true
     slide-number: true
     preview-links: true
@@ -53,15 +55,15 @@ format:
 
 - Suppose we start with $100 before we flip
 - There are two independent assets, each with possible returns of $\pm$ 10%
-  - Flipping once for \$10 $\sim$ putting all \$100 in a single asset
-  - Flipping twice for \$5 $\sim$ putting \$50 in each
+  - Put all \$100 in a single asset $\leftrightarrow$ flip once for \$10
+  - Put \$50 in each asset $\leftrightarrow$ flip twice for \$5
 - Call the assets 1 and 2 with random returns $r_1$ and $r_2$
-- The portfolio return $r_p = (1/2) r_1 + (1/2) r_2$ is less risky than either $r_1$ or $r_2$.
+- The portfolio return is less risky than either $r_1$ or $r_2$.
 
 
 ## Portfolio Returns
 
-- Consider a $100,000 portfolio with 40%  in one asset (Asset 1) and 60% in a second (Asset 2).
+- Consider a $100,000 portfolio with 40%  in one asset (asset 1) and 60% in a second (asset 2).
 - Suppose asset 1 $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
 - Suppose asset 2 $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
 - $100,000 $\rightarrow$ $114,000
@@ -92,8 +94,18 @@ $$w_1r_1 + w_2r_2 - (w_1 \bar{r}_1 +w_2\bar{r}_2)$$
 
 $$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
 
-- $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is the sum of [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"},
- [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"}, and [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"}.
+# 
+
+- The deviation of the portfolio return from its mean is 
+
+. . .
+
+$$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
+
+- and $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is  sum of 
+  - [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"},
+  - [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"}, 
+  - [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"}.
 
 #
 
@@ -120,24 +132,38 @@ $$\left(\frac{1}{2}\right)^2 100\text{%}^2 + \left(\frac{1}{2}\right)^2 100\text
 
 - portfolio std dev is $\sqrt{50}\text{%}= 7.07\text{%}$
 
+## Correlation and covariance {auto-animate=true}
+
+Set $\rho$ = correlation between $r_1$ and $r_2$
+<br>
+$\text{cov}(r_1, r_2) = \rho \times \text{std}(r_1) \times \text{std}(r_2)$
+
+. . .
+
+so portfolio variance is
+<br>
+$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2)$$
+<br>
+plus
+<br>
+$$2 w_1 w_2 \times \rho \times\text{std}(r_1)\times\text{std}(r_2)$$
+
+. . .
+
+[Portfolio variance is lower when correlation is lower]{style="color:tomato; font-weight:bold;"}
+
+
 ## Correlation, covariance, and beta
 
-- $\rho = $ correlation between $r_1$ and $r_2$
-- $\text{cov}(r_1, r_2) = \rho \times \text{stdev}(r_1) \times \text{stdev}(r_2)$
-- so portfolio variance is
+. . .
+
+The slope of the regression line of $r_2$ on $r_1$ is
 
 . . .
 
-$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)$$
+$$\beta = \frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \rho \times \frac{\text{std}(r_2)}{\text{std(r_1)}}$$
 
-- [Portfolio variance is lower when correlation is lower]{style="color:tomato; font-weight:bold;"}
-- If we regress $r_2$ on $r_1$, the slope of the regression line is
-
-. . .
-
-$\beta = \frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \rho \times \frac{\text{stdev}(r_2)}{\text{stdev}(r_1)}$$
-
-## Monthly CVX and AAPL returns since 2016
+## Monthly returns of CVX and AAPL 2017--2021
 
 :::: {.columns}
 ::: {.column width="55%"}
@@ -145,7 +171,12 @@ $\beta = \frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \rho \times \frac{\text{
 ```{python}
 from pandas_datareader import DataReader as pdr
 import plotly.express as px
-rets = pdr(['cvx', 'aapl'], "yahoo", start=2016)['Adj Close']  
+rets = pdr(
+  ['cvx', 'AAPL'], 
+  "yahoo", 
+  start="2016-12-01", 
+  end="2021-12-31"
+)['Adj Close']  
 rets = rets.resample('M').last().pct_change().dropna() 
 rets.index = rets.index.to_period('M').astype(str)
 rets = rets.reset_index()
@@ -174,90 +205,109 @@ fig.update_layout(
     width=520,
     height=520,
   )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+fig.update_xaxes(title_font_size=20)
+fig.update_yaxes(title_font_size=20)
+fig.update_layout(font_size=16)
 fig.show()
 ```
 :::
 ::: {.column width="45%"}
 ```{python}
 print(f"std dev of CVX is {rets.CVX.std(): .2%}")
-print(f"std dev of APPL is {rets.AAPL.std(): .2%}")
+print(f"std dev of AAPL is {rets.AAPL.std(): .2%}")
 print(f"corr is {rets.AAPL.corr(rets.CVX): .3f}")
 print(f"cov is {100*100*rets.AAPL.cov(rets.CVX): .1f}%^2")
 print(f"beta is {rets.AAPL.cov(rets.CVX)/rets.CVX.var(): .2f}")
 ```
 :::
 ::::
-#
+
+## Monthly returns of CVX and XOM 2017--2021
 
 :::: {.columns}
-::: {.column width="100%"}
-- $var(r_{p})$ is smaller when the covariance is smaller.
-- Covariance is correlation times product of standard deviations, so $var(r_{p})$ is smaller when the covariance is smaller.
+::: {.column width="55%"}
+
+```{python}
+from pandas_datareader import DataReader as pdr
+import plotly.express as px
+rets = pdr(
+  ['cvx', 'xom'], 
+  "yahoo", 
+  start="2016-12-01", 
+  end="2021-12-31"
+)['Adj Close']  
+rets = rets.resample('M').last().pct_change().dropna() 
+rets.index = rets.index.to_period('M').astype(str)
+rets = rets.reset_index()
+rets.columns = ['date', 'CVX', 'XOM'] 
+
+fig = px.scatter(
+        rets,
+        x="CVX",
+        y="XOM",
+        trendline="ols",
+        hover_data=dict(XOM=False, CVX=False, date=False),
+        hover_name="date",
+    )
+
+fig.update_traces(
+        marker=dict(size=12, line=dict(width=2, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
+)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="CVX Return",
+    yaxis_title="XOM Return",
+    yaxis_tickformat=".0%",
+    xaxis_tickformat=".0%",
+    width=520,
+    height=520,
+  )
+fig.update_xaxes(title_font_size=20)
+fig.update_yaxes(title_font_size=20)
+fig.update_layout(font_size=16)
+fig.show()
+```
+:::
+::: {.column width="45%"}
+```{python}
+print(f"std dev of CVX is {rets.CVX.std(): .2%}")
+print(f"std dev of XOM is {rets.XOM.std(): .2%}")
+print(f"corr is {rets.XOM.corr(rets.CVX): .3f}")
+print(f"cov is {100*100*rets.XOM.cov(rets.CVX): .1f}%^2")
+print(f"beta is {rets.XOM.cov(rets.CVX)/rets.CVX.var(): .2f}")
+```
 :::
 ::::
 
+## Some portfolios
 
-## Portfolio Variance with n Assets
+```p
+cvx = 0.0818
+aapl = 0.0850
+xom = 0.0858
+cvx_aapl = 0.153
+cvx_xom = 0.889
+w1 = 0.5
+w2 = 0.5
 
-$$\small var(r_{p})=\sum_{i=1}^n w_{i}^2var(r_i)+2\sum_{i=1}^n \sum_{j=i+1}^n w_{i}w_{j}cov(r_{i},r_{j})$$
+# 50% CVX and 50% AAPL
+w1**2 * cvx**2 + w2**2 * aapl**2 + 2*w1*w2*cvx_aapl*cvx*aapl
 
-There are $\frac{n(n-1)}{2}$ covariance terms. 
+# 50% CVX and 50% XOM
+w1**2 * cvx**2 + w2**2 * xom**2 + 2*w1*w2*cvx_xom*cvx*xom
+```
+
+## Results
+
+- std dev of CVX/XOM is 8.14%
+- std dev of CVX/AAPL is 6.33%
+- compared to
+  - std dev of CVX is 8.18%
+  - std dev of XOM is 8.58%
+  - std dev of AAPL is 8.50%
 
 
-## A Simple Case 
 
-$n$ assets, all variances are the same = $\sigma^2$, \
-all correlations are the same = $\rho$, \
-all weights = $\frac{1}{n}$.
 
-<p align=center> <img src="images/puzzle-2500328_1920.jpg" height=200 width=500></p>
-
-. . .
-
-$$\small var(r_{p})=\sum_{i=1}^n (\frac{1}{n})^2\sigma^2+2\sum_{i=1}^n \sum_{j=i+1}^n (\frac{1}{n})^2\rho\sigma^2$$
-
-. . .
-
-$$\small var(r_{p})=\frac{1}{n}\sigma^2+\frac{n-1}{n}\rho\sigma^2 \rightarrow \rho\sigma^2$$
-
-## 3C
-
-<p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
-</p>
-
-## 2A
-
-<p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
-</p>
-
-## Portfolio Std Dev < Weighted Average of Asset Std Devs
-
-$$\small (w_{A}\sigma_{A}+w_{B}\sigma_{B})^2=w_{A}^2\sigma_{A}^2+w_{B}^2\sigma_{B}^2+2w_{A}w_{B}\sigma_{A}\sigma_{B}$$
-
-same as $var_{p}$ except no correlation in the last term. So,  
-$$(w_{A}\sigma_{A}+w_{B}\sigma_{B})^2>var(r_{p})$$
-
-## Some Diversification Usually Lowers Risk
-
-Compare holding only asset B to holding some mix of A and B. 
-
-. . .
-
-Substitute $w_{B}=(1-w_{A})$. Variance in general is 
-
-$$\small w_{A}^2\sigma_{A}^2+(1-w_{A})^2\sigma_{B}^2+2w_{A}(1-w_{A})\rho\sigma_{A}\sigma_{B}$$
-
-. . .
-
-Derivative with respect to $w_{A}$ evaluated at $w_{A}$=0:
-
-$$\small 2w_{A}\sigma^2_{A}-2(1-w_{A})\sigma^2_{B}+2(1-2w_{A})\rho\sigma_{A}\sigma_{B}=-2\sigma^2_{B}+2\rho\sigma_{A}\sigma_{B}$$
-
-. . .
-
-Risk is **lowered** by $w_{A}$ $\uparrow$ when $\rho\sigma_{A}<\sigma_{B}$

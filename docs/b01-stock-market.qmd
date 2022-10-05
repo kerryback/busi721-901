@@ -11,6 +11,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade

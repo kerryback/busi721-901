@@ -11,6 +11,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade
@@ -68,7 +69,7 @@ $$\text{FV(Principal)} = \text{FV(Payments)}$$
 - Because future values are equal, present values are also equal.
 - The present value of the amount borrowed is just the amount (prinicpal).
 - So loan terms are related by Principal = PV of payments.
-- With a monthly payment of $P$, a monthly rate of $r_m$, and a loan term of $T$ years, the PV of payments is
+- The PV of payments is
 
 . . .
 

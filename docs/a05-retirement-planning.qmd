@@ -11,6 +11,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade
@@ -61,6 +62,12 @@ We'll first track it in a loop, then use future values.
 - Our account balance today is $B_0$.
 - We earn a monthly return $r$.
 
+## Constant dollars
+
+- It is most useful to do this exercise in today's dollars.
+- Think about what your deposits and withdrawals will be in today's dollars.
+- The monthly return should be the real return.
+
 ## Deposit period
 
 
@@ -73,12 +80,17 @@ the future value $(1+r)^2 B_0 + (1+r)D_1 + D_2$.
 
 $$B_R = (1+r)^R B_0 + (1+r)^{R-1} D_1  + \cdots +  D_R$$
 
-## Withdrawals and final balance
-
+## Withdrawals
 - At date $R$, we also make a withdrawal $W_R$
 - Then earn $r$ and make another withdrawal $W_{R+1}$.
-- The account balance evolves always as the future value of all prior deposits and withdrawals.
-- The ending balance is
+- Continue through the last withdrawal at $T-1$.
+- The account balance evolves always as the future value of all past deposits and withdrawals.
+
+## Ending balance
+
+. . .
+
+The ending balance is
 
 . . .
 
@@ -87,6 +99,7 @@ $$(1+r)^T B_0 + (1+r)^{T-1}D_1 + \cdots + (1+r)^{T-R}D_R$$
 . . .
 
 minus
+
 $$(1+r)^{T-R}W_R + \cdots + (1+r)W_{T-1}$$
 
 ## Deposit and withdrawal arrays
@@ -169,6 +182,5 @@ D1 = (z*W1 - x*B0) / y
 
 ## Success!
 
-<p align=center>
-<img src="images/richinshades.jpg" width=900 >
-</p>
+![](images/richinshades.jpg)
+

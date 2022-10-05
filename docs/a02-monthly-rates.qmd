@@ -11,6 +11,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade
@@ -48,5 +49,4 @@ $$(1+r/n)^n \rightarrow e^r$$
 
 - We say that an annual rate of $r$ compounded **continuously** produces an effective annual rate of $e^r-1$.
 - For example, 12\% compounded continuously implies an effective annual rate of $e^{0.12}-1 = 0.12750$.
-- Given an effective annual rate of $r_a$, the corresponding monthly compounded rate is $(1+r_a)^{1/12}-1$.
 - Given an effective annual rate of $r_a$, the corresponding continuously compounded rate is $\log (1+r_a)$.
