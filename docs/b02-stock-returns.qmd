@@ -17,6 +17,7 @@ format:
     transition: fade
     theme: [solarized, 721.scss]
     incremental: true
+    multiplex: true
 ---
 
 ## Daily Returns 
@@ -24,13 +25,13 @@ format:
 :::: {.columns}
 
 ::: {.column width="50%"}
-<img src="images/WallStreet.jpg" height=400 width=500>
+<img src="images/WallStreet.jpg" height=350 width=500>
 :::
 
 ::: {.column width="50%"}
 - Let's compute close-to-close daily stock returns.  Let P~t~ denote the price at close on day t. 
 
-- If there are no dividends, then the gain on day t is P~t~ - P~t-1~. 
+- If no dividends,  the gain on day t is P~t~ - P~t-1~. 
 :::
 
 ::::
@@ -139,8 +140,8 @@ $$
 
 . . .
 
-- \$1.34 of the value of CVX at close on Aug 17 was the value of the dividend.
-The adjusted price is the value without right to the dividend.
+- \$1.34 of the value ofat close on Aug 17 was the dividend.
+Adjusted price is the value without dividend.
 
 #  
 All prior adjusted prices were re-adjusted on Aug 18 by the factor 

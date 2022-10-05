@@ -21,11 +21,11 @@ format:
 
 ## Stock exchanges
 
-- NYSE, Nasdaq, regional exchanges, foreign exchanges are organized as limit order books.
+- NYSE, Nasdaq, etc. are organized as limit order books.
 - A limit order is an order with a price specified.
   - Buy at price of x or less
   - Sell at price of x or more
-- If not immediately executable, it goes into the "book."
+  - If not immediately executable, it goes into the "book."
 - Market orders are orders to trade "at market," taking whatever price is available.
 - Your broker is required to route your executable order to the venue offering the best price.
 
@@ -52,8 +52,7 @@ The bid-ask spread is 180.02--180.03.
 - Mutual funds etc. typically execute trades over several days, trading a small amount at a time, to minimize the price impacts of their trades.
   - Brokers provide algorithms optimized to minimize price impacts.
 - High frequency trading (HFT) is a different kind of automated trading.
-  - HFTs look for favorable trades in related securities
-  -  opportunities that may only exist for only a millisecond and only earn a penny a share or less
+  - HFTs look for opportunities that may only exist for only a millisecond and only earn a penny a share or less.
 
 
 ## Internalization and payment for order flow <a href="https://www.youtube.com/embed/2HSWM3fKldY"><img src="images/youtube2.jpg" style="height:0.5in;" align="right"></a>
