@@ -120,7 +120,27 @@ $$\left(\frac{1}{2}\right)^2 100\text{%}^2 + \left(\frac{1}{2}\right)^2 100\text
 
 - portfolio std dev is $\sqrt{50}\text{%}= 7.07\text{%}$
 
-#
+## Correlation, covariance, and beta
+
+- $\rho = $ correlation between $r_1$ and $r_2$
+- $\text{cov}(r_1, r_2) = \rho \times \text{stdev}(r_1) \times \text{stdev}(r_2)$
+- so portfolio variance is
+
+. . .
+
+$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)$$
+
+- [Portfolio variance is lower when correlation is lower]{style="color:tomato; font-weight:bold;"}
+- If we regress $r_2$ on $r_1$, the slope of the regression line is
+
+. . .
+
+$\beta = \frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \rho \times \frac{\text{stdev}(r_2)}{\text{stdev}(r_1)}$$
+
+## Monthly CVX and AAPL returns since 2016
+
+:::: {.columns}
+::: {.column width="55%"}
 
 ```{python}
 from pandas_datareader import DataReader as pdr
@@ -145,11 +165,31 @@ fig.update_traces(
         selector=dict(mode="markers"),
 )
 
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="CVX Return",
+    yaxis_title="AAPL Return",
+    yaxis_tickformat=".0%",
+    xaxis_tickformat=".0%",
+    width=520,
+    height=520,
+  )
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
 fig.show()
-print("std dev of APPL is", rets.AAPL.std())
 ```
-
-
+:::
+::: {.column width="45%"}
+```{python}
+print(f"std dev of CVX is {rets.CVX.std(): .2%}")
+print(f"std dev of APPL is {rets.AAPL.std(): .2%}")
+print(f"corr is {rets.AAPL.corr(rets.CVX): .3f}")
+print(f"cov is {100*100*rets.AAPL.cov(rets.CVX): .1f}%^2")
+print(f"beta is {rets.AAPL.cov(rets.CVX)/rets.CVX.var(): .2f}")
+```
+:::
+::::
 #
 
 :::: {.columns}
