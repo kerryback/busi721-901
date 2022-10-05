@@ -25,7 +25,7 @@ format:
 - However, what one anticipates earning on a bond varies with the market price.
   - Price < par $\Rightarrow$ coupon + capital gain
   - Price > par $\Rightarrow$ coupon - capital loss
-- What one would earn per year on a bond if held to maturity (assuming no default) is called the [bond yield]{style="color:tomato;"}.
+- What one would earn per year on a bond if held to maturity (assuming no default) is called the [bond yield]{style="color:tomato; font-weight:bold;"}.
 
 ## Definition of bond yield
 
