@@ -24,15 +24,13 @@ format:
 :::: {.columns}
 ::: {.column-width="50%"}
 - What is the risk of one coin flip for $10?
-  - The mean outcome is zero.
-  - The possible deviations from the mean are +10 and -10.
+  - The possible deviations from the mean are +10 and --10.
 :::
 ::: {.column-width="50%"}
 - What is the risk of two coin flips for $5 each?
-  - The mean outcome is zero.
-  - The possible deviations are 
+  - The possible deviations from the mean are 
     - +10 (prob 1/4), 
-    - -10 (prob 1/4) and 
+    - --10 (prob 1/4) and 
     - [0 (prob 1/2)]{style="color:tomato; font-weight:bold;"}.
 :::
 ::::
@@ -50,16 +48,6 @@ format:
 - Standard deviation is square root of variance
   - Flipping once for \$10 $\Rightarrow$ std dev = 10
   - Flipping twice for \$5 $\Rightarrow$ std dev = 7.07
-
-## Investment interpretation
-
-- Suppose we start with $100 before we flip
-- There are two independent assets, each with possible returns of $\pm$ 10%
-  - Put all \$100 in a single asset $\leftrightarrow$ flip once for \$10
-  - Put \$50 in each asset $\leftrightarrow$ flip twice for \$5
-- Call the assets 1 and 2 with random returns $r_1$ and $r_2$
-- The portfolio return is less risky than either $r_1$ or $r_2$.
-
 
 ## Portfolio Returns
 
@@ -96,13 +84,14 @@ $$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
 
 # 
 
-- The deviation of the portfolio return from its mean is 
-
-. . .
+The deviation of the portfolio return from its mean is 
 
 $$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
 
-- and $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is  sum of 
+. . .
+
+and $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is  sum of 
+
   - [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"},
   - [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"}, 
   - [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"}.
@@ -121,10 +110,18 @@ $$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)
 
 ## 2 Coin Flips Example
 
+- Suppose we start with $100 
+- There are two independent assets, each with possible returns of $\pm$ 10%
+  - Put all \$100 in a single asset $\leftrightarrow$ flip once for \$10
+  - Put \$50 in each asset $\leftrightarrow$ flip twice for \$5
 - std dev $r_1 = 10\text{%}$ $\Rightarrow$ var $r_1 = 100\text{%}^2$
 - std dev $r_2 = 10\text{%}$ $\Rightarrow$ var $r_2 = 100\text{%}^2$
-- coin flips are independent, so cov $= 0$
-- with weights = 1/2, portfolio variance is
+- assets are independent, so cov $= 0$
+
+# 
+
+- put $50 in each asset $\Rightarrow$ weights = 1/2
+- portfolio variance is
 
 . . .
 
@@ -132,36 +129,35 @@ $$\left(\frac{1}{2}\right)^2 100\text{%}^2 + \left(\frac{1}{2}\right)^2 100\text
 
 - portfolio std dev is $\sqrt{50}\text{%}= 7.07\text{%}$
 
-## Correlation and covariance {auto-animate=true}
+## Correlation and covariance 
 
-Set $\rho$ = correlation between $r_1$ and $r_2$
-<br>
-$\text{cov}(r_1, r_2) = \rho \times \text{std}(r_1) \times \text{std}(r_2)$
+- $\text{cov} = \text{corr} \times \text{std}(r_1) \times \text{std}(r_2)$, 
+so portfolio var is
 
 . . .
 
-so portfolio variance is
-<br>
 $$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2)$$
-<br>
+
+. . .
+
 plus
 <br>
-$$2 w_1 w_2 \times \rho \times\text{std}(r_1)\times\text{std}(r_2)$$
+$$2 w_1 w_2 \times \text{corr}(r_1, r_2) \times\text{std}(r_1)\times\text{std}(r_2)$$
 
 . . .
 
-[Portfolio variance is lower when correlation is lower]{style="color:tomato; font-weight:bold;"}
+[Portfolio variance is lower when correlation is lower.]{style="color:tomato; font-weight:bold;"}
 
 
 ## Correlation, covariance, and beta
 
 . . .
 
-The slope of the regression line of $r_2$ on $r_1$ is
+The slope (beta) of the regression line of $r_2$ on $r_1$ is
 
 . . .
 
-$$\beta = \frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \rho \times \frac{\text{std}(r_2)}{\text{std(r_1)}}$$
+$$\frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \text{corr}(r_1, r_2) \times \frac{\text{std}(r_2)}{\text{std}(r_1)}$$
 
 ## Monthly returns of CVX and AAPL 2017--2021
 
@@ -281,6 +277,12 @@ print(f"beta is {rets.XOM.cov(rets.CVX)/rets.CVX.var(): .2f}")
 :::
 ::::
 
+## CVX, AAPL, and XOM portfolios
+
+- The volatilities (std devs) of AAPL and XOM were very similar over the 2017-2021 period.
+- If you combined either with CVX, did you have similar volatilities over the period?
+- AAPL is a much better diversification play than XOM for someone holding CVX.
+
 ## Some portfolios
 
 ```p
@@ -301,8 +303,8 @@ w1**2 * cvx**2 + w2**2 * xom**2 + 2*w1*w2*cvx_xom*cvx*xom
 
 ## Results
 
-- std dev of CVX/XOM is 8.14%
-- std dev of CVX/AAPL is 6.33%
+- std dev of CVX with XOM is 8.14%
+- std dev of CVX with AAPL is 6.33%
 - compared to
   - std dev of CVX is 8.18%
   - std dev of XOM is 8.58%
