@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -43,8 +42,8 @@ fig.update_layout(
     xaxis_title="Year",
     yaxis_title="Coupons and Face Value",
     yaxis_tickprefix="$",
-    width=1040,
-    height=520,
+    width=1000,
+    height=440,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)

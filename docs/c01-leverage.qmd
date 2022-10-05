@@ -21,7 +21,7 @@ format:
 
 :::: {.columns}
 ::: {.column width="30%"}
-<br><br>
+<br><br><br><br>
 Investing borrowed money is called leverage.
 
 :::
@@ -35,7 +35,9 @@ Your own money gains extra force.
 
 . . .
 
+<p align=center>
 The return, good or bad, on each $1 is amplified.
+</p>
 
 ## Example
 
@@ -53,7 +55,6 @@ Invest $100,000.  Borrow $50,000.  Buy $150,000 of stocks.
 | ---    |
 | 100,000
 
-. . .
 
 - Leverage ratio = assets to equity.
 - You are levered 1.5 to 1.
@@ -73,10 +74,8 @@ Suppose the stocks go up 10% and you're charged 2% interest on the loan.
 | ---    |
 | 114,000 |
 
-. . .
-
 - You made 10% plus one half of (10% minus 2%) $= 0.10 + 0.5(0.10-0.02) = 0.14$
-- The "one-half" is because you matched your money with another 50% of borrowed money.
+- "one-half"  because you borrowed 50%.
 
 ## Conclusion
 
@@ -119,10 +118,9 @@ $$-10\text{%} \rightarrow -16\text{%}$$
 - It pays to shop around.
 - Interactive Brokers charges 
   - the Fed Funds rate plus 1.5% on the first $100,000, 
-  - the Fed Funds rate plus 1% on the next $900,000, 
   - and falling further after that.
 - Oct 1, 2022:
   - Fed Funds rate = 3.08%
   - Prime rate = 6.25%
-  - Mortgage rate = 7.5%
+ 
 

@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -73,7 +72,7 @@ The yield is
 
 $$y = 2r$$
 
-## Yield and Price <a href="https://bbcx-investments.com/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Yield and Price <a href="https://bbcx-investments.com/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 5 year bond, 6% coupon, $100 face
 
@@ -117,8 +116,8 @@ fig.show()
 
 ## Price sensitivity to market rates
 
-- When market [rates rise]{style="color:tomato;"}, a bond [price falls]{style="color:tomato;"} until its yield is commensurate with market rates.
-- When market [rates fall]{style="color:tomato;"}, a bond [price rises]{style="color:tomato;"} until its yield is commensurate with market rates.
+- When market [rates rise]{style="color:tomato; font-weight:bold"}, a bond [price falls]{style="color:tomato; font-weight:bold"} until its yield is commensurate with market rates.
+- When market [rates fall]{style="color:tomato; font-weight:bold"}, a bond [price rises]{style="color:tomato; font-weight:bold"} until its yield is commensurate with market rates.
 
 . . .
 
@@ -183,15 +182,14 @@ fig.show()
 
 ## Credit ratings
 
-- Issuers are rated by S&P and Moody's (and Fitch)
+- Issuers are rated by S&P, Moody's and Fitch
   - AAA=best quality
   - AA
   - A
   - BBB=worst investment grade
   - BB=best non-investment grade (= junk = high-yield)
-  - B
-  - etc.
-- There are +'s and -'s.  Moody's uses baa instead of BBB, etc.
+  - B, etc. (D is default)
+- And +'s and -'s.  Moody's uses baa instead of BBB, etc.
 
 ## Credit spreads
 
