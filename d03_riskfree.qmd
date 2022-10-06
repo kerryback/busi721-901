@@ -1,0 +1,36 @@
+:::: {.columns}
+
+::: {.column width=50}
+Part I
+
+[Diversification](d01-diversification.html)
+
+[More Diversification](d02-more-diversification.html)
+
+[Efficient Frontier](d05-efficient-frontier.html)
+
+[Alphas and Betas](e04-alphas-and-betas.html)
+
+[Capital Asset Pricing Model](e05-capital-asset-pricing-model.html)
+:::
+
+::: {.column width=50}
+Part II
+
+[Preferences](d06-preferences.html)
+
+
+[Different Borrowing and Saving Rates](e01-borrowing-and-saving-rates.html)
+
+[Portfolio Constraints](e02-portfolio-constraints.html)
+
+[Stocks, Bonds, and Gold](e03-stocks-bonds-and-gold.html)
+
+[Estimating Parameters](d02-estimating-parameters.html)
+
+
+
+
+:::
+
+::::

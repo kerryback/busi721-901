@@ -5,13 +5,15 @@ Part I
 
 [Diversification](d01-diversification.html)
 
-[Expected Return and Risk](d03-expected-return-and-risk.html)
+[More Diversification](d02-more-diversification.html)
 
-[Efficient Frontier](d05-efficient-frontier.html)
+[Saving and Borrowing](d03-riskfree.html)
 
-[Alphas and Betas](e04-alphas-and-betas.html)
+[Efficient Frontier](d04-efficient-frontier.html)
 
-[Capital Asset Pricing Model](e05-capital-asset-pricing-model.html)
+[Alphas and Betas](d05-alphas-and-betas.html)
+
+[Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
 :::
 
 ::: {.column width=50}
