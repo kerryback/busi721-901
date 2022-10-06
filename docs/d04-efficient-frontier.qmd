@@ -1,6 +1,6 @@
 ---
-title:  "Portfolios: Efficient Frontier"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+title:  "Mean-Variance Frontier"
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
 output-dir: docs
 execute:
   echo: false
@@ -15,14 +15,175 @@ format:
     transition: fade
     theme: [solarized, 721.scss]
     incremental: true
+    scrollable: true
 ---
 
-## Simplifying Assumptions
+## Objective
 
-1. Borrow and save at same rate
-2. Can short w/o borrowing fee
-3. Get full interest rate on short sale proceeds
-4. No margin requirements
+- For any target expected return, find the least-risk portfolio.
+  - Go as far left as possible in the mean -- standard deviation plot.
+- The (expected return, least risk) pairs are called the mean-variance frontier.
+- Least-risk portfolios are frontier portfolios.
+
+## Borrow and save at same rate
+
+- Assume $r_s=r_b=r_f$ (risk-free rate).
+- Set $x_f = x_s - x_b$.
+- portfolio expected return is
+$x_f r_f + w^\top \bar{r}$.
+
+- The accounting identify $x_s + \sum_{i=1}^n w_i = 1 + x_b$ implies $x_f$ is 1 minus sum of $w_i$ (which is $w^\top 1_n$) so portfolio expected return is
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+
+## No Short Sales Constraints
+
+
+- Assume short w/o borrowing fee 
+  - implies return on a short is minus the return on the asset
+  - contribution of a short to portfolio return is $w_i r_i$ (with $w_i<0$)
+- All previous formulas are valid with no sign constraints on $w_i$.
+
+## No margin requirements
+
+- Assume no Fed Reg T to limit positions.
+- Assume full use of short proceeds to buy other assets or to save (get full interest).
+- Only limit on positions is the accounting identity $x_f = 1 - w^\top 1_n$, which we've built in to the expected return formula
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+## Find a frontier portfolio
+
+- Let $\bar{r}_{\text{targ}}$ be target expected return.
+- Minimize $w^\top C w$
+
+. . .
+
+subject to 
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n) = \bar{r}_{\text{targ}}$$
+
+- This is like "choose output quantities to minimize production cost subject to achieving target revenue."
+
+## Optimality principle
+
+- Ratio of marginal benefit to marginal cost must be same for all choice variables.
+- Marginal benefit of $w_i$ is the risk premium $\bar{r}_i-r_f$ that appears in the constraint.
+- Marginal cost is how the variance changes with a small change in $w_i$.
+
+## Marginal cost
+
+- Variance is
+
+. . .
+
+$$\sum_{i=1}^n w_i^2\sigma_i^2 + 2 \sum_{i=1}^n \sum_{j=i+1}^n w_iw_j\sigma_{ij}$$
+
+- The terms that involve any given $w_i$ are
+
+. . .
+
+$$w_i^2\sigma_i^2 + 2 \sum_{j \neq i} w_iw_j\sigma_{ij}$$
+
+#
+
+- The derivative with respect to $w_i$ is (with $\sigma_{ii} = \sigma_i^2$)
+
+. . .
+
+$$2 \sum_{j=1}^n w_j \sigma_{ij}$$
+
+- The sum equals $C_i^\top w$ where $C_i$ is the $i$th column of the covariance matrix.
+
+## Equate benefit-cost ratios
+
+- Equal benefit-cost ratios means $(\bar{r}_i-r_f)/C_i^\top w =k$  for all $i$.
+- Rearrange: $k C_i^\top w = \bar{r}_i - r_f$
+
+- Stack: $k C w = \bar{r} - r_f 1_n$
+
+- Solve: 
+
+. . .
+
+$$w = (1/k)C^{-1}(\bar{r}-r_f1_n)$$
+
+## Find the constant
+
+- The portfolio expected return is
+
+. . .
+
+$$r_f + \frac{1}{k}(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)$$
+
+- Equating to the target gives
+
+. . .
+
+$$k = \frac{\bar{r}_{\text{targ}}-r_f}{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}$$
+
+
+## Example
+
+```{.p}
+import numpy as np
+rf = 0.02
+mn1, mn2, mn3 = 0.06, 0.08, 0.10
+sd1, sd2, sd3 = 0.1, 0.15, 0.12
+corr12, corr13, corr23 = 0.5, 0.7, 0.6
+targ = 0.09
+```
+
+## Solution of the example
+```{.p}
+
+S = np.diag([sd1, sd2, sd3])
+R = np.identity(3)
+R[0, 1] = R[1, 0] = corr12
+R[0, 2] = R[2, 0] = corr13
+R[1, 2] = R[2, 1] = corr23
+C = S @ R @ S
+
+rprem = np.array([mn1, mn2, mn3]) - rf
+```
+
+
+## Mean-Variance frontier 
+
+- The frontier portfolios are all scalar multiples of the vector $C^{-1}(\bar{r}-r_f1_n)$.
+- The scalar determines how much is saved or borrowed.
+- For some value of the scalar, there is no saving or borrowing.
+- For this value of the scalar, the portfolio is called the [tangency portfolio]{style="color:tomato; font-weight:bold"}.
+- The mean-variance frontier is the line from the risk-free rate through the tangency portfolio.
+
+
+
+## Tangency
+
+- Consider the same minimum variance problem but without saving or borrowing.
+- This adds the constraint $1_n^\top w=1$.
+- This frontier is a hyperbola.
+- The line through the tangency portfolio just touches the hyperbola.  It is tangent to the hyperbola at the tangency portfolio.
+
+
+#
+
+- risky assets without saving or borrowing
+
+. . .
+
+- the hyperbola
+
+. . .
+
+- tangency
 
 . . .
 

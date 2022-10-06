@@ -1,5 +1,5 @@
 ---
-title:  "Selling Short"
+title:  "Short Selling"
 author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
 output-dir: docs
 execute:

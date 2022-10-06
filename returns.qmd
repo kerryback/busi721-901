@@ -21,7 +21,7 @@ Part II
 
 [Leverage](c01-leverage.html)
 
-[Selling Short](c02-short-sales.html)
+[Short Selling](c02-short-sales.html)
 
 [Funds](c03
 -funds.html)
