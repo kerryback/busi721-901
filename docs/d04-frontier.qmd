@@ -20,8 +20,18 @@ format:
 
 ## Objective
 
-- For any target expected return, find the least-risk portfolio.
-  - Go as far left as possible in the mean -- standard deviation plot.
+. . .
+
+For any target expected return, find the least-risk portfolio.
+
+. . .
+
+<img src="images/riskdial.jpg" height="500" width="1040" align="center">
+
+
+## Frontier
+
+- Find the least-risk portfolio for various target expected returns.
 - The (expected return, least risk) pairs are called the mean-variance frontier.
 - Least-risk portfolios are frontier portfolios.
 
@@ -51,7 +61,7 @@ $$r_f + w^\top (\bar{r}-r_f1_n)$$
 
 - Assume no Fed Reg T to limit positions.
 - Assume full use of short proceeds to buy other assets or to save (get full interest).
-- Only limit on positions is the accounting identity $x_f = 1 - w^\top 1_n$, which we've built in to the expected return formula
+- Only limit on positions is the accounting identity $x_f = 1 - w^\top 1_n$, which we've built in to the expected return formula:
 
 . . .
 
@@ -129,7 +139,7 @@ $$r_f + \frac{1}{k}(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)$$
 
 . . .
 
-$$k = \frac{\bar{r}_{\text{targ}}-r_f}{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}$$
+$$k = \frac{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}{\bar{r}_{\text{targ}}-r_f}$$
 
 
 ## Example
@@ -146,7 +156,7 @@ targ = 0.09
 ```
 
 ## Solution of the example
-```{.p code-line-numbers="1-6|8|9|10"}
+```{.p code-line-numbers="1-6|8|9|10|11"}
 S = np.diag([sd1, sd2, sd3])
 R = np.identity(3)
 R[0, 1] = R[1, 0] = corr12
@@ -156,7 +166,7 @@ C = S @ R @ S
 
 rprem = np.array([mn1, mn2, mn3]) - rf
 Cinv = np.linalg.inv(C)
-k = (targ-rf) / (rprem @ Cinv @ rprem)
+k = (rprem @ Cinv @ rprem) / (targ-rf)
 w = (1/k) * Cinv @ rprem
 ```
 
