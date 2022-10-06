@@ -1,0 +1,364 @@
+---
+title:  "The Frontier in Pictures"
+author: <br>BUSI 721, Fall 2022<br>JGSB, Rice University<br><br>Kerry Back
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+    scrollable: true
+---
+
+## Objective
+
+- For any target expected return, find the least-risk portfolio.
+  - Go as far left as possible in the mean -- standard deviation plot.
+- The (expected return, least risk) pairs are called the mean-variance frontier.
+- Least-risk portfolios are frontier portfolios.
+
+## Borrow and save at same rate
+
+- Assume $r_s=r_b=r_f$ (risk-free rate).
+- Set $x_f = x_s - x_b$.
+- portfolio expected return is
+$x_f r_f + w^\top \bar{r}$.
+
+- The accounting identify $x_s + \sum w_i = 1 + x_b$ implies $x_f = 1-\sum w_i$, so portfolio expected return is
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+
+## No Short Sales Constraints
+
+
+- Assume short w/o borrowing fee 
+  - implies return on a short is minus the return on the asset
+  - contribution of a short to portfolio return is $w_i r_i$ (with $w_i<0$)
+- All previous formulas are valid with no sign constraints on $w_i$.
+
+## No margin requirements
+
+- Assume no Fed Reg T to limit positions.
+- Assume full use of short proceeds to buy other assets or to save (get full interest).
+- Only limit on positions is the accounting identity $x_f = 1 - w^\top 1_n$, which we've built in to the expected return formula
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+## Find a frontier portfolio
+
+- Let $\bar{r}_{\text{targ}}$ be target expected return.
+- Minimize $w^\top C w$
+
+. . .
+
+<p align=center>
+subject to 
+</p>
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n) = \bar{r}_{\text{targ}}$$
+
+- This is like "choose output quantities to minimize production cost subject to achieving target revenue."
+
+## Optimality principle
+
+- Ratio of marginal benefit to marginal cost must be same for all choice variables.
+- Marginal benefit of $w_i$ is the risk premium $\bar{r}_i-r_f$ that appears in the constraint.
+- Marginal cost is how the variance changes with a small change in $w_i$.
+
+## Marginal cost
+
+- Variance is
+
+. . .
+
+$$\sum_{i=1}^n w_i^2\sigma_i^2 + 2 \sum_{i=1}^n \sum_{j=i+1}^n w_iw_j\sigma_{ij}$$
+
+- The terms that involve any given $w_i$ are
+
+. . .
+
+$$w_i^2\sigma_i^2 + 2 \sum_{j \neq i} w_iw_j\sigma_{ij}$$
+
+#
+
+- The derivative with respect to $w_i$ is (with $\sigma_{ii} = \sigma_i^2$)
+
+. . .
+
+$$2 \sum_{j=1}^n w_j \sigma_{ij}$$
+
+- The sum equals $C_i^\top w$ where $C_i$ is the $i$th column of the covariance matrix.
+
+## Equate benefit-cost ratios
+
+- Equal benefit-cost ratios means $(\bar{r}_i-r_f)/C_i^\top w =k$.
+- Rearrange: $k C_i^\top w = \bar{r}_i - r_f$
+
+- Stack: $k C w = \bar{r} - r_f 1_n$
+
+- Solve: 
+
+. . .
+
+$$w = (1/k)C^{-1}(\bar{r}-r_f1_n)$$
+
+## Find the constant
+
+- The portfolio expected return is
+
+. . .
+
+$$r_f + \frac{1}{k}(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)$$
+
+- Equating to the target gives
+
+. . .
+
+$$k = \frac{\bar{r}_{\text{targ}}-r_f}{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}$$
+
+
+## Example
+
+```{.p code-line-numbers="1-6|8"}
+import numpy as np
+
+rf = 0.02
+mn1, mn2, mn3 = 0.06, 0.08, 0.10
+sd1, sd2, sd3 = 0.1, 0.15, 0.12
+corr12, corr13, corr23 = 0.5, 0.7, 0.6
+
+targ = 0.09
+```
+
+## Solution of the example
+```{.p code-line-numbers="1-6|8|9|10"}
+S = np.diag([sd1, sd2, sd3])
+R = np.identity(3)
+R[0, 1] = R[1, 0] = corr12
+R[0, 2] = R[2, 0] = corr13
+R[1, 2] = R[2, 1] = corr23
+C = S @ R @ S
+
+rprem = np.array([mn1, mn2, mn3]) - rf
+k = (targ-rf) / (rprem @ C @ rprem)
+w = np.linalg.solve(k*C, rprem)
+```
+
+
+## Mean-Variance frontier 
+
+- The frontier portfolios are all scalar multiples of the vector $C^{-1}(\bar{r}-r_f1_n)$.
+- The scalar determines how much is saved or borrowed.
+- For some value of the scalar, there is no saving or borrowing.
+- For this value of the scalar, the portfolio is called the [tangency portfolio]{style="color:tomato; font-weight:bold"}.
+- The mean-variance frontier is the line from the risk-free rate through the tangency portfolio.
+
+
+
+## Tangency
+
+- Consider the same minimum variance problem but without saving or borrowing.
+- This adds the constraint $1_n^\top w=1$.
+- This frontier is a hyperbola.
+- The line through the tangency portfolio just touches the hyperbola.  It is tangent to the hyperbola at the tangency portfolio.
+
+
+#
+
+- risky assets without saving or borrowing
+
+. . .
+
+- the hyperbola
+
+. . .
+
+- tangency
+
+. . .
+
+<p align=center> **Model** </p>
+
+:::: {.columns}
+::: {.column width="100%"}
+- $\text{n}$ risky assets plus risk-free asset with return $r_{f}$ 
+- Portfolio is $(w_{1},\cdots,w_{n})$
+- If "risky assets only," then $\sum w_{i}=1$
+- If risk-free asset, risk-free position is $1-\sum w_{i}$ and $w_{i}$ are unconstrained
+:::
+::::
+
+## 3B
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## GMV Portfolio 
+
+GMV = **G**lobal **M**inimum **V**ariance portfolio of risky assets only \
+Can find with calculus
+
+<p align=center> <img src="images/Calc_d05.png" height=400 width=400></p>
+
+. . .
+
+## Calculating GMV Portfolio
+
+**Two risky assets:** 
+
+$$\small \frac{w_{A}}{w_{B}}=\frac{\sigma^2_{B}-\rho\sigma_{A}\sigma_{B}}{\sigma^2_{A}-\rho\sigma_{A}\sigma_{B}}$$
+
+. . .
+
+<p align=center> <font size="6"> **Examples:** </font> </p>
+
+:::: {.columns}
+::: {.column width="100%"}
+- <font size="6"> Equal std devs $\rightarrow$ $w_{A}=w_{B}$ </font>
+- <font size="6"> Uncorrelated $\rightarrow$ $w_{A}\sigma_{A}^2=w_{B}\sigma_{B}^2$ </font>
+:::
+::::
+
+. . .
+
+**$\text{n}$ risky assets**: vector of weights has same inner product with each column of covariance matrix ($n-1$ equations) 
+
+$$\small \frac{w^{⊤}Cov_{i}}{w^{⊤}Cov_{j}}=1$$
+and $\small \sum w_{i}=1$.
+
+# 
+
+``` p
+import numpy as np
+
+# standard deviations
+sds = np.array([0.15, 0.25, 0.35])
+S = np.diag(sds)
+
+# correlations
+r12 = 0.15
+r13 = 0.6
+r23 = 0.3
+
+R = np.identity(3)
+R[0, 1] = R[1, 0] = r12
+R[0, 2] = R[2, 0] = r13
+R[1, 2] = R[2, 1] = r23
+
+# covariance matrix
+C = S @ R @ S
+
+# GMV portfolio
+w = np.linalg.solve(C, np.ones(3))
+w = w / np.sum(w)
+```
+
+$w_{1}$=0.89
+$w_{2}$=0.25
+$w_{3}$=-0.14
+
+## Risky-Only Frontier
+
+For any target expected return, find the minimum variance portfolio.
+
+<p align=center> <img src="images/target-4859140_1280.png" height=300 width=350></p>
+
+. . .
+
+Set of (std dev, mean) pairs is called the **mean-variance frontier** (of risky assets).
+
+. . .
+
+Similar optimization problem to GMV portfolio.
+
+## 3E
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## Tangency Portfolio
+
+Combining risk-free asset with any portfolio \
+$\rightarrow$ line from $r_{f}$ through the (std dev, mean) of the portfolio. 
+
+. . .
+
+Slope of the line is the Sharpe ratio.
+
+. . .
+
+Goal is to go northwest in the diagram (higher Sharpe ratio).
+
+. . .
+
+Line with highest Sharpe ratio is tangent to the risky-asset-only frontier.
+
+## 3G
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>
+
+## Calculating Tangency Portfolio
+
+As with the GMV portfolio, we can represent the tangency portfolio using calculus.
+
+The inner product of the tangency portfolio with each column of the covariance matrix is proportional to the asset's risk premium:
+
+$$\frac{w^{⊤}Cov_{i}}{w^{⊤}Cov_{j}}=\frac{\bar{r}_{i}-r_{f}}{\bar{r}_{j}-r_{f}}$$
+
+and $\sum w_{i}=1.$
+
+# 
+
+``` p
+import numpy as np
+
+# standard deviations
+sds = np.array([0.15, 0.25, 0.35])
+S = np.diag(sds)
+
+# correlations
+r12 = 0.15
+r13 = 0.6
+r23 = 0.3
+
+R = np.identity(3)
+R[0, 1] = R[1, 0] = r12
+R[0, 2] = R[2, 0] = r13
+R[1, 2] = R[2, 1] = r23
+
+# covariance matrix
+C = S @ R @ S
+
+# GMV portfolio
+w = np.linalg.solve(C, np.ones(3))
+w = w / np.sum(w)
+```
+
+$w_{1}$=0.37
+$w_{2}$=0.58
+$w_{3}$=0.05
+
+## 3H
+
+<p align=center> 
+<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+</p>

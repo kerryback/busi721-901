@@ -9,7 +9,7 @@ Part I
 
 [Saving and Borrowing](d03-riskfree.html)
 
-[Efficient Frontier](d04-efficient-frontier.html)
+[Efficient Frontier](d04-frontier.html)
 
 [Alphas and Betas](d05-alphas-and-betas.html)
 
