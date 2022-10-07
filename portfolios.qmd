@@ -19,16 +19,18 @@ Part I
 ::: {.column width=50}
 Part II
 
-[Preferences](d06-preferences.html)
+[Preferences](e01-preferences.html)
 
 
-[Different Borrowing and Saving Rates](e01-borrowing-and-saving-rates.html)
+[Quadratic Programming]()
 
-[Portfolio Constraints](e02-portfolio-constraints.html)
+[Portfolio Frictions and Constraints](e03-frictions-constraints.html)
 
-[Stocks, Bonds, and Gold](e03-stocks-bonds-and-gold.html)
+[Estimating Parameters](e04-estimating-parameters.html)
 
-[Estimating Parameters](d02-estimating-parameters.html)
+[Stocks, Bonds, and Gold](e05-stocks-bonds-and-gold.html)
+
+
 
 
 
