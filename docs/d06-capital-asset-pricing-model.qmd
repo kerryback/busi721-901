@@ -70,7 +70,7 @@ where $r_m$ = market return and $\beta_i$ is the slope of the regression line of
 . . . 
 $$r-r_{f}=\alpha + \beta(r_m-r_f)+e$$
 
-- where $r_{b}$ = benchmark return and
+- where $r_{m}$ = market return and
 $e$ = zero-mean risk.
 - Beta answers this question:
   - if the market is up 1%, how much do we expect the asset to be up, all else equal?
