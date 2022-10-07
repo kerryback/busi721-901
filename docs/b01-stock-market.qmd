@@ -13,6 +13,8 @@ format:
     slide-number: true
     scrollable: true
     preview-links: true
+    self-contained: true
+    controls: true
     transition: fade
     theme: [solarized, 721.scss]
     incremental: true
