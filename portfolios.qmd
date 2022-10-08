@@ -22,7 +22,7 @@ Part II
 [Preferences](e01-preferences.html)
 
 
-[Quadratic Programming]()
+[Quadratic Programming](e02-quadratic-programming.html)
 
 [Portfolio Frictions and Constraints](e03-frictions-constraints.html)
 
