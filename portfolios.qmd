@@ -11,7 +11,7 @@ Part I
 
 [Efficient Frontier](d04-frontier.html)
 
-[Alphas and Betas](d05-alphas-and-betas.html)
+[Frontier in Pictures](d05-frontier-pictures.html)
 
 [Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
 :::
