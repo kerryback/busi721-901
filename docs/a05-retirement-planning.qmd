@@ -20,6 +20,28 @@ format:
     incremental: true
 ---
 
+#
+
+:::: {.columns}
+
+::: {.column width=40}
+<br>
+
+Let's track a retirement account balance monthly.
+
+<br>
+
+For simplicity, assume the return is the same each month.
+
+<br>
+
+We'll first track it in a loop, then use future values.
+:::
+
+::: {.column width=60}
+:::
+::::
+
 
 #
 
@@ -40,7 +62,10 @@ We'll first track it in a loop, then use future values.
 :::
 
 ::: {.column width=60}
-<img src="images/retirement-concept-2021-08-28-19-21-53-utc.jpg" height=600>
+
+
+<img src="images/retirement-concept-2021-08-28-19-21-53-utc.jpg" height=500>
+
 :::
 
 
@@ -50,13 +75,15 @@ We'll first track it in a loop, then use future values.
 
 ## Our goal
 
-![](images/sleepingwell.jpg)
+. . .
+
+<img src="images/sleepingwell.jpg" height="500" width="1000">
 
 ## Timing
 
 
 - Today is date 0, date 1 is 1 month away, $\ldots$
-- Date R (R months away) is our retirement date
+- Date $R$ ($R$ months away) is our retirement date
 - We plan to live until date $T>R$.
 - We make deposits at dates $1, 2, \ldots, R$
 - We make withdrawals at the beginning of each month of retirement: dates $R, R+1, \ldots, T-1$
@@ -136,6 +163,8 @@ h = 0          # withdrawals are constant
 
 ## Deposits and withdrawals
 
+. . .
+
 ```{.python code-line-numbers="1-2|4-5"}
 D = D1 * (1+g)**np.arange(R)
 W = W1 * (1+h)**np.arange(T-R)
@@ -145,6 +174,8 @@ W = dict(zip(range(R, T), W)})
 ```
 
 ## Account balance
+
+. . .
 
 ```{.python code-line-numbers="1-2|4-5|7|9-10|12"}
 B = np.zeros(T+1)
@@ -163,6 +194,8 @@ B[T] = (1+r)*B[T-1]
 
 
 ## Final balance as sum of future values
+
+. . .
 
 ```{.p code-line-numbers="11|1|3-5|7-9|11|13-14"}
 x = (1+r)**T
@@ -183,5 +216,7 @@ D1 = (z*W1 - x*B0) / y
 
 ## Success!
 
-![](images/richinshades.jpg)
+. . .
+
+<img src="images/richinshades.jpg" height="520">
 

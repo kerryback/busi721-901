@@ -45,6 +45,8 @@ $r_m = (1+r_a)^{1/12} - 1$.
 
 ## Continuous compounding
 
+. . .
+
 A useful fact: as $n \rightarrow \infty$,
 $$(1+r/n)^n \rightarrow e^r$$
 

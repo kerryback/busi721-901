@@ -145,6 +145,8 @@ $$k = \frac{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}{\bar{r}_{\text{targ}}-
 
 ## Example
 
+. . .
+
 ```{.p code-line-numbers="1-6|8"}
 import numpy as np
 
@@ -157,6 +159,9 @@ targ = 0.09
 ```
 
 ## Solution of the example
+
+. . .
+
 ```{.p code-line-numbers="1-6|8|9|10|11"}
 S = np.diag([sd1, sd2, sd3])
 R = np.identity(3)
@@ -172,6 +177,8 @@ w = (1/k) * Cinv @ rprem
 ```
 
 ## Mean -- Standard Deviation Plot
+
+. . .
 
 ```{python}
 import plotly.graph_objects as go

@@ -21,6 +21,12 @@ format:
 
 ## Annual SPY returns
 
+SPY = S&P 500 Exchange Traded Fund (ETF)
+
+<br>
+
+. . .
+
 ```{python}
 
 from pandas_datareader import DataReader as pdr
@@ -56,11 +62,11 @@ fig.update_layout(font_size=20)
 fig.show()
 ```
 
-<br>
 
-SPY = S&P 500 ETF
 
 ##  Compounded SPY returns
+
+. . .
 
 ```{python}
 #| column: page
@@ -107,6 +113,8 @@ value of $1 investment with dividends reinvested
   - It will appear that stock 2 did nothing before 2000 and earned a lot less than stock 1 even after 2000.
 
 ## Plot of the Example 
+
+. . .
 
 ```{python}
 #| column: page
@@ -159,6 +167,8 @@ fig.show()
 
 ## Log (base 10) of accumulation
 
+. . .
+
 ```{python}
 #| column: page
 
@@ -207,6 +217,9 @@ fig.show()
 
 
 ## Map $y$ tick labels to dollars
+
+. . .
+
 
 ```{python}
 #| column: page
@@ -400,6 +413,8 @@ Normal distribution has same mean and std dev as actual
 
 ## Autocorrelations of annual SPY returns
 
+. . 
+
 ```{python}
 #| column: page
 
@@ -417,6 +432,8 @@ _ = fig.set_size_inches(18,9)
 
 
 ## Does last year's return predict this year's?
+
+. . .
 
 ```{python}
 #| column: page

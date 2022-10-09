@@ -63,27 +63,24 @@ format:
 
 ## Geometric Average Return
 
-Given returns $r_1, \cdots, r_n,$ \
+- Given returns $r_1, \cdots, r_n,$ 
 the geometric average return is the number $r$ such that
 
 . . .
 
 $$(1+r)^{n}=(1+r_1)\cdots(1+r_{n})$$
 
+
+- So earning $r$ each period produces the same accumulation as the actual returns $r_1, \cdots, r_n.$
+We solve for $r$ as
+
 . . .
-
-So earning $r$ each period produces the same accumulation as the actual returns $r_1, \cdots, r_n.$
-
-. . .
-
-<br>
-We solve for it as
 
 $$r=[(1+r_1)\cdots(1+r_n)]^{1/n}-1$$
 
 #
 
-The geometric average return is **always less** than the arithmetic average return. 
+The geometric average return is **always less** than the arithmetic average return.  The difference is larger when returns are more volatile. 
 
 <br><br>
 

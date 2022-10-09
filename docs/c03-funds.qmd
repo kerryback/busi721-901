@@ -54,6 +54,8 @@ format:
 
 ## Active and Passive Funds
 
+. . .
+
 :::: {.columns}
 
 ::: {.column}

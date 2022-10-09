@@ -48,6 +48,8 @@ $$P=\frac{c}{1+r}+\frac{c}{(1+r)^2}+\cdots+\frac{c+F}{(1+r)^n}$$
 
 ## Prices and yields are inversely related
 
+. . .
+
 For fixed coupon and face,
 
 - Higher price $\Rightarrow$ lower yield
@@ -60,6 +62,8 @@ For fixed coupon and face,
   - Said to be trading at a discount (to par)
 
 ## Example 
+
+. . .
 
 5 year bond, 6% coupon, $100 face.  The price $P$ and six-month rate $r$ satisfy
 
@@ -129,6 +133,8 @@ So,
 
 
 ## History of Treasury rates
+
+. . .
 
 ```{python}
 
@@ -203,6 +209,8 @@ fig.show()
   - Remainder provides a risk premium
 
 ## History of credit spreads
+
+. . .
 
 ```{python}
 

@@ -1288,6 +1288,7 @@ display: none;
 </section>
 <section id="solution-with-cvxopt" class="slide level2">
 <h2>Solution with cvxopt</h2>
+<div class="fragment">
 <div class="sourceCode" id="cb1" data-code-line-numbers="1-2|4-9|10-11"><pre class="sourceCode numberSource p number-lines code-with-copy"><code class="sourceCode pascal"><span id="cb1-1"><a href="#cb1-1"></a>from cvxopt <span class="kw">import</span> matrix</span>
 <span id="cb1-2"><a href="#cb1-2"></a>from cvxopt.solvers <span class="kw">import</span>  qp</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -1299,6 +1300,7 @@ display: none;
 <span id="cb1-9"><a href="#cb1-9"></a>b = matrix([<span class="dv">1.</span>], (<span class="dv">1</span>, <span class="dv">1</span>))</span>
 <span id="cb1-10"><a href="#cb1-10"></a>sol = qp(P=P, q=q, G=G, h=h, A=A, b=b)</span>
 <span id="cb1-11"><a href="#cb1-11"></a>print(sol[&quot;x&quot;])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="fragment">
 <div class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
@@ -1314,6 +1316,28 @@ Optimal solution found.
 </code></pre>
 </div>
 </div>
+</div>
+</section>
+<section id="mean-variance-frontier" class="slide level2">
+<h2>Mean-Variance Frontier</h2>
+<div class="fragment">
+<p>minimize <span class="math inline">\((1/2)w^\top C w\)</span> subject to</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[r_f + (\bar{r}-r_f1_n)^\top w = \bar{r}_{\text{targ}}\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(P=C\)</span><br><span class="math inline">\(q=0\)</span><br><span class="math inline">\(G=0\)</span><br> <span class="math inline">\(h=0\)</span><br><span class="math inline">\(A = (\bar{r}-r_f1_n)^\top\)</span><br><span class="math inline">\(b=(\bar{r}_{\text{targ}} - r_f)\)</span></p>
+</div>
+</section>
+<section id="optimal-portfolio" class="slide level2">
+<h2>Optimal portfolio</h2>
+<ul>
+<li class="fragment">maximize expected return minus (1/2)raver times variance</li>
+<li class="fragment">equivalent to: minimize (1/2)raver times variance minus expected return</li>
+</ul>
+<div class="fragment">
+<p><span class="math inline">\(P=\text{raver} \times C\)</span><br><span class="math inline">\(q=-(\bar{r}-r_f1_n)\)</span><br><span class="math inline">\(G=0\)</span><br> <span class="math inline">\(h=0\)</span><br><span class="math inline">\(A = 0\)</span><br><span class="math inline">\(b=0\)</span></p>
 <div class="footer footer-default">
 
 </div>

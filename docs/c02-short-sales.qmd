@@ -41,6 +41,8 @@ format:
 
 ## Shorting to Hedge
 
+. . .
+
 Sometimes short as part of a hedge.
 
 . . .
@@ -62,6 +64,8 @@ Strategy: buy CVX and short XOM or oil company index.
 
 ## Example
 
+. . .
+
 Invest $10,000.  Buy $10,000 of CVX and short $10,000 of XOM.
 
 . . .
@@ -81,6 +85,8 @@ Invest $10,000.  Buy $10,000 of CVX and short $10,000 of XOM.
 | 10,000
 
 #
+
+. . .
 
 Suppose CVX $\uparrow$ 30%, XOM $\uparrow$ 10%
 

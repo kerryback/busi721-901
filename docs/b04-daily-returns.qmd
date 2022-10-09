@@ -22,6 +22,8 @@ format:
 
 ## Daily SPY returns
 
+. . .
+
 ```{python}
 from pandas_datareader import DataReader as pdr
 import plotly.graph_objects as go
@@ -51,7 +53,6 @@ fig.update_yaxes(title_font_size=24)
 fig.update_layout(font_size=20)
 fig.show()
 ```
-SPY = S&P 500 ETF
 
 
 ## Box and density plots of daily SPY returns <a href="https://bbcx-investments.com/risk/frequency"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
@@ -137,6 +138,8 @@ Normal distribution has same mean and std dev as actual
 
 ## Autocorrelations of daily SPY returns
 
+. . .
+
 ```{python}
 from statsmodels.graphics.tsaplots import plot_acf
 import matplotlib.pyplot as plt
@@ -152,6 +155,8 @@ _ = plt.title("")
 
 
 ## Does today's return predict tomorrow's?
+
+. . .
 
 ```{python}
 import statsmodels.formula.api as smf
@@ -194,6 +199,8 @@ No, the autocorrelation is almost zero.
 
 ## Autocorrelations of absolute returns
 
+. . .
+
 ```{python}
 
 plt.style.use('classic')
@@ -207,6 +214,8 @@ _ = plt.title("")
 
 
 ## Does today's absolute return predict tomorrow's?
+
+. . .
 
 ```{python}
 

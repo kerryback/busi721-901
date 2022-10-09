@@ -65,6 +65,8 @@ in date 0 dollars.
 
 ## General formula 
 
+. . .
+
 The general formula for the real rate of return $r^*$ is 
 
 . . .

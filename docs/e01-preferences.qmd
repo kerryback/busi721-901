@@ -24,8 +24,7 @@ format:
 . . . 
 $$\text{expected return}-\frac{1}{2}A\times\text{variance}$$
 
-- The 1/2 is unnecessary but conventional. The number $A$ reflects how much we dislike variance.  
-- $A =$ risk aversion. 
+- The 1/2 is a convention. The number $A$ is risk aversion. 
 
 ## Indifference curves <a href="https://bbcx-investments.com/portfolios/preferences"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
@@ -94,15 +93,26 @@ fig.show()
 
 ## Benefit-cost ratio at the optimum
 
-- For frontier portfolios, the marginal benefit-cost ratio is the same across assets:
+- Recall: for frontier portfolios, the marginal benefit-cost ratio is the same across assets:
   - marginal benefit / marginal cost $= k$
   - marginal benefit = risk premium
-  - marginal benefit is the marginal contribution to portfolio risk $C_i^\top w$
-  - $(\bar{r}_i-r_f)/C_i^\top w = k$
-- The optimal frontier portfolio for risk aversion $A$ is the one for which the marginal benefit-cost ratio equals $A$.
+  - marginal cost is the marginal contribution to portfolio risk $C_i^\top w$
+  - so $(\bar{r}_i-r_f)/C_i^\top w = k$
+- The [optimal]{style="color:tomato; font-weight:bold"} frontier portfolio is the one for which [$(\bar{r}_i-r_f)/C_i^\top w = A$]{style="color:tomato; font-weight:bold"}.
 
+#
+
+- Repeating: $(\bar{r}_i-r_f)/C_i^\top w = A$
+- High risk aversion $A \Rightarrow$ low marginal contributions to risk $C_i^\top w$
+- Solve:
+  - Rearrange: $(1/A)(\bar{r}_i-r_f) = C_i^\top w$
+  - Stack: $(1/A)(\bar{r}-r_f1_n) = Cw$
+  - Solve: $(1/A)C^{-1}(\bar{r}-r_f1_n) = w$
+- High risk aversion $A \Rightarrow$ small $w$
 
 ## Example
+
+. . .
 
 ```{.p code-line-numbers="1-6|8"}
 import numpy as np
@@ -116,6 +126,8 @@ raver = 6
 ```
 
 ## Solution of the example <a href="https://bbcx-investments.com/portfolios/optimal"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+
+. . .
 
 ```{.p code-line-numbers="1-9|10"}
 S = np.diag([sd1, sd2, sd3])

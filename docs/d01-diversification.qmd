@@ -23,11 +23,11 @@ format:
 ## Why diversify your investments?
 
 :::: {.columns}
-::: {.column-width="50%"}
+::: {.column width="50%"}
 - What is the risk of one coin flip for $10?
   - The possible deviations from the mean are +10 and --10.
 :::
-::: {.column-width="50%"}
+::: {.column width="50%"}
 - What is the risk of two coin flips for $5 each?
   - The possible deviations from the mean are 
     - +10 (prob 1/4), 
@@ -109,7 +109,7 @@ and $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is  sum of
 $$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)$$
 
 
-## 2 Coin Flips Example
+## Independent assets
 
 - Suppose we start with $100 
 - There are two independent assets, each with possible returns of $\pm$ 10%
@@ -286,13 +286,13 @@ print(f"beta is {rets.XOM.cov(rets.CVX)/rets.CVX.var(): .2f}")
 
 ## Some portfolios
 
-```p
-cvx = 0.0818
+``` {.p code-line-numbers="1-7|9-10|12-13"}
+cvx = 0.0818       # std devs
 aapl = 0.0850
 xom = 0.0858
-cvx_aapl = 0.153
+cvx_aapl = 0.153   # correlations
 cvx_xom = 0.889
-w1 = 0.5
+w1 = 0.5           # portfolio weights
 w2 = 0.5
 
 # 50% CVX and 50% AAPL

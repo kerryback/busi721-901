@@ -24,6 +24,9 @@ format:
 
 If invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially.
 
+. . .
+
+
 ```{python}
 #| code-fold: true
 #| column: page
@@ -85,6 +88,9 @@ Due to exponential growth, the investment period and rate of return matter a lot
 ## Calculating the account growth
 
 With 1 year at 8%, $1 \rightarrow 1.08$.  After a 2nd year, we have
+
+. . .
+
 $$ 1.08 + (0.08 \times 1.08) = (1 \times 1.08) + (0.08 \times 1.08) $$ 
 which is $1.08^2$.
 
@@ -118,6 +124,8 @@ which is $1.08^2$.
 - We go from future $y$ to present $x$ by multiplying by $1/(1+r)^n$, so we call $1/(1+r)^n$ the present value factor.
 
 ## Present value factors
+
+. . .
 
 PV factors (also called discount factors) are smaller when the horizon is longer or the rate of return is larger.
 
@@ -183,6 +191,8 @@ $$(1+r)^n x_0 + \cdots + (1+r)^{n-m}x_m$$
 
 ## FV factors with numpy
 
+. . .
+
 ``` p
 import numpy as np
 
@@ -200,6 +210,8 @@ $$(1+r)^n, \ldots , (1+r)^{n-m}$$
 
 
 ## FV of multiple cash flows
+
+. . .
 
 ``` {.p code-line-numbers="1-3|4-5|7|8"}
 n = 10
@@ -224,6 +236,8 @@ $$\frac{y_1}{1+r} + \cdots + \frac{y_n}{(1+r)^n}$$
 
 ## PV factors with numpy
 
+. . .
+
 ``` p
 n = 15
 r = 0.08
@@ -236,6 +250,8 @@ $$\frac{1}{1+r}, \ldots, \frac{1}{(1+r)^n}$$
 
 
 ## PV of multiple cash flows <a href="https://bbcx-investments.com/borrowing-saving/npv"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
+. . .
 
 <br>
 

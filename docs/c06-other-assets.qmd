@@ -101,6 +101,8 @@ Agriculture - corn, wheat, $\ldots$
 
 ## Example
 
+. . .
+
 :::: {.columns}
 ::: {.column width="50%"}
 In July, you buy a soybean contract on the CME (Chicago Mercantile Exchange) for November delivery at a price of $15 per bushel.
@@ -135,6 +137,8 @@ A contract is for 5,000 bushels.
 
 
 ## Currencies
+
+. . .
 
 :::: {.columns}
 ::: {.column width="50%"}

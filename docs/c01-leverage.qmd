@@ -42,6 +42,8 @@ The return, good or bad, on each $1 is amplified.
 
 ## Example
 
+. . .
+
 Invest $100,000.  Borrow $50,000.  Buy $150,000 of stocks.
 
 . . .
@@ -63,6 +65,8 @@ Invest $100,000.  Borrow $50,000.  Buy $150,000 of stocks.
 
 ## A Possible Ending to the Story
 
+. . .
+
 Suppose the stocks go up 10% and you're charged 2% interest on the loan.
 
  Assets | Liabilities |
@@ -79,6 +83,8 @@ Suppose the stocks go up 10% and you're charged 2% interest on the loan.
 - "one-half"  because you borrowed 50%.
 
 ## Conclusion
+
+. . .
 
 You make the stock return  plus the fraction borrowed times (stock return minus borrowing rate).
 

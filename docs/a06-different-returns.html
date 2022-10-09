@@ -1272,6 +1272,7 @@ display: none;
 </section>
 <section id="previous-example" class="slide level2">
 <h2>Previous example</h2>
+<div class="fragment">
 <div class="sourceCode" id="cb2" data-code-line-numbers="1-7|9-13"><pre class="sourceCode numberSource p number-lines code-with-copy"><code class="sourceCode pascal"><span id="cb2-1"><a href="#cb2-1"></a>R = <span class="dv">30</span>*<span class="dv">12</span>      <span class="st"># </span><span class="dv">30</span> years <span class="kw">until</span> retirement</span>
 <span id="cb2-2"><a href="#cb2-2"></a>T = <span class="dv">60</span>*<span class="dv">12</span>      <span class="st"># </span><span class="dv">60</span> total years</span>
 <span id="cb2-3"><a href="#cb2-3"></a>B0 = <span class="dv">100000</span>    <span class="st"># </span>initial balance <span class="kw">is</span> <span class="bn">$100,</span><span class="dv">000</span></span>
@@ -1285,10 +1286,14 @@ display: none;
 <span id="cb2-11"><a href="#cb2-11"></a></span>
 <span id="cb2-12"><a href="#cb2-12"></a>W = W1 * (<span class="dv">1</span>+h)**np.arange(T-R)</span>
 <span id="cb2-13"><a href="#cb2-13"></a>W = dict(zip(range(R, T), W)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="account-balance" class="slide level2">
-<h2>Account balance</h2>
+<section id="account-balance-in-a-loop" class="slide level2">
+<h2>Account balance in a loop</h2>
+<div class="fragment">
 <p>Only change is r[t].</p>
+</div>
+<div class="fragment">
 <div class="sourceCode" id="cb3" data-code-line-numbers="1-2|4-5|7|9-10|12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>B <span class="op">=</span> np.zeros(T<span class="op">+</span><span class="dv">1</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>B[<span class="dv">0</span>] <span class="op">=</span> B0</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
@@ -1301,9 +1306,10 @@ display: none;
 <span id="cb3-10"><a href="#cb3-10"></a>    B[t] <span class="op">=</span> (<span class="dv">1</span><span class="op">+</span>r[t])<span class="op">*</span>B[t<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> W[t]</span>
 <span id="cb3-11"><a href="#cb3-11"></a></span>
 <span id="cb3-12"><a href="#cb3-12"></a>B[T] <span class="op">=</span> (<span class="dv">1</span><span class="op">+</span>r[T])<span class="op">*</span>B[T<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="future-value-factors" class="slide level2">
-<h2>Future value factors</h2>
+<section id="account-balance-with-future-value-factors" class="slide level2">
+<h2>account balance with Future value factors</h2>
 <ul>
 <li class="fragment">FV factor for <span class="math inline">\(B_0\)</span> is <span class="math inline">\((1+r_1)\cdots (1+r_T)\)</span></li>
 <li class="fragment">FV factor for <span class="math inline">\(D_1\)</span> is <span class="math inline">\((1+r_2) \cdots (1+r_T)\)</span></li>

@@ -24,11 +24,13 @@ Part II
 
 [Quadratic Programming](e02-quadratic-programming.html)
 
-[Portfolio Frictions and Constraints](e03-frictions-constraints.html)
+[Frictions and Constraints](e03-frictions-constraints.html)
 
-[Estimating Parameters](e04-estimating-parameters.html)
+[More Pictures](e04-more-pictures.html)
 
-[Stocks, Bonds, and Gold](e05-stocks-bonds-and-gold.html)
+[Estimating Parameters](e05-estimating-parameters.html)
+
+[Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
 
 
 
