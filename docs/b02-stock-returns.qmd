@@ -20,7 +20,7 @@ format:
     incremental: true
 ---
 
-## Daily Returns 
+## Close-to-close Returns 
 
 :::: {.columns}
 
@@ -29,16 +29,16 @@ format:
 :::
 
 ::: {.column width="50%"}
-- Let's compute close-to-close daily stock returns.  Let P~t~ denote the price at close on day t. 
+- Let's compute close-to-close daily stock returns.  Let $P_t$ denote the price at close on day $t$. 
 
-- If no dividends,  the gain on day t is P~t~ - P~t-1~. 
+- If no dividends,  the gain on day $t$ is $P_t - P_{t-1}$. 
 :::
 
 ::::
 
 . . .
 
-The return per $1 invested in a share at close on t-1 is 
+The return per $1 invested in a share at close on $t-1$ is 
 
 . . . 
 

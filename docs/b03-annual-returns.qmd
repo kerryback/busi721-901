@@ -69,8 +69,6 @@ fig.show()
 . . .
 
 ```{python}
-#| column: page
-
 compound = (1+spy.ret).cumprod()
 
 trace = go.Scatter(
@@ -117,8 +115,6 @@ value of $1 investment with dividends reinvested
 . . .
 
 ```{python}
-#| column: page
-
 r1 = np.cumprod([1] + 51*[1.1])
 r2 = np.cumprod([1] + 30*[1.02] + 21*[1.1])
 years = np.arange(1970, 2022)
@@ -146,6 +142,9 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
     yaxis_title="Accumulation",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
     width=1000,
@@ -157,9 +156,7 @@ fig.update_layout(
         x=0.1
     )
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 
 ```
@@ -170,12 +167,6 @@ fig.show()
 . . .
 
 ```{python}
-#| column: page
-
-r1 = np.log10(np.cumprod([1] + 51*[1.1]))
-r2 = np.log10(np.cumprod([1] + 30*[1.02] + 21*[1.1]))
-years = np.arange(1970, 2022)
-
 trace1 = go.Scatter(
   x=years,
   y=r1,
@@ -199,6 +190,9 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
     yaxis_title="Log of Accumulation",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickformat=",.1f",
     width=1000,
     height=520,
@@ -209,9 +203,7 @@ fig.update_layout(
         x=0.1
     )
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -222,12 +214,6 @@ fig.show()
 
 
 ```{python}
-#| column: page
-
-r1 = np.cumprod([1] + 51*[1.1])
-r2 = np.cumprod([1] + 30*[1.02] + 21*[1.1])
-years = np.arange(1970, 2022)
-
 trace1 = go.Scatter(
   x=years,
   y=r1,
@@ -251,6 +237,9 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
     yaxis_title="Accumulation ($)",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickformat=",.0f",
     width=1000,
     height=520,
@@ -265,9 +254,7 @@ fig.update_layout(
         tickvals = [1, 2, 5, 10, 20, 50, 100],
     )
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24, type="log")
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -275,8 +262,6 @@ fig.show()
 ##  Compounded SPY returns on log scale
 
 ```{python}
-#| column: page
-
 trace = go.Scatter(
     x=spy.date,
     y=compound,
@@ -288,7 +273,11 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
     yaxis_title="Accumulation from $1",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickformat=".0f",
+    yaxis_type="log",
     width=1000,
     height=460,
     yaxis = dict(
@@ -296,9 +285,6 @@ fig.update_layout(
         tickvals = [2, 5, 10, 16],
     )
   )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24, type="log")
-fig.update_layout(font_size=20)
 
 fig.show()
 ```
@@ -324,8 +310,6 @@ value of $1 investment with dividends reinvested
 
 ## Box plot
 ```{python}
-#| column: page
-
 trace = go.Box(
     x=spy.ret,
     text=spy.date,
@@ -337,14 +321,14 @@ fig.update_layout(
     template="plotly_dark",
     yaxis_title="",
     xaxis_title="Annual Return",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
     width=1000,
     height=500,
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
 
 fig.show()
 ```
@@ -352,17 +336,12 @@ fig.show()
 ## Density plot
 
 ```{python}
-#| column: page
-
 
 from scipy.stats import norm
 from scipy.stats import gaussian_kde as kde
 
 density = kde(spy.ret)
-
-m = spy.ret.mean()
-s = spy.ret.std()
-grid = np.linspace(m - 4 * s, m + 4 * s, 201)
+grid = np.linspace(np.min(spy.ret), np.max(spy.ret), 100)
 
 trace1 = go.Scatter(
   x=grid,
@@ -373,7 +352,7 @@ trace1 = go.Scatter(
 
 trace2 = go.Scatter(
   x=grid, 
-  y=norm.pdf(grid, loc=m, scale=s), 
+  y=norm.pdf(grid, np.mean(spy.ret), scale=np.std(spy.ret)), 
   mode="lines", 
   name="normal"
 )
@@ -384,10 +363,13 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Annual Return",
     yaxis_title="",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
     width=1000,
-    height=420,
+    height=360,
      legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -395,13 +377,11 @@ fig.update_layout(
         x=0.99
     ),
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
 
 fig.show()
 ```
-Normal distribution has same mean and std dev as actual
+Normal distribution has same mean and std dev as actual.
+<br>x-axis range is minimum to maximum return.
 :::
 
 
@@ -416,7 +396,6 @@ Normal distribution has same mean and std dev as actual
 . . 
 
 ```{python}
-#| column: page
 
 from statsmodels.graphics.tsaplots import plot_acf
 import matplotlib.pyplot as plt
@@ -436,13 +415,8 @@ _ = fig.set_size_inches(18,9)
 . . .
 
 ```{python}
-#| column: page
 
 import statsmodels.formula.api as smf
-import plotly.io as pio
-plotly_template = pio.templates["plotly_dark"]
-colors = plotly_template.layout.colorway
-blue = colors[0]
 
 spy['lag'] = spy.ret.shift()
 spy = spy.dropna()
@@ -466,7 +440,6 @@ trace = go.Scatter(
   y=predict,
   mode="lines",
   name="regression line",
-  line=dict(color=blue)
 )
 
 fig.add_trace(trace)
@@ -475,14 +448,15 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Lagged Return",
     yaxis_title="Return",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
     width=1000,
     height=520,
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 No, the autocorrelation is almost zero.

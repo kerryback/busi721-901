@@ -145,23 +145,32 @@ W = dict(zip(range(R, T), W)})
 
 ## Example <a href="https://bbcx-investments.com/borrowing-saving/retirement-planning"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
 
+. . .
+
+```{.p}
+import numpy as np
+
+R = 30*12      # 30 years until retirement
+T = 60*12      # 60 total years
+r = 0.005      # earn 1/2 % per month  (~ 6% per year)
+B0 = 100000    # initial balance is $100,000
+```
+
+# 
+
 - Assume deposits grow at some rate $g$, so $D_t = (1+g)D_{t-1}$.
 - Assume withdrawals grow (or decline) at some rate $h$, so $W_t = (1+h)W_{t-1}$.
 
 . . .
 
-```{.p code-line-numbers="1-6|7-8"}
-R = 30*12      # 30 years until retirement
-T = 60*12      # 60 total years
-r = 0.005      # earn 1/2 % per month  (~ 6% per year)
-B0 = 100000    # initial balance is $100,000
+```{.p}
 D1 = 1000      # initial savings is $1,000 (per month)
 W1 = 10000     # withdraw $10,000 first month in retirement
 g = 0.002      # deposit is 0.2% larger each month
 h = 0          # withdrawals are constant
 ```
 
-## Deposits and withdrawals
+## Deposit and withdrawal dictionaries
 
 . . .
 
@@ -169,8 +178,8 @@ h = 0          # withdrawals are constant
 D = D1 * (1+g)**np.arange(R)
 W = W1 * (1+h)**np.arange(T-R)
 
-D = dict(zip(range(1, R+1), D)})
-W = dict(zip(range(R, T), W)})
+D = dict(zip(range(1, R+1), D))
+W = dict(zip(range(R, T), W))
 ```
 
 ## Account balance

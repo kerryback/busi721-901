@@ -28,9 +28,6 @@ If invested funds earn a stable rate of return and funds are not withdrawn, then
 
 
 ```{python}
-#| code-fold: true
-#| column: page
-
 import plotly.graph_objects as go
 import numpy as np
 
@@ -54,11 +51,14 @@ fig.add_trace(trace2)
 string = "year %{x}<br>balance = $%{y:.2f}"
 fig.update_traces(hovertemplate=string)
 fig.update_layout(
-    template="none",
+    template="plotly_dark",
     xaxis_title="Year",
     yaxis_title="Account Balance",
     yaxis_tickprefix="$", 
     yaxis_tickformat=",.0f",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     width=1000,
     height=480,
     legend=dict(
@@ -68,10 +68,6 @@ fig.update_layout(
         x=0.01
     )
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
-fig.layout.template = "plotly_dark"
 
 fig.show()
 ```
@@ -132,12 +128,6 @@ PV factors (also called discount factors) are smaller when the horizon is longer
 . . .
 
 ```{python}
-
-#| column: page
-
-import plotly.graph_objects as go
-import numpy as np
-
 trace1= go.Scatter(
     x=np.arange(31), 
     y=1.08**(-np.arange(31)),
@@ -156,10 +146,13 @@ fig.add_trace(trace2)
 string = "year %{x}<br>PV factor = %{y:.1%}"
 fig.update_traces(hovertemplate=string)
 fig.update_layout(
-    template="none",
+    template="plotly_dark",
     xaxis_title="Year",
     yaxis_title="PV Factor",
     yaxis_tickformat=".0%",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     width=1000,
     height=480,
     legend=dict(
@@ -169,10 +162,7 @@ fig.update_layout(
         x=0.99
         )
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
-fig.layout.template = "plotly_dark"
+
 fig.show()
 ```
 

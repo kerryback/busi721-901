@@ -10,3 +10,5 @@
 
 [Time-Varying Returns](a06-different-returns.html)
 
+[Assignment 1](assignment1.qmd)
+

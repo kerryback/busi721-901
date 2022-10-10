@@ -83,8 +83,6 @@ $$y = 2r$$
 
 
 ```{python}
-#| column: page
-
 import numpy as np
 import plotly.graph_objects as go
 
@@ -107,14 +105,15 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Yield",
     yaxis_title="Price",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickformat=".0f",
     xaxis_tickformat=".0%",
     width=1040,
     height=520,
     )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -137,9 +136,6 @@ So,
 . . .
 
 ```{python}
-
-#| column: page
-
 from pandas_datareader import DataReader as pdr
 import plotly.express as px
 
@@ -173,15 +169,17 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Years to Maturity",
     yaxis_title="Yield",
+    xaxis_tickvals=[1, 3, 5, 10, 20, 30],
+    xaxis_range=[0,30],
     yaxis_tickformat=".1%",
+    yaxis_range=[0, df.rate.max() + 0.001],
     width=1040,
     height=520,
 )
 fig.update_xaxes(title_font_size=24)
 fig.update_yaxes(title_font_size=24)
 fig.update_layout(font_size=20)
-fig.update_yaxes(tickformat=".1%", range=[0, df.rate.max() + 0.001])
-fig.update_xaxes(tickvals=[1, 3, 5, 10, 20, 30], range=[0, 30])
+
 fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 200
 fig.show()  
 ```
@@ -213,9 +211,6 @@ fig.show()
 . . .
 
 ```{python}
-
-#| column: page
-
 import plotly.graph_objects as go
 
 files = ["BAMLC0A4CBBB", "BAMLC0A3CA", "BAMLC0A2CAA", "BAMLC0A1CAAA"]

@@ -54,10 +54,10 @@ g = 0.002      # deposit is 0.2% larger each month
 h = 0          # withdrawals are constant
 
 D = D1 * (1+g)**np.arange(R)
-D = dict(zip(range(1, R+1), D)})
+D = dict(zip(range(1, R+1), D))
 
 W = W1 * (1+h)**np.arange(T-R)
-W = dict(zip(range(R, T), W)})
+W = dict(zip(range(R, T), W))
 ```
 
 ## Account balance in a loop

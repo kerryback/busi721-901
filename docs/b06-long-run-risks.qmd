@@ -127,15 +127,16 @@ fig.update_layout(
     template="plotly_dark",
     yaxis_title="Accumulation from $1",
     xaxis_title="",
+    yaxis_title_font_size=20,
+    xaxis_title_font_size=20,
+    font_size=16,
     yaxis_tickprefix="$",
     yaxis_tickformat=".0f",
     xaxis_tickformat="",
     height=360,
     width=500
 )
-fig.update_xaxes(title_font_size=20)
-fig.update_yaxes(title_font_size=20)
-fig.update_layout(font_size=16)
+
 fig.show()
 ```
 

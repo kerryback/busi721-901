@@ -9,7 +9,7 @@ Part I
 
 [Saving and Borrowing](d03-riskfree.html)
 
-[Efficient Frontier](d04-frontier.html)
+[Mean-Variance Frontier](d04-frontier.html)
 
 [Frontier in Pictures](d05-frontier-pictures.html)
 

@@ -1282,10 +1282,10 @@ display: none;
 <span id="cb2-7"><a href="#cb2-7"></a>h = <span class="dv">0</span>          <span class="st"># </span>withdrawals are constant</span>
 <span id="cb2-8"><a href="#cb2-8"></a></span>
 <span id="cb2-9"><a href="#cb2-9"></a>D = D1 * (<span class="dv">1</span>+g)**np.arange(R)</span>
-<span id="cb2-10"><a href="#cb2-10"></a>D = dict(zip(range(<span class="dv">1</span>, R+<span class="dv">1</span>), D)})</span>
+<span id="cb2-10"><a href="#cb2-10"></a>D = dict(zip(range(<span class="dv">1</span>, R+<span class="dv">1</span>), D))</span>
 <span id="cb2-11"><a href="#cb2-11"></a></span>
 <span id="cb2-12"><a href="#cb2-12"></a>W = W1 * (<span class="dv">1</span>+h)**np.arange(T-R)</span>
-<span id="cb2-13"><a href="#cb2-13"></a>W = dict(zip(range(R, T), W)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-13"><a href="#cb2-13"></a>W = dict(zip(range(R, T), W))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="account-balance-in-a-loop" class="slide level2">

@@ -42,13 +42,14 @@ fig.update_layout(
     title="5-year 6% bond with semi-annual coupons (per $100 face)",
     xaxis_title="Year",
     yaxis_title="Coupons and Face Value",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickprefix="$",
     width=1000,
     height=440,
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 

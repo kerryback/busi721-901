@@ -214,7 +214,7 @@
     "href": "portfolios.html",
     "title": "",
     "section": "",
-    "text": "Part I\nDiversification\nMore Diversification\nSaving and Borrowing\nEfficient Frontier\nFrontier in Pictures\nCapital Asset Pricing Model\n\nPart II\nPreferences\nQuadratic Programming\nFrictions and Constraints\nMore Pictures\nEstimating Parameters\nStocks, Bonds, and Gold"
+    "text": "Part I\nDiversification\nMore Diversification\nSaving and Borrowing\nMean-Variance Frontier\nFrontier in Pictures\nCapital Asset Pricing Model\n\nPart II\nPreferences\nQuadratic Programming\nFrictions and Constraints\nMore Pictures\nEstimating Parameters\nStocks, Bonds, and Gold"
   },
   {
     "objectID": "portfolios_capm.html",
@@ -242,7 +242,7 @@
     "href": "time_and_money.html",
     "title": "",
     "section": "",
-    "text": "Monthly Rates, etc.\nMortgage Payments etc.\nInflation and Real Returns\nRetirement Planning\nTime-Varying Returns"
+    "text": "Monthly Rates, etc.\nMortgage Payments etc.\nInflation and Real Returns\nRetirement Planning\nTime-Varying Returns\nAssignment 1"
   },
   {
     "objectID": "returns.html#stylefloat-right",
@@ -257,5 +257,12 @@
     "title": "",
     "section": "",
     "text": "Daily Returns\nGeometric Average Returns\nLong-Run Risk"
+  },
+  {
+    "objectID": "assignment1.html",
+    "href": "assignment1.html",
+    "title": "",
+    "section": "",
+    "text": "This is assignment 1."
   }
 ]

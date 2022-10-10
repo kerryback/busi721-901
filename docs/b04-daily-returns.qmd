@@ -33,24 +33,28 @@ spy = spy.pct_change().dropna()
 spy.index = spy.index.astype(str)
 spy = spy.reset_index()
 spy.columns = ['date', 'ret']
+
 trace = go.Scatter(
     x=spy.date,
     y=spy.ret,
         hovertemplate="%{x}<br>%{y:.1%}<extra></extra>",
     name="",
     )
+
 fig = go.Figure(trace)
+
 fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
     yaxis_title="",
+    yaxis_title_font_size=24,
+    xaxis_title_font_size=24,
+    font_size=20,
     yaxis_tickformat=".0%",
     width=1000,
     height=500,
   )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -75,14 +79,15 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Daily Return",
     yaxis_title="",
+    yaxis_title_font_size=24,
+    xaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
     width=980,
     height=440,
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -92,9 +97,8 @@ fig.show()
 from scipy.stats import norm
 from scipy.stats import gaussian_kde as kde
 density = kde(spy.ret)
-m = spy.ret.mean()
-s = spy.ret.std()
-grid = np.linspace(m - 4 * s, m + 4 * s, 201)
+
+grid = np.linspace(np.min(spy.ret), np.max(spy.ret), 100)
 trace1 = go.Scatter(
   x=grid,
   y=density(grid),
@@ -103,7 +107,7 @@ trace1 = go.Scatter(
 )
 trace2 = go.Scatter(
   x=grid, 
-  y=norm.pdf(grid, loc=m, scale=s), 
+  y=norm.pdf(grid, loc=np.mean(spy.ret), scale=np.std(spy.ret)), 
   mode="lines", 
   name="normal"
 )
@@ -114,10 +118,13 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Daily Return",
     yaxis_title="",
+    yaxis_title_font_size=24,
+    xaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat="",
     width=1000,
-    height=420,
+    height=360,
      legend=dict(
         yanchor="top", 
         y=0.99, 
@@ -125,12 +132,10 @@ fig.update_layout(
         x=0.99
     ),
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
-Normal distribution has same mean and std dev as actual
+Normal distribution has same mean and std dev as actual.<br>x-axis range is minimum to maximum return.
 
 :::
 
@@ -184,14 +189,15 @@ fig.update_layout(
     template="plotly_dark",
     xaxis_title="Lagged Return",
     yaxis_title="Return",
+    yaxis_title_font_size=24,
+    xaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
     width=1000,
     height=500,
 )
-fig.update_xaxes(title_font_size=24)
-fig.update_yaxes(title_font_size=24)
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 
@@ -244,21 +250,23 @@ trace = go.Scatter(
   y=spy.predict,
   mode="lines",
   name="regression line",
-  line=dict(color=blue)
 )
 fig.add_trace(trace)
 fig.update_layout(
     template="plotly_dark",
     xaxis_title="Lagged Absolute Return",
     yaxis_title="Absolute Return",
+    yaxis_title_font_size=24,
+    xaxis_title_font_size=24,
+    font_size=20,
     xaxis_tickformat=".0%",
     yaxis_tickformat=".0%",
+    xaxis_rangemode="tozero",
+    yaxis_rangemode="tozero",
     width=1000,
     height=500,
 )
-fig.update_xaxes(title_font_size=24, rangemode="tozero")
-fig.update_yaxes(title_font_size=24, rangemode="tozero")
-fig.update_layout(font_size=20)
+
 fig.show()
 ```
 Yes, volatility is persistent.
