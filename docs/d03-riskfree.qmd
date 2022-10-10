@@ -243,17 +243,6 @@ $r_s$ = 2% and $r_b$ = 5%. Fully invested portfolio has $\bar{r}$ = 10%, std dev
 . . .
 
 ```{python}
-import numpy as np
-import plotly.graph_objects as go
-import plotly.io as pio
-
-plotly_template = pio.templates["plotly_dark"]
-colors = plotly_template.layout.colorway
-blue = colors[0]
-red = colors[1]
-green = colors[2]
-purple = colors[3]
-
 mn = 0.10
 sd = 0.15
 rs = 0.02
