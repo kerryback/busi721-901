@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.32">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -93,7 +93,7 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="assignment-2-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university">Assignment 2<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br></h2>
 <p>Submit a Jupyter notebook. Copy each question into a Markdown cell and provide your answer in the cell or cells below it.</p>
 <ol type="1">
-<li>Using Yahoo Finance, calculate daily, monthly, and annual returns for CVX over the five-year period Jan 1, 2018 through Dec 31, 2021. Plot the returns.</li>
+<li>Using Yahoo Finance, calculate daily, monthly, and annual returns for CVX over the five-year period Jan 1, 2018 through Dec 31, 2021. Plot the returns. Note: you should use start=“2016-12-30” and end=“2021-12-31” in the pandas datareader. Also, for plotting it is better not to convert the index to the period format.</li>
 <li>Create box plots for the three sets of returns.</li>
 <li>What was the geometric average annual return for CVX over the five-year period?</li>
 <li>Draw 1,000 sets of 30 normally distributed random variables with a mean of 6% and a standard deviation of 10%. Viewing the variables as annual returns, compound them over each 30-year period to obtain 1,000 accumulations <span class="math inline">\((1+r_1) \cdots (1+r_{30})\)</span>. Create a box plot of the 1,000 accumulations. Execute np.random.seed(0) before generating the random variables.</li>
