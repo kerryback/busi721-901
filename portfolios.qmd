@@ -1,41 +1,42 @@
 :::: {.columns}
 
 ::: {.column width=50}
-Part I
+Part A
 
-[Diversification](d01-diversification.html)
+[1. Diversification](d01-diversification.html)
 
-[More Diversification](d02-more-diversification.html)
+[2. More Diversification](d02-more-diversification.html)
 
-[Saving and Borrowing](d03-riskfree.html)
+[3. Saving and Borrowing](d03-riskfree.html)
 
-[Mean-Variance Frontier](d04-frontier.html)
+[4. Mean-Variance Frontier](d04-frontier.html)
 
-[Frontier in Pictures](d05-frontier-pictures.html)
+[5. Frontier in Pictures](d05-frontier-pictures.html)
 
-[Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
+[6. Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
+
+
+[Assignment 4](assignment4.qmd){style="color:Tan"}
 :::
 
 ::: {.column width=50}
-Part II
+Part B
 
-[Preferences](e01-preferences.html)
-
-
-[Quadratic Programming](e02-quadratic-programming.html)
-
-[Frictions and Constraints](e03-frictions-constraints.html)
-
-[More Pictures](e04-more-pictures.html)
-
-[Estimating Parameters](e05-estimating-parameters.html)
-
-[Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
+[1. Preferences](e01-preferences.html)
 
 
+[2. Quadratic Programming](e02-quadratic-programming.html)
+
+[3. Frictions and Constraints](e03-frictions-constraints.html)
+
+[4. More Pictures](e04-more-pictures.html)
+
+[5. Estimating Parameters](e05-estimating-parameters.html)
+
+[6. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
 
 
-
+[Assignment 5](assignment5.qmd){style="color:Tan"}
 
 :::
 

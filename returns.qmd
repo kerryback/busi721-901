@@ -1,36 +1,39 @@
 :::: {.columns}
 
 ::: {.column width=50} 
-Part I
+Part A
 
-[Stock Markets](b01-stock-market.html)
+[1. Stock Markets](b01-stock-market.html)
 
-[Stock Returns](b02-stock-returns.html)
+[2. Stock Returns](b02-stock-returns.html)
 
-[Annual Returns](b03-annual-returns.html)
+[3. Annual Returns](b03-annual-returns.html)
 
-[Daily Returns](b04-daily-returns.html)
+[4. Daily Returns](b04-daily-returns.html)
 
-[Geometric Average Returns](b05-geometric-average-returns.html)
+[5. Geometric Average Returns](b05-geometric-average-returns.html)
 
-[Long-Run Risk](b06-long-run-risks.html)
+[6. Long-Run Risk](b06-long-run-risks.html)
+
+[Assignment 2](assignment2.qmd){style="color:Tan"}
 :::
 
 ::: {.column width=50}
-Part II
+Part B
 
-[Leverage](c01-leverage.html)
+[1. Leverage](c01-leverage.html)
 
-[Short Selling](c02-short-sales.html)
+[2. Short Selling](c02-short-sales.html)
 
-[Funds](c03
--funds.html)
+[3. Funds](c03-funds.html)
 
-[Bonds](c04-bonds.html)
+[4. Bonds](c04-bonds.html)
 
-[Bond Prices and Yields](c05-bond-prices-and-yields.html)
+[5. Bond Prices and Yields](c05-bond-prices-and-yields.html)
 
-[Other Assets](c06-other-assets.html)
+[6. Other Assets](c06-other-assets.html)
+
+[Assignment 3](assignment3.qmd){style="color:Tan"}
 
 
 

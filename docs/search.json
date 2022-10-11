@@ -193,7 +193,7 @@
     "href": "returns.html",
     "title": "",
     "section": "",
-    "text": "Part I\nStock Markets\nStock Returns\nAnnual Returns\nDaily Returns\nGeometric Average Returns\nLong-Run Risk\n\nPart II\nLeverage\nShort Selling\nFunds\nBonds\nBond Prices and Yields\nOther Assets"
+    "text": "Part A\n1. Stock Markets\n2. Stock Returns\n3. Annual Returns\n4. Daily Returns\n5. Geometric Average Returns\n6. Long-Run Risk\nAssignment 2\n\nPart B\n1. Leverage\n2. Short Selling\n3. Funds\n4. Bonds\n5. Bond Prices and Yields\n6. Other Assets\nAssignment 3"
   },
   {
     "objectID": "index.html",
@@ -214,7 +214,7 @@
     "href": "portfolios.html",
     "title": "",
     "section": "",
-    "text": "Part I\nDiversification\nMore Diversification\nSaving and Borrowing\nMean-Variance Frontier\nFrontier in Pictures\nCapital Asset Pricing Model\n\nPart II\nPreferences\nQuadratic Programming\nFrictions and Constraints\nMore Pictures\nEstimating Parameters\nStocks, Bonds, and Gold"
+    "text": "Part A\n1. Diversification\n2. More Diversification\n3. Saving and Borrowing\n4. Mean-Variance Frontier\n5. Frontier in Pictures\n6. Capital Asset Pricing Model\nAssignment 4\n\nPart B\n1. Preferences\n2. Quadratic Programming\n3. Frictions and Constraints\n4. More Pictures\n5. Estimating Parameters\n6. Stocks, Bonds, and Gold\nAssignment 5"
   },
   {
     "objectID": "portfolios_capm.html",
@@ -242,7 +242,7 @@
     "href": "time_and_money.html",
     "title": "",
     "section": "",
-    "text": "Monthly Rates, etc.\nMortgage Payments etc.\nInflation and Real Returns\nRetirement Planning\nTime-Varying Returns\nAssignment 1"
+    "text": "2. Monthly Rates, etc.\n3. Mortgage Payments etc.\n4. Inflation and Real Returns\n5. Retirement Planning\n6. Time-Varying Returns\n\nAssignment 1"
   },
   {
     "objectID": "returns.html#stylefloat-right",
@@ -263,6 +263,34 @@
     "href": "assignment1.html",
     "title": "",
     "section": "",
-    "text": "This is assignment 1."
+    "text": "I have $50,000 now and I plan to invest $10,000 in one year and another $40,000 at the end of the following four years (five investments in five years in total). If I earn 6% per year on my investments, what will I have at the end of the five years?\nI have $50,000 now and plan to invest money at the end of this year and also for the following four years (five investments in five years in total). I expect to earn 6% per year. I hope to have $200,000 at the end of the five years, including the last investment. How much do I need to invest each year?\nWhat would the monthly payments be on a 5-year loan for $40,000 at 6%?\nHow much can I borrow on a 5-year loan at 6% if I can afford to pay $500 per month?\nAn investment earned 10%, 15%, -8%, -3%, and 20% over a five-year span. Inflation over the five years was 3%, 5%, 7%, 4%, and 2%.\n\n\nHow much did $1 at the beginning of the five years grow to in nominal terms?\nIn real terms?\n\n\nAn investment earned 10%, 15%, -8%, -3%, and 20% over a five-year span.\n\n\n\nWhat were the corresponding continuously compounded returns?\nWhat was the sum of the continuously compounded returns?\nHow does the natural exponential of the sum of the continuously compounded returns (\\(e^{\\sum \\ldots}\\)) compare to the answer to 5a?"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "",
+    "section": "",
+    "text": "This is assignment 2."
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "",
+    "section": "",
+    "text": "This is assignment 3."
+  },
+  {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "",
+    "section": "",
+    "text": "This is assignment 4."
+  },
+  {
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "",
+    "section": "",
+    "text": "This is assignment 5."
   }
 ]

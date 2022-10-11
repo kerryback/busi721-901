@@ -1,14 +1,16 @@
-[Present and Future Values](a01-fvs-pvs.html)
+[1. Present and Future Values](a01-fvs-pvs.html)
 
-[Monthly Rates, etc.](a02-monthly-rates.html)
+[2. Monthly Rates, etc.](a02-monthly-rates.html)
 
-[Mortgage Payments etc.](a03-mortgage-payments.html)
+[3. Mortgage Payments etc.](a03-mortgage-payments.html)
 
-[Inflation and Real Returns](a04-inflation.html)
+[4. Inflation and Real Returns](a04-inflation.html)
 
-[Retirement Planning](a05-retirement-planning.html)
+[5. Retirement Planning](a05-retirement-planning.html)
 
-[Time-Varying Returns](a06-different-returns.html)
+[6. Time-Varying Returns](a06-different-returns.html)
 
-[Assignment 1](assignment1.qmd)
+<hr>
+
+[Assignment 1](assignment1.qmd){style="color:Tan"}
 
