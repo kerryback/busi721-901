@@ -14,8 +14,6 @@ Part A
 [5. Geometric Average Returns](b05-geometric-average-returns.html)
 
 [6. Long-Run Risk](b06-long-run-risks.html)
-
-[Assignment 2](assignment2.qmd){style="color:Tan"}
 :::
 
 ::: {.column width=50}
@@ -32,11 +30,16 @@ Part B
 [5. Bond Prices and Yields](c05-bond-prices-and-yields.html)
 
 [6. Other Assets](c06-other-assets.html)
-
-[Assignment 3](assignment3.qmd){style="color:Tan"}
-
-
-
 :::
+::::
 
+<hr>
+
+:::: {.columns}
+::: {.column width="50%"}
+[Assignment 2](assignment2.qmd){style="color:Tan"}
+:::
+::: {.column width="50%"}
+[Assignment 3](assignment3.qmd){style="color:Tan"}
+:::
 ::::

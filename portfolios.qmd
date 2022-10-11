@@ -14,9 +14,6 @@ Part A
 [5. Frontier in Pictures](d05-frontier-pictures.html)
 
 [6. Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
-
-
-[Assignment 4](assignment4.qmd){style="color:Tan"}
 :::
 
 ::: {.column width=50}
@@ -34,10 +31,16 @@ Part B
 [5. Estimating Parameters](e05-estimating-parameters.html)
 
 [6. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
-
-
-[Assignment 5](assignment5.qmd){style="color:Tan"}
-
 :::
+::::
 
+<hr>
+
+:::: {.columns}
+::: {.column width="50%"}
+[Assignment 4](assignment4.qmd){style="color:Tan"}
+:::
+::: {.column width="50%"}
+[Assignment 5](assignment5.qmd){style="color:Tan"}
+:::
 ::::
