@@ -1,3 +1,13 @@
 ## Assignment 5<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
 
-This is assignment 5.
+Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide your answer in the cell or cells below it.
+
+1. 3 assets, no short sales, different borrowing and saving rates.
+
+2. A certain investment is a coin flip.  You will either lose 10% of your portfolio or win some percent.  Decide how large the win must be in order for you to be willing to flip the coin (there is no right or wrong answer for this).  Calculate the number $A$ such that
+$$\frac{x - 0.1}{2}  - \frac{A}{2} \left(\frac{x+0.1}{2}\right)^2 = 0$$
+where $x$ is the amount you need to win entered as a decimal.  $A$ is your risk aversion.
+
+3.  Compute annual CVX returns over the time period 1980-2021 using Yahoo Finance data.  Compute a 95% confidence interval for the mean annual CVX return.
+
+4.  Get real return data for stocks, bonds, and gold from website.  Compute optimal portfolio with risk aversion of 4 assuming no shorts and different borrowing and saving rates.
