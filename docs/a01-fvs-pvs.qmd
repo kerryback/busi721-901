@@ -5,7 +5,6 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -21,6 +20,8 @@ format:
 ---
 
 ## Exponential growth
+
+. . .
 
 If invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially.
 
