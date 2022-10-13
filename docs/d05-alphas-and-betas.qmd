@@ -1,6 +1,6 @@
 ---
 title:  "Portfolios and CAPM: Alphas and Betas"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
 output-dir: docs
 execute:
   echo: false

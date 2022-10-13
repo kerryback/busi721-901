@@ -1,6 +1,6 @@
 ---
 title:  "Long-Run Risk"
-author: <br>BUSI 721<br>Jones Graduate School of Business<br>Rice University<br><br>Kerry Back
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
 output-dir: docs
 execute:
   echo: false
