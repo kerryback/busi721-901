@@ -1,6 +1,6 @@
 ---
 title:  "Diversification"
-author: <br><br><br><br>Kerry Back<br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=100>
+author: <br><br><br><br><span style="font-variant:small-caps; font-weight:bold;color:#7c7e7f;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=100>
 output-dir: docs
 execute:
   echo: false
