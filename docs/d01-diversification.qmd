@@ -1,11 +1,10 @@
 ---
 title:  "Diversification"
-author: <br>BUSI 721<br>Jones Graduate School of Business<br>Rice University<br><br>Kerry Back
+author: <br><br><br><br>Kerry Back<br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=100>
 output-dir: docs
 execute:
   echo: false
   jupyter: python3
-  cache: true
 format: 
   revealjs:
     highlight-style: monokai
