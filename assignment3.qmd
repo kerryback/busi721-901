@@ -4,8 +4,8 @@ Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide 
 
 1.  I have a $50,000 portfolio.  I am considering levering it -- borrowing $25,000 to increase the investment to $75,000.  I can borrow at 5%.  What will be my gain or loss in a year if the unlevered investment earns 10%?  What if it loses 10%?
 
-2.  I think CVX will beat XOM.  I am considering investing $10,000, buying $10,000 of CVX, and shorting $10,000 of XOM.  What will be my gain or loss if CVX earns 12% and XOM earns 5%?  What if the reverse happens?
+2.  I think CVX will beat XOM.  I am considering investing $10,000, buying $10,000 of CVX, and shorting $10,000 of XOM.  I will earn negligible interest on the short sale proceeds.  What will be my gain or loss if CVX earns 12% and XOM earns 5%?  What if the reverse happens?
 
-3.  A bond makes annual 6% coupon payments.  It has 10 years to maturity, and the next coupon payment is 1 year away.  If it is priced at $95 per $100 of face value, what is its yield?
+3.  A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  If it is priced at $95 per $100 of face value, what is its yield?
 
-4.  A bond makes annual 6% coupon payments.  It has 10 years to maturity, and the next coupon payment is 1 year away.  Its current yield is 8%.  What is its price?
+4.  A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  Its current yield is 8%.  What is its price?
