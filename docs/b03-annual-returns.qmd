@@ -5,6 +5,7 @@ output-dir: docs
 execute:
   echo: false
   jupyter: python3
+  cache: true
 format: 
   revealjs:
     highlight-style: monokai
@@ -169,14 +170,14 @@ fig.show()
 ```{python}
 trace1 = go.Scatter(
   x=years,
-  y=r1,
+  y=np.log10(r1),
   mode="lines",
   name="stock 1"
 )
 
 trace2 = go.Scatter(
   x=years,
-  y=r2,
+  y=np.log10(r2),
   mode="lines",
   name="stock 2"
 )
@@ -231,16 +232,18 @@ trace2 = go.Scatter(
 fig = go.Figure()
 fig.add_trace(trace1)
 fig.add_trace(trace2)
-string = "year %{x}<br>log = %{y:.2f}"
+string = "year %{x}<br>$%{y:.2f}"
 fig.update_traces(hovertemplate=string)
 fig.update_layout(
     template="plotly_dark",
     xaxis_title="",
-    yaxis_title="Accumulation ($)",
+    yaxis_title="Accumulation",
     xaxis_title_font_size=24,
     yaxis_title_font_size=24,
     font_size=20,
+    yaxis_type="log",
     yaxis_tickformat=",.0f",
+    yaxis_tickprefix="$",
     width=1000,
     height=520,
     legend=dict(
@@ -300,7 +303,7 @@ value of $1 investment with dividends reinvested
 
 - Median is indicated as a line in the box.
 - Fences extend 1.5 times inter-quartile range from 25th and 75th percentiles or to the most extreme observation if that is closer to the box. 
-    - inter-quartile range = 75th minus 25th percentile)
+    - inter-quartile range = 75th minus 25th percentile
 - Points outside the fences are outliers. 
     - If you simulate data from a normal distribution, there will typically be very few points outside the fences.
 
@@ -373,8 +376,8 @@ fig.update_layout(
      legend=dict(
         yanchor="top", 
         y=0.99, 
-        xanchor="right", 
-        x=0.99
+        xanchor="left", 
+        x=0.01
     ),
 )
 
