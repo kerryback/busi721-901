@@ -39,11 +39,11 @@ format:
 - Risk is that ABC $\uparrow$ and you have to buy back at more than $60
 
 
-## Shorting to Hedge
+## Relative performance
 
 . . .
 
-Sometimes short as part of a hedge.
+Sometimes short to bet on [relative]{style="color:tomato; font-weight:bold;"} performance.
 
 . . .
 
@@ -125,12 +125,11 @@ You make the difference in returns on $10,000.
 - Reg T is for initial margin. Maintenance margin is up to your broker.
 - This is a 150/50 portfolio (150% long and 50% short).
 
-## Dividends and short interest rebate
+## Dividends and interest
 
-- Cash proceeds from a short sale are held by the stock lender as collateral.
-- If you short, you owe the lender stock; the lender owes you cash.
-- You have to pay the lender dividends paid by the stock; the lender pays you interest on the cash (short interest rebate).
-- How much interest you get depends on your broker.  Shop around.
+- You have to pay the lender dividends paid by the stock.
+- Cash proceeds from a short sale are held as collateral.
+- How much interest you get on the cash collateral depends on your broker.  Shop around.
 
 
 

@@ -42,6 +42,8 @@ It is also possible to invest in real estate in the stock market via REITS (real
 ## REITs
 
 - Equity REITs
+  - Own or manage properties
+  - More than $3 trillion of U.S. real estate
 - Mortgage REITs
 - REIT ETFs
 

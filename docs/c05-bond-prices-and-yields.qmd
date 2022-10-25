@@ -46,21 +46,6 @@ format:
 $$P=\frac{c}{1+r}+\frac{c}{(1+r)^2}+\cdots+\frac{c+F}{(1+r)^n}$$
 
 
-## Prices and yields are inversely related
-
-. . .
-
-For fixed coupon and face,
-
-- Higher price $\Rightarrow$ lower yield
-  - Price $>$ face $\Rightarrow$ yield $<$ coupon rate 
-  - Said to be trading at a premium (to par)
-
-
-- Lower price $\Rightarrow$ higher yield
-  - Price $<$ face $\Rightarrow$ yield $>$ coupon rate
-  - Said to be trading at a discount (to par)
-
 ## Example 
 
 . . .
@@ -77,10 +62,13 @@ The yield is
 
 $$y = 2r$$
 
-## Yield and Price <a href="https://bbcx-investments.com/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+## Prices and Yields are Inversely Related <a href="https://bbcx-investments.com/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+
+. . .
 
 5 year bond, 6% coupon, $100 face
 
+. . .
 
 ```{python}
 import numpy as np
@@ -117,6 +105,13 @@ fig.update_layout(
 fig.show()
 ```
 
+## Premium and Discount Bonds
+
+
+- Premium bond: price > face value
+  - Implies yield < coupon rate
+- Discount bond: price < face value
+  - Implies yield > coupon rate
 
 ## Price sensitivity to market rates
 

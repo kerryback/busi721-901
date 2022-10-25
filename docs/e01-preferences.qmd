@@ -22,6 +22,7 @@ format:
 - To model liking high expected returns and disliking high variance, we can rank portfolios based on a combination of mean and variance:
 
 . . . 
+
 $$\text{expected return}-\frac{1}{2}A\times\text{variance}$$
 
 - The 1/2 is a convention. The number $A$ is risk aversion. 

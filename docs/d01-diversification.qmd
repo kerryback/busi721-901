@@ -55,12 +55,13 @@ format:
 
 ## Portfolio Returns
 
-- Consider a $100,000 portfolio with 40%  in one asset (asset 1) and 60% in a second (asset 2).
-- Suppose asset 1 $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
-- Suppose asset 2 $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
-- $100,000 $\rightarrow$ $114,000
-- So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
-- The portfolio return is $r_p = w_1r_1 + w_2r_2$ where $w_i$ is the fraction of the portfolio invested in asset $i$.
+- The return of a portfolio of two assets is $r_p = w_1r_1 + w_2r_2$ where $w_i$ is the fraction of the portfolio invested in asset $i$.
+- Example: $100,000 portfolio with 40%  in asset 1 and 60% in asset 2.
+  - Suppose asset 1 $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
+  - Suppose asset 2 $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
+  - $100,000 $\rightarrow$ $114,000
+  - So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
+
 
 ## Expected portfolio return
 
@@ -118,8 +119,8 @@ $$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)
 - There are two independent assets, each with possible returns of $\pm$ 10%
   - Put all \$100 in a single asset $\leftrightarrow$ flip once for \$10
   - Put \$50 in each asset $\leftrightarrow$ flip twice for \$5
-- std dev $r_1 = 10\text{%}$ $\Rightarrow$ var $r_1 = 100\text{%}^2$
-- std dev $r_2 = 10\text{%}$ $\Rightarrow$ var $r_2 = 100\text{%}^2$
+- std dev $r_1 = 0.1$ $\Rightarrow$ var $r_1 = 0.01$
+- std dev $r_2 = 0.1$ $\Rightarrow$ var $r_2 = 0.01$
 - assets are independent, so cov $= 0$
 
 # 
@@ -129,9 +130,9 @@ $$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)
 
 . . .
 
-$$\left(\frac{1}{2}\right)^2 100\text{%}^2 + \left(\frac{1}{2}\right)^2 100\text{%}^2 = 50\text{%}^2$$
+$$\left(\frac{1}{2}\right)^2 (0.01) + \left(\frac{1}{2}\right)^2 (0.01) = 0.005$$
 
-- portfolio std dev is $\sqrt{50}\text{%}= 7.07\text{%}$
+- portfolio std dev is $\sqrt{0.005}= 0.0707$
 
 ## Correlation and covariance 
 
@@ -150,6 +151,7 @@ $$2 w_1 w_2 \times \text{corr}(r_1, r_2) \times\text{std}(r_1)\times\text{std}(r
 
 . . .
 
+<br>
 [Portfolio variance is lower when correlation is lower.]{style="color:tomato; font-weight:bold;"}
 
 
@@ -221,6 +223,8 @@ print(f"beta is {rets.AAPL.cov(rets.CVX)/rets.CVX.var(): .2f}")
 ```
 :::
 ::::
+
+
 
 ## Monthly returns of CVX and XOM 2017--2021
 

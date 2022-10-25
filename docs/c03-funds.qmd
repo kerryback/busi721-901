@@ -147,6 +147,4 @@ Active funds try to beat the market or their market sector by choosing the best 
 
 - Because of the mechanism for APs to redeem or acquire shares, an ETF's portfolio must be transparent. 
 
-- So, active strategies of the type typical for mutual funds (who only report portfolios quarterly) are not possible.
-
-- Nevertheless, complex strategies are possible.  For example, some ETFs focus on "quality" stocks or "high momentum" stocks or the like (factor ETFs).
+- ETFs either hold an index or follow an algorithmic strategy.

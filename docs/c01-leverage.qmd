@@ -92,7 +92,7 @@ You make the stock return  plus the fraction borrowed times (stock return minus 
 
 - Suppose the stocks fell by 10%.
 - You lose 10% plus one half of ($-$ 10% $-$ 2% ).
-- So, your loss is 16% on your $20,000 investment.
+- So, your loss is 16% on your $100,000 investment.
 
 . . .
 
