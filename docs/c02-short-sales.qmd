@@ -54,7 +54,7 @@ Sometimes short to bet on [relative]{style="color:tomato; font-weight:bold;"} pe
 Example: optimistic that Chevron will do well among oil companies, but not sure what price of oil will do.
 :::
 ::: {.column width="60%"}
-![](images/oilprice2.jpg)
+<img src=images/gas-station-1275484_1920.jpg height=400>
 :::
 ::::
 
