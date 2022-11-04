@@ -74,7 +74,7 @@ $$w= I_n w^+ - I_n w^- =\begin{pmatrix} I_n & - I_n \end{pmatrix}
 
 . . .
 
-$$(1/2) \times \text{raver} \times \hat{w}^\top D^\top C D \hat{w} - r_s x_x + r_b x_b - \bar{r}^\top D \hat{w}$$
+$$(1/2) \times \text{raver} \times w^\top C w - r_s x_x + r_b x_b - \bar r^\top w$$
 
 - subject to $x_s \ge 0$, $x_b \ge 0$, $w \ge 0$
 - and $x_s - x_b + 1_n^\top w = 1$

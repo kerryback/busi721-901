@@ -1,5 +1,5 @@
 ---
-title:  "NPV and IRR"
+title:  "Internal rate of return"
 author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
 output-dir: docs
 execute:
