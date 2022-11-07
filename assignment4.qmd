@@ -10,5 +10,3 @@ Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide 
 2.  Three assets have standard deviations of 20%, 30%, and 40%.  Their expected returns are 10%, 15%, and 12%.  Compute the mean and standard deviation of a portfolio that is 25% in stock 1, 50% in stock 2, and 25% in stock 3.  Plot the assets and the portfolio in mean -- standard deviation space.
 
 3. For the data in question 2, find the least-risk portfolio with an expected return of 12%.  Assume the saving and borrowing rate are both 2%.
-
-4. CAPM question.

@@ -6,6 +6,6 @@ Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide 
 
 2.  I think CVX will beat XOM.  I am considering investing $10,000, buying $10,000 of CVX, and shorting $10,000 of XOM.  I will earn negligible interest on the short sale proceeds.  What will be my gain or loss if CVX earns 12% and XOM earns 5%?  What if the reverse happens?
 
-3.  A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  If it is priced at $95 per $100 of face value, what is its yield?
+3.  SKIP QUESTION 3
 
 4.  A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  Its current yield is 8%.  What is its price?
