@@ -2,12 +2,10 @@
 
 Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide your answer in the cell or cells below it.
 
-1. 3 assets, no short sales, different borrowing and saving rates.
+1. Use the asset data from questions 2 and 3 of Assignment 4, but assume the money market rate of return is 3% and the margin loan rate is 5%.  Find the optimal portfolio for an investor with a risk aversion of 6 who does not want to sell anything short.  
 
 2. A certain investment is a coin flip.  You will either lose 10% of your portfolio or win some percent.  Decide how large the win must be in order for you to be willing to flip the coin (there is no right or wrong answer for this).  Calculate the number $A$ such that
 $$\frac{x - 0.1}{2}  - \frac{A}{2} \left(\frac{x+0.1}{2}\right)^2 = 0$$
 where $x$ is the amount you need to win entered as a decimal.  $A$ is your risk aversion.
 
-3.  Compute annual CVX returns over the time period 1980-2021 using Yahoo Finance data.  Compute a 95% confidence interval for the mean annual CVX return.
-
-4.  Get real return data for stocks, bonds, and gold from website.  Compute optimal portfolio with risk aversion of 4 assuming no shorts and different borrowing and saving rates.
+3.  There is no coding required for this question.  Use the webpage http://bbcx-investments.com/capm/costequity to calculate the expected return implied by the CAPM for United Airlines (ticker=UAL) and also the expected return implied by the CAPM for Kroger (ticker=KR).  Report them in a Markdown cell.  Explain why it would be reasonable to expect a higher return on United Airlines than on Kroger.

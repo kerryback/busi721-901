@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.32">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -93,14 +98,9 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="assignment-5-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university">Assignment 5<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br></h2>
 <p>Submit a Jupyter notebook. Copy each question into a Markdown cell and provide your answer in the cell or cells below it.</p>
 <ol type="1">
-<li><p>3 assets, no short sales, different borrowing and saving rates.</p></li>
-<li><p>A certain investment is a coin flip. You will either lose 10% of your portfolio or win some percent. Decide how large the win must be in order for you to be willing to flip the coin (there is no right or wrong answer for this). Calculate the number <span class="math inline">\(A\)</span> such that</p></li>
-</ol>
-<p><span class="math display">\[\frac{x - 0.1}{2}  - \frac{A}{2} \left(\frac{x+0.1}{2}\right)^2 = 0\]</span></p>
-<p>where <span class="math inline">\(x\)</span> is the amount you need to win entered as a decimal. <span class="math inline">\(A\)</span> is your risk aversion.</p>
-<ol start="3" type="1">
-<li><p>Compute annual CVX returns over the time period 1980-2021 using Yahoo Finance data. Compute a 95% confidence interval for the mean annual CVX return.</p></li>
-<li><p>Get real return data for stocks, bonds, and gold from website. Compute optimal portfolio with risk aversion of 4 assuming no shorts and different borrowing and saving rates.</p></li>
+<li><p>Use the asset data from questions 2 and 3 of Assignment 4, but assume the money market rate of return is 3% and the margin loan rate is 5%. Find the optimal portfolio for an investor with a risk aversion of 6 who does not want to sell anything short.</p></li>
+<li><p>A certain investment is a coin flip. You will either lose 10% of your portfolio or win some percent. Decide how large the win must be in order for you to be willing to flip the coin (there is no right or wrong answer for this). Calculate the number <span class="math inline">\(A\)</span> such that <span class="math display">\[\frac{x - 0.1}{2}  - \frac{A}{2} \left(\frac{x+0.1}{2}\right)^2 = 0\]</span> where <span class="math inline">\(x\)</span> is the amount you need to win entered as a decimal. <span class="math inline">\(A\)</span> is your risk aversion.</p></li>
+<li><p>There is no coding required for this question. Use the webpage http://bbcx-investments.com/capm/costequity to calculate the expected return implied by the CAPM for United Airlines (ticker=UAL) and also the expected return implied by the CAPM for Kroger (ticker=KR). Report them in a Markdown cell. Explain why it would be reasonable to expect a higher return on United Airlines than on Kroger.</p></li>
 </ol>
 
 
@@ -176,7 +176,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
