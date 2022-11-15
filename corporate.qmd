@@ -3,17 +3,13 @@
 ::: {.column width=50}
 Part I
 
-[NPV and IRR](f01-npv-irr.html)
+[Cash Flows and NPV](f01-cash-flows.html)
 
-[Income vs Cash Flow](f02-cash-flow.html)
+[Economic Value Added](f02-eva.html)
 
-[Return on Capital Employed](f03-roce.html)
+[Financial Accounting](f03-accounting.html)
 
-[Financial Statements](f04-statements.html)
 
-[Capital Budgeting Exercises](f05-exercises.html)
-
-[Sneaker Case](f06-sneaker.html)
 
 :::
 
@@ -22,7 +18,6 @@ Part I
 ::: {.column width=50}
 Part II
 
-[Two Stage Valuation Model](g01-two-stage.html)
 
 :::
 
