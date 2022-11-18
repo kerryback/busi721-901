@@ -1,6 +1,6 @@
 ---
 title:  "Economic Value Added"
-author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
 output-dir: docs
 execute:
   echo: false
@@ -78,79 +78,22 @@ cost of capital = 10%
 | Lagged IC | | 100 | 70 | 50 | 35 |
 | EVA |  | 10 | 23 | 15 | 1.5
 
-## Example in code
 
-```p
-import numpy as np
-import pandas as pd
 
-IC = pd.Series((100, 70, 50, 35, 0))
-Income = pd.Series((0, 20, 30, 20, 5))
-df = pd.concat((IC, Income), axis=1)
-df.columns = ["IC", "Income"]
-df.index.name = "Year"
 
-df.T
-```
-
-. . .
-
-```{python}
-import numpy as np
-import pandas as pd
-
-IC = pd.Series((100, 70, 50, 35, 0))
-Income = pd.Series((0, 20, 30, 20, 5))
-df = pd.concat((IC, Income), axis=1)
-df.columns = ["IC", "Income"]
-df.index.name = "Year"
-
-df.T
-```
-
-#
-
-```{.p code-line-numbers="1|3|4|6"}
-cost_capital = 0.1
-
-df["Capital charge"] = cost_capital * df.IC.shift()
-df["EVA"] = df.Income - df["Capital charge"]
-
-df[["IC", "Income", "Capital charge", "EVA"]].T
-```
-
-. . .
-
-```{python}
-cost_capital = 0.1
-
-df["Capital charge"] = cost_capital * df.IC.shift()
-df["EVA"] = df.Income - df["Capital charge"]
-
-df[["IC", "Income", "Capital charge", "EVA"]].T
-```
 
 ## Discounted EVA
 
-```p
-df["PV factor"] = 1 / (1+cost_capital)**df.index
-df["PV of EVA"] = df["EVA"] * df["PV factor"]
-df["NPV"] = np.nan
-df["NPV"].iloc[0] = df["PV of EVA"].sum()
-
-df[["EVA", "PV factor", "PV of EVA", "NPV"]].T.round(2)
-```
-
 . . .
 
-```{python}
-df["PV factor"] = 1 / (1+cost_capital)**df.index
-df["PV of EVA"] = df["EVA"] * df["PV factor"]
-df["NPV"] = np.nan
-df["NPV"].iloc[0] = df["PV of EVA"].sum()
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| EVA |  | 10 | 23 | 15 | 1.50 |
+| PV factor |  | 0.91 | 0.83 | 0.75 | 0.68 |
+| PV of EVA | | 9.09 | 19.01 | 11.27 | 1.02 |
+| NPV | 40.39|  |  |  |  |
 
-df[["EVA", "PV factor", "PV of EVA", "NPV"]].T.round(2)
-```
+
 
 ##
 

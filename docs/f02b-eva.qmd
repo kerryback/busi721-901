@@ -1,0 +1,112 @@
+---
+title:  "Economic Value Added"
+author: <br>Kerry Back<br><br>BUSI 721, Fall 2022<br>JGSB, Rice University
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+
+## Return on invested capital (ROIC)
+
+- Equals income divided by lagged invested capital
+- Also called return on capital employed (ROCE)
+- Some different versions
+  - Adjust income for interest tax shield
+  - Use average of lagged and current IC instead of lagged
+
+## Example
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| Invested capital | 100 | 70 | 50 | 35 | 0 |
+| Income | 0 | 20 | 30 | 20 | 5 |
+| ROIC | | 0.2 | 0.428 | 0.4 | 0.143 |
+
+
+## Economic value added
+
+- EVA = income minus a charge for capital
+- Charge for capital = required return times lagged invested capital
+- Equivalently, EVA equals
+
+. . .
+
+$$(\text{ROIC} - \text{required return}) \times \text{lagged IC}$$
+
+
+## Example (method 1)
+
+. . .
+
+cost of capital = 10%
+
+. . .
+
+<br>
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| Invested capital | 100 | 70 | 50 | 35 | 0 |
+| Income | 0 | 20 | 30 | 20 | 5 |
+| Charge for capital | 0 | 10 | 7 |5 | 3.5 |
+| EVA | 0 | 10 | 23 | 15 | 1.5
+
+## Example (method 2)
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| Invested capital | 100 | 70 | 50 | 35 | 0 |
+| Income | 0 | 20 | 30 | 20 | 5 |
+| ROIC | | 0.2 | 0.428 | 0.4 | 0.143 |
+| Extra return | | 0.1 | 0.328 | 0.3 | 0.043 |
+| Lagged IC | | 100 | 70 | 50 | 35 |
+| EVA |  | 10 | 23 | 15 | 1.5
+
+
+
+
+
+## Discounted EVA
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| EVA |  | 10 | 23 | 15 | 1.50 |
+| PV factor |  | 0.91 | 0.83 | 0.75 | 0.68 |
+| PV of EVA | | 9.09 | 19.01 | 11.27 | 1.02 |
+| NPV | 40.39|  |  |  |  |
+
+
+
+##
+
+<br>
+<p align=center>
+[Discounted EVA equals NPV]{style="color:tomato; font-weight:bold;"} 
+<p>
+
+<br>
+<p align=center>
+<img src="images/EPoint.png" height=300 width=300> </p>
+
+
+
+
+ 

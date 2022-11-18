@@ -1,0 +1,33 @@
+---
+title:  "Project Analysis Example 1"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+
+## Example
+
+- Project requires $10 million purchase of 5-year MACRS equipment.  Depreciation rates are 20%, 32%, 19.2%, 11.52%, 11.52% and 5.76%.
+- Anticipate equipment could be sold for $3 million at end of year 5.
+- Project sales revenue of $6, $10, $12, $10, and $5 million
+
+# 
+
+- Cost of goods sold (materials + labor) = 50% of sales
+- Initial working capital of $0.5 million (inventory), thereafter 20% of COGS, but 0 in year 5
+- Selling, general & administrative expenses of $2, $2, $1, $1, and $1 million
+- Corporate tax rate (state + federal) is 30%
+- Discount rate is 10%

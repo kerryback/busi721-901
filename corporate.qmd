@@ -9,6 +9,8 @@ Part I
 
 [Financial Accounting](f03-accounting.html)
 
+[Example 1](f04-example1.html)
+
 
 
 :::

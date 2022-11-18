@@ -1,6 +1,6 @@
 ---
 title:  "Financial Accounting"
-author: <br>BUSI 721, Fall 2022<br>JGSB, Rice UniversityKerry Back<br><br>
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
 output-dir: docs
 execute:
   echo: false
@@ -16,6 +16,20 @@ format:
     theme: [solarized, 721.scss]
     incremental: true
 ---
+
+## Major accounting statments
+
+- Income statement
+  - Revenue - expenses - taxes = net income
+- Balance sheet
+  - Assets and liabilities
+- Statement of cash flows
+
+## Cash flows
+
+- Anything run through the income statement that is not a cash item creates a balance sheet item
+- Any cash item that is not run through the income statement also creates a balance sheet item
+- Income minus change in balance sheet = cash
 
 ## Timing of expenses
 
@@ -59,16 +73,4 @@ format:
 - Subtracting reduction in invested capital adds back the book value to cash flow
 - Net effect on cash flow is selling price minus taxes
 
-## Example
 
-- Project requires $10 million purchase of 5-year MACRS equipment.  Depreciation rates are 20%, 32%, 19.2%, 11.52%, 11.52% and 5.76%.
-- Anticipate equipment could be sold for $3 million at end of year 5.
-- Project sales revenue of $6, $10, $12, $10, and $5 million
-
-# 
-
-- Cost of goods sold (materials + labor) = 50% of sales
-- Initial working capital of $0.5 million (inventory), thereafter 20% of COGS, but 0 in year 5
-- Selling, general & administrative expenses of $2, $2, $1, $1, and $1 million
-- Corporate tax rate (state + federal) is 30%
-- Discount rate is 10%
