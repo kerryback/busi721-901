@@ -1,4 +1,4 @@
-## Assignment 5<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
+## Assignment 6<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
 
 Calculate the net preent value of the following project.  Submit an Excel workbook.
 
