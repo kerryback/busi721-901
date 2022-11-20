@@ -17,31 +17,106 @@ format:
     incremental: true
 ---
 
-# 
+## Break-even rate of return
 
-- The market for a product is declining.  It is estimated that sales of 1 million units per year can be maintained for the next 5 years, but the sales price will fall by 5% per year as follows:
+- When calculating an NPV, we usually also calculate a break-even rate of return, called the internal rate of return (IRR).
+- For projects with negative cash flows early and positive cash flows late:
+  - If IRR > required return, then NPV>0.
+  - If IRR < required return, then NPV<0.
+- If cash flows are reversed (positive early and negative late), then we are borrowing instead of investing, and we like low rates instead of high.
 
+## Interpretation for usual projects
+
+- Usual = "negative early and positive late"
+- Suppose we invested the negative cash flows in stocks or other assets rather than the project.
+- We want to pull out the positive cash flows later from the stock account.
+- What rate of return would we have to earn on the stocks for this to be feasible?
+- Answer is IRR.
+
+## Usefulness of the IRR
+
+- If IRR is very high or very low, then the required return doesn't matter much.  
+  - For usual projects, very high $\Rightarrow$ "take." 
+  - For usual projects, very low $\Rightarrow$ "reject".
+- When there is limited capital, we can sometimes calculate the best portfolio of projects by starting with the highest IRR projects and working down the list.
+
+## Example
+
+- Cash flows = [-100, 30, 30, 30, 30]
 
 . . .
 
-| Year | 0 | 1 | 2 | 3 | 4 | 5 |
-|:---|---:|---:|---:|---:|---:|---:|
-| | |  19 | 18.05 | 17.15 | 16.29 | 15.48 |
+```{python}
+import plotly.graph_objects as go
+import numpy as np
+import numpy_financial as npf
 
-- COGS and SG&A expenses are projected to stay constant at 10 million per year and 5 million per year, respectively.
+cf = np.array((-100, 30, 30, 30, 30))
+def f(r) :
+  return np.sum((cf*(1+r)**np.arange(0, -5, -1)))
+rates = np.linspace(0.001, 0.2, 100)
+npvs = [f(r) for r in rates]
+irr = npf.irr(cf)
 
-#
+trace1 = go.Scatter(
+  x=rates,
+  y=npvs,
+  hovertemplate="""
+  discount rate = %{x:.1%}<br>
+  npv = $%{y:.2f}<extra></extra>
+  """,
+)
 
-- Current inventory is $2 million, receivables are $2.4 million, and payables are $1.6 million.  
-- Future inventory is projected to be 20% of COGS, recievables are projected to be 16% of sales, and payables are projected to be 16% of COGS, with all working capital recovered in five years.
-- The current book value of equipment used in production is $7 million.  The planned depreciation is $5 million in the upcoming year and $2 million the following year.
+trace2 = go.Scatter(
+  x=[irr],
+  y=[f(irr)],
+  mode="markers",
+  marker=dict(size=15),
+  hovertemplate="""
+  internal rate of return = %{x:.2%}<extra></extra>
+  """,
+)
 
+fig = go.Figure(trace1)
+fig.add_trace(trace2)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Discount Rate",
+    yaxis_title="NPV",
+    yaxis_tickformat=".0f",
+    xaxis_tickformat=".0%",
+    width=1000,
+    height=460,
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
+    showlegend=False
+)
+fig.show()
+print(f"IRR is {irr:.2%}")
+```
+  
+## Calculating IRR
 
-# 
+- NPV is a polynomial in $1/(1+r)$:
 
-- The equipment will have zero salvage value after five years.
-- If production is discontinued now, the equipment could be sold for $4 million, and all working capital could be recovered now.
-- The cost of capital is 12%.
-- The corporate tax rate is 30%.
-- Should production be discontinued now?
+. . .
 
+$$\text{NPV} = c_0 + \frac{c_1}{1+r} + \frac{c_2}{(1+r)^2}+ \cdots + \frac{c_n}{(1+r)^n}$$
+
+- So, NPV = 0 is a polynomial equation, which in general can have many or zero real roots.
+
+- For usual projects (negative early and positive late):
+  - If sum of positive cash flows $\le$ sum of negative cash flows, no positive IRR.
+  - Otherwise, unique positive IRR.
+
+## Calculating IRR with numpy financial
+
+. . .
+
+```{.p}
+import numpy_financial as npf
+
+cash_flows = [-100, 30, 30, 30, 30]
+irr = npf.irr(cash_flows)
+```
