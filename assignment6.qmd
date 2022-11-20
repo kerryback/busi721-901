@@ -1,11 +1,36 @@
 ## Assignment 5<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
 
-Submit a Jupyter notebook.  Copy each question into a Markdown cell and provide your answer in the cell or cells below it.
+Calculate the net preent value of the following project.  Submit an Excel workbook.
 
-1. Use the asset data from questions 2 and 3 of Assignment 4, but assume the money market rate of return is 3% and the margin loan rate is 5%.  Find the optimal portfolio for an investor with a risk aversion of 6 who does not want to sell anything short.  
+- The XYZ company is considering launching a new product.  Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.
 
-2. A certain investment is a coin flip.  You will either lose 10% of your portfolio or win some percent.  Decide how large the win must be in order for you to be willing to flip the coin (there is no right or wrong answer for this).  Calculate the number $A$ such that
-$$\frac{x - 0.1}{2}  - \frac{A}{2} \left(\frac{x+0.1}{2}\right)^2 = 0$$
-where $x$ is the amount you need to win entered as a decimal.  $A$ is your risk aversion.
+- Sales (in millions of dollars) are projected as follows:
 
-3.  There is no coding required for this question.  Use the webpage http://bbcx-investments.com/capm/costequity to calculate the expected return implied by the CAPM for United Airlines (ticker=UAL) and also the expected return implied by the CAPM for Kroger (ticker=KR).  Report them in a Markdown cell.  Explain why it would be reasonable to expect a higher return on United Airlines than on Kroger.
+| Year | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---|---:|---:|---:|---:|---:|---:|
+| | | 100 | 150 | 200 | 120 | 80 |
+
+
+- Labor and material costs for the product would be 50% of sales revenue.
+
+- For the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively.  The existing products have the same 50% gross margin.
+
+ - Incremental selling, general, and administrative expenses are forecast to be (in millions of dollars):
+
+
+| Year | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---|---:|---:|---:|---:|---:|---:|
+| | | 20 | 25 | 15 | 10 | 5 |
+
+
+- The new product would require an investment of $100 million in 10-year MACRS equipment.  The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.  
+- It is anticipated that the equipment could be sold for $60 million in five years.
+- $15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.  
+- Afterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.  
+- All working capital would be recovered in five years.  
+- The corporate tax rate is 30%.
+- The cost of capital is 12%.
+
+
+
+

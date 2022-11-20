@@ -11,6 +11,10 @@ Part I
 
 [Example 1](f04-example1.html)
 
+[Example 2](f04-example2.html)
+
+[Example 3](f04-example3.html)
+
 
 
 :::
@@ -25,3 +29,13 @@ Part II
 
 ::::
 
+<hr>
+
+:::: {.columns}
+::: {.column width="50%"}
+[Assignment 6](assignment6.qmd){style="color:Tan"}
+:::
+::: {.column width="50%"}
+
+:::
+::::
