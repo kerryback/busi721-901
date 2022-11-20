@@ -110,9 +110,11 @@ $$\text{NPV} = c_0 + \frac{c_1}{1+r} + \frac{c_2}{(1+r)^2}+ \cdots + \frac{c_n}{
   - If sum of positive cash flows $\le$ sum of negative cash flows, no positive IRR.
   - Otherwise, unique positive IRR.
 
-## Calculating IRR with numpy financial
+## numpy financial or excel
 
 . . .
+
+<br>
 
 ```{.p}
 import numpy_financial as npf
@@ -120,3 +122,8 @@ import numpy_financial as npf
 cash_flows = [-100, 30, 30, 30, 30]
 irr = npf.irr(cash_flows)
 ```
+
+. . .
+
+<br>
+Or, in Excel, =IRR(range) computes the IRR.  First element of the range is date-0 cash flow, next element is date-1 cash flow, etc.
