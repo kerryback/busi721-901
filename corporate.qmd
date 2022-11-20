@@ -11,9 +11,9 @@ Part I
 
 [Example 1](f04-example1.html)
 
-[Example 2](f04-example2.html)
+[Example 2](f05-example2.html)
 
-[Example 3](f04-example3.html)
+[Example 3](f06-example3.html)
 
 
 
@@ -24,6 +24,17 @@ Part I
 ::: {.column width=50}
 Part II
 
+[Internal Rate of Return](g01-irr.html)
+
+[Perpetuities](g02-perpetuties.html)
+
+[Valuing Companies](g03-valuing-companies.html)
+
+[Weighted Average Cost of Capital](g04-wacc.html)
+
+[Modigliani & Miller](g05-mm.html)
+
+[Interest Tax Shields](g06-interest-tax-shields.html)
 
 :::
 
