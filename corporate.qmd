@@ -1,7 +1,7 @@
 :::: {.columns}
 
 ::: {.column width=50}
-Part I
+Part A
 
 [Cash Flows and NPV](f01-cash-flows.html)
 
@@ -22,7 +22,7 @@ Part I
 
 
 ::: {.column width=50}
-Part II
+Part B
 
 [Internal Rate of Return](g01-irr.html)
 
