@@ -123,7 +123,9 @@ cash_flows = [-100, 30, 30, 30, 30]
 irr = npf.irr(cash_flows)
 ```
 
-. . .
+
 
 <br>
-Or, in Excel, =IRR(range) computes the IRR.  First element of the range is date-0 cash flow, next element is date-1 cash flow, etc.
+
+- Or, in Excel, =IRR(range) computes the IRR.  
+- First element of the range is date-0 cash flow, next element is date-1 cash flow, etc.

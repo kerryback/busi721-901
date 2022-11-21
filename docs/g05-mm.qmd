@@ -17,3 +17,21 @@ format:
     incremental: true
 ---
 
+## How much debt should a company have?
+
+- There is a wide range of debt levels.
+  - Public companies relatively low.
+  - Private equity/leveraged buyout funds relatively high.
+- What are the pluses and minuses?
+
+## Hold investments and operations constant
+
+- Consider a financial restructuring with no effect on investments or operations.
+- Issue equity to pay down debt or borrow money to repurchase shares.
+- Anything that increases enterprise value is good for shareholders.
+  - Suppose EV = 300, debt=100, equity=200
+  - Suppose we can borrow 20 more to repurchase shares and increase EV to 310
+    - Now debt = 120
+    - Equity = 190
+    - Shareholders get 20 in share repurchases, so 210 total.
+
