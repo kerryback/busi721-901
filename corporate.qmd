@@ -26,15 +26,15 @@ Part B
 
 [Internal Rate of Return](g01-irr.html)
 
-[Perpetuities](g02-perpetuties.html)
+[Perpetuities](g02-perpetuities.html)
 
 [Valuing Companies](g03-valuing-companies.html)
 
 [Weighted Average Cost of Capital](g04-wacc.html)
 
-[Modigliani & Miller](g05-mm.html)
+[Debt and Taxes](g05-debt-taxes.html)
 
-[Interest Tax Shields](g06-interest-tax-shields.html)
+[Leverage and Betas](g06-levered-betas.html)
 
 :::
 
