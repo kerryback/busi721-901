@@ -34,7 +34,7 @@ Part B
 
 [Debt and Taxes](g05-debt-taxes.html)
 
-[Leverage and Betas](g06-levered-betas.html)
+[Debt and Cost of Capital](g06-levered-betas.html)
 
 :::
 
