@@ -10,6 +10,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade
@@ -42,11 +43,14 @@ $$+ \text{% Debt} \times \text{After-tax Cost of Debt}$$
 - The company's tax rate is 40%.
 - Invested capital is expected to be constant forever.
 - Required return on equity is 20%.
+- We want to value the equity.
+  - Method 1: discount equity cash flows at the cost of equity.
+  - Method 2: discount free cash flows at the WACC and then subtract value of debt.
 
 ## Method 1: Discount equity cash flows
 
 - Pre-tax income is 66 2/3.  Taxes are 26 2/3.  Net income is 40.
-- Cash flow is 40.
+- Equity cash flow is 40.
 - Equity value is 40/0.2 = 200.
 - Company is 50% debt and 50% equity by market value.
 
@@ -54,12 +58,14 @@ $$+ \text{% Debt} \times \text{After-tax Cost of Debt}$$
 
 - Apply tax rate to EBIT as if there were no interest: taxes = 30 2/3.
 - Income = 76 2/3 - 30 2/3 = 46.
-- Cash flow = 46.
+- Free cash flow = 46.
 - WACC is 
 
 . . .
 
 $$\frac{1}{2} \times \text{20%} + \frac{1}{2} \times (1-\text{40%}) \times \text{5%} = \text{11.5%}$$
+
+# 
 
 - Enterprise value is 46/0.115 = 400.
 - Subtract 200 debt value to get 200 equity value.

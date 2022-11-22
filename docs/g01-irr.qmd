@@ -9,6 +9,7 @@ format:
   revealjs:
     highlight-style: monokai
     code-fold: true
+    scrollable: true
     slide-number: true
     preview-links: true
     self-contained: true
@@ -23,7 +24,7 @@ format:
 - For projects with negative cash flows early and positive cash flows late:
   - If IRR > required return, then NPV>0.
   - If IRR < required return, then NPV<0.
-- If cash flows are reversed (positive early and negative late), then we are borrowing instead of investing, and we like low rates instead of high.
+
 
 ## Interpretation for usual projects
 
@@ -98,13 +99,11 @@ print(f"IRR is {irr:.2%}")
   
 ## Calculating IRR
 
-- NPV is a polynomial in $1/(1+r)$:
-
 . . .
 
 $$\text{NPV} = c_0 + \frac{c_1}{1+r} + \frac{c_2}{(1+r)^2}+ \cdots + \frac{c_n}{(1+r)^n}$$
 
-- So, NPV = 0 is a polynomial equation, which in general can have many or zero real roots.
+- So, NPV = 0 is a polynomial equation in the variable $1/(1+r)$.
 
 - For usual projects (negative early and positive late):
   - If sum of positive cash flows $\le$ sum of negative cash flows, no positive IRR.

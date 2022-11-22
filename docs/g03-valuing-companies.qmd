@@ -10,6 +10,7 @@ format:
     highlight-style: monokai
     code-fold: true
     slide-number: true
+    scrollable: true
     preview-links: true
     self-contained: true
     transition: fade
@@ -27,10 +28,10 @@ format:
  
 ## Equity value or enterprise value?
 
-- Can forecast cash flows after net payments to bondholders.
+- Can forecast cash flows after net payments to lenders.
   - These are equity cash flows.
-  - Discount at an appropriate rate, given the risk of the stock.
-- Or, can forecast total cash flows to shareholders and bondholders.
+  - Discount at an appropriate rate, given stock risk.
+- Or, can forecast total cash flows to shareholders and lenders.
   - Discount at a blended rate, given equity and debt risk.
   - Present value is enterprise value (debt + equity value).
   - Subtract value of debt to get equity value.
@@ -38,8 +39,10 @@ format:
 ## Equity cash flow
 
 - Subtract interest expense in income statement.
-- Forecast how much additional debt will be used in the future and what future interest will be.
-- Borrowing money reduces shareholders' contributions to growing invested capital.
+- Forecast future growth in invested capital.
+- Forecast how much of the growth will be debt financed.
+- Subtract change in IC not debt financed and also subtract any net debt redemptions from income to get equity cash flows.
+
 
 ## Free cash flow
 
@@ -52,9 +55,9 @@ format:
 
 - A company has no definite ending date, so a perpetuity model is reasonable.
 - What cash flow  will be generated next year?
-- By how much will it grow each year afterwards?
+- By how much will it grow or decline each year afterwards?
 - If growth is constant at rate $g$, then value of the company today is $c_1 / (r-g)$.
-- The could be equity cash flow and equity value or free cash flow and enterprise value.
+
 
 ## Two-stage growth model
 
@@ -65,6 +68,8 @@ format:
 . . .
 
 $$\text{TV} = \frac{c_{n+1}}{r-g}$$
+
+# 
 
 - Value of the company today is
 
@@ -79,6 +84,9 @@ $$\frac{c_1}{1+r} + \frac{c_2}{(1+r)^2} + \cdots + \frac{c_n}{(1+r)^n} + \frac{\
 - Required rate of return is 12%.
 - $c_5 = 200 \times 1.05 = 210$, so terminal value at year 4 is 
 $210/0.07$.
+
+# 
+
 - Company value is
 
 . . .
