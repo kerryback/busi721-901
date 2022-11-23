@@ -1,0 +1,83 @@
+---
+title:  "Debt and Cost of Capital"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    scrollable: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+
+## Overview
+
+- Adding debt increases enterprise value because of the tax savings, up to a point.
+- Enterprise value is free cash flow discounted at the WACC.
+  - Adding debt does not change FCF.
+  - So adding debt must reduce the WACC.
+- The effect is through taxes, not just because debt is cheaper capital.
+
+## Example
+
+- All equity firm
+- Issues perpetual risk-free debt with interest payment $X$
+- Value of debt is $D=X/r_f$.
+- Tax savings per year is $tX$, where $t=$ tax rate.
+- Government's claim is reduced by $tX/r_f = tD$.
+- Enterprise value is increased by $tD$.
+
+## If there were no taxes ...
+
+- Enterprise value $EV$ is unchanged
+- New equity value is $E = EV-D$.
+- All risk is now borne by $E$ dollars of capital rather than $EV$, so risk per dollar increases by $EV/E$.
+- Risk premium of equity should increase by $EV/E$.
+- New cost of equity is 
+
+. . .
+
+$$r_{\text{new}} = r_f + (EV/E) (r_{\text{old}}-r_f)$$
+
+#
+
+- Without taxes, WACC is 
+
+. . .
+
+$$\frac{E}{EV} \left[r_f + \frac{EV}{E}(r_{\text{old}}-r_f)\right] + \left(1-\frac{E}{EV}\right)r_f$$
+
+- This is $r_{\text{old}}$.
+- Leverage wouldn't change cost of capital if there were no taxes.
+
+## But there are taxes ...
+
+- With taxes, leverage still increases the cost of equity.
+- With risk-free debt as before, all risk is borne by $E$ dollars of capital rather than the old enterprise value.  
+- Old enterprise value is the new enterprise value $EV$ minus $tD$.
+
+. . .
+
+$$EV - tD = E + D - tD = E + (1-t)D$$
+
+#
+
+- So risk per dollar of capital rises by a factor of 
+
+. . .
+
+$$\frac{E+(1-t)D}{E}= 1 + (1-t)\frac{D}{E}$$
+
+- So equity risk rises less when there are taxes.
+- The reason it rises less is that the IRS shares the risk increase.
+- Because equity risk rises less, the WACC falls (straightforward algebra).
+- Leverage reduces the cost of capital - up to a point.
