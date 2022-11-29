@@ -13,7 +13,7 @@ project:
     - assignment4.qmd
     - assignment5.qmd
     - assignment6.qmd
-  
+    
 website:
   title: ""
   search: false
@@ -37,6 +37,9 @@ website:
               
       - text: "Corporate Investment"
         file: corporate.qmd
+
+      - text: "Project Cash Flows"
+        file: accounting.html
      
 format: 
   html:

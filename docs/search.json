@@ -299,5 +299,19 @@
     "title": "",
     "section": "",
     "text": "Calculate the net preent value of the following project. Submit an Excel workbook.\n\nThe XYZ company is considering launching a new product. Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.\nSales (in millions of dollars) are projected as follows:\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n100\n150\n200\n120\n80\n\n\n\n\nLabor and material costs for the product would be 50% of sales revenue.\nFor the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively. The existing products have the same 50% gross margin.\nIncremental selling, general, and administrative expenses are forecast to be (in millions of dollars):\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n20\n25\n15\n10\n5\n\n\n\n\nThe new product would require an investment of $100 million in 10-year MACRS equipment. The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.\n\nIt is anticipated that the equipment could be sold for $60 million in five years.\n$15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.\n\nAfterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.\n\nAll working capital would be recovered in five years.\n\nThe corporate tax rate is 30%.\nThe cost of capital is 12%."
+  },
+  {
+    "objectID": "accounting.html",
+    "href": "accounting.html",
+    "title": "",
+    "section": "",
+    "text": "Net PP&E\n\nRecord cost at date 0\nDepreciate over time according to tax schedule\n\nNet working capital\n\nInventory (usually % of COGS) plus accounts receivable (usually % of sales) minus accounts payable (usually % of COGS)\nEquals NWC\n\nInvested capital = Net PP&E + NWC\nZero out invested capital in last year\n\n\n\n\n\nSales\n\nminus Cost of Goods Sold\nminus Selling, General & Administrative\nminus Depreciation\nplus sales of PP&E\nminus book value of PP&E sold\n\nEquals pre-tax income (EBIT)\nminus taxes\nEquals net income\n\n\n\n\n\nNet income\nless change in invested capital\nEquals cash flow"
+  },
+  {
+    "objectID": "accounting.html#project-cash-flows-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "href": "accounting.html#project-cash-flows-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "title": "",
+    "section": "Project Cash FlowsBUSI 721Data Driven Finance IJones Graduate School of BusinessRice University",
+    "text": "Project Cash FlowsBUSI 721Data Driven Finance IJones Graduate School of BusinessRice University\n\nBalance sheet\n\nNet PP&E\n\nRecord cost at date 0\nDepreciate over time according to tax schedule\n\nNet working capital\n\nInventory (usually % of COGS) plus accounts receivable (usually % of sales) minus accounts payable (usually % of COGS)\nEquals NWC\n\nInvested capital = Net PP&E + NWC\nZero out invested capital in last year\n\n\n\nIncome statement\n\nSales\n\nminus Cost of Goods Sold\nminus Selling, General & Administrative\nminus Depreciation\nplus sales of PP&E\nminus book value of PP&E sold\n\nEquals pre-tax income (EBIT)\nminus taxes\nEquals net income\n\n\n\nStatement of cash flows\n\nNet income\nless change in invested capital\nEquals cash flow"
   }
 ]

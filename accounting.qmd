@@ -1,0 +1,40 @@
+---
+format:
+  html:
+    theme: cosmo
+---
+
+## Project Cash Flows<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
+
+### Balance sheet
+
+
+- Net PP&E
+  - Record cost at date 0
+  - Depreciate over time according to tax schedule
+- Net working capital
+  - Inventory (usually % of COGS)
+    plus accounts receivable (usually % of sales)
+    minus accounts payable (usually % of COGS)
+  - Equals NWC
+- Invested capital = Net PP&E + NWC
+- Zero out invested capital in last year
+
+### Income statement
+
+- Sales
+  - minus Cost of Goods Sold
+  - minus Selling, General & Administrative
+  - minus Depreciation
+  - plus sales of PP&E
+  - minus book value of PP&E sold
+- Equals pre-tax income (EBIT)
+- minus taxes
+- Equals net income
+
+### Statement of cash flows
+
+ - Net income
+ - less change in invested capital
+ - Equals cash flow
+
