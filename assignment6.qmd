@@ -1,6 +1,6 @@
 ## Assignment 6<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
 
-Calculate the net preent value of the following project.  Submit an Excel workbook.
+Calculate the net present value of the following project.  Submit an Excel workbook.
 
 - The XYZ company is considering launching a new product.  Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.
 
