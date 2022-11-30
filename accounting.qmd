@@ -14,8 +14,8 @@ format:
   - Depreciate over time according to tax schedule
 - Net working capital
   - Inventory (usually % of COGS)
-    plus accounts receivable (usually % of sales)
-    minus accounts payable (usually % of COGS)
+  - plus accounts receivable (usually % of sales)
+  - minus accounts payable (usually % of COGS)
   - Equals NWC
 - Invested capital = Net PP&E + NWC
 - Zero out invested capital in last year
