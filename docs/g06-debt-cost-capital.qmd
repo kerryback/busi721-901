@@ -27,57 +27,30 @@ format:
   - So adding debt must reduce the WACC.
 - The effect is through taxes, not just because debt is cheaper capital.
 
-## Example
-
-- All equity firm
-- Issues perpetual risk-free debt with interest payment $X$
-- Value of debt is $D=X/r_f$.
-- Tax savings per year is $tX$, where $t=$ tax rate.
-- Government's claim is reduced by $tX/r_f = tD$.
-- Enterprise value is increased by $tD$.
 
 ## If there were no taxes ...
 
-- Enterprise value $EV$ is unchanged
-- New equity value is $E = EV-D$.
-- All risk is now borne by $E$ dollars of capital rather than $EV$, so risk per dollar increases by $EV/E$.
-- Risk premium of equity should increase by $EV/E$.
-- New cost of equity is 
+- WACC is 
 
 . . .
 
-$$r_{\text{new}} = r_f + (EV/E) (r_{\text{old}}-r_f)$$
+$$\frac{E}{E+D} r_E + \frac{D}{E+D}r_D$$
 
-#
-
-- Without taxes, WACC is 
-
-. . .
-
-$$\frac{E}{EV} \left[r_f + \frac{EV}{E}(r_{\text{old}}-r_f)\right] + \left(1-\frac{E}{EV}\right)r_f$$
-
-- This is $r_{\text{old}}$.
-- Leverage wouldn't change cost of capital if there were no taxes.
+- Increasing the debt share substitutes cheaper capital
+- Cost of debt will rise as debt share increases
+- Cost of equity will also rise as debt share increases
+- These effects exactly offset the use of cheaper capital
 
 ## But there are taxes ...
 
-- With taxes, leverage still increases the cost of equity.
-- With risk-free debt as before, all risk is borne by $E$ dollars of capital rather than the old enterprise value.  
-- Old enterprise value is the new enterprise value $EV$ minus $tD$.
+- WACC is 
 
 . . .
 
-$$EV - tD = E + D - tD = E + (1-t)D$$
+$$\frac{E}{E+D} r_E + (1-t)\frac{D}{E+D}r_D$$
 
-#
+- As without taxes, increasing the debt share
+  - substitutes cheaper capital
+  - but makes debt and equity more expensive
 
-- So risk per dollar of capital rises by a factor of 
-
-. . .
-
-$$\frac{E+(1-t)D}{E}= 1 + (1-t)\frac{D}{E}$$
-
-- So equity risk rises less when there are taxes.
-- The reason it rises less is that the IRS shares the risk increase.
-- Because equity risk rises less, the WACC falls (straightforward algebra).
-- Leverage reduces the cost of capital - up to a point.
+- The net effect with taxes is to lower the WACC
