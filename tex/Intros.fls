@@ -1,9 +1,9 @@
-PWD c:/Users/kerry/repos/2022-721/tex
+PWD c:/Users/keb7/repos/2022-721/tex
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/kerry/repos/2022-721/tex/Intro - module2.tex
-OUTPUT Intro - module2.log
+INPUT c:/Users/keb7/repos/2022-721/tex/Intros.tex
+OUTPUT Intros.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/amscls/amsart.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/amscls/amsart.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/amscls/amsart.cls
@@ -515,10 +515,10 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./Intro - module2.aux
-INPUT Intro - module2.aux
-INPUT Intro - module2.aux
-OUTPUT Intro - module2.aux
+INPUT ./Intros.aux
+INPUT Intros.aux
+INPUT Intros.aux
+OUTPUT Intros.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -554,22 +554,22 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./Intro - module2.out
-INPUT Intro - module2.out
-INPUT ./Intro - module2.out
-INPUT Intro - module2.out
-INPUT ./Intro - module2.out
-INPUT Intro - module2.out
-INPUT ./Intro - module2.out
-INPUT Intro - module2.out
-INPUT ./Intro - module2.out
-INPUT ./Intro - module2.out
-OUTPUT Intro - module2.out
-OUTPUT Intro - module2.pdf
+INPUT ./Intros.out
+INPUT Intros.out
+INPUT ./Intros.out
+INPUT Intros.out
+INPUT ./Intros.out
+INPUT Intros.out
+INPUT ./Intros.out
+INPUT Intros.out
+INPUT ./Intros.out
+INPUT ./Intros.out
+OUTPUT Intros.out
+OUTPUT Intros.pdf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT Intro - module2.aux
-INPUT ./Intro - module2.out
-INPUT ./Intro - module2.out
+INPUT Intros.aux
+INPUT ./Intros.out
+INPUT ./Intros.out
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
