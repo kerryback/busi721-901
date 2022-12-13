@@ -3,10 +3,8 @@ project:
   output-dir: docs
   render:
     - index.qmd
-    - time_and_money.qmd
-    - returns.qmd
-    - portfolios.qmd
-    - corporate.qmd
+    - slides.qmd
+    - assignments.qmd
     - assignment1.qmd
     - assignment2.qmd
     - assignment3.qmd
@@ -19,31 +17,26 @@ website:
   search: false
 
   navbar:
-    background: "#00205B"
     search: false
-    left:
-       
-      - text: "Home"
+    title: BUSI 721
+    right:
+
+      - text: Code Binder
+        href: https://mybinder.org/v2/gh/kerryback/2022-721-binder.git/HEAD
+
+      - text: Slide Decks
+        file: slides.qmd
+
+      - text: Assignments
+        file: assignments.qmd
+
+      - text: Home
         file: index.qmd
 
-      - text: "Time and Money"
-        file: time_and_money.qmd
-
-      - text: "Assets and Returns"
-        file: returns.qmd
-                
-      - text: "Portfolios"
-        file: portfolios.qmd
-              
-      - text: "Corporate Investment"
-        file: corporate.qmd
-
-      - text: "Project Cash Flows"
-        file: accounting.html
-     
+         
 format: 
   html:
-    theme: cyborg
+    theme: cosmo
     scss: styles.css
     
 

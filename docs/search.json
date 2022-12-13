@@ -200,7 +200,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "BBCX Investments Library\nModern Investments: Theory, Data, and Practice\nCourse Code Binder\n\n\n\nKerry Back  J. Howard Creekmore Professor of Finance and Professor of Economics kerryback@gmail.com\n\n\n\nThis course is an introduction to investments, including the analysis of corporate investment projects. We begin with foundational issues such as retirement planning and mortgage calculations. The next part of the course describes markets, assets, and properties of returns. We then study study how to construct efficient portfolios of assets. The final part of the course pertains to the financial analysis of corporate projects.\nOur analysis tool throughout the course will be python. Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss. Code will be posted at the “Course Code Binder” link above.\nThe “Investments Library” linked above is a collection of web pages that illustrate financial concepts. We will use it throughout the course. Many of the pages contain links to Jupyter notebooks that supplement the code in the binder. The “Modern Investments” link above is to the beginnings of a textbook. It should be a useful supplement to the course slides for part of the course. The slides are linked through the navigation bar at the top of the page.\nGrades will be based on weekly assignments and a take-home final exam.\n\n\n\nThe Rice University honor code applies to all work in this course. Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other.\n\n\n\nAny student with a documented disability requiring accommodations in this course is encouraged to contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations regarding assignments or the final exam must be made in advance. Students with disabilities should also contact Disability Support Services in the Allen Center."
+    "text": "Kerry Back  J. Howard Creekmore Professor of Finance and Professor of Economics kerryback@gmail.com\n\n\n\nThis course is an introduction to investments, including the analysis of corporate investment projects. We begin with foundational issues such as retirement planning and mortgage calculations. The next part of the course describes markets, assets, and properties of returns. We then study study how to construct efficient portfolios of assets. The final part of the course pertains to the financial analysis of corporate projects.\nOur analysis tool throughout the course will be python. Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss. Code will be posted at the “Code Binder” link above.\nGrades will be based on weekly assignments and a take-home final exam.\n\n\n\nThe Rice University honor code applies to all work in this course. Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other.\n\n\n\nAny student with a documented disability requiring accommodations in this course is encouraged to contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations regarding assignments or the final exam must be made in advance. Students with disabilities should also contact Disability Support Services in the Allen Center."
   },
   {
     "objectID": "timevalue.html",
@@ -313,5 +313,40 @@
     "title": "",
     "section": "Project Cash FlowsBUSI 721Data Driven Finance IJones Graduate School of BusinessRice University",
     "text": "Project Cash FlowsBUSI 721Data Driven Finance IJones Graduate School of BusinessRice University\n\nBalance sheet\n\nNet PP&E\n\nRecord cost at date 0\nDepreciate over time according to tax schedule\n\nNet working capital\n\nInventory (usually % of COGS) plus accounts receivable (usually % of sales) minus accounts payable (usually % of COGS)\nEquals NWC\n\nInvested capital = Net PP&E + NWC\nZero out invested capital in last year\n\n\n\nIncome statement\n\nSales\n\nminus Cost of Goods Sold\nminus Selling, General & Administrative\nminus Depreciation\nplus sales of PP&E\nminus book value of PP&E sold\n\nEquals pre-tax income (EBIT)\nminus taxes\nEquals net income\n\n\n\nStatement of cash flows\n\nNet income\nless change in invested capital\nEquals cash flow"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "",
+    "section": "",
+    "text": "1. Present and Future Values\n2. Monthly Rates, etc.\n3. Mortgage Payments etc.\n4. Inflation and Real Returns\n5. Retirement Planning\n6. Time-Varying Returns"
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "",
+    "section": "",
+    "text": "1. Time Value of Money\n2. Assets and Returns A\n3. Assets and Returns B\n4. Portfolios A\n5. Portfolios B\n6. Corporate Finance"
+  },
+  {
+    "objectID": "slides.html#assets-and-returns",
+    "href": "slides.html#assets-and-returns",
+    "title": "",
+    "section": "Assets and Returns",
+    "text": "Assets and Returns\n1. Stock Markets\n2. Stock Returns\n3. Annual Returns\n4. Daily Returns\n5. Geometric Average Returns\n6. Long-Run Risk\n7. Leverage\n8. Short Selling\n9. Funds\n10. Bonds\n11. Bond Prices and Yields\n12. Other Assets"
+  },
+  {
+    "objectID": "slides.html#portfolios",
+    "href": "slides.html#portfolios",
+    "title": "",
+    "section": "Portfolios",
+    "text": "Portfolios\n1. Diversification\n2. More Diversification\n3. Saving and Borrowing\n4. Mean-Variance Frontier\n5. Frontier in Pictures\n6. Capital Asset Pricing Model\n7. Preferences\n8. Quadratic Programming\n9. Frictions and Constraints\n10. More Pictures\n11. Estimating Parameters\n12. Stocks, Bonds, and Gold"
+  },
+  {
+    "objectID": "slides.html#corporate-finance",
+    "href": "slides.html#corporate-finance",
+    "title": "",
+    "section": "Corporate Finance",
+    "text": "Corporate Finance\n1. Cash Flows and NPV\n2. Economic Value Added\n3. Financial Accounting\n4. Example 1\n5. Example 2\n6. Example 3\n7. Internal Rate of Return\n8. Perpetuities\n9. Valuing Companies\n10. Weighted Average Cost of Capital\n11. Debt and Taxes\n12. Debt and Cost of Capital"
   }
 ]

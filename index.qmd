@@ -1,12 +1,5 @@
-## BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University
+## Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University
 
-[BBCX Investments Library](http://bbcx-investments.com)
-
-[Modern Investments: Theory, Data, and Practice](http://mi.bbcx-investments.com/index.html)
-
-[Course Code Binder](https://mybinder.org/v2/gh/kerryback/2022-721-binder.git/HEAD)
-
-<hr>
 
 #### Instructor
 
@@ -19,9 +12,7 @@ J. Howard Creekmore Professor of Finance and Professor of Economics<br>
 
 This course is an introduction to investments, including the analysis of corporate investment projects.  We begin with foundational issues such as retirement planning and mortgage calculations.  The next part of the course describes markets, assets, and properties of returns.  We then study  study how to construct efficient portfolios of assets.  The final part of the course pertains to the financial analysis of corporate projects.
 
-Our analysis tool throughout the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Code will be posted at the "Course Code Binder" link above.
-
-The "Investments Library" linked above is a collection of web pages that illustrate financial concepts.  We will use it throughout the course.  Many of the pages contain links to Jupyter notebooks that supplement the code in the binder.  The "Modern Investments" link above is to the beginnings of a textbook.  It should be a useful supplement to the course slides for part of the course.  The slides are linked through the navigation bar at the top of the page.
+Our analysis tool throughout the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Code will be posted at the "Code Binder" link above.
 
 Grades will be based on weekly assignments and a take-home final exam.
 
