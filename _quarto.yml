@@ -19,6 +19,7 @@ website:
 
   navbar:
     search: false
+    link-external-newwindow: true
     title: BUSI 721
     right:
 
@@ -31,8 +32,12 @@ website:
       - text: Assignments
         file: assignments.qmd
 
+      - text: BBCX Investments Library
+        href: https://bbcx-investments.com
+
       - text: Home
         file: index.qmd
+
 
          
 format: 
