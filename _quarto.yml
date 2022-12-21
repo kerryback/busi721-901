@@ -22,7 +22,7 @@ website:
     right:
 
       - text: Code Binder
-        href: https://mybinder.org/v2/gh/kerryback/2022-721-binder.git/HEAD
+        href: https://mybinder.org/v2/gh/kerryback/721-rol-binder.git/HEAD
 
       - text: Slide Decks
         file: slides.qmd

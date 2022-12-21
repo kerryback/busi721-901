@@ -12,20 +12,10 @@ J. Howard Creekmore Professor of Finance and Professor of Economics<br>
 
 This course is an introduction to investments, including the analysis of corporate investment projects.  We begin with foundational issues such as retirement planning and mortgage calculations.  The next part of the course describes markets, assets, and properties of returns.  We then study  study how to construct efficient portfolios of assets.  The final part of the course pertains to the financial analysis of corporate projects.
 
-Our analysis tool throughout the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Code will be posted at the "Code Binder" link above.
+Our analysis tool throughout the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Code snippets are sprinkled throughout the slides.  Those snippets -- plus the code used to generate all figures in the slides -- are posted at the "Code Binder" link above.  Clicking on that link will open a JupyterLab environment in your web browser.  If you wish to do so, you can work in that environment for your assignments by launching a new notebook or modifying an existing notebook and downloading it.  Alternatively, you can download any notebooks from the binder that you wish to use and work in whatever IDE you prefer.
 
-Grades will be based on weekly assignments and a take-home final exam.
 
-#### Honor Code
 
-The Rice University honor code applies to all work in this course.  Each student must do his or her own assignments, but it is allowed and in fact encouraged for students to seek advice from each other. 
-
-#### Disability Accommodations
-
-Any student with a documented disability requiring accommodations in this course is encouraged to
-contact me outside of class. All discussions will remain confidential. Any adjustments or accommodations
-regarding assignments or the final exam must be made in advance. Students with disabilities
-should also contact Disability Support Services in the Allen Center.
 
 
 
