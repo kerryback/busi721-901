@@ -1,4 +1,7 @@
-## Assignments
+### Assignments<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+
+There are six assignments for each module, and they are provided at the links below.  The assignments are a mix of python, Excel, and discussions.
+
 
 [1. Time Value of Money](assignment1.qmd)
 

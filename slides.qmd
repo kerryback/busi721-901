@@ -1,4 +1,10 @@
-## Time Value of Money
+## Slide Decks<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+#### 1. Time Value of Money
 
 [1. Present and Future Values](a01-fvs-pvs.html)
 
@@ -12,7 +18,7 @@
 
 [6. Time-Varying Returns](a06-different-returns.html)
 
-##  Assets and Returns
+#### 2. Assets and Returns A
 
 [1. Stock Markets](b01-stock-market.html)
 
@@ -26,19 +32,26 @@
 
 [6. Long-Run Risk](b06-long-run-risks.html)
 
-[7. Leverage](c01-leverage.html)
+#### 3. Assets and Returns B
 
-[8. Short Selling](c02-short-sales.html)
+[1. Leverage](c01-leverage.html)
 
-[9. Funds](c03-funds.html)
+[2. Short Selling](c02-short-sales.html)
 
-[10. Bonds](c04-bonds.html)
+[3. Funds](c03-funds.html)
 
-[11. Bond Prices and Yields](c05-bond-prices-and-yields.html)
+[4. Bonds](c04-bonds.html)
 
-[12. Other Assets](c06-other-assets.html)
+[5. Bond Prices and Yields](c05-bond-prices-and-yields.html)
 
-## Portfolios
+[6. Other Assets](c06-other-assets.html)
+
+:::
+
+
+::: {.column width="50%"}
+
+#### 4. Portfolios A
 
 [1. Diversification](d01-diversification.html)
 
@@ -52,19 +65,21 @@
 
 [6. Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
 
-[7. Preferences](e01-preferences.html)
+#### 5. Portfolios B
 
-[8. Quadratic Programming](e02-quadratic-programming.html)
+[1. Preferences](e01-preferences.html)
 
-[9. Frictions and Constraints](e03-frictions-constraints.html)
+[2. Quadratic Programming](e02-quadratic-programming.html)
 
-[10. More Pictures](e04-more-pictures.html)
+[3. Frictions and Constraints](e03-frictions-constraints.html)
 
-[11. Estimating Parameters](e05-estimating-parameters.html)
+[4. More Pictures](e04-more-pictures.html)
 
-[12. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
+[5. Estimating Parameters](e05-estimating-parameters.html)
 
-## Corporate Finance
+[6. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
+
+#### 6. Corporate Finance A
 
 [1. Cash Flows and NPV](f01-cash-flows.html)
 
@@ -78,15 +93,19 @@
 
 [6. Example 3](f06-example3.html)
 
-[7. Internal Rate of Return](g01-irr.html)
+#### 7. Corporate Finance B
 
-[8. Perpetuities](g02-perpetuities.html)
+[1. Internal Rate of Return](g01-irr.html)
 
-[9. Valuing Companies](g03-valuing-companies.html)
+[2. Perpetuities](g02-perpetuities.html)
 
-[10. Weighted Average Cost of Capital](g04-wacc.html)
+[3. Valuing Companies](g03-valuing-companies.html)
 
-[11. Debt and Taxes](g05-debt-taxes.html)
+[4. Weighted Average Cost of Capital](g04-wacc.html)
 
-[12. Debt and Cost of Capital](g06-debt-cost-capital.html)
+[5. Debt and Taxes](g05-debt-taxes.html)
 
+[6. Debt and Cost of Capital](g06-debt-cost-capital.html)
+
+:::
+::::

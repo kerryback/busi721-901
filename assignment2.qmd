@@ -1,4 +1,4 @@
-### Assignment 1<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+### Module 2 Assignments<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
 
 The six assignments for Module 2 are provided below.  For each python assignment, submit a Jupyter notebook on Canvas.  If there are multiple questions in an assignment, copy each question into a Markdown cell and provide your answer in the cell or cells below it.
 

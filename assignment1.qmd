@@ -1,6 +1,6 @@
-### Assignment 1<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+### Module 1 Assignments<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
 
-The six assignments for module 1 are provided below.  For each assignment, submit a Jupyter notebook.  If there are multiple questions in an assignment, copy each question into a Markdown cell and provide your answer in the cell or cells below it.
+The six assignments for Module 1 are provided below.  For each assignment, submit a Jupyter notebook on Canvas.  If there are multiple questions in an assignment, copy each question into a Markdown cell and provide your answer in the cell or cells below it.
 
 #### 1.1  Present and Future Values
 
