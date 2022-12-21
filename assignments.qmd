@@ -1,4 +1,4 @@
-### Assignments<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+### Assignments<br>BUSI 721<br>Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}<br>
 
 There are six assignments for each module, and they are provided at the links below.  The assignments are a mix of python, Excel, and discussions.
 

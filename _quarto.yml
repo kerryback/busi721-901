@@ -39,6 +39,7 @@ format:
   html:
     theme: cosmo
     scss: styles.css
+    link-external-newwindow: true
     
 
 

@@ -1,4 +1,4 @@
-## Rice Online: Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="50"}<br>
+## Rice Online: Data Driven Finance I<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}<br>
 
 
 #### Instructor
@@ -12,7 +12,9 @@ J. Howard Creekmore Professor of Finance and Professor of Economics<br>
 
 This course is an introduction to investments, including the analysis of corporate investment projects.  We begin with foundational issues such as retirement planning and mortgage calculations.  The next part of the course describes markets, assets, and properties of returns.  We then study  study how to construct efficient portfolios of assets.  The final part of the course pertains to the financial analysis of corporate projects.
 
-Our analysis tool throughout most of the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Code snippets are sprinkled throughout the slides.  Those snippets -- plus the code used to generate all figures in the slides -- are posted at the "Code Binder" link above.  Clicking on that link will open a JupyterLab environment in your web browser.  If you wish to do so, you can work in that environment for your assignments by launching a new notebook or modifying an existing notebook and downloading it.  Alternatively, you can download any notebooks from the binder that you wish to use and work in whatever IDE you prefer.
+Our analysis tool throughout most of the course will be python.  Python is both more transparent and quicker to write than are spreadsheets, which are conventional for a lot of the topics we will discuss.   Furthermore, the use of python will allow us to go deeper into some of our topics than is possible with spreadsheets.
+
+Code snippets are sprinkled throughout the slides.  Those snippets -- plus the code used to generate all figures in the slides -- are posted at the "Code Binder" link above.  Clicking on that link will open a JupyterLab environment in your web browser.  If you wish to do so, you can work in that environment for your assignments by launching a new notebook or modifying an existing notebook and downloading it.  Alternatively, you can download any notebooks from the binder that you wish to use and work in whatever IDE you prefer.  The binder is slow to load, so be patient.
 
 
 
