@@ -1,0 +1,36 @@
+## Assignment 6<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
+
+Calculate the net present value of the following project.  Submit an Excel workbook.
+
+- The XYZ company is considering launching a new product.  Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.
+
+- Sales (in millions of dollars) are projected as follows:
+
+| Year | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---|---:|---:|---:|---:|---:|---:|
+| | | 100 | 150 | 200 | 120 | 80 |
+
+
+- Labor and material costs for the product would be 50% of sales revenue.
+
+- For the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively.  The existing products have the same 50% gross margin.
+
+ - Incremental selling, general, and administrative expenses are forecast to be (in millions of dollars):
+
+
+| Year | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---|---:|---:|---:|---:|---:|---:|
+| | | 20 | 25 | 15 | 10 | 5 |
+
+
+- The new product would require an investment of $100 million in 10-year MACRS equipment.  The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.  
+- It is anticipated that the equipment could be sold for $60 million in five years.
+- $15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.  
+- Afterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.  
+- All working capital would be recovered in five years.  
+- The corporate tax rate is 30%.
+- The cost of capital is 12%.
+
+
+
+

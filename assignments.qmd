@@ -13,5 +13,7 @@ There are six assignments for each module, and they are provided at the links be
 
 [5. Portfolios B](assignment5.qmd)
 
-[6. Corporate Finance](assignment6.qmd)
+[6. Corporate Finance A](assignment6.qmd)
+
+[7. Corporate Finance B](assignment7.qmd)
 
