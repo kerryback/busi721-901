@@ -4,15 +4,7 @@ project:
   render:
     - index.qmd
     - slides.qmd
-    - assignments.qmd
-    - assignment1.qmd
-    - assignment2.qmd
-    - assignment3.qmd
-    - assignment4.qmd
-    - assignment5.qmd
-    - assignment6.qmd
-    - assignment7.qmd
-    
+        
 website:
   title: ""
   search: false
@@ -24,13 +16,10 @@ website:
     right:
 
       - text: Code Binder
-        href: https://mybinder.org/v2/gh/kerryback/721-rol-binder.git/HEAD
+        href: https://mybinder.org/v2/gh/kerryback/2023-721-901-binder.git/HEAD
 
       - text: Slide Decks
         file: slides.qmd
-
-      - text: Assignments
-        file: assignments.qmd
 
       - text: BBCX Investments Library
         href: https://bbcx-investments.com

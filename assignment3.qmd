@@ -1,8 +1,7 @@
 ## Assignment 3<br>BUSI 721<br>Data Driven Finance I<br>Jones Graduate School of Business<br>Rice University<br>
 
-The six assignments for Module 2 are provided below.  For each python assignment, submit a Jupyter notebook on Canvas.  If there are multiple questions in an assignment, copy each question into a Markdown cell and provide your answer in the cell or cells below it.  Tor each Excel assignment, submit an Excel workbook.
+The assignments for Module 3 (other than Discussion Board assignments) are presented below.  For each python assignment, submit a Jupyter notebook on Canvas.  If there are multiple questions in an assignment, copy each question into a Markdown cell and provide your answer in the cell or cells below it.  For the Excel assignment, submit an Excel workbook on canvas.
 
-For the discussion assignments, you are expected to participate in the discussion board on Canvas.
 
 #### 3.1 Leverage (Excel Assignment)
 
@@ -12,10 +11,7 @@ You have a $50,000 portfolio.  You are considering levering it -- borrowing $25,
 
 2) Repeat part (1) assuming the unlevered investment loses 10%.
 
-#### 3.2 Short Selling (Excel Assignment)
+#### 3.5 Bond Prices and Yields (Python Assignment)
 
-2.  I think CVX will beat XOM.  I am considering investing $10,000, buying $10,000 of CVX, and shorting $10,000 of XOM.  I will earn negligible interest on the short sale proceeds.  What will be my gain or loss if CVX earns 12% and XOM earns 5%?  What if the reverse happens?
+A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  Its current yield is 8%.  What is its price?
 
-3.  SKIP QUESTION 3
-
-4.  A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  Its current yield is 8%.  What is its price?
