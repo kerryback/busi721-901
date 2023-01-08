@@ -24,6 +24,9 @@ website:
       - text: BBCX Investments Library
         href: https://bbcx-investments.com
 
+      - text: Investments Notes
+        href: http://notes.kerryback.com
+        
       - text: Home
         file: index.qmd
 
