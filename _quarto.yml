@@ -21,12 +21,12 @@ website:
       - text: Slide Decks
         file: slides.qmd
 
-      - text: BBCX Investments Library
+      - text: Investments Library
         href: https://bbcx-investments.com
 
       - text: Investments Notes
         href: http://notes.kerryback.com
-        
+
       - text: Home
         file: index.qmd
 
