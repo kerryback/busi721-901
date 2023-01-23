@@ -6,45 +6,45 @@
 
 #### 1. Time Value of Money
 
-[1. Present and Future Values](a01-fvs-pvs.html)
+[1. Present and Future Values](a01-fvs-pvs.html){target="_blank"}
 
-[2. Monthly Rates, etc.](a02-monthly-rates.html)
+[2. Monthly Rates, etc.](a02-monthly-rates.html){target="_blank"}
 
-[3. Mortgage Payments etc.](a03-mortgage-payments.html)
+[3. Mortgage Payments etc.](a03-mortgage-payments.html){target="_blank"}
 
-[4. Inflation and Real Returns](a04-inflation.html)
+[4. Inflation and Real Returns](a04-inflation.html){target="_blank"}
 
-[5. Retirement Planning](a05-retirement-planning.html)
+[5. Retirement Planning](a05-retirement-planning.html){target="_blank"}
 
-[6. Time-Varying Returns](a06-different-returns.html)
+[6. Time-Varying Returns](a06-different-returns.html){target="_blank"}
 
 #### 2. Assets and Returns A
 
-[1. Stock Markets](b01-stock-market.html)
+[1. Stock Markets](b01-stock-market.html){target="_blank"}
 
-[2. Stock Returns](b02-stock-returns.html)
+[2. Stock Returns](b02-stock-returns.html){target="_blank"}
 
-[3. Annual Returns](b03-annual-returns.html)
+[3. Annual Returns](b03-annual-returns.html){target="_blank"}
 
-[4. Daily Returns](b04-daily-returns.html)
+[4. Daily Returns](b04-daily-returns.html){target="_blank"}
 
-[5. Geometric Average Returns](b05-geometric-average-returns.html)
+[5. Geometric Average Returns](b05-geometric-average-returns.html){target="_blank"}
 
-[6. Long-Run Risk](b06-long-run-risks.html)
+[6. Long-Run Risk](b06-long-run-risks.html){target="_blank"}
 
 #### 3. Assets and Returns B
 
-[1. Leverage](c01-leverage.html)
+[1. Leverage](c01-leverage.html){target="_blank"}
 
-[2. Short Selling](c02-short-sales.html)
+[2. Short Selling](c02-short-sales.html){target="_blank"}
 
-[3. Funds](c03-funds.html)
+[3. Funds](c03-funds.html){target="_blank"}
 
-[4. Bonds](c04-bonds.html)
+[4. Bonds](c04-bonds.html){target="_blank"}
 
-[5. Bond Prices and Yields](c05-bond-prices-and-yields.html)
+[5. Bond Prices and Yields](c05-bond-prices-and-yields.html){target="_blank"}
 
-[6. Other Assets](c06-other-assets.html)
+[6. Other Assets](c06-other-assets.html){target="_blank"}
 
 :::
 
@@ -53,59 +53,59 @@
 
 #### 4. Portfolios A
 
-[1. Diversification](d01-diversification.html)
+[1. Diversification](d01-diversification.html){target="_blank"}
 
-[2. More Diversification](d02-more-diversification.html)
+[2. More Diversification](d02-more-diversification.html){target="_blank"}
 
-[3. Saving and Borrowing](d03-riskfree.html)
+[3. Saving and Borrowing](d03-riskfree.html){target="_blank"}
 
-[4. Mean-Variance Frontier](d04-frontier.html)
+[4. Mean-Variance Frontier](d04-frontier.html){target="_blank"}
 
-[5. Frontier in Pictures](d05-frontier-pictures.html)
+[5. Frontier in Pictures](d05-frontier-pictures.html){target="_blank"}
 
-[6. Capital Asset Pricing Model](d06-capital-asset-pricing-model.html)
+[6. Capital Asset Pricing Model](d06-capital-asset-pricing-model.html){target="_blank"}
 
 #### 5. Portfolios B
 
-[1. Preferences](e01-preferences.html)
+[1. Preferences](e01-preferences.html){target="_blank"}
 
-[2. Quadratic Programming](e02-quadratic-programming.html)
+[2. Quadratic Programming](e02-quadratic-programming.html){target="_blank"}
 
-[3. Frictions and Constraints](e03-frictions-constraints.html)
+[3. Frictions and Constraints](e03-frictions-constraints.html){target="_blank"}
 
-[4. More Pictures](e04-more-pictures.html)
+[4. More Pictures](e04-more-pictures.html){target="_blank"}
 
-[5. Estimating Parameters](e05-estimating-parameters.html)
+[5. Estimating Parameters](e05-estimating-parameters.html){target="_blank"}
 
-[6. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html)
+[6. Stocks, Bonds, and Gold](e06-stocks-bonds-gold.html){target="_blank"}
 
 #### 6. Corporate Finance A
 
-[1. Cash Flows and NPV](f01-cash-flows.html)
+[1. Cash Flows and NPV](f01-cash-flows.html){target="_blank"}
 
-[2. Economic Value Added](f02-eva.html)
+[2. Economic Value Added](f02-eva.html){target="_blank"}
 
-[3. Financial Accounting](f03-accounting.html)
+[3. Financial Accounting](f03-accounting.html){target="_blank"}
 
-[4. Example 1](f04-example1.html)
+[4. Example 1](f04-example1.html){target="_blank"}
 
-[5. Example 2](f05-example2.html)
+[5. Example 2](f05-example2.html){target="_blank"}
 
-[6. Example 3](f06-example3.html)
+[6. Example 3](f06-example3.html){target="_blank"}
 
 #### 7. Corporate Finance B
 
-[1. Internal Rate of Return](g01-irr.html)
+[1. Internal Rate of Return](g01-irr.html){target="_blank"}
 
-[2. Perpetuities](g02-perpetuities.html)
+[2. Perpetuities](g02-perpetuities.html){target="_blank"}
 
-[3. Valuing Companies](g03-valuing-companies.html)
+[3. Valuing Companies](g03-valuing-companies.html){target="_blank"}
 
-[4. Weighted Average Cost of Capital](g04-wacc.html)
+[4. Weighted Average Cost of Capital](g04-wacc.html){target="_blank"}
 
-[5. Debt and Taxes](g05-debt-taxes.html)
+[5. Debt and Taxes](g05-debt-taxes.html){target="_blank"}
 
-[6. Debt and Cost of Capital](g06-debt-cost-capital.html)
+[6. Debt and Cost of Capital](g06-debt-cost-capital.html){target="_blank"}
 
 :::
 ::::

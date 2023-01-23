@@ -15,3 +15,4 @@ You have a $50,000 portfolio.  You are considering levering it -- borrowing $25,
 
 A 6% coupon bond makes semi-annual coupon payments (3% each six months).  It has 10 years to maturity, and the next coupon payment is six months away.  Its current yield is 8%.  What is its price?
 
+#### 3.6 Bond Prices and Yields (Python Assignment
