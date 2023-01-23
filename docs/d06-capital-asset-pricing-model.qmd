@@ -69,6 +69,7 @@ where $r_m$ = market return and $\beta_i$ is the slope of the regression line of
 - Beta is the slope in the regression:
 
 . . . 
+
 $$r-r_{f}=\alpha + \beta(r_m-r_f)+e$$
 
 - where $r_{m}$ = market return and
