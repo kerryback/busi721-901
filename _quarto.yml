@@ -10,28 +10,25 @@ website:
   search: false
 
   navbar:
-    search: false
+    search: false  
     link-external-newwindow: true
-    title: BUSI 721
+    title: BUSI 721 901
+    file: index.qmd
     right:
 
       - text: Code Binder
         href: https://mybinder.org/v2/gh/kerryback/2023-721-901-binder.git/HEAD
 
+      - text: Notebook Repo
+        href: https://github.com/kerryback/2023-721-901-binder
+
       - text: Slide Decks
         file: slides.qmd
 
-      - text: Investments Library
+      - text: Learn Investments Dashboard
         href: https://bbcx-investments.com
 
-      - text: Investments Notes
-        href: http://notes.kerryback.com
-
-      - text: Home
-        file: index.qmd
-
-
-         
+      
 format: 
   html:
     theme: cosmo
