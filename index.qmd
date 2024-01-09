@@ -8,6 +8,10 @@
 J. Howard Creekmore Professor of Finance and Professor of Economics<br>
 <a href="mailto:kerryback@gmail.com">kerryback@gmail.com</a>
 
+#### Recommended Textbook
+
+[Corporate Finance by Ivo Welch](https://book.ivo-welch.info/read/)
+
 #### Course Description
 
 This course is an introduction to investments, including the analysis of corporate investment projects.  We begin with foundational issues such as retirement planning and mortgage calculations.  The next part of the course describes markets, assets, and properties of returns.  We then study how to construct efficient portfolios of assets.  The final part of the course pertains to the financial analysis of corporate projects.
