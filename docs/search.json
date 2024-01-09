@@ -355,5 +355,12 @@
     "title": "",
     "section": "",
     "text": "Calculate the net present value of the following project. Submit an Excel workbook.\n\nThe XYZ company is considering launching a new product. Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.\nSales (in millions of dollars) are projected as follows:\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n100\n150\n200\n120\n80\n\n\n\n\nLabor and material costs for the product would be 50% of sales revenue.\nFor the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively. The existing products have the same 50% gross margin.\nIncremental selling, general, and administrative expenses are forecast to be (in millions of dollars):\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n20\n25\n15\n10\n5\n\n\n\n\nThe new product would require an investment of $100 million in 10-year MACRS equipment. The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.\n\nIt is anticipated that the equipment could be sold for $60 million in five years.\n$15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.\n\nAfterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.\n\nAll working capital would be recovered in five years.\n\nThe corporate tax rate is 30%.\nThe cost of capital is 12%."
+  },
+  {
+    "objectID": "live_sessions.html",
+    "href": "live_sessions.html",
+    "title": "",
+    "section": "",
+    "text": "Mon, Jan 8"
   }
 ]

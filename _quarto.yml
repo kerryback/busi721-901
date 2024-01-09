@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - slides.qmd
+    - live_sessions.qmd
         
 website:
   title: ""
@@ -24,6 +25,9 @@ website:
 
       - text: Slide Decks
         file: slides.qmd
+
+      - text: Live Session Recordings
+        file: live_sessions.qmd
 
       - text: Learn Investments Dashboard
         href: https://bbcx-investments.com
