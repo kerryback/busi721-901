@@ -30,7 +30,7 @@ website:
         file: live_sessions.qmd
 
       - text: Solutions 
-        file: solutions.qmd
+        href: https://github.com/kerryback/busi721-901/solutions
 
       - text: Investments Compendium
         href: https://learn-investments.rice-business.org
