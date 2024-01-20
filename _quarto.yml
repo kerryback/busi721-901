@@ -29,7 +29,10 @@ website:
       - text: Live Session Recordings
         file: live_sessions.qmd
 
-      - text: Learn Investments Dashboard
+      - text: Solutions 
+        file: solutions.qmd
+
+      - text: Investments Compendium
         href: https://learn-investments.rice-business.org
 
       
