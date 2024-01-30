@@ -162,5 +162,5 @@ Solution is same as in last module for these parameters. Higher borrowing rate d
 ## 3K
 
 <p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://learn-investments.rice-business.org/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
 </p>

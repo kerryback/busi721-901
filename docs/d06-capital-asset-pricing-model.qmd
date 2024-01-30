@@ -64,7 +64,7 @@ where $r_m$ = market return and $\beta_i$ is the slope of the regression line of
 - The equation says that the marginal benefit of an asset (its risk premium) is proportional to its marginal contribution to the risk of the *market portfolio*.
 - This marginal contribution is measured by beta.
 
-## Beta <a href="https://bbcx-investments.com/capm/costequity"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right></a>
+## Beta <a href="https://learn-investments.rice-business.org/capm/costequity"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right></a>
 
 - Beta is the slope in the regression:
 
@@ -79,7 +79,7 @@ $e$ = zero-mean risk.
   - e.g., $\beta$ = 2 $\Rightarrow$ we expect the asset to be up 2%.
  
 
-## The CAPM and the data <a href="https://bbcx-investments.com/capm/sml-industries"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right" vertical-align="center"></a>
+## The CAPM and the data <a href="https://learn-investments.rice-business.org/capm/sml-industries"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right" vertical-align="center"></a>
 
 - The CAPM doesn't fit the data very well.
 - A simple example is industry returns. Average returns are mostly unrelated to betas.

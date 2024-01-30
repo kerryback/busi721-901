@@ -30,11 +30,11 @@ SPY = S&P 500 Exchange Traded Fund (ETF)
 
 ```{python}
 
-from pandas_datareader import DataReader as pdr
+import yfinance as yf
 import plotly.graph_objects as go
 import numpy as np
 
-spy = pdr('SPY', 'yahoo', start=1990)['Adj Close']
+spy = yf.download('SPY', start=1990)['Adj Close']
 spy = spy.resample('Y').last()
 spy = spy.pct_change().dropna()
 spy.index = spy.index.to_period('Y').astype(str)
@@ -307,7 +307,7 @@ value of $1 investment with dividends reinvested
 - Points outside the fences are outliers. 
     - If you simulate data from a normal distribution, there will typically be very few points outside the fences.
 
-## Box and density plots of annual SPY returns <a href="https://bbcx-investments.com/risk/returns"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+## Box and density plots of annual SPY returns <a href="https://learn-investments.rice-business.org/risk/returns"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 ::: {.panel-tabset}
 

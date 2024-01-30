@@ -52,7 +52,7 @@ For example, asset = stock and benchmark = stock market return
 ## 4A
 
 <p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://learn-investments.rice-business.org/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
 </p>
 
 ## Meaning of $\alpha$
@@ -73,7 +73,7 @@ For example, asset = stock and benchmark = stock market return
 ## 4B
 
 <p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://learn-investments.rice-business.org/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
 </p>
 
 ## What Sharpe Ratio is Needed for \alpha > 0? 
@@ -96,5 +96,5 @@ Low correlation $\rightarrow$ $\alpha > 0$ with low Sharpe ratio.
 ## 4C
 
 <p align=center> 
-<a href="https://bbcx-investments.com/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
+<a href="https://learn-investments.rice-business.org/assets/"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:4in;"></a>
 </p>

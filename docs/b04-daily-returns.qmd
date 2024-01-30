@@ -25,10 +25,10 @@ format:
 . . .
 
 ```{python}
-from pandas_datareader import DataReader as pdr
+import yfinance as yf
 import plotly.graph_objects as go
 import numpy as np
-spy = pdr('SPY', 'yahoo', start=1990)['Adj Close']
+spy = yf.download('SPY', start=1990)['Adj Close']
 spy = spy.pct_change().dropna()
 spy.index = spy.index.astype(str)
 spy = spy.reset_index()
@@ -59,7 +59,7 @@ fig.show()
 ```
 
 
-## Box and density plots of daily SPY returns <a href="https://bbcx-investments.com/risk/frequency"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+## Box and density plots of daily SPY returns <a href="https://learn-investments.rice-business.org/risk/frequency"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 ::: {.panel-tabset}
 

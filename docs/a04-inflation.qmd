@@ -73,7 +73,7 @@ The general formula for the real rate of return $r^*$ is
 
 $$r^* = \frac{r-i}{1+i}$$ 
 
-## Compounding real rates of return <a href="https://bbcx-investments.com/borrowing-saving/inflation"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Compounding real rates of return <a href="https://learn-investments.rice-business.org/borrowing-saving/inflation"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
 
 - The formula $r^*=(r-i)/(1+i)$ implies
 

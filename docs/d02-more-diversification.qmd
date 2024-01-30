@@ -39,7 +39,7 @@ format:
 $$\sum_{i=1}^n w_i^2 \sigma_i^2 + 2 \sum_{i=1}^n \sum_{j=i+1}^n w_iw_j \sigma_{ij}$$
 
 
-##  Special case <a href="https://bbcx-investments.com/portfolios/diversification"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right></a> 
+##  Special case <a href="https://learn-investments.rice-business.org/portfolios/diversification"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right></a> 
 
 - Suppose all standard deviations are the same $\sigma$
 - Suppose all correlations are the same $\rho$
@@ -82,7 +82,7 @@ w = np.array([w1, w2, w3])
 portvar = w @ C @ w
 ```
 
-## Mean -- Standard Deviation Plot <a href="https://bbcx-investments.com/portfolios/two-assets"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;" align=right></a> 
+## Mean -- Standard Deviation Plot <a href="https://learn-investments.rice-business.org/portfolios/two-assets"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;" align=right></a> 
 
 - Set  mn1, mn2, mn3 = 0.06, 0.08, 0.10
 

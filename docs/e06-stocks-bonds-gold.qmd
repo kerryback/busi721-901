@@ -50,9 +50,9 @@ We'll look at indices from 1968 and ETFs from 2004.
 
 <br>
 
- <a href="https://bbcx-investments.com/portfolios/optimal-sb"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left> </a> Indices
+ <a href="https://learn-investments.rice-business.org/portfolios/optimal-sb"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left> </a> Indices
 
 
 <br><br>
 
-<a href="https://bbcx-investments.com/portfolios/optimal-yahoo"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left></a> ETFs
+<a href="https://learn-investments.rice-business.org/portfolios/optimal-yahoo"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left></a> ETFs

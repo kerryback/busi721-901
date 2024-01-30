@@ -59,7 +59,7 @@ $$C_0 + \frac{C_1}{1+r} + \cdots + \frac{C_n}{(1+r)^n} = 0$$
 
 - Polynomial equation in $1/(1+r)$
 
-## Example <a href="https://bbcx-investments.com/borrowing-saving/irr"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+## Example <a href="https://learn-investments.rice-business.org/borrowing-saving/irr"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
 . . .
 

@@ -62,7 +62,7 @@ The yield is
 
 $$y = 2r$$
 
-## Prices and Yields are Inversely Related <a href="https://bbcx-investments.com/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+## Prices and Yields are Inversely Related <a href="https://learn-investments.rice-business.org/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
 
 . . .
 

@@ -143,7 +143,7 @@ D = dict(zip(range(1, R+1), D)})
 W = dict(zip(range(R, T), W)})
 ```
 
-## Example <a href="https://bbcx-investments.com/borrowing-saving/retirement-planning"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Example <a href="https://learn-investments.rice-business.org/borrowing-saving/retirement-planning"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
 
 . . .
 

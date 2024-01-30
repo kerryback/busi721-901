@@ -43,17 +43,17 @@ format:
 - 
 risky assets without saving or borrowing
 <br>
-<a href="https://bbcx-investments.com/portfolios/three-assets"><img src="images/Rice_Owl.jpg" style="width:.65in;"></a>
+<a href="https://learn-investments.rice-business.org/portfolios/three-assets"><img src="images/Rice_Owl.jpg" style="width:.65in;"></a>
 
 - the least-risk hyperbola without saving or borrowing
 <br>
-<a href="https://bbcx-investments.com/portfolios/frontier"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in; align=right"></a>
+<a href="https://learn-investments.rice-business.org/portfolios/frontier"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in; align=right"></a>
 
 - adding risk-free saving and borrowing to any portfolio
 <br>
-<a href="https://bbcx-investments.com/portfolios/sharpe"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;"></a>
+<a href="https://learn-investments.rice-business.org/portfolios/sharpe"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;"></a>
 
 - the optimum is at tangency
 <br>
-<a href="https://bbcx-investments.com/portfolios/tangency"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;"></a>
+<a href="https://learn-investments.rice-business.org/portfolios/tangency"><img src="images/Rice_Owl.jpg" alt="HTML tutorial" style="width:.65in;"></a>
 

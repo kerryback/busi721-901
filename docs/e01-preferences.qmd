@@ -27,7 +27,7 @@ $$\text{expected return}-\frac{1}{2}A\times\text{variance}$$
 
 - The 1/2 is a convention. The number $A$ is risk aversion. 
 
-## Indifference curves <a href="https://bbcx-investments.com/portfolios/preferences"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+## Indifference curves <a href="https://learn-investments.rice-business.org/portfolios/preferences"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
 ```{python}
 import plotly.graph_objects as go
@@ -126,7 +126,7 @@ corr12, corr13, corr23 = 0.5, 0.7, 0.6
 raver = 6
 ```
 
-## Solution of the example <a href="https://bbcx-investments.com/portfolios/optimal"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+## Solution of the example <a href="https://learn-investments.rice-business.org/portfolios/optimal"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
 . . .
 

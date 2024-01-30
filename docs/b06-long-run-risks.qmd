@@ -48,7 +48,7 @@ format:
 But the gain or loss from gambling is
 average gain per gamble $\times$ number of gambles.
 
-## Betting on the stock market <a href="http://bbcx-investments.com/risk/best-worst"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"></a>
+## Betting on the stock market <a href="http://learn-investments.rice-business.org/risk/best-worst"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"></a>
 
 - Based on history, the bet is definitely in our favor.  
 
@@ -157,7 +157,7 @@ print(table.iloc[1:].round(2))
 ::::
 
 
-## Retirement Planning Simulation <a href="https://bbcx-investments.com/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg"  style="width:.65in;" align="right"></a>
+## Retirement Planning Simulation <a href="https://learn-investments.rice-business.org/borrowing-saving/retirement-planning-sim"><img src="images/Rice_Owl.jpg"  style="width:.65in;" align="right"></a>
 
 . . .
 

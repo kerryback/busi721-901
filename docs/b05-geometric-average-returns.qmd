@@ -87,7 +87,7 @@ The geometric average return is **always less** than the arithmetic average retu
 <p align=center>
 <img src="images/EPoint.png" height=300 width=300> </p>
 
-## Examples <a href=http://bbcx-investments.com/risk/geometric"><img src="images/Rice_Owl.jpg"  style="width:.65in;" align="right"></a>
+## Examples <a href=http://learn-investments.rice-business.org/risk/geometric"><img src="images/Rice_Owl.jpg"  style="width:.65in;" align="right"></a>
 
 - make 50% and lose 50% → geometric average is  
 

@@ -107,7 +107,7 @@ $$\frac{\text{Balloon}}{(1+r_m)^{12 \times T}}$$
 - Functions are [rate, pmt, pv, fv]{style="font-family:courier; font-weight:bold; color:tomato;"}.
 - Same functions are in Excel.
 
-## Example  <a href="https://bbcx-investments.com/borrowing-saving/amortization"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+## Example  <a href="https://learn-investments.rice-business.org/borrowing-saving/amortization"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
 
 . . .
 

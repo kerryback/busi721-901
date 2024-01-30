@@ -19,13 +19,13 @@ format:
     scrollable: true
 ---
 
-## Effect of short sales constraints <a href="https://bbcx-investments.com/portfolios/short-sales-constraints"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+## Effect of short sales constraints <a href="https://learn-investments.rice-business.org/portfolios/short-sales-constraints"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
 - The effect of short sales constraints depends on correlations and differences in expected returns.
 - If there are assets or portfolios with different expected returns and high correlations, shorting can be useful.
 - E.g., if you think CVX will beat XOM, then buy CVX and short XOM.
 
-## Different saving and borrowing rates <a href="https://bbcx-investments.com/portfolios/optimal-two-rates"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
+## Different saving and borrowing rates <a href="https://learn-investments.rice-business.org/portfolios/optimal-two-rates"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right vertical-align=center></a>
 
 - Two tangency portfolios, one at the saving rate and second at the borrowing rate
 - Frontier/optimal portfolios are the union of
