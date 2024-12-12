@@ -1,4 +1,4 @@
-## Slide Decks<br>Data Driven Finance I<br>Spring 2024<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}<br>
+## Slide Decks<br>Data Driven Finance I<br>Spring 2025<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}<br>
 
 :::: {.columns}
 
