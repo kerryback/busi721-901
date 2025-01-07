@@ -8,9 +8,10 @@
 J. Howard Creekmore Professor of Finance and Professor of Economics<br>
 <a href="mailto:kerryback@gmail.com">kerryback@gmail.com</a>
 
-#### Recommended Textbook
+#### Recommended (Free Online) Textbooks
 
-[Corporate Finance by Ivo Welch](https://book.ivo-welch.info/read/)
+- [Time Value of Money by Kerry Back](https://notes.kerryback.com)
+- [Corporate Finance by Ivo Welch](https://book.ivo-welch.info/read/)
 
 #### Course Description
 

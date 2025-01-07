@@ -13,7 +13,7 @@ website:
   navbar:
     search: false  
     link-external-newwindow: true
-    title: BUSI 721 901
+    title: BUSI 721
     file: index.qmd
     right:
 
