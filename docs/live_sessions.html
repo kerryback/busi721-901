@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.32">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,10 +31,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4ebd2eb7c9ff38b57148d0e3da08e0a3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd053a38988e21bb3d3b0b617a2084cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -107,15 +107,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <section id="live-session-recordings-data-driven-finance-i-spring-2025" class="level2">
 <h2 class="anchored" data-anchor-id="live-session-recordings-data-driven-finance-i-spring-2025">Live Session Recordings<br>Data Driven Finance I<br>Spring 2025<br><br><img src="RiceBusiness-transparent-logo-sm.png" height="60"><br></h2>
-<p><a href="https://jgsb.zoom.us/rec/share/ecSNDnwIxeoXHQ2lFO0kzgJrPkJo4A_RDX8WDDIRYsE6RTQwR2H1WH-GLV5fCK83.hw1c2H84HJ7PgCrC%20Passcode:%2041MBB.WI">Jan 13</a><br></p>
-<p><a href="https://jgsb.zoom.us/rec/share/3qP0d7_lq3r9xFHI4hdkbOGiHPHAGsw5waZWo_0zNiZJcQkUQg0etwCIILLTUI4.MgaRWz7997zVQqCB%20Passcode:%20N2m?YS$%">Jan 20</a><br></p>
+<p><a href="https://jgsb.zoom.us/rec/share/LqX2DnBshYlYybbwYANM8hsPLs4anvWOEUUxfU76prpC1sqDDzV72QzJ6vXK94yV.aqcxIMVUe_SKkL3Y">Jan 13</a> <br></p>
+<p><a href="https://jgsb.zoom.us/rec/share/slCuzmmGXOk_W-524HiDjSI_ZoNHkKQ-RK5XvvKtbMRFGLltKnwzy5eHfEHNO7k.sWZW-MEmrEIqNLJP">Jan 20</a><br></p>
+<p><a href="https://jgsb.zoom.us/rec/share/Blq7bcaZM84QLQG-yTYyJ9bNQYsuJc6tvZv5Md_UQyIuvqZHkfcm8cXxxXkLWKLP.a5-4qvRGsZIUsicV">Jan 27</a><br></p>
+<p><a href="https://jgsb.zoom.us/rec/share/95d55uYnZ1Itk2X0etQ8KeKqeAiTA5RDVU1Yx5efBevlRRP-4e4A_IZFG2ekBVI.8wkrBVtkJ8r39RmQ">Feb 3</a><br></p>
 
 
 </section>
@@ -203,8 +205,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -320,7 +320,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
