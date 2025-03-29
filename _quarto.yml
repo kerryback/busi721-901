@@ -17,9 +17,6 @@ website:
     file: index.qmd
     right:
 
-      - text: Code Binder
-        href: https://mybinder.org/v2/gh/kerryback/2023-721-901-binder.git/HEAD
-
       - text: Notebook Repo
         href: https://github.com/kerryback/2023-721-901-binder
 
