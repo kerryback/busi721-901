@@ -34,10 +34,11 @@ website:
         href: https://learn-investments.rice-business.org
 
       
-format: 
+format:
   html:
-    theme: yeti
-    scss: styles.css
+    theme:
+      light: flatly
+      dark: superhero
     link-external-newwindow: true
     
 
