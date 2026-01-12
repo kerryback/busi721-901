@@ -1,0 +1,8 @@
+## Agenda 1/12/2026
+
+1. Canvas: syllabus, videos, assignments
+2. Syllabus
+   a) Investments: slide decks, Jupyter notebooks, solutions
+   b) Derivative securities: book, slide deck
+3. Book: NotebookLM, Jupyter notebooks, Hypothesis
+4. Introduction to Options

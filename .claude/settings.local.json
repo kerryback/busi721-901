@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xelatex:*)",
+      "Bash(pdfinfo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
