@@ -9,6 +9,7 @@ project:
     - slides/*.html
     - CNAME
     - .nojekyll
+    - RiceBusiness-transparent-logo-sm.png
         
 website:
   title: ""

@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(xelatex:*)",
-      "Bash(pdfinfo:*)"
+      "Bash(pdfinfo:*)",
+      "Bash(quarto render:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git restore:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(git push)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(index.tex)",
+      "Bash(RiceBusiness-transparent-logo-sm.png)"
     ],
     "deny": [],
     "ask": []
