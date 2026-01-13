@@ -1,0 +1,231 @@
+---
+title:  "Retirement Planning"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    scrollable: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+#
+
+:::: {.columns}
+
+::: {.column width=40}
+<br>
+
+Let's track a retirement account balance monthly.
+
+<br>
+
+For simplicity, assume the return is the same each month.
+
+<br>
+
+We'll first track it in a loop, then use future values.
+:::
+
+::: {.column width=60}
+:::
+::::
+
+
+#
+
+:::: {.columns}
+
+::: {.column width=40}
+<br>
+
+Let's track a retirement account balance monthly.
+
+<br>
+
+For simplicity, assume the return is the same each month.
+
+<br>
+
+We'll first track it in a loop, then use future values.
+:::
+
+::: {.column width=60}
+
+
+<img src="images/retirement-concept-2021-08-28-19-21-53-utc.jpg" height=500>
+
+:::
+
+
+::::
+
+
+
+## Our goal
+
+. . .
+
+<img src="images/sleepingwell.jpg" height="500" width="1000">
+
+## Timing
+
+
+- Today is date 0, date 1 is 1 month away, $\ldots$
+- Date $R$ ($R$ months away) is our retirement date
+- We plan to live until date $T>R$.
+- We make deposits at dates $1, 2, \ldots, R$
+- We make withdrawals at the beginning of each month of retirement: dates $R, R+1, \ldots, T-1$
+- Our account balance today is $B_0$.
+- We earn a monthly return $r$.
+
+## Constant dollars
+
+- It is most useful to do this exercise in today's dollars.
+- Think about what your deposits and withdrawals will be in today's dollars.
+- The monthly return should be the real return.
+
+## Deposit period
+
+
+- At date 1, we have $(1+r)B_0$ and deposit $D_1$, so $B_1 = (1+r)B_0 + D_1$.
+- Likewise, $B_2 = (1+r)B_1 + D_2$. This is
+the future value $(1+r)^2 B_0 + (1+r)D_1 + D_2$.
+- Etc., until 
+
+. . .
+
+$$B_R = (1+r)^R B_0 + (1+r)^{R-1} D_1  + \cdots +  D_R$$
+
+## Withdrawals
+- At date $R$, we also make a withdrawal $W_R$
+- Then earn $r$ and make another withdrawal $W_{R+1}$.
+- Continue through the last withdrawal at $T-1$.
+- The account balance evolves always as the future value of all past deposits and withdrawals.
+
+## Ending balance
+
+. . .
+
+The ending balance is
+
+. . .
+
+$$(1+r)^T B_0 + (1+r)^{T-1}D_1 + \cdots + (1+r)^{T-R}D_R$$
+
+. . .
+
+minus
+
+$$(1+r)^{T-R}W_R + \cdots + (1+r)W_{T-1}$$
+
+## Deposit and withdrawal arrays
+
+- Let D be an array of deposits (of length $R$).
+- Let W be an array of withdrawals (of length $T-R$).
+- To escape the normal counting from zero, let's make them dictionaries with keys being the dates $1, \ldots, R, \ldots, T$.
+
+. . .
+
+```{.python code-line-numbers="1|2"}
+D = dict(zip(range(1, R+1), D)})
+W = dict(zip(range(R, T), W)})
+```
+
+## Example <a href="https://learn-investments.rice-business.org/borrowing-saving/retirement-planning"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
+. . .
+
+```{.p}
+import numpy as np
+
+R = 30*12      # 30 years until retirement
+T = 60*12      # 60 total years
+r = 0.005      # earn 1/2 % per month  (~ 6% per year)
+B0 = 100000    # initial balance is $100,000
+```
+
+# 
+
+- Assume deposits grow at some rate $g$, so $D_t = (1+g)D_{t-1}$.
+- Assume withdrawals grow (or decline) at some rate $h$, so $W_t = (1+h)W_{t-1}$.
+
+. . .
+
+```{.p}
+D1 = 1000      # initial savings is $1,000 (per month)
+W1 = 10000     # withdraw $10,000 first month in retirement
+g = 0.002      # deposit is 0.2% larger each month
+h = 0          # withdrawals are constant
+```
+
+## Deposit and withdrawal dictionaries
+
+. . .
+
+```{.python code-line-numbers="1-2|4-5"}
+D = D1 * (1+g)**np.arange(R)
+W = W1 * (1+h)**np.arange(T-R)
+
+D = dict(zip(range(1, R+1), D))
+W = dict(zip(range(R, T), W))
+```
+
+## Account balance
+
+. . .
+
+```{.python code-line-numbers="1-2|4-5|7|9-10|12"}
+B = np.zeros(T+1)
+B[0] = B0
+
+for t in range(1, R+1) :               
+    B[t] = (1+r)*B[t-1] + D[t] 
+
+B[R] -= W[R]
+
+for t in range(R+1, T):
+    B[t] = (1+r)*B[t-1] - W[t]
+
+B[T] = (1+r)*B[T-1]
+```
+
+
+## Final balance as sum of future values
+
+. . .
+
+```{.p code-line-numbers="11|1|3-5|7-9|11|13-14"}
+x = (1+r)**T
+
+grFactors = (1+g)**np.arange(R)
+fvFactors = (1+r)**np.arange(T-1, T-R-1, -1)
+y = np.sum(grFactors*fvFactors)
+
+grFactors = (1+h)**np.arange(T-R)
+fvFactors = (1+r)**np.arange(T-R, 0, -1)
+z = np.sum(grFactors*fvFactors)
+
+BT = x*B0 + y*D1 - z*W1
+
+# example: solve for D1 to make BT=0
+D1 = (z*W1 - x*B0) / y
+```
+
+## Success!
+
+. . .
+
+<img src="images/richinshades.jpg" height="520">
+

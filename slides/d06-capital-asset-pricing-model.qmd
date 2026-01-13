@@ -1,0 +1,85 @@
+---
+title:  "Capital Asset Pricing Model"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+    scrollable: true
+---
+
+## What is the CAPM?
+
+- The Capital Asset Pricing Model (CAPM) is a theory from the 1960s.  Its discoverer won the econ Nobel prize.
+- The intuition is:
+  - Market risk is the biggest risk that a diversified investor faces.
+  - The risk of each asset should be measured in terms of how much it contributes to market risk.
+  - The risk premium of each asset should depend (linearly) on this measure of risk.
+
+##  CAPM Formula
+
+. . .
+
+The CAPM formula is 
+
+. . .
+
+$$\bar{r}_i - r_f = \beta_i(\bar{r}_m-r_f)$$
+
+. . .
+
+where $r_m$ = market return and $\beta_i$ is the slope of the regression line of $r_i-r_f$ on $r_m-r_f$.
+
+## Cost of equity capital
+
+- The CAPM is widely used to estimate expected returns to compute discount factors for corporate investment projects.
+  - The return shareholders expect is $r_f + \beta_i(\bar{r}_m - r_f)$.
+  - This is the required return on equity capital for corporate projects.
+- The CAPM does not work well enough to use in an investments context.
+
+
+## Foundation of the theory
+
+- The hypothesis of the CAPM is that the market is a frontier portfolio, with borrowing rate = savings rate.
+  - The rationale is that each investor chooses a frontier portfolio, which is the tangency portfolio with borrowing or saving.
+  - So, the market is the tangency portfolio.
+- In the usual application in the U.S., the "market portfolio" is the U.S. stock market.
+
+## Deriving the CAPM
+
+- The equation for a frontier portfolio is $kCw = \bar{r} - r_f1_n$.
+- If we imagine that we know $C$ and $w$, then this is an equation for the risk premia $\bar{r}-r_f1_n$.
+- Specifying $w$ = market, this equation is the CAPM.
+- The equation says that the marginal benefit of an asset (its risk premium) is proportional to its marginal contribution to the risk of the *market portfolio*.
+- This marginal contribution is measured by beta.
+
+## Beta <a href="https://learn-investments.rice-business.org/capm/costequity"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=right></a>
+
+- Beta is the slope in the regression:
+
+. . . 
+
+$$r-r_{f}=\alpha + \beta(r_m-r_f)+e$$
+
+- where $r_{m}$ = market return and
+$e$ = zero-mean risk.
+- Beta answers this question:
+  - if the market is up 1%, how much do we expect the asset to be up, all else equal?
+  - e.g., $\beta$ = 2 $\Rightarrow$ we expect the asset to be up 2%.
+ 
+
+## The CAPM and the data <a href="https://learn-investments.rice-business.org/capm/sml-industries"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right" vertical-align="center"></a>
+
+- The CAPM doesn't fit the data very well.
+- A simple example is industry returns. Average returns are mostly unrelated to betas.

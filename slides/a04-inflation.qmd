@@ -1,0 +1,86 @@
+---
+title:  "Inflation and Real Returns"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    scrollable: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## CPI and inflation
+
+- Standard U.S. price index is the Consumer Price Index for all Urban Consumers.
+- Basket of goods with prices sampled monthly in 87 urban areas
+- % change in the index is the inflation rate
+- Inflation in 2021 was 7%, so a typical item that cost \$100 on Jan 1 cost \$107 on Dec 31.
+- We say that the $107 on Dec 31 is $100 in Jan 1 dollars.
+- Any price $x$ on Dec 31 is $x/1.07$ in Jan 1 dollars.
+
+
+## Multiple years
+
+- If there is 7% inflation in 2021 followed by 5% inflation in 2022, then 
+  - the cost of a \$100 item grows to \$107 and then another 5\%, which is $100 \times 1.07 \times 1.05$.
+- Any price $x$ at the end of 2022 would be 
+
+. . .
+
+$$\frac{x}{1.07 \times 1.05}$$
+
+in beginning of 2021 dollars.
+
+## Constant dollars
+
+- For any dates 0, 1, ..., T and inflation rates $i_1, \ldots, i_T$, we say that a price $x$ at date $T$ is
+
+. . .
+
+$$\frac{x}{(1+i_1) \cdots (1+i_T)}$$
+in date 0 dollars.
+
+- We might refer to "date-0 dollars" as "constant dollars."
+- The denominator in the above expression is $\text{CPI}_T/\text{CPI}_0$.
+
+## Real rate of return
+
+- Suppose you make 10% on your portfolio and there is 7% inflation. Consider an item that cost \$100 at the beginning of the year.
+- Each \$100 of your portfolio at the beginning of the year would buy 1 of them.
+  - The \$100 grows to \$110.
+  - The cost of the item goes to \$107.
+  - So you could buy 1 and 3/107 items.  
+- Your [real rate of return]{style="color:tomato; font-weight:bold;"} is 3/107. 
+
+## General formula 
+
+. . .
+
+The general formula for the real rate of return $r^*$ is 
+
+. . .
+
+$$r^* = \frac{r-i}{1+i}$$ 
+
+## Compounding real rates of return <a href="https://learn-investments.rice-business.org/borrowing-saving/inflation"><img src="images/Rice_Owl.jpg" style="width:.8in;" align="right"> </a>
+
+- The formula $r^*=(r-i)/(1+i)$ implies
+
+. . .
+
+$$(1+r_1^*) \cdots (1+r_n^*) = \frac{(1+r_1)\cdots (1+r_T)}{(1+i_1) \cdots (1+i_T)}$$
+
+- The denominator is $\text{CPI}_T / \text{CPI}_0$, so compounding real rates of return "takes inflation out" of compounded nominal rates.
+- It is the accumulation from $1 in date--0 dollars.
+

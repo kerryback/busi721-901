@@ -1,3 +1,7 @@
+---
+format: revealjs
+---
+
 ## Agenda 1/12/2026
 
 1. Canvas: syllabus, videos, assignments
@@ -5,4 +9,5 @@
    a) Investments: slide decks, Jupyter notebooks, solutions
    b) Derivative securities: book, slide deck
 3. Book: NotebookLM, Jupyter notebooks, Hypothesis
-4. Introduction to Options
+4. Gen AI tools
+5. Introduction to Options

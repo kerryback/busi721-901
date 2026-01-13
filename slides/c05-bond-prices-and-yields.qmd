@@ -1,0 +1,268 @@
+---
+title:  "Bond Prices and Yields"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    scrollable: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Coupons vs Yields 
+
+- The coupon rate of a bond is set at the time of its issue.
+
+- However, what one anticipates earning on a bond varies with the market price.
+  - Price < par $\Rightarrow$ coupon + capital gain
+  - Price > par $\Rightarrow$ coupon - capital loss
+- What one would earn per year on a bond if held to maturity (assuming no default) is called the [bond yield]{style="color:tomato; font-weight:bold;"}.
+
+## Definition of bond yield
+
+- Buy a bond at price $P$, receive coupons $c_1, \ldots, c_n$ and face value $F$ at date $n$.
+- The rate of return $r$ for which an investment of $P$ would exactly finance the cash flows $c_1, \ldots, c_n$ and $F$ is called the bond yield.
+- It is the rate at which the present value of the promised cash flows $c_1, \ldots, c_n$ and $F$ equals the bond price.
+ 
+
+## Calculating Yields 
+
+- Bonds usually pay coupons semi-annually, so it is conventional to use semi-annual discounting.
+- Calculate a six-month rate.  Double it to annualize.
+- Suppose the next coupon payment is six months away.  Solve the following for a six-month rate $r$. Yield is $y=2r$.
+
+. . .
+
+$$P=\frac{c}{1+r}+\frac{c}{(1+r)^2}+\cdots+\frac{c+F}{(1+r)^n}$$
+
+
+## Example 
+
+. . .
+
+5 year bond, 6% coupon, $100 face.  The price $P$ and six-month rate $r$ satisfy
+
+. . .
+
+$$P=\frac{3}{1+r}+\frac{3}{(1+r)^2}+\cdots+\frac{3+100}{(1+r)^{10}}$$
+
+. . .
+
+The yield is
+
+$$y = 2r$$
+
+## Prices and Yields are Inversely Related <a href="https://learn-investments.rice-business.org/fixed-income/prices-yields"><img src="images/Rice_Owl.jpg" style="width:.65in;" align="right"> </a>
+
+. . .
+
+5 year bond, 6% coupon, $100 face
+
+. . .
+
+```{python}
+import numpy as np
+import plotly.graph_objects as go
+
+c = 3
+F = 100
+n = 10
+ylds = np.linspace(0.01, 0.12, 50)
+prices = [
+  c*np.sum((1+y/2)**np.arange(-1,-n-1,-1)) + F/(1+y/2)**n for y in ylds
+]
+
+trace = go.Scatter(
+  x=ylds,
+  y=prices,
+  mode="lines",
+  hovertemplate="yield = %{x:.1%}<br>price = $%{y.2f}<extra></extra>"
+)
+fig = go.Figure(trace)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Yield",
+    yaxis_title="Price",
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
+    yaxis_tickformat=".0f",
+    xaxis_tickformat=".0%",
+    width=1040,
+    height=520,
+    )
+
+fig.show()
+```
+
+## Premium and Discount Bonds
+
+
+- Premium bond: price > face value
+  - Implies yield < coupon rate
+- Discount bond: price < face value
+  - Implies yield > coupon rate
+
+## Price sensitivity to market rates
+
+- When market [rates rise]{style="color:tomato; font-weight:bold"}, a bond [price falls]{style="color:tomato; font-weight:bold"} until its yield is commensurate with market rates.
+- When market [rates fall]{style="color:tomato; font-weight:bold"}, a bond [price rises]{style="color:tomato; font-weight:bold"} until its yield is commensurate with market rates.
+
+. . .
+
+So,
+
+- rising rates $\Rightarrow$ negative bond returns
+- falling rates $\Rightarrow$ positive bond returns
+
+
+## History of Treasury rates
+
+. . .
+
+```{python}
+from pandas_datareader import DataReader as pdr
+import plotly.express as px
+
+files = ["DGS" + x for x in ["1MO", "3MO", "1", "2", "3", "5", "10", "20", "30"]]
+df = pdr(files, "fred", start=1920) / 100
+
+df.index.name = "date"
+df = df.reset_index()
+
+df["month"] = df.date.dt.to_period("M").astype(str)
+df = df.groupby("month").first()
+df = df.drop(columns=["date"])
+df = df.dropna(subset=["DGS3MO", "DGS30"])
+df.columns = [1 / 12, 1 / 4, 1, 2, 3, 5, 10, 20, 30]
+
+df = df.stack()
+df = df.reset_index()
+df.columns = ["month", "term", "rate"]
+
+hover_data = dict(month=False, term=True, rate=True)
+fig = px.line(
+        df,
+        x="term",
+        y="rate",
+        animation_frame="month",
+        hover_name="month",
+        hover_data=hover_data,
+)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Years to Maturity",
+    yaxis_title="Yield",
+    xaxis_tickvals=[1, 3, 5, 10, 20, 30],
+    xaxis_range=[0,30],
+    yaxis_tickformat=".1%",
+    yaxis_range=[0, df.rate.max() + 0.001],
+    width=1040,
+    height=520,
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+
+fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 200
+fig.show()  
+```
+
+
+## Credit ratings
+
+- Issuers are rated by S&P, Moody's and Fitch
+  - AAA=best quality
+  - AA
+  - A
+  - BBB=worst investment grade
+  - BB=best non-investment grade (= junk = high-yield)
+  - B, etc. (D is default)
+- And +'s and -'s.  Moody's uses baa instead of BBB, etc.
+
+## Credit spreads
+
+- Investors require higher yields on riskier bonds
+  - default $\rightarrow$ low return
+  - no-default $\rightarrow$ high return (= yield)
+  - yield must be high enough so that expected return = Treasury yield + risk premium
+- Usually think of yield as Treasury yield + spread
+  - Part of spread offsets expected loss due to default 
+  - Remainder provides a risk premium
+
+## History of credit spreads
+
+. . .
+
+```{python}
+import plotly.graph_objects as go
+
+files = ["BAMLC0A4CBBB", "BAMLC0A3CA", "BAMLC0A2CAA", "BAMLC0A1CAAA"]
+df = pdr(files, "fred", start=1920) / 100
+df.index.name = "date"
+df.index = df.index.to_period("M").astype(str)
+df = df.groupby("date").first()
+df.columns = ["BBB", "A", "AA", "AAA"]
+df = df.reset_index()
+
+trace1 = go.Scatter(
+  x=df.date,
+  y=df.BBB,
+  mode="lines",
+  hovertemplate="%{y:.1%}",
+  name="BBB"
+)
+
+trace2 = go.Scatter(
+  x=df.date,
+  y=df.A,
+  mode="lines",
+  hovertemplate="%{y:.1%}",
+  name="A"
+)
+
+trace3 = go.Scatter(
+  x=df.date,
+  y=df.AA,
+  mode="lines",
+  hovertemplate="%{y:.1%}",
+  name="AA"
+)
+
+trace4 = go.Scatter(
+  x=df.date,
+  y=df.AAA,
+  mode="lines",
+  hovertemplate="%{y:.1%}",
+  name="AAA"
+)
+
+fig = go.Figure()
+for trace in [trace1, trace2, trace3, trace4]:
+  fig.add_trace(trace)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Date",
+    yaxis_title="Credit Spread",
+    yaxis_tickformat=".0%",
+    hovermode="x unified",
+    width=1040,
+    height=520,
+)
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+fig.show()
+```

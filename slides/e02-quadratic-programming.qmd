@@ -1,0 +1,112 @@
+---
+title:  "Quadratic Programming"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    scrollable: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+
+## Quadratic Program
+
+- Choose $x$ to minimize a quadratic objective
+
+. . .
+
+$$\frac{1}{2}x^\top P x + q^\top x$$
+
+- subject to equality constraints
+$Ax=b$
+
+- and inequality constraints $Gx \le h$
+- for given $P, q, A, b, G$, and $h$.
+
+## Example
+
+. . .
+
+minimize $x_1^2 + x_2^2 - 2x_1 - x_2$ subject to $x_1 \ge 0$, $x_2 \ge 0$ and $x_1+x_2=1$.
+
+. . .
+
+:::: {.columns}
+::: {.column width="50%"}
+$$P = \begin{pmatrix}  2 & 0 \\ 0 & 2 \end{pmatrix}$$
+$$G =\begin{pmatrix}  -1 & 0 \\ 0 & -1 \end{pmatrix}$$
+$$A = \begin{pmatrix} 1 & 1 \end{pmatrix}$$
+:::
+::: {.column width="50%"}
+$$ q = \begin{pmatrix} - 2 \\ - 1 \end{pmatrix}$$
+$$h= \begin{pmatrix} 0 \\ 0 \end{pmatrix}$$
+$$b = \begin{pmatrix} 1 \end{pmatrix}$$
+:::
+::::
+
+## Solution with cvxopt
+
+. . .
+
+```{.p code-line-numbers="1-2|4-9|10-11"}
+from cvxopt import matrix
+from cvxopt.solvers import  qp
+
+P = matrix([[2., 0.], [0., 2.]], (2, 2))
+q = matrix([-2., -1.], (2, 1))
+G = matrix([[-1., 0.], [0., -1.]], (2, 2))
+h = matrix([0., 0.], (2, 1))
+A = matrix([1., 1.], (1, 2))
+b = matrix([1.], (1, 1))
+sol = qp(P=P, q=q, G=G, h=h, A=A, b=b)
+print(sol["x"])
+```
+
+. . .
+
+```{python}
+from cvxopt import matrix
+from cvxopt.solvers import  qp
+
+P = matrix([[2., 0.], [0., 2.]], (2, 2))
+q = matrix([-2., -1.], (2, 1))
+G = matrix([[-1., 0.], [0., -1.]], (2, 2))
+h = matrix([0., 0.], (2, 1))
+A = matrix([1., 1.], (1, 2))
+b = matrix([1.], (1, 1))
+sol = qp(P=P, q=q, G=G, h=h, A=A, b=b)
+print(sol["x"])
+```
+
+## Mean-Variance Frontier
+
+. . .
+
+minimize $(1/2)w^\top C w$ subject to
+
+. . .
+
+$$r_f + (\bar{r}-r_f1_n)^\top w = \bar{r}_{\text{targ}}$$
+
+. . .
+
+$P=C$<br>$q=0$<br>$G=0$<br> $h=0$<br>$A = (\bar{r}-r_f1_n)^\top$<br>$b=(\bar{r}_{\text{targ}} - r_f)$
+
+## Optimal portfolio
+
+- maximize expected return minus (1/2)raver times variance
+- equivalent to: minimize (1/2)raver times variance minus expected return
+
+. . .
+
+$P=\text{raver} \times C$<br>$q=-(\bar{r}-r_f1_n)$<br>$G=0$<br> $h=0$<br>$A = 0$<br>$b=0$

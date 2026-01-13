@@ -1,0 +1,130 @@
+---
+title:  "Internal Rate of Return"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    scrollable: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Break-even rate of return
+
+- When calculating an NPV, we usually also calculate a break-even rate of return, called the internal rate of return (IRR).
+- For projects with negative cash flows early and positive cash flows late:
+  - If IRR > required return, then NPV>0.
+  - If IRR < required return, then NPV<0.
+
+
+## Interpretation for usual projects
+
+- Usual = "negative early and positive late"
+- Suppose we invested the negative cash flows in stocks or other assets rather than the project.
+- We want to pull out the positive cash flows later from the stock account.
+- What rate of return would we have to earn on the stocks for this to be feasible?
+- Answer is IRR.
+
+## Usefulness of the IRR
+
+- If IRR is very high or very low, then the required return doesn't matter much.  
+  - For usual projects, very high $\Rightarrow$ "take." 
+  - For usual projects, very low $\Rightarrow$ "reject".
+- When there is limited capital, we can sometimes calculate the best portfolio of projects by starting with the highest IRR projects and working down the list.
+
+## Example
+
+- Cash flows = [-100, 30, 30, 30, 30]
+
+. . .
+
+```{python}
+import plotly.graph_objects as go
+import numpy as np
+import numpy_financial as npf
+
+cf = np.array((-100, 30, 30, 30, 30))
+def f(r) :
+  return np.sum((cf*(1+r)**np.arange(0, -5, -1)))
+rates = np.linspace(0.001, 0.2, 100)
+npvs = [f(r) for r in rates]
+irr = npf.irr(cf)
+
+trace1 = go.Scatter(
+  x=rates,
+  y=npvs,
+  hovertemplate="""
+  discount rate = %{x:.1%}<br>
+  npv = $%{y:.2f}<extra></extra>
+  """,
+)
+
+trace2 = go.Scatter(
+  x=[irr],
+  y=[f(irr)],
+  mode="markers",
+  marker=dict(size=15),
+  hovertemplate="""
+  internal rate of return = %{x:.2%}<extra></extra>
+  """,
+)
+
+fig = go.Figure(trace1)
+fig.add_trace(trace2)
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Discount Rate",
+    yaxis_title="NPV",
+    yaxis_tickformat=".0f",
+    xaxis_tickformat=".0%",
+    width=1000,
+    height=460,
+    xaxis_title_font_size=24,
+    yaxis_title_font_size=24,
+    font_size=20,
+    showlegend=False
+)
+fig.show()
+print(f"IRR is {irr:.2%}")
+```
+  
+## Calculating IRR
+
+. . .
+
+$$\text{NPV} = c_0 + \frac{c_1}{1+r} + \frac{c_2}{(1+r)^2}+ \cdots + \frac{c_n}{(1+r)^n}$$
+
+- So, NPV = 0 is a polynomial equation in the variable $1/(1+r)$.
+
+- For usual projects (negative early and positive late):
+  - If sum of positive cash flows $\le$ sum of negative cash flows, no positive IRR.
+  - Otherwise, unique positive IRR.
+
+## numpy financial or excel
+
+. . .
+
+<br>
+
+```{.p}
+import numpy_financial as npf
+
+cash_flows = [-100, 30, 30, 30, 30]
+irr = npf.irr(cash_flows)
+```
+
+
+
+<br>
+
+- Or, in Excel, =IRR(range) computes the IRR.  
+- First element of the range is date-0 cash flow, next element is date-1 cash flow, etc.

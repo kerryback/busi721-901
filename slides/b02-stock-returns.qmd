@@ -1,0 +1,236 @@
+---
+title:  "Stock Returns"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    scrollable: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Close-to-close Returns 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src="images/WallStreet.jpg" height=350 width=500>
+:::
+
+::: {.column width="50%"}
+- Let's compute close-to-close daily stock returns.  Let $P_t$ denote the price at close on day $t$. 
+
+- If no dividends,  the gain on day $t$ is $P_t - P_{t-1}$. 
+:::
+
+::::
+
+. . .
+
+The return per $1 invested in a share at close on $t-1$ is 
+
+. . . 
+
+$$(P_t - P_{t-1}) / P_{t-1}$$
+
+
+## What about dividends?  CVX in Fall 2021
+
+<br><br>
+
+<p align=center>
+<a href="https://www.chevron.com/newsroom/2021/Q3/chevron-announces-2Q-2021-quarterly-dividend"><img src="images/CVX.png" style="width:3in;" align=center> </a> </p>
+
+## Nasdaq's statement
+
+Chevron Corporation (CVX) will begin trading ex-dividend on August 18, 2021. A cash dividend payment of $1.34 per share is scheduled to be paid on September 10, 2021. Shareholders who purchased CVX prior to the ex-dividend date are eligible for the cash dividend payment.
+<br>
+
+. . .
+
+**Three Dates:**
+
+- August 18: (begins trading ex-dividend) \
+- August 19: (shareholders of record receive the dividend) \
+- September 10: (dividend is paid)
+
+## Ex-dividend days
+
+- If you buy on Aug 18, you are not entitled to the dividend.
+
+- Purchase Aug 17 or before (and hold through Aug 17) 
+  -  → will be shareholder of record on Aug 19 \
+  -  → receive dividend on Sept 10
+- Why Aug 17 → Aug 19? 
+  - T+2 settlement
+
+#
+
+- For computing returns, the dividend goes on the ex day.  
+- The close Aug 17 to close Aug 18 return for CVX is calculated as $(P_{\text{Aug18}} + 1.34 - P_{\text{Aug17}})/P_{\text{Aug17}}$.
+- We compound daily returns to get weekly, monthly, or annual returns:
+
+. . .
+
+$$
+  (1+r_1)(1+r_2)...(1+r_T)-1
+$$
+<br>
+
+. . . 
+
+- The weekly, etc. returns are as if the dividend was received on the ex day and reinvested in new shares.
+
+
+
+
+## Stock splits
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50"}
+If a company does an $n$-for-1 stock split, then each shareholder gets $n$ new shares for each of her existing shares.  Shares are worth roughly $1/n$ as much.
+:::
+
+::: {.column width="50"}
+<img src="images/Split.webp" height=300 width=300>
+:::
+
+::::
+
+
+
+
+
+
+## Split adjusted prices
+
+<br>
+
+Data vendors routinely compute split-adjusted prices, scaling down old prices by the same factor for comparability to new prices.
+
+
+
+## Yahoo's adjusted prices
+
+- finance.yahoo.com is a good source for data.
+
+- Yahoo's adjusted closing prices are adjusted for splits and also adjusted for dividends on each ex date.
+- On Aug 18, 2021, the Aug 17 price was adjusted as
+
+. . . 
+
+$$
+  {\hat{P}_{\text{Aug17}}}={P_{\text{Aug17}}}-1.34
+$$ 
+
+
+- \$1.34 of the value of at close on Aug 17 was the dividend.
+Adjusted price is the value without dividend.
+
+#  
+
+- So, Aug 17 price is scaled down by the factor
+
+. . . 
+
+$$
+  {\hat{P}_{\text{Aug17}}}/{P_{\text{Aug17}}}
+$$ 
+
+- All prior prices are scaled down by the same factor.
+- Previous price ratios are therefore unchanged:
+
+. . .
+
+$$
+  \frac{\hat{P}_{t}}{\hat{P}_{t-1}}=\frac{P_{t}}{P_{t-1}}=1+r_t
+$$ 
+
+## Summary of Yahoo adjusted closing prices
+
+- On non ex-dividend days, percent change is the return $P_t/P_{t-1} - 1$.
+- On ex-dividend days, percent change is
+
+. . .
+
+$$
+  \frac{P_{t}}{P_{t-1}-D_t} - 1
+$$ 
+
+
+
+## CVX on Aug 18, 2021
+
+. . .
+
+
+The return calculated the usual way is:
+
+$$
+  \frac{P_{\text{Aug18}}+1.34}{P_{\text{Aug17}}} - 1 =-0.0267
+$$ 
+
+. . .
+
+The % change in Yahoo's adjusted close is
+
+$$
+\frac{P_{\text{Aug18}}}{P_{\text{Aug17}}-1.34} - 1=-0.0271
+$$ 
+
+
+## Getting Returns from Yahoo
+
+. . .
+
+<br>
+
+Install pandas-datareader or, on colab, upgrade it.
+
+. . .
+
+<br>
+
+```{.p code-line-numbers="1-5|6"}
+!pip install --upgrade pandas-datareader
+
+from pandas_datareader import DataReader as pdr
+
+price = pdr('cvx', 'yahoo', start=2010)['Adj Close']
+ret_daily = price.pct_change()
+```
+
+## Compounding Yahoo returns
+
+<br>
+
+Can get monthly or annual return as % change in monthly or annual Yahoo-adjusted closing prices -  equivalent to compounding Yahoo daily returns.
+
+. . .
+
+<br>
+
+```{.p code-line-numbers="1-3|5-7"}
+price = pdr('cvx', 'yahoo', start=2010)['Adj Close']
+ret_monthly = price.resample('M').last().pct_change()
+ret_annual = price.resample('Y').last().pct_change()
+
+# change datetime to monthly or annual (optional)
+ret_monthly.index = ret_monthly.index.to_period('M')
+ret_annual.index = ret_annual.index.to_period('Y')
+```
+

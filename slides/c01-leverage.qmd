@@ -1,0 +1,133 @@
+---
+title:  "Leverage"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    scrollable: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+:::: {.columns}
+::: {.column width="30%"}
+<br><br><br><br>
+Investing borrowed money is called leverage.
+
+:::
+::: {.column width="70%"} 
+:::{.fragment .fade-up}
+![](images/leverage.jpg)
+Your own money gains extra force.
+:::
+:::
+::::
+
+. . .
+
+<p align=center>
+The return, good or bad, on each $1 is amplified.
+</p>
+
+## Example
+
+. . .
+
+Invest $100,000.  Borrow $50,000.  Buy $150,000 of stocks.
+
+. . .
+
+<br>
+
+ Assets | Liabilities |
+| ---    | ---         |
+| Stocks 150,000  | Debt 50,000|
+
+| Equity |
+| ---    |
+| 100,000
+
+
+- Leverage ratio = assets to equity.
+- You are levered 1.5 to 1.
+
+
+## A Possible Ending to the Story
+
+. . .
+
+Suppose the stocks go up 10% and you're charged 2% interest on the loan.
+
+ Assets | Liabilities |
+| ---    | ---         |
+| Stocks 165,000  | Debt 51,000|
+
+. . .
+
+| Equity |
+| ---    |
+| 114,000 |
+
+- You made 10% plus one half of (10% minus 2%) $= 0.10 + 0.5(0.10-0.02) = 0.14$
+- "one-half"  because you borrowed 50%.
+
+## Conclusion
+
+. . .
+
+You make the stock return  plus the fraction borrowed times (stock return minus borrowing rate).
+
+## Another possible ending
+
+- Suppose the stocks fell by 10%.
+- You lose 10% plus one half of ($-$ 10% $-$ 2% ).
+- So, your loss is 16% on your $100,000 investment.
+
+. . .
+
+ Assets | Liabilities |
+| ---    | ---         |
+| Stocks 135,000  | Debt 51,000|
+
+. . .
+
+| Equity |
+| ---    |
+| 84,000 |
+
+## The good and the bad
+
+- You always make the stock return  plus the fraction borrowed times (stock return minus borrowing rate).
+- With 50% leverage and a 2% interest charge, 
+
+. . .
+
+$$+10\text{%} \rightarrow +14\text{%}$$
+
+. . .
+
+$$-10\text{%} \rightarrow -16\text{%}$$
+
+
+## Margin loan rates
+
+- It pays to shop around.
+- Interactive Brokers charges 
+  - the Fed Funds rate plus 1.5% on the first $100,000, 
+  - and falling further after that.
+- Oct 1, 2022:
+  - Fed Funds rate = 3.08%
+  - Prime rate = 6.25%
+ 
+

@@ -1,11 +1,4 @@
----
-format:
-  pdf:
-    documentclass: article
-    geometry: margin=1in
----
-
-## Syllabus<br>Data Driven Finance I<br>Spring 2026<br><br>![](docs/RiceBusiness-transparent-logo-sm.png){height="60"}
+## Syllabus<br>Data Driven Finance I<br>Spring 2026<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}
 
 
 ### Instructor

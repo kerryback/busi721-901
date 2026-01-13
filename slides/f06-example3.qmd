@@ -1,0 +1,47 @@
+---
+title:  "Project Analysis Example 3"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+# 
+
+- The market for a product is declining.  It is estimated that sales of 1 million units per year can be maintained for the next 5 years, but the sales price will fall by 5% per year as follows:
+
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---|---:|---:|---:|---:|---:|---:|
+| | |  19 | 18.05 | 17.15 | 16.29 | 15.48 |
+
+- COGS and SG&A expenses are projected to stay constant at 10 million per year and 5 million per year, respectively.
+
+#
+
+- Current inventory is $2 million, receivables are $2.4 million, and payables are $1.6 million.  
+- Future inventory is projected to be 20% of COGS, recievables are projected to be 16% of sales, and payables are projected to be 16% of COGS, with all working capital recovered in five years.
+- The current book value of equipment used in production is $7 million.  The planned depreciation is $5 million in the upcoming year and $2 million the following year.
+
+
+# 
+
+- The equipment will have zero salvage value after five years.
+- If production is discontinued now, the equipment could be sold for $4 million, and all working capital could be recovered now.
+- The cost of capital is 12%.
+- The corporate tax rate is 30%.
+- Should production be discontinued now?
+

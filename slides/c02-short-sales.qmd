@@ -1,0 +1,136 @@
+---
+title:  "Short Selling"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    scrollable: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Short Sales
+
+- It is possible to sell before you buy.
+
+- You need to borrow the asset the want to sell and return it later.
+
+- This is called selling short or going short or shorting.
+
+- Long = own something (asset)
+- Short = owe something (liability)
+
+## Example  <a href=https://www.youtube.com/embed/x2J9s4HMJCY"><img src="images/youtube2.jpg" style="height:0.5in;" align="right"></a>
+
+- Borrow and sell 100 shares of ABC, which is trading at $60
+- ABC drops to $40 and you buy back and return the shares (cover the short).  
+- You  bought at $40 and sold at $60, so you made $20 per share.
+- Risk is that ABC $\uparrow$ and you have to buy back at more than $60
+
+
+## Relative performance
+
+. . .
+
+Sometimes short to bet on [relative]{style="color:tomato; font-weight:bold;"} performance.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="40%"}
+<br>
+Example: optimistic that Chevron will do well among oil companies, but not sure what price of oil will do.
+:::
+::: {.column width="60%"}
+<img src=images/gas-station-1275484_1920.jpg height=400>
+:::
+::::
+
+. . .
+
+Strategy: buy CVX and short XOM or oil company index.
+
+## Example
+
+. . .
+
+Invest $10,000.  Buy $10,000 of CVX and short $10,000 of XOM.
+
+. . .
+
+<br>
+
+| Assets | Liabilities |
+| ---    | ---         |
+| CVX 10,000  | XOM 10,000|
+| Cash 10,000  |          |
+
+. . .
+
+
+| Equity |
+| ---    |
+| 10,000
+
+#
+
+. . .
+
+Suppose CVX $\uparrow$ 30%, XOM $\uparrow$ 10%
+
+. . .
+
+<br>
+
+| Assets | Liabilities |
+| ---    | ---         |
+| CVX 13,000  | XOM 11,000|
+| Cash 10,000  |          |
+
+. . .
+
+
+| Equity |
+| ---    |
+| 12,000
+
+. . . 
+
+<br>
+You make the difference in returns on $10,000.
+
+## Stock borrowing fee
+
+- Have to pay stock borrowing fee (usually small).
+- Higher for hard to borrow stocks.
+- Lending stocks for shorts is a regular business for mutual funds and the like.
+
+## Margin Requirements
+
+- Suppose you have a $100,000 portfolio and you want to add long-short bets like the CVX-XOM example.
+- You can add $50,000 long and $50,000 short.
+- Fed Reg T: sum of long and short positions cannot exceed twice your equity, when the positions are put on.
+- Reg T is for initial margin. Maintenance margin is up to your broker.
+- This is a 150/50 portfolio (150% long and 50% short).
+
+## Dividends and interest
+
+- You have to pay the lender dividends paid by the stock.
+- Cash proceeds from a short sale are held as collateral.
+- How much interest you get on the cash collateral depends on your broker.  Shop around.
+
+
+
+

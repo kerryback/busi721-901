@@ -1,0 +1,94 @@
+---
+title:  "Valuing Companies"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    scrollable: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+# {background-image="images/buffett.png"}
+
+[Intrinsic value is an all-important concept that offers the only logical approach to evaluating the relative attractiveness of investments and businesses.]{style="color:white; font-weight:bold; font-size:200%;"}
+
+# {background-image="images/buffett.png"}
+
+[Intrinsic value can be defined simply: It is the discounted value of the cash that can be taken out of a business during its remaining life.]{style="color:white; font-weight:bold; font-size:200%;"}
+ 
+## Equity value or enterprise value?
+
+- Can forecast cash flows after net payments to lenders.
+  - These are equity cash flows.
+  - Discount at an appropriate rate, given stock risk.
+- Or, can forecast total cash flows to shareholders and lenders.
+  - Discount at a blended rate, given equity and debt risk.
+  - Present value is enterprise value (debt + equity value).
+  - Subtract value of debt to get equity value.
+
+## Equity cash flow
+
+- Subtract interest expense in income statement.
+- Forecast future growth in invested capital.
+- Forecast how much of the growth will be debt financed.
+- Subtract change in IC not debt financed and also subtract any net debt redemptions from income to get equity cash flows.
+
+
+## Free cash flow
+
+- Total cash flows to shareholders and lenders is called free cash flow.
+- Don't deduct interest expense in income statement.
+- Subtract change in invested capital without worrying aobut how much will be funded by debt or equity.
+- Taxes will be overstated (because interest reduces taxable income).  Fix that in cost of capital (more later).
+
+## Perpetuities
+
+- A company has no definite ending date, so a perpetuity model is reasonable.
+- What cash flow  will be generated next year?
+- By how much will it grow or decline each year afterwards?
+- If growth is constant at rate $g$, then value of the company today is $c_1 / (r-g)$.
+
+
+## Two-stage growth model
+
+- Instead of constant growth beginning next year, forecast cash flows year-by-year for $n$ years.
+- Assume constant growth beginning in year $n+1$.
+- Terminal value at year $n$ is
+
+. . .
+
+$$\text{TV} = \frac{c_{n+1}}{r-g}$$
+
+# 
+
+- Value of the company today is
+
+. . .
+
+$$\frac{c_1}{1+r} + \frac{c_2}{(1+r)^2} + \cdots + \frac{c_n}{(1+r)^n} + \frac{\text{TV}}{(1+r)^n}$$
+
+## Example
+
+- Forecast cash flows $c_1=100, c_2=150, c_3= 180, c_4=200$.
+- Afterward grow at 5% per year forever.
+- Required rate of return is 12%.
+- $c_5 = 200 \times 1.05 = 210$, so terminal value at year 4 is 
+$210/0.07$.
+
+# 
+
+- Company value is
+
+. . .
+
+$$\frac{100}{1.12} + \frac{150}{1.12^2} + \frac{180}{1.12^3} + \frac{200}{1.12^4} + \frac{210/0.07}{1.12^4}$$

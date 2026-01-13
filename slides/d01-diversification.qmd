@@ -1,0 +1,321 @@
+---
+title: Diversification
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    scrollable: true
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Why diversify your investments?
+
+:::: {.columns}
+::: {.column width="45%"}
+- What is the risk of one coin flip for $10?
+  - The possible deviations from the mean are +10 and --10.
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+- What is the risk of two coin flips for $5 each?
+  - The possible deviations from the mean are 
+    - +10 (prob 1/4), 
+    - --10 (prob 1/4) and 
+    - [0 (prob 1/2)]{style="color:tomato; font-weight:bold;"}.
+:::
+::::
+
+ 
+## More baskets is better
+
+![](images/eggsinbaskets.jpg)
+
+## Variance and standard deviation
+ 
+- Variance is expected squared deviation from mean
+  - Flipping once for \$10 $\Rightarrow$ variance = 100
+  - Flipping twice for \$5 $\Rightarrow$ variance = (1/4) $\times$ 100 + (1/4) $\times$ 100 = 50
+- Standard deviation is square root of variance
+  - Flipping once for \$10 $\Rightarrow$ std dev = 10
+  - Flipping twice for \$5 $\Rightarrow$ std dev = 7.07
+
+## Portfolio Returns
+
+- The return of a portfolio of two assets is $r_p = w_1r_1 + w_2r_2$ where $w_i$ is the fraction of the portfolio invested in asset $i$.
+- Example: $100,000 portfolio with 40%  in asset 1 and 60% in asset 2.
+  - Suppose asset 1 $\uparrow$ 20%. $40,000 $\rightarrow$ \$48,000
+  - Suppose asset 2 $\uparrow$ 10%. $60,000 $\rightarrow$ \$66,000
+  - $100,000 $\rightarrow$ $114,000
+  - So, up 14% = 0.4 $\times$ 20% + 0.6 $\times$ 10%
+
+
+## Expected portfolio return
+
+- $\bar{r}_1$ = expected return of asset 1
+- $\bar{r}_2$ = expected return of asset 2
+- The expected portfolio return is
+
+. . .
+
+$$ \bar{r}_p = w_1 \bar{r}_1 + w_2 \bar{r}_2$$
+
+## Portfolio variance 
+
+- The deviation of the portfolio return from its mean is
+
+. . .
+
+$$w_1r_1 + w_2r_2 - (w_1 \bar{r}_1 +w_2\bar{r}_2)$$
+
+- This equals
+
+. . .
+
+$$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
+
+# 
+
+The deviation of the portfolio return from its mean is 
+
+$$w_1(r_1 - \bar{r}_1) + w_2(r_2 - \bar{r}_2)$$
+
+. . .
+
+and $(a+b)^2 = a^2 + b^2 + 2ab$, so the squared deviation is  sum of 
+
+  - [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"},
+  - [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"}, 
+  - [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"}.
+
+#
+
+- Expected value of [$w_1^2(r_1-\bar{r}_1)^2$]{style="color:green;"} is [$w_1^2 \text{var}(r_1)$]{style="color:green;"}.
+- Expected value of [$w_2^2(r_2 - \bar{r}_2)^2$]{style="color:purple;"} is [$w_2^2 \text{var}(r_2)$]{style="color:purple;"}.
+- Expected value of [$2w_1w_2(r_1-\bar{r}_1)(r_2-\bar{r}_2)$]{style="color:red;"} is [$2w_1w_2\text{cov}(r_1,r_2)$]{style="color:red;"}.
+- Portfolio variance is
+
+. . .
+
+$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2) + 2 w_1 w_2 \text{cov}(r_1, r_2)$$
+
+
+## Independent assets
+
+- Suppose we start with $100 
+- There are two independent assets, each with possible returns of $\pm$ 10%
+  - Put all \$100 in a single asset $\leftrightarrow$ flip once for \$10
+  - Put \$50 in each asset $\leftrightarrow$ flip twice for \$5
+- std dev $r_1 = 0.1$ $\Rightarrow$ var $r_1 = 0.01$
+- std dev $r_2 = 0.1$ $\Rightarrow$ var $r_2 = 0.01$
+- assets are independent, so cov $= 0$
+
+# 
+
+- put $50 in each asset $\Rightarrow$ weights = 1/2
+- portfolio variance is
+
+. . .
+
+$$\left(\frac{1}{2}\right)^2 (0.01) + \left(\frac{1}{2}\right)^2 (0.01) = 0.005$$
+
+- portfolio std dev is $\sqrt{0.005}= 0.0707$
+
+## Correlation and covariance 
+
+- $\text{cov} = \text{corr} \times \text{std}(r_1) \times \text{std}(r_2)$, 
+so portfolio var is
+
+. . .
+
+$$w_1^2 \text{var}(r_1) + w_2^2 \text{var}(r_2)$$
+
+. . .
+
+plus
+<br>
+$$2 w_1 w_2 \times \text{corr}(r_1, r_2) \times\text{std}(r_1)\times\text{std}(r_2)$$
+
+. . .
+
+<br>
+[Portfolio variance is lower when correlation is lower.]{style="color:tomato; font-weight:bold;"}
+
+
+## Correlation, covariance, and beta
+
+. . .
+
+The slope (beta) of the regression line of $r_2$ on $r_1$ is
+
+. . .
+
+$$\frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \text{corr}(r_1, r_2) \times \frac{\text{std}(r_2)}{\text{std}(r_1)}$$
+
+## Monthly returns of CVX and AAPL 2017--2021
+
+:::: {.columns}
+::: {.column width="55%"}
+
+```{python}
+from pandas_datareader import DataReader as pdr
+import plotly.express as px
+rets = pdr(
+  ['cvx', 'AAPL'], 
+  "yahoo", 
+  start="2016-12-01", 
+  end="2021-12-31"
+)['Adj Close']  
+rets = rets.resample('M').last().pct_change().dropna() 
+rets.index = rets.index.to_period('M').astype(str)
+rets = rets.reset_index()
+rets.columns = ['date', 'CVX', 'AAPL'] 
+
+fig = px.scatter(
+        rets,
+        x="CVX",
+        y="AAPL",
+        trendline="ols",
+        hover_data=dict(AAPL=False, CVX=False, date=False),
+        hover_name="date",
+    )
+
+fig.update_traces(
+        marker=dict(size=12, line=dict(width=2, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
+)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="CVX Return",
+    yaxis_title="AAPL Return",
+    yaxis_tickformat=".0%",
+    xaxis_tickformat=".0%",
+    width=520,
+    height=520,
+  )
+fig.update_xaxes(title_font_size=20)
+fig.update_yaxes(title_font_size=20)
+fig.update_layout(font_size=16)
+fig.show()
+```
+:::
+::: {.column width="45%"}
+```{python}
+print(f"std dev of CVX is {rets.CVX.std(): .2%}")
+print(f"std dev of AAPL is {rets.AAPL.std(): .2%}")
+print(f"corr is {rets.AAPL.corr(rets.CVX): .3f}")
+print(f"cov is {100*100*rets.AAPL.cov(rets.CVX): .1f}%^2")
+print(f"beta is {rets.AAPL.cov(rets.CVX)/rets.CVX.var(): .2f}")
+```
+:::
+::::
+
+
+
+## Monthly returns of CVX and XOM 2017--2021
+
+:::: {.columns}
+::: {.column width="55%"}
+
+```{python}
+rets = pdr(
+  ['cvx', 'xom'], 
+  "yahoo", 
+  start="2016-12-01", 
+  end="2021-12-31"
+)['Adj Close']  
+rets = rets.resample('M').last().pct_change().dropna() 
+rets.index = rets.index.to_period('M').astype(str)
+rets = rets.reset_index()
+rets.columns = ['date', 'CVX', 'XOM'] 
+
+fig = px.scatter(
+        rets,
+        x="CVX",
+        y="XOM",
+        trendline="ols",
+        hover_data=dict(XOM=False, CVX=False, date=False),
+        hover_name="date",
+    )
+
+fig.update_traces(
+        marker=dict(size=12, line=dict(width=2, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
+)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="CVX Return",
+    yaxis_title="XOM Return",
+    yaxis_tickformat=".0%",
+    xaxis_tickformat=".0%",
+    width=520,
+    height=520,
+  )
+fig.update_xaxes(title_font_size=20)
+fig.update_yaxes(title_font_size=20)
+fig.update_layout(font_size=16)
+fig.show()
+```
+:::
+::: {.column width="45%"}
+```{python}
+print(f"std dev of CVX is {rets.CVX.std(): .2%}")
+print(f"std dev of XOM is {rets.XOM.std(): .2%}")
+print(f"corr is {rets.XOM.corr(rets.CVX): .3f}")
+print(f"cov is {100*100*rets.XOM.cov(rets.CVX): .1f}%^2")
+print(f"beta is {rets.XOM.cov(rets.CVX)/rets.CVX.var(): .2f}")
+```
+:::
+::::
+
+## CVX, AAPL, and XOM portfolios
+
+- The volatilities (std devs) of AAPL and XOM were very similar over the 2017-2021 period.
+- If you combined either with CVX, did you have similar volatilities over the period?
+- AAPL is a much better diversification play than XOM for someone holding CVX.
+
+## Some portfolios
+
+``` {.p code-line-numbers="1-7|9-10|12-13"}
+cvx = 0.0818       # std devs
+aapl = 0.0850
+xom = 0.0858
+cvx_aapl = 0.153   # correlations
+cvx_xom = 0.889
+w1 = 0.5           # portfolio weights
+w2 = 0.5
+
+# 50% CVX and 50% AAPL
+w1**2 * cvx**2 + w2**2 * aapl**2 + 2*w1*w2*cvx_aapl*cvx*aapl
+
+# 50% CVX and 50% XOM
+w1**2 * cvx**2 + w2**2 * xom**2 + 2*w1*w2*cvx_xom*cvx*xom
+```
+
+## Results
+
+- std dev of CVX with XOM is 8.14%
+- std dev of CVX with AAPL is 6.33%
+- compared to
+  - std dev of CVX is 8.18%
+  - std dev of XOM is 8.58%
+  - std dev of AAPL is 8.50%
+
+
+
+

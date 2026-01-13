@@ -1,0 +1,92 @@
+---
+title:  "Cash Flows and NPV"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Property, plant, & equipment
+
+- Net PP&E = undepreciated part of historical PP&E cost
+- Use tax depreciation schedules
+  - Accelerated compared to straight line financial reporting
+
+## Net working capital
+
+- Short-term assets minus short-term operating liabilities
+  - Short-term is called "current"
+- Inventory plus accounts receivable minus accounts payable
+
+## Invested capital
+
+- Net PP&E plus net working capital
+- Equals assets not financed by payables
+- $\Rightarrow$ financed by investors (shareholders and lenders)
+- Example: Net PP&E = 100, current assets = 30, current liabilities = 10
+  - Total assets = 130
+  - Invested capital = 120
+
+## Project cash flows
+
+- Cash flow = income minus change in invested capital
+- Usual timing
+  - Early years = negative cash flows (build up of capital)
+  - Middle years = positive cash flows
+  - End = either
+    - Extra positive cash flow due to wind-down of working capital and salvage value of PP&E
+    - Or maybe disposal and/or environmental clean-up costs
+
+## Example
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| Invested capital | 100 | 70 | 50 | 35 | 0 |
+ Income | 0 | 20 | 30 | 20 | 5 |
+
+. . .
+
+<br>
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+ Income | 0 | 20 | 30 | 20 | 5 |
+| Change in invested capital | 100 | -30 | -20 | -15 | -35 |
+| Cash flow | -100 | 50 | 50 | 35 | 40 |
+
+
+## Net present value
+
+. . .
+
+Discount rate = 10%
+
+<br>
+
+. . .
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|:---|---:|---:|---:|---:|---:|
+| Cash flow | -100 | 50 | 50 | 35 | 40 |
+| PV factor | 1 | 0.91 | 0.83 | 0.75 | 0.68 |
+| PV of cash flow | -100 | 45.45 | 41.32 | 26.30 | 27.32 |
+| NPV | 40.39 |  |  | |  |
+
+
+
+
+
+ 

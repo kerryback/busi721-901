@@ -5,6 +5,8 @@ project:
     - index.qmd
     - slides.qmd
     - live_sessions.qmd
+  resources:
+    - slides/*.html
         
 website:
   title: ""

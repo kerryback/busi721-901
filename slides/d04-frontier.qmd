@@ -1,0 +1,274 @@
+---
+title:  "Mean-Variance Frontier"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+    scrollable: true
+---
+
+## Objective
+
+. . .
+
+For any target expected return, find the least-risk portfolio.
+
+. . .
+
+<img src="images/riskdial.jpg" height="500" width="1040" align="center">
+
+
+## Frontier
+
+- Find the least-risk portfolio for various target expected returns.
+- The (expected return, least risk) pairs are called the mean-variance frontier.
+- Least-risk portfolios are frontier portfolios.
+
+## Borrow and save at same rate
+
+- Assume $r_s=r_b=r_f$ (risk-free rate).
+- Set $x_f = x_s - x_b$.
+- portfolio expected return is
+$x_f r_f + w^\top \bar{r}$.
+
+- The accounting identify $x_s + \sum w_i = 1 + x_b$ implies $x_f = 1-\sum w_i$, so portfolio expected return is
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+
+## No Short Sales Constraints
+
+
+- Assume short w/o borrowing fee 
+  - implies return on a short is minus the return on the asset
+  - contribution of a short to portfolio return is $w_i r_i$ (with $w_i<0$)
+- All previous formulas are valid with no sign constraints on $w_i$.
+
+## No margin requirements
+
+- Assume no Fed Reg T to limit positions.
+- Assume full use of short proceeds to buy other assets or to save (get full interest).
+- Only limit on positions is the accounting identity $x_f = 1 - w^\top 1_n$, which we've built in to the expected return formula:
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n)$$
+
+## Find a frontier portfolio
+
+- Let $\bar{r}_{\text{targ}}$ be target expected return.
+- Minimize $w^\top C w$
+
+. . .
+
+<p align=center>
+subject to 
+</p>
+
+. . .
+
+$$r_f + w^\top (\bar{r}-r_f1_n) = \bar{r}_{\text{targ}}$$
+
+- This is like "choose output quantities to minimize production cost subject to achieving target revenue."
+
+## Optimality principle
+
+- Ratio of marginal benefit to marginal cost must be same for all choice variables.
+- Marginal benefit of $w_i$ is the risk premium $\bar{r}_i-r_f$ that appears in the constraint.
+- Marginal cost is how the variance changes with a small change in $w_i$.
+
+## Marginal cost
+
+- Variance is
+
+. . .
+
+$$\sum_{i=1}^n w_i^2\sigma_i^2 + 2 \sum_{i=1}^n \sum_{j=i+1}^n w_iw_j\sigma_{ij}$$
+
+- The terms that involve any given $w_i$ are
+
+. . .
+
+$$w_i^2\sigma_i^2 + 2 \sum_{j \neq i} w_iw_j\sigma_{ij}$$
+
+#
+
+- The derivative with respect to $w_i$ is (with $\sigma_{ii} = \sigma_i^2$)
+
+. . .
+
+$$2 \sum_{j=1}^n w_j \sigma_{ij}$$
+
+- The sum equals $C_i^\top w$ where $C_i$ is the $i$th column of the covariance matrix.
+
+## Equate benefit-cost ratios
+
+- Equal benefit-cost ratios means $(\bar{r}_i-r_f)/C_i^\top w =k$.
+- Rearrange: $k C_i^\top w = \bar{r}_i - r_f$
+
+- Stack: $k C w = \bar{r} - r_f 1_n$
+
+- Solve: 
+
+. . .
+
+$$w = (1/k)C^{-1}(\bar{r}-r_f1_n)$$
+
+## Find the constant
+
+- The portfolio expected return is
+
+. . .
+
+$$r_f + \frac{1}{k}(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)$$
+
+- Equating to the target gives
+
+. . .
+
+$$k = \frac{(\bar{r}-r_f1_n)^\top C^{-1}(\bar{r}-r_f1_n)}{\bar{r}_{\text{targ}}-r_f}$$
+
+
+## Example
+
+. . .
+
+```{.p code-line-numbers="1-6|8"}
+import numpy as np
+
+rf = 0.02
+mn1, mn2, mn3 = 0.06, 0.08, 0.10
+sd1, sd2, sd3 = 0.1, 0.15, 0.12
+corr12, corr13, corr23 = 0.5, 0.7, 0.6
+
+targ = 0.09
+```
+
+## Solution of the example
+
+. . .
+
+```{.p code-line-numbers="1-6|8|9|10|11"}
+S = np.diag([sd1, sd2, sd3])
+R = np.identity(3)
+R[0, 1] = R[1, 0] = corr12
+R[0, 2] = R[2, 0] = corr13
+R[1, 2] = R[2, 1] = corr23
+C = S @ R @ S
+
+rprem = np.array([mn1, mn2, mn3]) - rf
+Cinv = np.linalg.inv(C)
+k = (rprem @ Cinv @ rprem) / (targ-rf)
+w = (1/k) * Cinv @ rprem
+```
+
+## Mean -- Standard Deviation Plot
+
+. . .
+
+```{python}
+import plotly.graph_objects as go
+import numpy as np
+
+rf = 0.02
+mn1, mn2, mn3 = 0.06, 0.08, 0.10
+sd1, sd2, sd3 = 0.1, 0.15, 0.12
+corr12, corr13, corr23 = 0.5, 0.7, 0.6
+targ = 0.09
+
+S = np.diag([sd1, sd2, sd3])
+R = np.identity(3)
+R[0, 1] = R[1, 0] = corr12
+R[0, 2] = R[2, 0] = corr13
+R[1, 2] = R[2, 1] = corr23
+C = S @ R @ S
+
+rprem = np.array([mn1, mn2, mn3]) - rf
+Cinv = np.linalg.inv(C)
+k =  (rprem @ Cinv @ rprem) / (targ-rf)
+w = (1/k) * Cinv @ rprem
+
+portmn = rf + w @ rprem
+portsd = np.sqrt(w @ C @ w)
+trace1 = go.Scatter(
+  x=[sd1],
+  y=[mn1],
+  mode="markers",
+  marker=dict(size=15),
+  name="asset 1",
+  hovertemplate="asset 1<br>mean=%{y:.0%}<br>std dev=%{x:.0%}<extra></extra>"
+)
+trace2 = go.Scatter(
+  x=[sd2],
+  y=[mn2],
+  mode="markers",
+  marker=dict(size=15),
+  name="asset 2",
+  hovertemplate="asset 2<br>mean=%{y:.0%}<br>std dev=%{x:.0%}<extra></extra>"
+)
+trace3 = go.Scatter(
+  x=[sd3],
+  y=[mn3],
+  mode="markers",
+  marker=dict(size=15),
+  name="asset 3",
+  hovertemplate="asset 3<br>mean=%{y:.0%}<br>std dev=%{x:.0%}<extra></extra>"
+)
+
+cd = np.empty(shape=(1, 3, 1), dtype=float)
+for i in range(3):
+  cd[:, i] = [w[i]]
+
+
+trace4 = go.Scatter(
+  x=[portsd],
+  y=[portmn],
+  customdata=cd,
+  mode="markers",
+  marker=dict(size=15),
+  name="portfolio",
+  hovertemplate="w1 = %{customdata[0]:.1%}<br>w2 = %{customdata[1]:.1%}<br>w3 = %{customdata[2]:.1%}<extra></extra>"
+)
+fig = go.Figure()
+for trace in (trace1, trace2, trace3, trace4):
+  fig.add_trace(trace)
+
+fig.update_layout(
+    template="plotly_dark",
+    xaxis_title="Standard Deviation",
+    yaxis_title="Mean",
+    yaxis_tickformat=".0%",
+    xaxis_tickformat=".0%",
+    width=1000,
+    height=460,
+    legend=dict(
+        yanchor="bottom", 
+        y=0.01, 
+        xanchor="center", 
+        x=0.5
+    )
+  )
+fig.update_xaxes(title_font_size=24)
+fig.update_yaxes(title_font_size=24)
+fig.update_layout(font_size=20)
+
+fig.show()
+
+string = f"w1={w[0]:.1%}, w2={w[1]:.1%}, w3={w[2]:.1%}"
+print(string)
+```
+

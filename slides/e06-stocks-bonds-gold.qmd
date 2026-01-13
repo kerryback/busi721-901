@@ -1,0 +1,58 @@
+---
+title:  "Stocks, Bonds, and Gold"
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    preview-links: true
+    self-contained: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+#
+Let's calculate optimal portfolios for
+stocks, treasury bonds, corporate bonds, and gold
+based on historical means, standard deviations, and correlations.
+
+<br>
+
+We'll look at indices from 1968 and ETFs from 2004.
+
+<br>
+
+<p float="left" style="background-color:gray;">
+
+  <img src="images/report-3183779_1920.jpg" width="250" />
+  <img src="images/im-140375.jpeg" width="250" /> 
+  <img src="images/is-it-worth-investing-in-corporate-bonds-the-pros-and-cons.jpeg" width="250" />
+  <img src="images/gold-163519_1280.jpg" width="250" />
+</p>
+
+
+## Reliability of parameter estimates 
+- Large standard errors
+- Parameters may change over time
+  - Turbulent and calm markets
+  - Past 5-year return is a weak predictor of the mean.  Other weak predictors
+  - Correlation between Treasuries and stocks seems to have changed over time.
+    - Positive in 1900s (inflation shocks?)
+    - Negative in 2000s (no inflation shocks?)
+
+## Optimal portfolios
+
+<br>
+
+ <a href="https://learn-investments.rice-business.org/portfolios/optimal-sb"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left> </a> Indices
+
+
+<br><br>
+
+<a href="https://learn-investments.rice-business.org/portfolios/optimal-yahoo"><img src="images/Rice_Owl.jpg" style="width:.65in;" align=left></a> ETFs

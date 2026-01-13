@@ -1,0 +1,55 @@
+---
+title:  "Monthly Rates, etc."
+author: <br><br><br><br><span style="font-family:perpetua; font-variant:small-caps; color:#606060;">Kerry Back</span><br><br><img src="RiceBusiness-transparent-logo-sm.png"  height=80>
+output-dir: docs
+execute:
+  echo: false
+  jupyter: python3
+  cache: true
+format: 
+  revealjs:
+    highlight-style: monokai
+    code-fold: true
+    slide-number: true
+    scrollable: true
+    preview-links: true
+    self-contained: true
+    controls: true
+    transition: fade
+    theme: [solarized, 721.scss]
+    incremental: true
+---
+
+## Monthly rates
+
+- If we earn $r_m$ each month, then \$1 will grow in a year to \$$(1+r_m)^{12}$.
+- So, the annual return (gain per \$1) is
+$r_a = (1+r_m)^{12}-1$.
+- For example, 1\% per month corresponds to
+12.68\% per year.
+- We can reverse this to compute the monthly return from the annual return as
+$r_m = (1+r_a)^{1/12} - 1$.
+- 12\% per year corresponds to 0.95\% per month.
+
+## Bank rates
+
+- If a bank says it will loan you money at 12% per year with monthly payments, it will charge you 1% per month.
+- Bank formula is $r_m = r_a/12$.
+
+## Frequent compounding at bank rates
+
+- 12\% per year compounded monthly at the bank formula implies an annual rate of $1.01^{12}-1 = 0.1268$
+- 12\% per year compounded weekly at the bank formula implies an annual rate of $(1+0.12/52)^{52}-1 = 0.1273$
+- 12\% per year compounded daily at the bank formula implies an annual rate of $(1+0.12/365)^{365} = 0.12747$
+- More frequent compounding $\rightarrow$ higher **effective annual** rate
+
+## Continuous compounding
+
+. . .
+
+A useful fact: as $n \rightarrow \infty$,
+$$(1+r/n)^n \rightarrow e^r$$
+
+- We say that an annual rate of $r$ compounded **continuously** produces an effective annual rate of $e^r-1$.
+- For example, 12\% compounded continuously implies an effective annual rate of $e^{0.12}-1 = 0.12750$.
+- Given an effective annual rate of $r_a$, the corresponding continuously compounded rate is $\log (1+r_a)$.
