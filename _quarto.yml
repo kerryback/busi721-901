@@ -7,6 +7,8 @@ project:
     - live_sessions.qmd
   resources:
     - slides/*.html
+    - CNAME
+    - .nojekyll
         
 website:
   title: ""
