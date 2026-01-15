@@ -25,8 +25,11 @@ website:
       - text: Notebook Repo
         href: https://github.com/kerryback/2023-721-901-binder
 
-      - text: Slide Decks
+      - text: Slide Decks in Videos
         file: slides.qmd
+
+      - text: Slide Decks for Derivatives
+        href: https://slides.derivative-securities.org
 
       - text: Live Session Recordings
         file: live_sessions.qmd
