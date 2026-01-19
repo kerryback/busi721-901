@@ -23,7 +23,7 @@ website:
     right:
 
       - text: Notebook Repo
-        href: https://github.com/kerryback/2023-721-901-binder
+        href: https://github.com/kerryback/busi721-notebooks
 
       - text: Slide Decks in Videos
         file: slides.qmd
