@@ -5,6 +5,7 @@ project:
     - index.qmd
     - slides.qmd
     - live_sessions.qmd
+    - slides/*.qmd
   resources:
     - slides/*.html
     - CNAME

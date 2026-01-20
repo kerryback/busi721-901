@@ -28,7 +28,7 @@ format:
 import yfinance as yf
 import plotly.graph_objects as go
 import numpy as np
-spy = yf.download('SPY', start=1990)['Adj Close']
+spy = yf.download('SPY', start=1990)['Close']
 spy = spy.pct_change().dropna()
 spy.index = spy.index.astype(str)
 spy = spy.reset_index()

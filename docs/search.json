@@ -1,17 +1,1151 @@
 [
   {
-    "objectID": "live_sessions.html",
-    "href": "live_sessions.html",
-    "title": "",
-    "section": "",
-    "text": "Jan 11"
+    "objectID": "slides/g06-debt-cost-capital.html#overview",
+    "href": "slides/g06-debt-cost-capital.html#overview",
+    "title": "Debt and Cost of Capital",
+    "section": "Overview",
+    "text": "Overview\n\nAdding debt increases enterprise value because of the tax savings, up to a point.\nEnterprise value is free cash flow discounted at the WACC.\n\nAdding debt does not change FCF.\nSo adding debt must reduce the WACC.\n\nThe effect is through taxes, not just because debt is cheaper capital."
   },
   {
-    "objectID": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
-    "href": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
+    "objectID": "slides/g06-debt-cost-capital.html#if-there-were-no-taxes",
+    "href": "slides/g06-debt-cost-capital.html#if-there-were-no-taxes",
+    "title": "Debt and Cost of Capital",
+    "section": "If there were no taxes …",
+    "text": "If there were no taxes …\n\nWACC is\n\n\n\\[\\frac{E}{E+D} r_E + \\frac{D}{E+D}r_D\\]\n\nIncreasing the debt share substitutes cheaper capital\nCost of debt will rise as debt share increases\nCost of equity will also rise as debt share increases\nThese effects exactly offset the use of cheaper capital"
+  },
+  {
+    "objectID": "slides/g06-debt-cost-capital.html#but-there-are-taxes",
+    "href": "slides/g06-debt-cost-capital.html#but-there-are-taxes",
+    "title": "Debt and Cost of Capital",
+    "section": "But there are taxes …",
+    "text": "But there are taxes …\n\nWACC is\n\n\n\\[\\frac{E}{E+D} r_E + (1-t)\\frac{D}{E+D}r_D\\]\n\nAs without taxes, increasing the debt share\n\nsubstitutes cheaper capital\nbut makes debt and equity more expensive\n\nThe net effect with taxes is to lower the WACC"
+  },
+  {
+    "objectID": "slides/g04-wacc.html#weighted-average-cost-of-capital",
+    "href": "slides/g04-wacc.html#weighted-average-cost-of-capital",
+    "title": "Weighted Average Cost of Capital",
+    "section": "Weighted Average Cost of Capital",
+    "text": "Weighted Average Cost of Capital\n\n\\[ \\text{WACC} = \\text{% Equity} \\times \\text{Cost of Equity} \\]\n\\[+ \\text{% Debt} \\times \\text{After-tax Cost of Debt}\\]\n\nAfter-tax cost of debt:\n\nSuppose $100 interest and 30% tax rate\nTaxes are reduced by $30, so after-tax interest cost is only $70.\nAfter-tax cost of debt = debt yield \\(\\times\\) (1 - tax rate)."
+  },
+  {
+    "objectID": "slides/g04-wacc.html#example",
+    "href": "slides/g04-wacc.html#example",
+    "title": "Weighted Average Cost of Capital",
+    "section": "Example",
+    "text": "Example\n\nA company has perpetual expected earnings before interest and taxes (EBIT) of 76 2/3.\nInterest expense is projected to be 10 forever.\nThe company’s bond yield is 5%.\n\nMarket value of the debt is 10 / 0.05 = 200."
+  },
+  {
+    "objectID": "slides/g04-wacc.html#method-1-discount-equity-cash-flows",
+    "href": "slides/g04-wacc.html#method-1-discount-equity-cash-flows",
+    "title": "Weighted Average Cost of Capital",
+    "section": "Method 1: Discount equity cash flows",
+    "text": "Method 1: Discount equity cash flows\n\nPre-tax income is 66 2/3. Taxes are 26 2/3. Net income is 40.\nEquity cash flow is 40.\nEquity value is 40/0.2 = 200.\nCompany is 50% debt and 50% equity by market value."
+  },
+  {
+    "objectID": "slides/g04-wacc.html#method-2-discount-free-cash-flows",
+    "href": "slides/g04-wacc.html#method-2-discount-free-cash-flows",
+    "title": "Weighted Average Cost of Capital",
+    "section": "Method 2: Discount free cash flows",
+    "text": "Method 2: Discount free cash flows\n\nApply tax rate to EBIT as if there were no interest: taxes = 30 2/3.\nIncome = 76 2/3 - 30 2/3 = 46.\nFree cash flow = 46.\nWACC is\n\n\n\\[\\frac{1}{2} \\times \\text{20%} + \\frac{1}{2} \\times (1-\\text{40%}) \\times \\text{5%} = \\text{11.5%}\\]"
+  },
+  {
+    "objectID": "slides/g02-perpetuities.html#valuing-a-perpetuity",
+    "href": "slides/g02-perpetuities.html#valuing-a-perpetuity",
+    "title": "Perpetuities",
+    "section": "Valuing a perpetuity",
+    "text": "Valuing a perpetuity\n\nWhat is the value of a constant sequence of cash flows that goes on forever?\n\n\n\\[\\text{PV} = \\frac{c}{1+r} + \\frac{c}{(1+r)^2} + \\frac{c}{(1+r)^3} + \\cdots\\]\n\nThe value is \\(c/r\\).\nExample: the value of getting $100 forever, starting in one year, when the rate of return is 10%, is $1,000."
+  },
+  {
+    "objectID": "slides/g02-perpetuities.html#valuing-a-growing-perpetuity",
+    "href": "slides/g02-perpetuities.html#valuing-a-growing-perpetuity",
+    "title": "Perpetuities",
+    "section": "Valuing a growing perpetuity",
+    "text": "Valuing a growing perpetuity\n\nWhat is the value of a sequence of cash flows that grows (or declines) at a fixed rate forever?\n\n\n\\[\\text{PV} = \\frac{c}{1+r} + \\frac{(1+g)c}{(1+r)^2} + \\frac{(1+g)^2c}{(1+r)^3} + \\cdots \\]\n\nThe value is \\(c/(r-g)\\). Example: the value of getting $100 next year and 8% more each year afterwards, when the rate of return is 10%, is 100/(0.1-0.08) = 5,000."
+  },
+  {
+    "objectID": "slides/f04-example1.html#example",
+    "href": "slides/f04-example1.html#example",
+    "title": "Project Analysis Example 1",
+    "section": "Example",
+    "text": "Example\n\nProject requires $10 million purchase of 5-year MACRS equipment. Depreciation rates are 20%, 32%, 19.2%, 11.52%, 11.52% and 5.76%.\nAnticipate equipment could be sold for $3 million at end of year 5.\nProject sales revenue of $6, $10, $12, $10, and $5 million"
+  },
+  {
+    "objectID": "slides/f02-eva.html#return-on-invested-capital-roic",
+    "href": "slides/f02-eva.html#return-on-invested-capital-roic",
+    "title": "Economic Value Added",
+    "section": "Return on invested capital (ROIC)",
+    "text": "Return on invested capital (ROIC)\n\nEquals income divided by lagged invested capital\nAlso called return on capital employed (ROCE)\nSome different versions\n\nAdjust income for interest tax shield\nUse average of lagged and current IC instead of lagged"
+  },
+  {
+    "objectID": "slides/f02-eva.html#example",
+    "href": "slides/f02-eva.html#example",
+    "title": "Economic Value Added",
+    "section": "Example",
+    "text": "Example\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nInvested capital\n100\n70\n50\n35\n0\n\n\nIncome\n0\n20\n30\n20\n5\n\n\nROIC\n\n0.2\n0.428\n0.4\n0.143"
+  },
+  {
+    "objectID": "slides/f02-eva.html#economic-value-added",
+    "href": "slides/f02-eva.html#economic-value-added",
+    "title": "Economic Value Added",
+    "section": "Economic value added",
+    "text": "Economic value added\n\nEVA = income minus a charge for capital\nCharge for capital = required return times lagged invested capital\nEquivalently, EVA equals\n\n\n\\[(\\text{ROIC} - \\text{required return}) \\times \\text{lagged IC}\\]"
+  },
+  {
+    "objectID": "slides/f02-eva.html#example-method-1",
+    "href": "slides/f02-eva.html#example-method-1",
+    "title": "Economic Value Added",
+    "section": "Example (method 1)",
+    "text": "Example (method 1)\n\ncost of capital = 10%\n\n\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nInvested capital\n100\n70\n50\n35\n0\n\n\nIncome\n0\n20\n30\n20\n5\n\n\nCharge for capital\n0\n10\n7\n5\n3.5\n\n\nEVA\n0\n10\n23\n15\n1.5"
+  },
+  {
+    "objectID": "slides/f02-eva.html#example-method-2",
+    "href": "slides/f02-eva.html#example-method-2",
+    "title": "Economic Value Added",
+    "section": "Example (method 2)",
+    "text": "Example (method 2)\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nInvested capital\n100\n70\n50\n35\n0\n\n\nIncome\n0\n20\n30\n20\n5\n\n\nROIC\n\n0.2\n0.428\n0.4\n0.143\n\n\nExtra return\n\n0.1\n0.328\n0.3\n0.043\n\n\nLagged IC\n\n100\n70\n50\n35\n\n\nEVA\n\n10\n23\n15\n1.5"
+  },
+  {
+    "objectID": "slides/f02-eva.html#discounted-eva",
+    "href": "slides/f02-eva.html#discounted-eva",
+    "title": "Economic Value Added",
+    "section": "Discounted EVA",
+    "text": "Discounted EVA\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nEVA\n\n10\n23\n15\n1.50\n\n\nPV factor\n\n0.91\n0.83\n0.75\n0.68\n\n\nPV of EVA\n\n9.09\n19.01\n11.27\n1.02\n\n\nNPV\n40.39"
+  },
+  {
+    "objectID": "slides/f02-eva.html#section",
+    "href": "slides/f02-eva.html#section",
+    "title": "Economic Value Added",
+    "section": "",
+    "text": "Discounted EVA equals NPV"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#property-plant-equipment",
+    "href": "slides/f01-cash-flows.html#property-plant-equipment",
+    "title": "Cash Flows and NPV",
+    "section": "Property, plant, & equipment",
+    "text": "Property, plant, & equipment\n\nNet PP&E = undepreciated part of historical PP&E cost\nUse tax depreciation schedules\n\nAccelerated compared to straight line financial reporting"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#net-working-capital",
+    "href": "slides/f01-cash-flows.html#net-working-capital",
+    "title": "Cash Flows and NPV",
+    "section": "Net working capital",
+    "text": "Net working capital\n\nShort-term assets minus short-term operating liabilities\n\nShort-term is called “current”\n\nInventory plus accounts receivable minus accounts payable"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#invested-capital",
+    "href": "slides/f01-cash-flows.html#invested-capital",
+    "title": "Cash Flows and NPV",
+    "section": "Invested capital",
+    "text": "Invested capital\n\nNet PP&E plus net working capital\nEquals assets not financed by payables\n\\(\\Rightarrow\\) financed by investors (shareholders and lenders)\nExample: Net PP&E = 100, current assets = 30, current liabilities = 10\n\nTotal assets = 130\nInvested capital = 120"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#project-cash-flows",
+    "href": "slides/f01-cash-flows.html#project-cash-flows",
+    "title": "Cash Flows and NPV",
+    "section": "Project cash flows",
+    "text": "Project cash flows\n\nCash flow = income minus change in invested capital\nUsual timing\n\nEarly years = negative cash flows (build up of capital)\nMiddle years = positive cash flows\nEnd = either\n\nExtra positive cash flow due to wind-down of working capital and salvage value of PP&E\nOr maybe disposal and/or environmental clean-up costs"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#example",
+    "href": "slides/f01-cash-flows.html#example",
+    "title": "Cash Flows and NPV",
+    "section": "Example",
+    "text": "Example\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nInvested capital\n100\n70\n50\n35\n0\n\n\nIncome\n0\n20\n30\n20\n5\n\n\n\n\n\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nIncome\n0\n20\n30\n20\n5\n\n\nChange in invested capital\n100\n-30\n-20\n-15\n-35\n\n\nCash flow\n-100\n50\n50\n35\n40"
+  },
+  {
+    "objectID": "slides/f01-cash-flows.html#net-present-value",
+    "href": "slides/f01-cash-flows.html#net-present-value",
+    "title": "Cash Flows and NPV",
+    "section": "Net present value",
+    "text": "Net present value\n\nDiscount rate = 10%\n\n\n\n\n\n\nYear\n0\n1\n2\n3\n4\n\n\n\n\nCash flow\n-100\n50\n50\n35\n40\n\n\nPV factor\n1\n0.91\n0.83\n0.75\n0.68\n\n\nPV of cash flow\n-100\n45.45\n41.32\n26.30\n27.32\n\n\nNPV\n40.39"
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#overview",
+    "href": "slides/e05-estimating-parameters.html#overview",
+    "title": "Estimating Parameters",
+    "section": "Overview",
+    "text": "Overview\n\nUsing past samples to estimate means, standard deviations, and correlations is hazardous.\nEspecially if there are many assets.\nNeed long (stationary) time series of returns\nAnd/or some models. Models limit the degrees of freedom and can help avoid overfitting.\nAnd/or some “penalization” – constraints, etc.\nThis session: past samples."
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#sampling-distributions",
+    "href": "slides/e05-estimating-parameters.html#sampling-distributions",
+    "title": "Estimating Parameters",
+    "section": "Sampling Distributions",
+    "text": "Sampling Distributions\n\nSuppose returns \\(r_{1},\\cdots,r_{n}\\) are independent draws from a normal \\((\\mu,\\sigma^2)\\) distribution.\nLet \\(m =\\) sample mean and \\(s =\\) sample std dev = \\(\\sqrt{\\sum_{i=1}^n \\frac{(r_{i}-m)^2}{n-1}}\\)\nThen, \\(m\\) is normal \\((\\mu,\\sigma^2/n)\\) and\n\\((n-1)s^2/\\sigma^2\\) is \\(\\chi^2(n-1)\\)."
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#confidence-intervals",
+    "href": "slides/e05-estimating-parameters.html#confidence-intervals",
+    "title": "Estimating Parameters",
+    "section": "Confidence Intervals",
+    "text": "Confidence Intervals\n\nExample: \\(n=25\\), \\(m=0.12\\), \\(s=0.30\\).\nThe estimated std dev (std error) of \\(\\bar{r}\\) is \\(0.30/\\sqrt{25}=0.06\\).\nA \\(95\\%\\) confidence interval for \\(\\mu\\) is\n\n\n\\[0.12 ± 1.96 \\times 0.06 = [0.013,0.227]\\] - A similarly wide confidence interval for \\(\\sigma\\) is implied by the \\(\\chi^2\\) distribution."
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#sampling-frequency",
+    "href": "slides/e05-estimating-parameters.html#sampling-frequency",
+    "title": "Estimating Parameters",
+    "section": "Sampling frequency",
+    "text": "Sampling frequency\n\n\n\nIf we sample monthly, weekly, \\(\\ldots\\) then we have more data points, so estimates are more accurate.\n\n\n\n\n\n\n\n\nWhen we scale to annual parameters, the accuracy gain vanishes for the mean."
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#simulation",
+    "href": "slides/e05-estimating-parameters.html#simulation",
+    "title": "Estimating Parameters",
+    "section": "Simulation",
+    "text": "Simulation\n\nTo illustrate effect of sampling frequency,\n\nSimulate 5,000 25-year histories of monthly returns.\nCompound monthly returns to get annual returns.\nCompute sampling distributions (across 5,000 samples) of monthly and annual statistics."
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#means-sampling-monthly-doesnt-help",
+    "href": "slides/e05-estimating-parameters.html#means-sampling-monthly-doesnt-help",
+    "title": "Estimating Parameters",
+    "section": "Means – sampling monthly doesn’t help",
+    "text": "Means – sampling monthly doesn’t help"
+  },
+  {
+    "objectID": "slides/e05-estimating-parameters.html#standard-deviations---monthly-is-better",
+    "href": "slides/e05-estimating-parameters.html#standard-deviations---monthly-is-better",
+    "title": "Estimating Parameters",
+    "section": "Standard deviations - monthly is better",
+    "text": "Standard deviations - monthly is better\n\n\n\n                            \n                                            \n\n\n\n\nHigher frequency is also better for correlations, covariances, and betas."
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#different-borrowing-and-saving-rates",
+    "href": "slides/e03-frictions-constraints.html#different-borrowing-and-saving-rates",
+    "title": "Frictions and Constraints",
+    "section": "Different borrowing and saving rates",
+    "text": "Different borrowing and saving rates\n\n\\(r_s=\\) saving rate, \\(r_b=\\) borrowing rate,\n\\(x_s \\ge 0\\) is fraction saved, \\(x_b \\ge 0\\) is fraction borrowed\nchoose \\((x_s, x_b, w_1, \\ldots, w_n)\\)\nvariance = \\(w^\\top C w\\) where \\(w=(w_1, \\ldots, w_n)\\)\nexpected return = \\(x_s r_s - x_b r_b + \\bar{r}^\\top w\\)\naccounting identity is \\(x_b = x_s + \\sum w_i - 1\\)"
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#position-constraints",
+    "href": "slides/e03-frictions-constraints.html#position-constraints",
+    "title": "Frictions and Constraints",
+    "section": "Position constraints",
+    "text": "Position constraints\n\nThere are various reasons to impose ex-ante constraints (like \\(\\ge 0\\) or \\(\\le 1\\)) on portfolio weights.\nThe inputs are not 100% trustworthy, so we may want to over-ride extreme allocations.\nWe may not want to choose or recommend a long-term short position in a major asset class.\nOr, we may think we should have at least some minimum investment in some asset classes.\nAnd there are costs to short selling."
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#margin-constraints",
+    "href": "slides/e03-frictions-constraints.html#margin-constraints",
+    "title": "Frictions and Constraints",
+    "section": "Margin constraints",
+    "text": "Margin constraints\n\nThe Fed Reg T limits position sizes as \\(\\sum |w_i| \\le 2\\).\nIf allowing \\(w_i&lt;0\\), then instead of choosing \\(w_i\\),\n\nchoose \\(w_i^+ \\ge 0\\) and \\(w_i^-\\ge 0\\)\n\nand set \\(w_i = w_i^+ - w_i^-\\)\n\nFed Reg T is\n\n\n\\[\\sum_{i=1}^n w_i^+ + \\sum_{i=1}^n w_i^- \\le 2\\]"
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#example",
+    "href": "slides/e03-frictions-constraints.html#example",
+    "title": "Frictions and Constraints",
+    "section": "Example",
+    "text": "Example\n\nFind optimal portfolio for given risk aversion\nDifferent borrowing and saving rates\nNo short sales"
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#set-up",
+    "href": "slides/e03-frictions-constraints.html#set-up",
+    "title": "Frictions and Constraints",
+    "section": "Set-up",
+    "text": "Set-up\n\nimport numpy as np\nrs = 0.02\nrb = 0.05\n\nmn1, mn2 = 0.05, 0.1\nsd1, sd2 = 0.1, 0.1\ncorr = 0.9\nraver = 2\n\nR = np.identity(2)\nR[0, 1] = R[1, 0] = corr\nS = np.diag([sd1, sd2])\nC = S @ R @ S"
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#define-cvxopt-arrays",
+    "href": "slides/e03-frictions-constraints.html#define-cvxopt-arrays",
+    "title": "Frictions and Constraints",
+    "section": "Define cvxopt arrays",
+    "text": "Define cvxopt arrays\n\nP = np.zeros((4, 4))\nP[2:,2:] = raver*C\nq = [-rs, rb, -mn1, -mn2]\nG = -np.identity(4)\nh = np.zeros(4)\nA = [1., -1., 1., 1.]\nb = [1.]"
+  },
+  {
+    "objectID": "slides/e03-frictions-constraints.html#convert-to-cvxopt-matrices-and-solve",
+    "href": "slides/e03-frictions-constraints.html#convert-to-cvxopt-matrices-and-solve",
+    "title": "Frictions and Constraints",
+    "section": "convert to cvxopt matrices and solve",
+    "text": "convert to cvxopt matrices and solve\n\nfrom cvxopt import matrix\nfrom cvxopt.solvers import qp\n\nP = matrix(P, (4, 4))\nq = matrix(q, (4, 1))\nG = matrix(G, (4, 4))\nh = matrix(h, (4, 1))\nA = matrix(A, (1, 4))\nb = matrix(b, (1, 1))\n\nsol = qp(P=P, q=q, G=G, h=h, A=A, b=b)\nprint(sol[\"x\"])\n\n\n\n\n     pcost       dcost       gap    pres   dres\n 0: -5.5226e-02 -4.4750e-01  6e+00  3e+00  3e+00\n 1: -4.5212e-02 -7.9829e-01  9e-01  3e-01  3e-01\n 2: -5.0337e-02 -1.3104e-01  8e-02  2e-02  2e-02\n 3: -1.0537e-01 -1.2652e-01  2e-02  2e-04  3e-04\n 4: -1.1243e-01 -1.1304e-01  6e-04  4e-06  4e-06\n 5: -1.1250e-01 -1.1251e-01  6e-06  4e-08  4e-08\n 6: -1.1250e-01 -1.1250e-01  6e-08  4e-10  4e-10\nOptimal solution found.\n[ 2.01e-07]\n[ 1.50e+00]\n[ 2.69e-08]\n[ 2.50e+00]"
+  },
+  {
+    "objectID": "slides/e01-preferences.html#risk-aversion",
+    "href": "slides/e01-preferences.html#risk-aversion",
+    "title": "Preferences",
+    "section": "Risk Aversion",
+    "text": "Risk Aversion\n\nTo model liking high expected returns and disliking high variance, we can rank portfolios based on a combination of mean and variance:\n\n\n\\[\\text{expected return}-\\frac{1}{2}A\\times\\text{variance}\\]\n\nThe 1/2 is a convention. The number \\(A\\) is risk aversion."
+  },
+  {
+    "objectID": "slides/e01-preferences.html#indifference-curves",
+    "href": "slides/e01-preferences.html#indifference-curves",
+    "title": "Preferences",
+    "section": "Indifference curves ",
+    "text": "Indifference curves"
+  },
+  {
+    "objectID": "slides/e01-preferences.html#benefit-cost-ratio-at-the-optimum",
+    "href": "slides/e01-preferences.html#benefit-cost-ratio-at-the-optimum",
+    "title": "Preferences",
+    "section": "Benefit-cost ratio at the optimum",
+    "text": "Benefit-cost ratio at the optimum\n\nRecall: for frontier portfolios, the marginal benefit-cost ratio is the same across assets:\n\nmarginal benefit / marginal cost \\(= k\\)\nmarginal benefit = risk premium\nmarginal cost is the marginal contribution to portfolio risk \\(C_i^\\top w\\)\nso \\((\\bar{r}_i-r_f)/C_i^\\top w = k\\)\n\nThe optimal frontier portfolio is the one for which \\((\\bar{r}_i-r_f)/C_i^\\top w = A\\)."
+  },
+  {
+    "objectID": "slides/e01-preferences.html#example",
+    "href": "slides/e01-preferences.html#example",
+    "title": "Preferences",
+    "section": "Example",
+    "text": "Example\n\nimport numpy as np\n\nrf = 0.02\nmn1, mn2, mn3 = 0.06, 0.08, 0.10\nsd1, sd2, sd3 = 0.1, 0.15, 0.12\ncorr12, corr13, corr23 = 0.5, 0.7, 0.6\n\nraver = 6"
+  },
+  {
+    "objectID": "slides/e01-preferences.html#solution-of-the-example",
+    "href": "slides/e01-preferences.html#solution-of-the-example",
+    "title": "Preferences",
+    "section": "Solution of the example ",
+    "text": "Solution of the example \n\nS = np.diag([sd1, sd2, sd3])\nR = np.identity(3)\nR[0, 1] = R[1, 0] = corr12\nR[0, 2] = R[2, 0] = corr13\nR[1, 2] = R[2, 1] = corr23\nC = S @ R @ S\n\nrprem = np.array([mn1, mn2, mn3]) - rf\nCinv = np.linalg.inv(C)\nw = (1/A) * Cinv @ rprem\n\n\nw1=-13.3%, w2=1.1%, w3=62.5%"
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#what-is-the-capm",
+    "href": "slides/d06-capital-asset-pricing-model.html#what-is-the-capm",
+    "title": "Capital Asset Pricing Model",
+    "section": "What is the CAPM?",
+    "text": "What is the CAPM?\n\nThe Capital Asset Pricing Model (CAPM) is a theory from the 1960s. Its discoverer won the econ Nobel prize.\nThe intuition is:\n\nMarket risk is the biggest risk that a diversified investor faces.\nThe risk of each asset should be measured in terms of how much it contributes to market risk.\nThe risk premium of each asset should depend (linearly) on this measure of risk."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#capm-formula",
+    "href": "slides/d06-capital-asset-pricing-model.html#capm-formula",
+    "title": "Capital Asset Pricing Model",
+    "section": "CAPM Formula",
+    "text": "CAPM Formula\n\nThe CAPM formula is\n\n\n\\[\\bar{r}_i - r_f = \\beta_i(\\bar{r}_m-r_f)\\]\n\n\nwhere \\(r_m\\) = market return and \\(\\beta_i\\) is the slope of the regression line of \\(r_i-r_f\\) on \\(r_m-r_f\\)."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#cost-of-equity-capital",
+    "href": "slides/d06-capital-asset-pricing-model.html#cost-of-equity-capital",
+    "title": "Capital Asset Pricing Model",
+    "section": "Cost of equity capital",
+    "text": "Cost of equity capital\n\nThe CAPM is widely used to estimate expected returns to compute discount factors for corporate investment projects.\n\nThe return shareholders expect is \\(r_f + \\beta_i(\\bar{r}_m - r_f)\\).\nThis is the required return on equity capital for corporate projects.\n\nThe CAPM does not work well enough to use in an investments context."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#foundation-of-the-theory",
+    "href": "slides/d06-capital-asset-pricing-model.html#foundation-of-the-theory",
+    "title": "Capital Asset Pricing Model",
+    "section": "Foundation of the theory",
+    "text": "Foundation of the theory\n\nThe hypothesis of the CAPM is that the market is a frontier portfolio, with borrowing rate = savings rate.\n\nThe rationale is that each investor chooses a frontier portfolio, which is the tangency portfolio with borrowing or saving.\nSo, the market is the tangency portfolio.\n\nIn the usual application in the U.S., the “market portfolio” is the U.S. stock market."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#deriving-the-capm",
+    "href": "slides/d06-capital-asset-pricing-model.html#deriving-the-capm",
+    "title": "Capital Asset Pricing Model",
+    "section": "Deriving the CAPM",
+    "text": "Deriving the CAPM\n\nThe equation for a frontier portfolio is \\(kCw = \\bar{r} - r_f1_n\\).\nIf we imagine that we know \\(C\\) and \\(w\\), then this is an equation for the risk premia \\(\\bar{r}-r_f1_n\\).\nSpecifying \\(w\\) = market, this equation is the CAPM.\nThe equation says that the marginal benefit of an asset (its risk premium) is proportional to its marginal contribution to the risk of the market portfolio.\nThis marginal contribution is measured by beta."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#beta",
+    "href": "slides/d06-capital-asset-pricing-model.html#beta",
+    "title": "Capital Asset Pricing Model",
+    "section": "Beta ",
+    "text": "Beta \n\nBeta is the slope in the regression:\n\n\n\\[r-r_{f}=\\alpha + \\beta(r_m-r_f)+e\\]\n\nwhere \\(r_{m}\\) = market return and \\(e\\) = zero-mean risk.\nBeta answers this question:\n\nif the market is up 1%, how much do we expect the asset to be up, all else equal?\ne.g., \\(\\beta\\) = 2 \\(\\Rightarrow\\) we expect the asset to be up 2%."
+  },
+  {
+    "objectID": "slides/d06-capital-asset-pricing-model.html#the-capm-and-the-data",
+    "href": "slides/d06-capital-asset-pricing-model.html#the-capm-and-the-data",
+    "title": "Capital Asset Pricing Model",
+    "section": "The CAPM and the data ",
+    "text": "The CAPM and the data \n\nThe CAPM doesn’t fit the data very well.\nA simple example is industry returns. Average returns are mostly unrelated to betas."
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#meaning-of-beta",
+    "href": "slides/d05-alphas-and-betas.html#meaning-of-beta",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "Meaning of \\(\\beta\\)",
+    "text": "Meaning of \\(\\beta\\)\nBeta answers this question:\nif the benchmark is up 1%, how much do we expect the asset to be up, all else equal?\n\n\n\n\nIf \\(\\beta\\)=2, we expect the asset to be up 2%\nIf \\(\\beta\\)=0.5, we expect the asset to be up 0.5%"
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#a",
+    "href": "slides/d05-alphas-and-betas.html#a",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "4A",
+    "text": "4A"
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#meaning-of-alpha",
+    "href": "slides/d05-alphas-and-betas.html#meaning-of-alpha",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "Meaning of \\(\\alpha\\)",
+    "text": "Meaning of \\(\\alpha\\)\nAlpha answers this question:\nIf I start by holding the benchmark, can I improve mean-variance efficiency by investing something in the asset?\n\n\n\n\nThe answer is “yes” if and only if \\(\\alpha\\) &gt; 0\nIf \\(\\alpha\\) &lt; 0, mean-variance efficiency can be improved by shorting the asset."
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#b",
+    "href": "slides/d05-alphas-and-betas.html#b",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "4B",
+    "text": "4B"
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#what-sharpe-ratio-is-needed-for-0",
+    "href": "slides/d05-alphas-and-betas.html#what-sharpe-ratio-is-needed-for-0",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "What Sharpe Ratio is Needed for > 0?",
+    "text": "What Sharpe Ratio is Needed for &gt; 0?\nPerformance is often measured by Sharpe ratio\n= reward to risk ratio\n= risk premium / std dev\n\n\n\n\n\\(\\alpha &gt; 0\\) if and only if\nSharpe ratio &gt; Sharpe ratio of benchmark \\(\\times\\) correlation\n\n\nLow correlation \\(\\rightarrow\\) \\(\\alpha &gt; 0\\) with low Sharpe ratio."
+  },
+  {
+    "objectID": "slides/d05-alphas-and-betas.html#c",
+    "href": "slides/d05-alphas-and-betas.html#c",
+    "title": "Portfolios and CAPM: Alphas and Betas",
+    "section": "4C",
+    "text": "4C"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#saving",
+    "href": "slides/d03-riskfree.html#saving",
+    "title": "Saving and Borrowing",
+    "section": "Saving",
+    "text": "Saving\n\nUninvested funds should earn money market rate.\n\\(n\\) risky assets, \\(w_i\\) = weights, \\(x_s\\) = fraction of portfolio earning money market rate\n\n\n\\[x_s = 1 - \\sum_{i=1}^n w_i\\]"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#expected-return-and-risk",
+    "href": "slides/d03-riskfree.html#expected-return-and-risk",
+    "title": "Saving and Borrowing",
+    "section": "Expected return and risk",
+    "text": "Expected return and risk\n\nLet \\(r_s\\) = money market rate (saving rate)\nportfolio expected return is \\(x_sr_s + \\bar{r}^\\top w\\)\nportfolio variance is still \\(w^\\top C w\\)"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#fully-invested-portfolio",
+    "href": "slides/d03-riskfree.html#fully-invested-portfolio",
+    "title": "Saving and Borrowing",
+    "section": "Fully invested portfolio",
+    "text": "Fully invested portfolio\n\nBecause \\(\\sum w_i &lt; 1\\), we can view \\((w_1, \\ldots, w_n)\\) as a scaled down version of a fully-invested portfolio.\n\\(x_s\\) in savings and \\(1-x_s\\) in the fully invested portfolio\n\n\\(\\hat{w}_i = w_i/(1-x_s)\\) are the fully invested weights\n\\(\\sum \\hat{w}_i = \\sum w_i/(1-x_s) = 1\\)\n\\(w_i = (1-x_s)\\hat{w}_i\\)"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#risk-premium-and-sharpe-ratio",
+    "href": "slides/d03-riskfree.html#risk-premium-and-sharpe-ratio",
+    "title": "Saving and Borrowing",
+    "section": "Risk premium and Sharpe ratio",
+    "text": "Risk premium and Sharpe ratio\n\nFor any asset or portfolio, expected return minus \\(r_s\\) is called its risk premium\n\nIt is compensation for risk.\n\n(expected return - \\(r_s\\)) / std dev is called the Sharpe ratio\n\nIt is the reward-to-risk ratio."
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#portfolio-risk-premium",
+    "href": "slides/d03-riskfree.html#portfolio-risk-premium",
+    "title": "Saving and Borrowing",
+    "section": "Portfolio Risk premium",
+    "text": "Portfolio Risk premium\n\nweights \\(w_i = (1-x_s)\\hat{w}_i\\) where \\(\\sum \\hat{w}_i=1\\)\nrisk premium is\n\n\n\\[x_sr_s + (1-x_s)\\sum_{i=1}^n \\hat{w}_i \\bar{r}_i - r_s\\]\n\nThis is \\((1-x_s)\\left[\\sum_{i=1}^n \\hat{w}_i \\bar{r}_i - r_s\\right]\\)"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#standard-deviation-and-sharpe-ratio",
+    "href": "slides/d03-riskfree.html#standard-deviation-and-sharpe-ratio",
+    "title": "Saving and Borrowing",
+    "section": "Standard deviation and Sharpe ratio",
+    "text": "Standard deviation and Sharpe ratio\n\nvariance is \\((1-x_s)\\hat{w}^\\top C \\hat{w}(1-x_s)\\)\nstd dev is \\((1-x_s)\\sqrt{\\hat{w}^\\top C \\hat{w}}\\)\nSo, \\(1-x_s\\) is in both numerator and denominator of Sharpe ratio. Sharpe ratio doesn’t depend on \\(x_s\\)"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#example",
+    "href": "slides/d03-riskfree.html#example",
+    "title": "Saving and Borrowing",
+    "section": "Example",
+    "text": "Example\n\n\\(r_s\\) = 2%. Fully invested portfolio has \\(\\bar{r}\\) = 10%, std dev = 15%.\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\nLine is set of (std dev, mean) pairs generated by \\(0 \\le x_s \\le 1\\). Slope is Sharpe ratio."
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#borrowing-margin-loans",
+    "href": "slides/d03-riskfree.html#borrowing-margin-loans",
+    "title": "Saving and Borrowing",
+    "section": "Borrowing (Margin loans)",
+    "text": "Borrowing (Margin loans)\n\n\\(x_b \\ge 0\\) is fraction borrowed, \\(r_b\\) = borrowing rate\nportfolio expected return is \\(w^\\top \\bar{r} - x_br_b\\)\nportfolio variance is still \\(w^\\top C w\\)\nweights are \\(w_i = (1+x_b)\\hat{w}_i\\) for a fully invested portfolio \\(\\hat{w}\\)\nportfolio mean is \\((1+x_b)\\bar{r}^\\top \\hat w - x_br_b\\) and std dev is \\((1+x_b)\\sqrt{\\hat{w}^\\top C \\hat{w}}\\)\nSharpe ratio (mean - \\(r_b\\)) / std dev is invariant to \\(x_b\\)"
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#example-1",
+    "href": "slides/d03-riskfree.html#example-1",
+    "title": "Saving and Borrowing",
+    "section": "Example",
+    "text": "Example\n\n\\(r_b\\) = 5%. Fully invested portfolio has \\(\\bar{r}\\) = 10%, std dev = 15%.\n\n\n\n\n                            \n                                            \n\n\nLine is set of (std dev, mean) pairs generated by \\(0 \\le x_b \\le 1\\). Slope is Sharpe ratio at borrowing rate."
+  },
+  {
+    "objectID": "slides/d03-riskfree.html#saving-and-borrowing-opportunities",
+    "href": "slides/d03-riskfree.html#saving-and-borrowing-opportunities",
+    "title": "Saving and Borrowing",
+    "section": "Saving and borrowing opportunities",
+    "text": "Saving and borrowing opportunities\n\n\\(r_s\\) = 2% and \\(r_b\\) = 5%. Fully invested portfolio has \\(\\bar{r}\\) = 10%, std dev = 15%.\n\n\n\n\n                            \n                                            \n\n\nOpportunities for \\(0\\le x_s \\le 1\\) or \\(0 \\le x_b \\le 1\\)."
+  },
+  {
+    "objectID": "slides/d01-diversification.html#why-diversify-your-investments",
+    "href": "slides/d01-diversification.html#why-diversify-your-investments",
+    "title": "Diversification",
+    "section": "Why diversify your investments?",
+    "text": "Why diversify your investments?\n\n\n\nWhat is the risk of one coin flip for $10?\n\nThe possible deviations from the mean are +10 and –10.\n\n\n\n\n\n\nWhat is the risk of two coin flips for $5 each?\n\nThe possible deviations from the mean are\n\n+10 (prob 1/4),\n–10 (prob 1/4) and\n0 (prob 1/2)."
+  },
+  {
+    "objectID": "slides/d01-diversification.html#more-baskets-is-better",
+    "href": "slides/d01-diversification.html#more-baskets-is-better",
+    "title": "Diversification",
+    "section": "More baskets is better",
+    "text": "More baskets is better"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#variance-and-standard-deviation",
+    "href": "slides/d01-diversification.html#variance-and-standard-deviation",
+    "title": "Diversification",
+    "section": "Variance and standard deviation",
+    "text": "Variance and standard deviation\n\nVariance is expected squared deviation from mean\n\nFlipping once for $10 \\(\\Rightarrow\\) variance = 100\nFlipping twice for $5 \\(\\Rightarrow\\) variance = (1/4) \\(\\times\\) 100 + (1/4) \\(\\times\\) 100 = 50\n\nStandard deviation is square root of variance\n\nFlipping once for $10 \\(\\Rightarrow\\) std dev = 10\nFlipping twice for $5 \\(\\Rightarrow\\) std dev = 7.07"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#portfolio-returns",
+    "href": "slides/d01-diversification.html#portfolio-returns",
+    "title": "Diversification",
+    "section": "Portfolio Returns",
+    "text": "Portfolio Returns\n\nThe return of a portfolio of two assets is \\(r_p = w_1r_1 + w_2r_2\\) where \\(w_i\\) is the fraction of the portfolio invested in asset \\(i\\).\nExample: $100,000 portfolio with 40% in asset 1 and 60% in asset 2.\n\nSuppose asset 1 \\(\\uparrow\\) 20%. $40,000 \\(\\rightarrow\\) $48,000\nSuppose asset 2 \\(\\uparrow\\) 10%. $60,000 \\(\\rightarrow\\) $66,000\n$100,000 \\(\\rightarrow\\) $114,000\nSo, up 14% = 0.4 \\(\\times\\) 20% + 0.6 \\(\\times\\) 10%"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#expected-portfolio-return",
+    "href": "slides/d01-diversification.html#expected-portfolio-return",
+    "title": "Diversification",
+    "section": "Expected portfolio return",
+    "text": "Expected portfolio return\n\n\\(\\bar{r}_1\\) = expected return of asset 1\n\\(\\bar{r}_2\\) = expected return of asset 2\nThe expected portfolio return is\n\n\n\\[ \\bar{r}_p = w_1 \\bar{r}_1 + w_2 \\bar{r}_2\\]"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#portfolio-variance",
+    "href": "slides/d01-diversification.html#portfolio-variance",
+    "title": "Diversification",
+    "section": "Portfolio variance",
+    "text": "Portfolio variance\n\nThe deviation of the portfolio return from its mean is\n\n\n\\[w_1r_1 + w_2r_2 - (w_1 \\bar{r}_1 +w_2\\bar{r}_2)\\]\n\nThis equals\n\n\n\n\\[w_1(r_1 - \\bar{r}_1) + w_2(r_2 - \\bar{r}_2)\\]"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#independent-assets",
+    "href": "slides/d01-diversification.html#independent-assets",
+    "title": "Diversification",
+    "section": "Independent assets",
+    "text": "Independent assets\n\nSuppose we start with $100\nThere are two independent assets, each with possible returns of \\(\\pm\\) 10%\n\nPut all $100 in a single asset \\(\\leftrightarrow\\) flip once for $10\nPut $50 in each asset \\(\\leftrightarrow\\) flip twice for $5\n\nstd dev \\(r_1 = 0.1\\) \\(\\Rightarrow\\) var \\(r_1 = 0.01\\)\nstd dev \\(r_2 = 0.1\\) \\(\\Rightarrow\\) var \\(r_2 = 0.01\\)\nassets are independent, so cov \\(= 0\\)"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#correlation-and-covariance",
+    "href": "slides/d01-diversification.html#correlation-and-covariance",
+    "title": "Diversification",
+    "section": "Correlation and covariance",
+    "text": "Correlation and covariance\n\n\\(\\text{cov} = \\text{corr} \\times \\text{std}(r_1) \\times \\text{std}(r_2)\\), so portfolio var is\n\n\n\\[w_1^2 \\text{var}(r_1) + w_2^2 \\text{var}(r_2)\\]\n\n\nplus  \\[2 w_1 w_2 \\times \\text{corr}(r_1, r_2) \\times\\text{std}(r_1)\\times\\text{std}(r_2)\\]\n\n\n Portfolio variance is lower when correlation is lower."
+  },
+  {
+    "objectID": "slides/d01-diversification.html#correlation-covariance-and-beta",
+    "href": "slides/d01-diversification.html#correlation-covariance-and-beta",
+    "title": "Diversification",
+    "section": "Correlation, covariance, and beta",
+    "text": "Correlation, covariance, and beta\n\nThe slope (beta) of the regression line of \\(r_2\\) on \\(r_1\\) is\n\n\n\\[\\frac{\\text{cov}(r_1, r_2)}{\\text{var}(r_1)} = \\text{corr}(r_1, r_2) \\times \\frac{\\text{std}(r_2)}{\\text{std}(r_1)}\\]"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#monthly-returns-of-cvx-and-aapl-20172021",
+    "href": "slides/d01-diversification.html#monthly-returns-of-cvx-and-aapl-20172021",
+    "title": "Diversification",
+    "section": "Monthly returns of CVX and AAPL 2017–2021",
+    "text": "Monthly returns of CVX and AAPL 2017–2021\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nstd dev of CVX is  8.51%\nstd dev of AAPL is  8.18%\ncorr is  0.154\ncov is  10.7%^2\nbeta is  0.15"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#monthly-returns-of-cvx-and-xom-20172021",
+    "href": "slides/d01-diversification.html#monthly-returns-of-cvx-and-xom-20172021",
+    "title": "Diversification",
+    "section": "Monthly returns of CVX and XOM 2017–2021",
+    "text": "Monthly returns of CVX and XOM 2017–2021\n\n\n\n\n                            \n                                            \n\n\n\n\n\nstd dev of CVX is  8.18%\nstd dev of XOM is  8.58%\ncorr is  0.888\ncov is  62.4%^2\nbeta is  0.93"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#cvx-aapl-and-xom-portfolios",
+    "href": "slides/d01-diversification.html#cvx-aapl-and-xom-portfolios",
+    "title": "Diversification",
+    "section": "CVX, AAPL, and XOM portfolios",
+    "text": "CVX, AAPL, and XOM portfolios\n\nThe volatilities (std devs) of AAPL and XOM were very similar over the 2017-2021 period.\nIf you combined either with CVX, did you have similar volatilities over the period?\nAAPL is a much better diversification play than XOM for someone holding CVX."
+  },
+  {
+    "objectID": "slides/d01-diversification.html#some-portfolios",
+    "href": "slides/d01-diversification.html#some-portfolios",
+    "title": "Diversification",
+    "section": "Some portfolios",
+    "text": "Some portfolios\ncvx = 0.0818       # std devs\naapl = 0.0850\nxom = 0.0858\ncvx_aapl = 0.153   # correlations\ncvx_xom = 0.889\nw1 = 0.5           # portfolio weights\nw2 = 0.5\n\n# 50% CVX and 50% AAPL\nw1**2 * cvx**2 + w2**2 * aapl**2 + 2*w1*w2*cvx_aapl*cvx*aapl\n\n# 50% CVX and 50% XOM\nw1**2 * cvx**2 + w2**2 * xom**2 + 2*w1*w2*cvx_xom*cvx*xom"
+  },
+  {
+    "objectID": "slides/d01-diversification.html#results",
+    "href": "slides/d01-diversification.html#results",
+    "title": "Diversification",
+    "section": "Results",
+    "text": "Results\n\nstd dev of CVX with XOM is 8.14%\nstd dev of CVX with AAPL is 6.33%\ncompared to\n\nstd dev of CVX is 8.18%\nstd dev of XOM is 8.58%\nstd dev of AAPL is 8.50%"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#coupons-vs-yields",
+    "href": "slides/c05-bond-prices-and-yields.html#coupons-vs-yields",
+    "title": "Bond Prices and Yields",
+    "section": "Coupons vs Yields",
+    "text": "Coupons vs Yields\n\nThe coupon rate of a bond is set at the time of its issue.\nHowever, what one anticipates earning on a bond varies with the market price.\n\nPrice &lt; par \\(\\Rightarrow\\) coupon + capital gain\nPrice &gt; par \\(\\Rightarrow\\) coupon - capital loss\n\nWhat one would earn per year on a bond if held to maturity (assuming no default) is called the bond yield."
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#definition-of-bond-yield",
+    "href": "slides/c05-bond-prices-and-yields.html#definition-of-bond-yield",
+    "title": "Bond Prices and Yields",
+    "section": "Definition of bond yield",
+    "text": "Definition of bond yield\n\nBuy a bond at price \\(P\\), receive coupons \\(c_1, \\ldots, c_n\\) and face value \\(F\\) at date \\(n\\).\nThe rate of return \\(r\\) for which an investment of \\(P\\) would exactly finance the cash flows \\(c_1, \\ldots, c_n\\) and \\(F\\) is called the bond yield.\nIt is the rate at which the present value of the promised cash flows \\(c_1, \\ldots, c_n\\) and \\(F\\) equals the bond price."
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#calculating-yields",
+    "href": "slides/c05-bond-prices-and-yields.html#calculating-yields",
+    "title": "Bond Prices and Yields",
+    "section": "Calculating Yields",
+    "text": "Calculating Yields\n\nBonds usually pay coupons semi-annually, so it is conventional to use semi-annual discounting.\nCalculate a six-month rate. Double it to annualize.\nSuppose the next coupon payment is six months away. Solve the following for a six-month rate \\(r\\). Yield is \\(y=2r\\).\n\n\n\\[P=\\frac{c}{1+r}+\\frac{c}{(1+r)^2}+\\cdots+\\frac{c+F}{(1+r)^n}\\]"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#example",
+    "href": "slides/c05-bond-prices-and-yields.html#example",
+    "title": "Bond Prices and Yields",
+    "section": "Example",
+    "text": "Example\n\n5 year bond, 6% coupon, $100 face. The price \\(P\\) and six-month rate \\(r\\) satisfy\n\n\n\\[P=\\frac{3}{1+r}+\\frac{3}{(1+r)^2}+\\cdots+\\frac{3+100}{(1+r)^{10}}\\]\n\n\nThe yield is\n\\[y = 2r\\]"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#prices-and-yields-are-inversely-related",
+    "href": "slides/c05-bond-prices-and-yields.html#prices-and-yields-are-inversely-related",
+    "title": "Bond Prices and Yields",
+    "section": "Prices and Yields are Inversely Related  ",
+    "text": "Prices and Yields are Inversely Related  \n\n5 year bond, 6% coupon, $100 face"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#premium-and-discount-bonds",
+    "href": "slides/c05-bond-prices-and-yields.html#premium-and-discount-bonds",
+    "title": "Bond Prices and Yields",
+    "section": "Premium and Discount Bonds",
+    "text": "Premium and Discount Bonds\n\nPremium bond: price &gt; face value\n\nImplies yield &lt; coupon rate\n\nDiscount bond: price &lt; face value\n\nImplies yield &gt; coupon rate"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#price-sensitivity-to-market-rates",
+    "href": "slides/c05-bond-prices-and-yields.html#price-sensitivity-to-market-rates",
+    "title": "Bond Prices and Yields",
+    "section": "Price sensitivity to market rates",
+    "text": "Price sensitivity to market rates\n\nWhen market rates rise, a bond price falls until its yield is commensurate with market rates.\nWhen market rates fall, a bond price rises until its yield is commensurate with market rates.\n\n\nSo,\n\nrising rates \\(\\Rightarrow\\) negative bond returns\nfalling rates \\(\\Rightarrow\\) positive bond returns"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#history-of-treasury-rates",
+    "href": "slides/c05-bond-prices-and-yields.html#history-of-treasury-rates",
+    "title": "Bond Prices and Yields",
+    "section": "History of Treasury rates",
+    "text": "History of Treasury rates"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#credit-ratings",
+    "href": "slides/c05-bond-prices-and-yields.html#credit-ratings",
+    "title": "Bond Prices and Yields",
+    "section": "Credit ratings",
+    "text": "Credit ratings\n\nIssuers are rated by S&P, Moody’s and Fitch\n\nAAA=best quality\nAA\nA\nBBB=worst investment grade\nBB=best non-investment grade (= junk = high-yield)\nB, etc. (D is default)\n\nAnd +’s and -’s. Moody’s uses baa instead of BBB, etc."
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#credit-spreads",
+    "href": "slides/c05-bond-prices-and-yields.html#credit-spreads",
+    "title": "Bond Prices and Yields",
+    "section": "Credit spreads",
+    "text": "Credit spreads\n\nInvestors require higher yields on riskier bonds\n\ndefault \\(\\rightarrow\\) low return\nno-default \\(\\rightarrow\\) high return (= yield)\nyield must be high enough so that expected return = Treasury yield + risk premium\n\nUsually think of yield as Treasury yield + spread\n\nPart of spread offsets expected loss due to default\nRemainder provides a risk premium"
+  },
+  {
+    "objectID": "slides/c05-bond-prices-and-yields.html#history-of-credit-spreads",
+    "href": "slides/c05-bond-prices-and-yields.html#history-of-credit-spreads",
+    "title": "Bond Prices and Yields",
+    "section": "History of credit spreads",
+    "text": "History of credit spreads"
+  },
+  {
+    "objectID": "slides/c03-funds.html#mutual-funds",
+    "href": "slides/c03-funds.html#mutual-funds",
+    "title": "Funds",
+    "section": "Mutual Funds",
+    "text": "Mutual Funds\n\nEasy way to get diversification\nCan also perhaps benefit from professional active management\nCan usually invest directly with no need for a brokerage account\nOver 7,000 U.S. mutual funds \\(∼\\) number of U.S. stocks\nMutual funds for stocks, bonds, international stocks, real estate, …"
+  },
+  {
+    "objectID": "slides/c03-funds.html#net-asset-value",
+    "href": "slides/c03-funds.html#net-asset-value",
+    "title": "Funds",
+    "section": "Net Asset Value",
+    "text": "Net Asset Value\n\nNAV (net asset value per share) is calculated daily after close of trading.\nEquals value of portfolio less any expenses not yet paid divided by number of shares outstanding\nInvest money \\(\\rightarrow\\) get shares in fund at next end-of-day NAV\nWithdraw money \\(\\rightarrow\\) sell shares at next end-of-day NAV"
+  },
+  {
+    "objectID": "slides/c03-funds.html#example",
+    "href": "slides/c03-funds.html#example",
+    "title": "Funds",
+    "section": "Example",
+    "text": "Example\n\nInvest $10,000 Thursday end-of-day NAV = $250, get 40 shares\n# of shares can be fractional\nFund \\(\\uparrow\\), withdraw $6,000, next end-of-day NAV = $300\n\n$6,000 / $300 = 20 shares that are redeemed\nStill have 20 shares, worth 20 \\(\\times\\) $300 = $6,000"
+  },
+  {
+    "objectID": "slides/c03-funds.html#active-and-passive-funds",
+    "href": "slides/c03-funds.html#active-and-passive-funds",
+    "title": "Funds",
+    "section": "Active and Passive Funds",
+    "text": "Active and Passive Funds\n\n\n\nPassive funds track an index. They do not try to “beat the market.” They have low expenses.\n\n\n\n\n\n\n\nActive funds try to beat the market or their market sector by choosing the best stocks. They have higher expenses."
+  },
+  {
+    "objectID": "slides/c03-funds.html#evidence-on-active-funds",
+    "href": "slides/c03-funds.html#evidence-on-active-funds",
+    "title": "Funds",
+    "section": "Evidence on active funds",
+    "text": "Evidence on active funds\n\nThere is some evidence that active fund managers can beat the market before payment of fees.\nBut there is little evidence of extra returns to investors, after payment of managers’ fees.\nThere is also little evidence of repeat performance, except that the worst funds after fees tend to remain the worst."
+  },
+  {
+    "objectID": "slides/c03-funds.html#some-u.s.-stock-indexes",
+    "href": "slides/c03-funds.html#some-u.s.-stock-indexes",
+    "title": "Funds",
+    "section": "Some U.S. Stock Indexes",
+    "text": "Some U.S. Stock Indexes\n\nDow Jones = 30 stocks\nS&P 100 ~ 50% of U.S. stock market capitalization\nS&P 500 ~ 80% of U.S. stock market capitalization\nRussell 1000\nRussell 3000\nRussell 2000 = Russell 3000 excluding Russell 1000, small-cap index\nWilshire 5000"
+  },
+  {
+    "objectID": "slides/c03-funds.html#how-do-stock-indexes-work",
+    "href": "slides/c03-funds.html#how-do-stock-indexes-work",
+    "title": "Funds",
+    "section": "How do stock indexes work?",
+    "text": "How do stock indexes work?\n\n% change in index is % increase/decrease in total value of companies in the index (except for Dow)\n% change in index does not include dividend return"
+  },
+  {
+    "objectID": "slides/c03-funds.html#exchange-traded-funds-etfs",
+    "href": "slides/c03-funds.html#exchange-traded-funds-etfs",
+    "title": "Funds",
+    "section": "Exchange Traded Funds (ETFs)",
+    "text": "Exchange Traded Funds (ETFs)\n\nETFs were invented in 1990. Now ~ 3,000 U.S. ETFs.\nETFs are listed on stock exchanges and trade like stocks. You buy/sell them through your broker.\nAnother easy way to get diversification. And lower fees than mutual funds.\nThere are ETFs for stocks, bonds, international stocks, real estate, currencies, commodities\nETFs calculate NAVs daily, but you do not buy/sell at the NAV. You buy/sell at the price determined by the market."
+  },
+  {
+    "objectID": "slides/c03-funds.html#how-do-etfs-work",
+    "href": "slides/c03-funds.html#how-do-etfs-work",
+    "title": "Funds",
+    "section": "How do ETFs work?",
+    "text": "How do ETFs work?\n\nETFs are not open to new cash investments.\nNeither can anyone withdraw cash from them.\nThey are open to exchanges with authorized participants (APs).\n\nAPs deliver baskets of assets and receive ETF shares when ETF market price is higher than NAV.\nAPs deliver shares and receive baskets of assets when ETF market price is lower than NAV.\nThis activity moves the ETF market price towards NAV."
+  },
+  {
+    "objectID": "slides/c03-funds.html#futures-based-etfs",
+    "href": "slides/c03-funds.html#futures-based-etfs",
+    "title": "Funds",
+    "section": "Futures based ETFs",
+    "text": "Futures based ETFs\n\nCommodity ETFs generally hold futures contracts on the commodity instead of the physical commodity.\nAn example is USO (U.S. Oil). A counter-example is GLD.\nThere are also ETFs that take positions in stock index futures to deliver\n\nmultiples (2-to-1 or 3-to-1) of the stock index return (levered ETFs)\nthe negative of the stock index return (inverse ETFs) or multiples of the negative (levered inverse ETFs)"
+  },
+  {
+    "objectID": "slides/c03-funds.html#transparency-of-etf-strategies",
+    "href": "slides/c03-funds.html#transparency-of-etf-strategies",
+    "title": "Funds",
+    "section": "Transparency of ETF Strategies",
+    "text": "Transparency of ETF Strategies\n\nBecause of the mechanism for APs to redeem or acquire shares, an ETF’s portfolio must be transparent.\nETFs either hold an index or follow an algorithmic strategy."
+  },
+  {
+    "objectID": "slides/c01-leverage.html#example",
+    "href": "slides/c01-leverage.html#example",
+    "title": "Leverage",
+    "section": "Example",
+    "text": "Example\n\nInvest $100,000. Borrow $50,000. Buy $150,000 of stocks.\n\n\n\n\n\n\nAssets\nLiabilities\n\n\n\n\nStocks 150,000\nDebt 50,000\n\n\n\n\n\n\nEquity\n\n\n\n\n100,000\n\n\n\n\nLeverage ratio = assets to equity.\nYou are levered 1.5 to 1."
+  },
+  {
+    "objectID": "slides/c01-leverage.html#a-possible-ending-to-the-story",
+    "href": "slides/c01-leverage.html#a-possible-ending-to-the-story",
+    "title": "Leverage",
+    "section": "A Possible Ending to the Story",
+    "text": "A Possible Ending to the Story\n\nSuppose the stocks go up 10% and you’re charged 2% interest on the loan.\n\n\n\nAssets\nLiabilities\n\n\n\n\nStocks 165,000\nDebt 51,000\n\n\n\n\n\n\n\n\nEquity\n\n\n\n\n114,000\n\n\n\n\nYou made 10% plus one half of (10% minus 2%) \\(= 0.10 + 0.5(0.10-0.02) = 0.14\\)\n“one-half” because you borrowed 50%."
+  },
+  {
+    "objectID": "slides/c01-leverage.html#conclusion",
+    "href": "slides/c01-leverage.html#conclusion",
+    "title": "Leverage",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nYou make the stock return plus the fraction borrowed times (stock return minus borrowing rate)."
+  },
+  {
+    "objectID": "slides/c01-leverage.html#another-possible-ending",
+    "href": "slides/c01-leverage.html#another-possible-ending",
+    "title": "Leverage",
+    "section": "Another possible ending",
+    "text": "Another possible ending\n\nSuppose the stocks fell by 10%.\nYou lose 10% plus one half of (\\(-\\) 10% \\(-\\) 2% ).\nSo, your loss is 16% on your $100,000 investment.\n\n\n\n\n\nAssets\nLiabilities\n\n\n\n\nStocks 135,000\nDebt 51,000\n\n\n\n\n\n\n\n\nEquity\n\n\n\n\n84,000"
+  },
+  {
+    "objectID": "slides/c01-leverage.html#the-good-and-the-bad",
+    "href": "slides/c01-leverage.html#the-good-and-the-bad",
+    "title": "Leverage",
+    "section": "The good and the bad",
+    "text": "The good and the bad\n\nYou always make the stock return plus the fraction borrowed times (stock return minus borrowing rate).\nWith 50% leverage and a 2% interest charge,\n\n\n\\[+10\\text{%} \\rightarrow +14\\text{%}\\]\n\n\n\\[-10\\text{%} \\rightarrow -16\\text{%}\\]"
+  },
+  {
+    "objectID": "slides/c01-leverage.html#margin-loan-rates",
+    "href": "slides/c01-leverage.html#margin-loan-rates",
+    "title": "Leverage",
+    "section": "Margin loan rates",
+    "text": "Margin loan rates\n\nIt pays to shop around.\nInteractive Brokers charges\n\nthe Fed Funds rate plus 1.5% on the first $100,000,\nand falling further after that.\n\nOct 1, 2022:\n\nFed Funds rate = 3.08%\nPrime rate = 6.25%"
+  },
+  {
+    "objectID": "slides/b05-geometric-average-returns.html#tesla",
+    "href": "slides/b05-geometric-average-returns.html#tesla",
+    "title": "Geometric Average Returns",
+    "section": "Tesla",
+    "text": "Tesla\n\n\n\n\nTesla went down 50% between Nov 2021 and May 2022.\nIt then went up 50% between May 2022 and Aug 2022.\nWere Tesla shareholders back to even?"
+  },
+  {
+    "objectID": "slides/b05-geometric-average-returns.html#geometric-average-return",
+    "href": "slides/b05-geometric-average-returns.html#geometric-average-return",
+    "title": "Geometric Average Returns",
+    "section": "Geometric Average Return",
+    "text": "Geometric Average Return\n\nGiven returns \\(r_1, \\cdots, r_n,\\) the geometric average return is the number \\(r\\) such that\n\n\n\\[(1+r)^{n}=(1+r_1)\\cdots(1+r_{n})\\]\n\nSo earning \\(r\\) each period produces the same accumulation as the actual returns \\(r_1, \\cdots, r_n.\\) We solve for \\(r\\) as\n\n\n\n\\[r=[(1+r_1)\\cdots(1+r_n)]^{1/n}-1\\]"
+  },
+  {
+    "objectID": "slides/b05-geometric-average-returns.html#examples",
+    "href": "slides/b05-geometric-average-returns.html#examples",
+    "title": "Geometric Average Returns",
+    "section": "Examples ",
+    "text": "Examples \n\nmake 50% and lose 50% → geometric average is\n\n\n\\[\\sqrt{1.5 \\times 0.5}-1=-0.134\\]\n\nmake 100% and lose 50% → geometric average is\n\n\n\n\\[\\sqrt{2 \\times 0.5}-1=0\\]"
+  },
+  {
+    "objectID": "slides/b05-geometric-average-returns.html#averaging-continuously-compounded-returns",
+    "href": "slides/b05-geometric-average-returns.html#averaging-continuously-compounded-returns",
+    "title": "Geometric Average Returns",
+    "section": "Averaging continuously compounded returns",
+    "text": "Averaging continuously compounded returns\n\nCompounding continuously at rate \\(z\\) \\(\\Rightarrow\\) $1 \\(\\rightarrow e^z\\) in a year.\nActual return is \\(r\\) \\(\\Rightarrow\\) continuously compounded return is \\(\\log (1+r)\\)\n\nbecause compounding continuously at rate \\(\\log (1+r)\\) means $1 \\(\\rightarrow e^{\\log (1+r)} = 1+r\\).\n\nMake 50% and lose 50% \\(\\Rightarrow\\) continuously compounded returns are \\(\\log(1.5)\\) and \\(\\log(0.5)\\) and average \\(&lt;0\\).\nMake 100% and lose 50% \\(\\Rightarrow\\) continuously compounded returns are \\(\\log(2)\\) and \\(\\log(0.5)\\) and average \\(=0\\)."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#annual-spy-returns",
+    "href": "slides/b03-annual-returns.html#annual-spy-returns",
+    "title": "Annual Returns",
+    "section": "Annual SPY returns",
+    "text": "Annual SPY returns\nSPY = S&P 500 Exchange Traded Fund (ETF)"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#compounded-spy-returns",
+    "href": "slides/b03-annual-returns.html#compounded-spy-returns",
+    "title": "Annual Returns",
+    "section": "Compounded SPY returns",
+    "text": "Compounded SPY returns\n\n\n\n                            \n                                            \n\n\n\nvalue of $1 investment with dividends reinvested"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#compounded-returns-on-log-scale-motivation",
+    "href": "slides/b03-annual-returns.html#compounded-returns-on-log-scale-motivation",
+    "title": "Annual Returns",
+    "section": "Compounded returns on log scale: motivation",
+    "text": "Compounded returns on log scale: motivation\n\nLet’s look at accumulations from two hypothetical stocks.\n\nstock 1: 10% per year\nstock 1: 2% per year until 2000 and 10% afterwards\n\nIt will appear that stock 2 did nothing before 2000 and earned a lot less than stock 1 even after 2000."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#plot-of-the-example",
+    "href": "slides/b03-annual-returns.html#plot-of-the-example",
+    "title": "Annual Returns",
+    "section": "Plot of the Example",
+    "text": "Plot of the Example"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#log-base-10-of-accumulation",
+    "href": "slides/b03-annual-returns.html#log-base-10-of-accumulation",
+    "title": "Annual Returns",
+    "section": "Log (base 10) of accumulation",
+    "text": "Log (base 10) of accumulation"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#map-y-tick-labels-to-dollars",
+    "href": "slides/b03-annual-returns.html#map-y-tick-labels-to-dollars",
+    "title": "Annual Returns",
+    "section": "Map \\(y\\) tick labels to dollars",
+    "text": "Map \\(y\\) tick labels to dollars"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#compounded-spy-returns-on-log-scale",
+    "href": "slides/b03-annual-returns.html#compounded-spy-returns-on-log-scale",
+    "title": "Annual Returns",
+    "section": "Compounded SPY returns on log scale",
+    "text": "Compounded SPY returns on log scale\n\n\n                            \n                                            \n\n\n\nvalue of $1 investment with dividends reinvested"
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#box-plot",
+    "href": "slides/b03-annual-returns.html#box-plot",
+    "title": "Annual Returns",
+    "section": "Box Plot",
+    "text": "Box Plot\n\nBox contains 25th percentile through 75th percentile.\nMedian is indicated as a line in the box.\nFences extend 1.5 times inter-quartile range from 25th and 75th percentiles or to the most extreme observation if that is closer to the box.\n\ninter-quartile range = 75th minus 25th percentile\n\nPoints outside the fences are outliers.\n\nIf you simulate data from a normal distribution, there will typically be very few points outside the fences."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#box-and-density-plots-of-annual-spy-returns",
+    "href": "slides/b03-annual-returns.html#box-and-density-plots-of-annual-spy-returns",
+    "title": "Annual Returns",
+    "section": "Box and density plots of annual SPY returns  ",
+    "text": "Box and density plots of annual SPY returns  \n\nBox plotDensity plot\n\n\n\n\n                            \n                                            \n\n\n\n\n\n\n                            \n                                            \n\n\nNormal distribution has same mean and std dev as actual. x-axis range is minimum to maximum return."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#autocorrelations",
+    "href": "slides/b03-annual-returns.html#autocorrelations",
+    "title": "Annual Returns",
+    "section": "Autocorrelations",
+    "text": "Autocorrelations\n\nAutocorrelation is the correlation of a time series with its own lagged values.\nAutocorrelation at lag 1 tells us whether the current value predicts the next one.\nFor monthly data, autocorrelation might be high at lag 12 (seasonality)."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#autocorrelations-of-annual-spy-returns",
+    "href": "slides/b03-annual-returns.html#autocorrelations-of-annual-spy-returns",
+    "title": "Annual Returns",
+    "section": "Autocorrelations of annual SPY returns",
+    "text": "Autocorrelations of annual SPY returns\n. ."
+  },
+  {
+    "objectID": "slides/b03-annual-returns.html#does-last-years-return-predict-this-years",
+    "href": "slides/b03-annual-returns.html#does-last-years-return-predict-this-years",
+    "title": "Annual Returns",
+    "section": "Does last year’s return predict this year’s?",
+    "text": "Does last year’s return predict this year’s?\n\n\n\n                            \n                                            \n\n\nNo, the autocorrelation is almost zero."
+  },
+  {
+    "objectID": "slides/b01-stock-market.html#stock-exchanges",
+    "href": "slides/b01-stock-market.html#stock-exchanges",
+    "title": "Stock Markets",
+    "section": "Stock exchanges",
+    "text": "Stock exchanges\n\nNYSE, Nasdaq, etc. are organized as limit order books.\nA limit order is an order with a price specified.\n\nBuy at price of x or less\nSell at price of x or more\nIf not immediately executable, it goes into the “book.”\n\nMarket orders are orders to trade “at market,” taking whatever price is available.\nYour broker is required to route your executable order to the venue offering the best price."
+  },
+  {
+    "objectID": "slides/b01-stock-market.html#bid-ask-spread",
+    "href": "slides/b01-stock-market.html#bid-ask-spread",
+    "title": "Stock Markets",
+    "section": "Bid-ask spread",
+    "text": "Bid-ask spread\n\nThe price on a limit sell order is called an ask or offer price.\nThe price on a limit buy order is called a bid.\nThe best (lowest) ask and best (highest) bid are called the inside quotes.\nThe difference between the best ask and the best bid is called the bid-ask spread or bid-offer spread."
+  },
+  {
+    "objectID": "slides/b01-stock-market.html#example-of-a-limit-orer-book",
+    "href": "slides/b01-stock-market.html#example-of-a-limit-orer-book",
+    "title": "Stock Markets",
+    "section": "Example of a limit orer book",
+    "text": "Example of a limit orer book\n\nThe bid-ask spread is 180.02–180.03."
+  },
+  {
+    "objectID": "slides/b01-stock-market.html#institutional-trading",
+    "href": "slides/b01-stock-market.html#institutional-trading",
+    "title": "Stock Markets",
+    "section": "Institutional trading",
+    "text": "Institutional trading\n\nMutual funds etc. typically execute trades over several days, trading a small amount at a time, to minimize the price impacts of their trades.\n\nBrokers provide algorithms optimized to minimize price impacts.\n\nHigh frequency trading (HFT) is a different kind of automated trading.\n\nHFTs look for opportunities that may only exist for only a millisecond and only earn a penny a share or less."
+  },
+  {
+    "objectID": "slides/b01-stock-market.html#internalization-and-payment-for-order-flow",
+    "href": "slides/b01-stock-market.html#internalization-and-payment-for-order-flow",
+    "title": "Stock Markets",
+    "section": "Internalization and payment for order flow ",
+    "text": "Internalization and payment for order flow \n\nRetail orders are primarily executed on Alternative Trading Systems rather than the limit order book.\nYour broker/dealer may execute your order itself, to earn the bid-ask spread.\nOr your broker may send your order to another institution in exchange for a “kickback” of part of the spread.\nYou are nevertheless supposed to get the National Best Bid or Offer (NBBO)."
+  },
+  {
+    "objectID": "slides/accounting.html",
+    "href": "slides/accounting.html",
     "title": "",
     "section": "",
-    "text": "Jan 11"
+    "text": "Net PP&E\n\nRecord cost at date 0\nDepreciate over time according to tax schedule\n\nNet working capital\n\nInventory (usually % of COGS) plus accounts receivable (usually % of sales) minus accounts payable (usually % of COGS)\nEquals NWC\n\nInvested capital = Net PP&E + NWC\nZero out invested capital in last year\n\n\n\n\n\nSales\n\nminus Cost of Goods Sold\nminus Selling, General & Administrative\nminus Depreciation\nplus sales of PP&E\nminus book value of PP&E sold\n\nEquals pre-tax income (EBIT)\nminus taxes\nEquals net income\n\n\n\n\n\nNet income\nless change in invested capital\nEquals cash flow"
+  },
+  {
+    "objectID": "slides/accounting.html#project-cash-flows-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "href": "slides/accounting.html#project-cash-flows-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "title": "",
+    "section": "",
+    "text": "Net PP&E\n\nRecord cost at date 0\nDepreciate over time according to tax schedule\n\nNet working capital\n\nInventory (usually % of COGS) plus accounts receivable (usually % of sales) minus accounts payable (usually % of COGS)\nEquals NWC\n\nInvested capital = Net PP&E + NWC\nZero out invested capital in last year\n\n\n\n\n\nSales\n\nminus Cost of Goods Sold\nminus Selling, General & Administrative\nminus Depreciation\nplus sales of PP&E\nminus book value of PP&E sold\n\nEquals pre-tax income (EBIT)\nminus taxes\nEquals net income\n\n\n\n\n\nNet income\nless change in invested capital\nEquals cash flow"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#our-goal",
+    "href": "slides/a05-retirement-planning.html#our-goal",
+    "title": "Retirement Planning",
+    "section": "Our goal",
+    "text": "Our goal"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#timing",
+    "href": "slides/a05-retirement-planning.html#timing",
+    "title": "Retirement Planning",
+    "section": "Timing",
+    "text": "Timing\n\nToday is date 0, date 1 is 1 month away, \\(\\ldots\\)\nDate \\(R\\) (\\(R\\) months away) is our retirement date\nWe plan to live until date \\(T&gt;R\\).\nWe make deposits at dates \\(1, 2, \\ldots, R\\)\nWe make withdrawals at the beginning of each month of retirement: dates \\(R, R+1, \\ldots, T-1\\)\nOur account balance today is \\(B_0\\).\nWe earn a monthly return \\(r\\)."
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#constant-dollars",
+    "href": "slides/a05-retirement-planning.html#constant-dollars",
+    "title": "Retirement Planning",
+    "section": "Constant dollars",
+    "text": "Constant dollars\n\nIt is most useful to do this exercise in today’s dollars.\nThink about what your deposits and withdrawals will be in today’s dollars.\nThe monthly return should be the real return."
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#deposit-period",
+    "href": "slides/a05-retirement-planning.html#deposit-period",
+    "title": "Retirement Planning",
+    "section": "Deposit period",
+    "text": "Deposit period\n\nAt date 1, we have \\((1+r)B_0\\) and deposit \\(D_1\\), so \\(B_1 = (1+r)B_0 + D_1\\).\nLikewise, \\(B_2 = (1+r)B_1 + D_2\\). This is the future value \\((1+r)^2 B_0 + (1+r)D_1 + D_2\\).\nEtc., until\n\n\n\\[B_R = (1+r)^R B_0 + (1+r)^{R-1} D_1  + \\cdots +  D_R\\]"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#withdrawals",
+    "href": "slides/a05-retirement-planning.html#withdrawals",
+    "title": "Retirement Planning",
+    "section": "Withdrawals",
+    "text": "Withdrawals\n\nAt date \\(R\\), we also make a withdrawal \\(W_R\\)\nThen earn \\(r\\) and make another withdrawal \\(W_{R+1}\\).\nContinue through the last withdrawal at \\(T-1\\).\nThe account balance evolves always as the future value of all past deposits and withdrawals."
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#ending-balance",
+    "href": "slides/a05-retirement-planning.html#ending-balance",
+    "title": "Retirement Planning",
+    "section": "Ending balance",
+    "text": "Ending balance\n\nThe ending balance is\n\n\n\\[(1+r)^T B_0 + (1+r)^{T-1}D_1 + \\cdots + (1+r)^{T-R}D_R\\]\n\n\nminus\n\\[(1+r)^{T-R}W_R + \\cdots + (1+r)W_{T-1}\\]"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#deposit-and-withdrawal-arrays",
+    "href": "slides/a05-retirement-planning.html#deposit-and-withdrawal-arrays",
+    "title": "Retirement Planning",
+    "section": "Deposit and withdrawal arrays",
+    "text": "Deposit and withdrawal arrays\n\nLet D be an array of deposits (of length \\(R\\)).\nLet W be an array of withdrawals (of length \\(T-R\\)).\nTo escape the normal counting from zero, let’s make them dictionaries with keys being the dates \\(1, \\ldots, R, \\ldots, T\\).\n\n\nD = dict(zip(range(1, R+1), D)})\nW = dict(zip(range(R, T), W)})"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#example",
+    "href": "slides/a05-retirement-planning.html#example",
+    "title": "Retirement Planning",
+    "section": "Example  ",
+    "text": "Example  \n\nimport numpy as np\n\nR = 30*12      # 30 years until retirement\nT = 60*12      # 60 total years\nr = 0.005      # earn 1/2 % per month  (~ 6% per year)\nB0 = 100000    # initial balance is $100,000"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#deposit-and-withdrawal-dictionaries",
+    "href": "slides/a05-retirement-planning.html#deposit-and-withdrawal-dictionaries",
+    "title": "Retirement Planning",
+    "section": "Deposit and withdrawal dictionaries",
+    "text": "Deposit and withdrawal dictionaries\n\nD = D1 * (1+g)**np.arange(R)\nW = W1 * (1+h)**np.arange(T-R)\n\nD = dict(zip(range(1, R+1), D))\nW = dict(zip(range(R, T), W))"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#account-balance",
+    "href": "slides/a05-retirement-planning.html#account-balance",
+    "title": "Retirement Planning",
+    "section": "Account balance",
+    "text": "Account balance\n\nB = np.zeros(T+1)\nB[0] = B0\n\nfor t in range(1, R+1) :               \n    B[t] = (1+r)*B[t-1] + D[t] \n\nB[R] -= W[R]\n\nfor t in range(R+1, T):\n    B[t] = (1+r)*B[t-1] - W[t]\n\nB[T] = (1+r)*B[T-1]"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#final-balance-as-sum-of-future-values",
+    "href": "slides/a05-retirement-planning.html#final-balance-as-sum-of-future-values",
+    "title": "Retirement Planning",
+    "section": "Final balance as sum of future values",
+    "text": "Final balance as sum of future values\n\nx = (1+r)**T\n\ngrFactors = (1+g)**np.arange(R)\nfvFactors = (1+r)**np.arange(T-1, T-R-1, -1)\ny = np.sum(grFactors*fvFactors)\n\ngrFactors = (1+h)**np.arange(T-R)\nfvFactors = (1+r)**np.arange(T-R, 0, -1)\nz = np.sum(grFactors*fvFactors)\n\nBT = x*B0 + y*D1 - z*W1\n\n# example: solve for D1 to make BT=0\nD1 = (z*W1 - x*B0) / y"
+  },
+  {
+    "objectID": "slides/a05-retirement-planning.html#success",
+    "href": "slides/a05-retirement-planning.html#success",
+    "title": "Retirement Planning",
+    "section": "Success!",
+    "text": "Success!"
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#questions-about-loans",
+    "href": "slides/a03-mortgage-payments.html#questions-about-loans",
+    "title": "Mortgage Payments, etc.",
+    "section": "Questions about loans",
+    "text": "Questions about loans\n\nI know how much I want to borrow and for how many years and what the rate will be. What will my payment be?\nI know how much I can afford to pay and for how many years the loan will be and what the rate will be. How much can I borrow?\nI know how much I want to borrow and what I can afford to pay and for how many years the loan will be. What rate do I need to get?"
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#future-values",
+    "href": "slides/a03-mortgage-payments.html#future-values",
+    "title": "Mortgage Payments, etc.",
+    "section": "Future values",
+    "text": "Future values\n\nThe balance after the last payment is zero.\nSo, for future values as of the loan maturity,\n\n\n\\[0 = \\text{FV(Principal)} - \\text{FV(Payments)}\\]\n\n\nEquivalently,\n\\[\\text{FV(Principal)} = \\text{FV(Payments)}\\]"
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#present-values",
+    "href": "slides/a03-mortgage-payments.html#present-values",
+    "title": "Mortgage Payments, etc.",
+    "section": "Present values",
+    "text": "Present values\n\nBecause future values are equal, present values are also equal.\nThe present value of the amount borrowed is just the amount (prinicpal).\nSo loan terms are related by Principal = PV of payments.\nThe PV of payments is\n\n\n\\[P \\times \\left(\\frac{1}{1+r_m} + \\frac{1}{(1+r_m)^2} + \\cdots + \\frac{1}{(1+r_m)^{12 \\times T}}\\right)\\]"
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#annuity-factor",
+    "href": "slides/a03-mortgage-payments.html#annuity-factor",
+    "title": "Mortgage Payments, etc.",
+    "section": "Annuity factor",
+    "text": "Annuity factor\n\nThe sum of PV factors is called the annuity factor AF.\nSo, Principal = Payment \\(\\times\\) AF.\nThere is a simpler formula for the annuity factor (sum of a finite number of terms of a geometric series):\n\n\n\\[\\text{AF} = \\frac{1}{r_m}\\left(1 - \\frac{1}{(1+r_m)^{12 \\times T}}\\right)\\]\n\nIt is not necessary to remember the AF formula."
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#balloon-payments",
+    "href": "slides/a03-mortgage-payments.html#balloon-payments",
+    "title": "Mortgage Payments, etc.",
+    "section": "Balloon payments",
+    "text": "Balloon payments\n\nA loan might have a balloon payment, meaning a lump sum payment at the end.\nLoan terms are related by Principal = PV of monthly payments + PV of balloon\nPV of balloon is\n\n\n\\[\\frac{\\text{Balloon}}{(1+r_m)^{12 \\times T}}\\]"
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#numpy-financial",
+    "href": "slides/a03-mortgage-payments.html#numpy-financial",
+    "title": "Mortgage Payments, etc.",
+    "section": "Numpy financial",
+    "text": "Numpy financial\n\nYou may need to do pip install numpy-financial\nConvention is that payments, including balloon, are negative.\nPrincipal received is positive. It is called pv.\nBallon is called fv.\nFunctions are rate, pmt, pv, fv.\nSame functions are in Excel."
+  },
+  {
+    "objectID": "slides/a03-mortgage-payments.html#example",
+    "href": "slides/a03-mortgage-payments.html#example",
+    "title": "Mortgage Payments, etc.",
+    "section": "Example  ",
+    "text": "Example  \n\nimport numpy_financial as npf\n \nnper = 30 * 12       # 30 year loan\nprincipal = 400000   # borrow $400,000\npmt = -1500          # pay $1,500 per month\nrate = 0.04 / 12     # annual rate is 4%\nballoon = 0          # no balloon\n\n\nWe’ll calculate each of the last four, one at a time, given the other inputs."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#exponential-growth",
+    "href": "slides/a01-fvs-pvs.html#exponential-growth",
+    "title": "Present and Future Values",
+    "section": "Exponential growth",
+    "text": "Exponential growth\n\nIf invested funds earn a stable rate of return and funds are not withdrawn, then the account grows exponentially."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#section",
+    "href": "slides/a01-fvs-pvs.html#section",
+    "title": "Present and Future Values",
+    "section": "",
+    "text": "Due to exponential growth, the investment period and rate of return matter a lot!\n\n\nat 8%, doubling the investment horizon from 15 to 30 years implies the growth in the account increases from $2.17 to $9.06 (more than quadrupling).\nat a 30 year horizon, changing the rate of return from 4% to 8% implies the growth in the account increases from $2.24 to $9.06 (more than quadrupling)."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#calculating-the-account-growth",
+    "href": "slides/a01-fvs-pvs.html#calculating-the-account-growth",
+    "title": "Present and Future Values",
+    "section": "Calculating the account growth",
+    "text": "Calculating the account growth\nWith 1 year at 8%, \\(1 \\rightarrow 1.08\\). After a 2nd year, we have\n\n\\[ 1.08 + (0.08 \\times 1.08) = (1 \\times 1.08) + (0.08 \\times 1.08) \\] which is \\(1.08^2\\).\n\n\nAfter \\(3\\) years at 8%: \\(1.08^2 + 0.08\\times 1.08^2 = 1.08^3\\)\nAfter \\(n\\) years at 8%: \\(1.08^n\\)."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#interest-on-interest",
+    "href": "slides/a01-fvs-pvs.html#interest-on-interest",
+    "title": "Present and Future Values",
+    "section": "Interest on interest",
+    "text": "Interest on interest\n\nWhy is growth exponential?\n\\(1.08^2 = (1+0.08)^2 = 1 + 2 \\times 0.08 + 0.08^2\\)\n\\(1.08^3 = 1 + 3 \\times 0.08 + 3 \\times 0.08^2 + 0.08^3\\)\n\\(3 \\times 0.08\\) is linear growth\nThe interest on interest terms \\(3 \\times 0.08^2 + 0.08^3\\) are responsible for exponential growth\nThose terms eventually add up to large numbers!"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#future-values-and-present-values",
+    "href": "slides/a01-fvs-pvs.html#future-values-and-present-values",
+    "title": "Present and Future Values",
+    "section": "Future values and present values",
+    "text": "Future values and present values\n\nWe call $\\(1.08^n\\) the future value of $1 at 8% for \\(n\\) years.\nMore generally, $\\((1+r)^n\\) is the future value of $1 at a rate of return of \\(r\\).\nIf we start with \\(x\\) dollars, we will have \\((1+r)^nx\\) dollars after \\(n\\) years, so \\((1+r)^nx\\) is the future value of \\(x\\).\nSimilarly, we call \\(x\\) the present value of \\((1+r)^nx\\).\n\nEquivalently, for any \\(y\\), we call \\(y/(1+r)^n\\) the present value of \\(y\\)."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#future-and-present-value-factors",
+    "href": "slides/a01-fvs-pvs.html#future-and-present-value-factors",
+    "title": "Present and Future Values",
+    "section": "Future and present value factors",
+    "text": "Future and present value factors\n\n\nWe go from present \\(x\\) to future \\(y\\) by multiplying by \\((1+r)^n\\), so we call \\((1+r)^n\\) the future value factor.\nWe go from future \\(y\\) to present \\(x\\) by multiplying by \\(1/(1+r)^n\\), so we call \\(1/(1+r)^n\\) the present value factor."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#present-value-factors",
+    "href": "slides/a01-fvs-pvs.html#present-value-factors",
+    "title": "Present and Future Values",
+    "section": "Present value factors",
+    "text": "Present value factors\n\nPV factors (also called discount factors) are smaller when the horizon is longer or the rate of return is larger."
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#fv-of-multiple-cash-flows",
+    "href": "slides/a01-fvs-pvs.html#fv-of-multiple-cash-flows",
+    "title": "Present and Future Values",
+    "section": "FV of multiple cash flows",
+    "text": "FV of multiple cash flows\n\nSuppose we invest \\(x_0\\) dollars today, another \\(x_1\\) dollars in 1 year, etc. for \\(m\\) years and earn \\(r\\) per year.\n\nWhat will we have in \\(n \\ge m\\) years?\n\\(x_0 \\rightarrow (1+r)^nx_0\\)\n\\(x_1 \\rightarrow (1+r)^{n-1}x_1\\), \\(\\ldots, x_m \\rightarrow (1+r)^{n-m}x_m\\)\nSo, we end up with\n\n\n\\[(1+r)^n x_0 + \\cdots + (1+r)^{n-m}x_m\\]"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#fv-factors-with-numpy",
+    "href": "slides/a01-fvs-pvs.html#fv-factors-with-numpy",
+    "title": "Present and Future Values",
+    "section": "FV factors with numpy",
+    "text": "FV factors with numpy\n\nimport numpy as np\n\nm = 10\nn = 15\nr = 0.08\n\nfvFactors = (1+r)**np.arange(n, n-m-1, -1)\n\nfvFactors are \\[(1+r)^n, \\ldots , (1+r)^{n-m}\\]"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#fv-of-multiple-cash-flows-1",
+    "href": "slides/a01-fvs-pvs.html#fv-of-multiple-cash-flows-1",
+    "title": "Present and Future Values",
+    "section": "FV of multiple cash flows",
+    "text": "FV of multiple cash flows\n\nn = 10\nm = 4\nr = 0.08\nx0, x1, x2, x3, x4 = 100, 120, 130, 140, 150\nx = np.array([x0, x1, x2, x3, x4])\n\nfvFactors = (1+r)**np.arange(n, n-m-1, -1)\nfv = np.sum(x*fvFactors)"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#pv-of-multiple-cash-flows",
+    "href": "slides/a01-fvs-pvs.html#pv-of-multiple-cash-flows",
+    "title": "Present and Future Values",
+    "section": "PV of multiple cash flows",
+    "text": "PV of multiple cash flows\n\nSuppose we want to spend \\(y_1\\) dollars in 1 year, \\(y_2\\) dollars in 2 years, and so on for \\(n\\) years.\nIf we want to finance this from existing savings, how much do we need to have, assuming we earn \\(r\\) each year?\nWe need \\(y_1/(1+r)\\) to finance \\(y_1\\) in 1 year, \\(y_2/(1+r)^2\\) to finance \\(y_2\\) in 2 years, etc., so we need\n\n\n\\[\\frac{y_1}{1+r} + \\cdots + \\frac{y_n}{(1+r)^n}\\]"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#pv-factors-with-numpy",
+    "href": "slides/a01-fvs-pvs.html#pv-factors-with-numpy",
+    "title": "Present and Future Values",
+    "section": "PV factors with numpy",
+    "text": "PV factors with numpy\n\nn = 15\nr = 0.08\n\npvFactors = (1+r)**np.arange(-1, -n-1, -1)\npvFactors are \\[\\frac{1}{1+r}, \\ldots, \\frac{1}{(1+r)^n}\\]"
+  },
+  {
+    "objectID": "slides/a01-fvs-pvs.html#pv-of-multiple-cash-flows-1",
+    "href": "slides/a01-fvs-pvs.html#pv-of-multiple-cash-flows-1",
+    "title": "Present and Future Values",
+    "section": "PV of multiple cash flows  ",
+    "text": "PV of multiple cash flows  \n\n\nn = 4\nr = 0.08\ny1, y2, y3, y4 = 120, 130, 140, 150\ny = np.array([y1, y2, y3, y4])\n\npvFactors = (1+r)**np.arange(-1, -n-1, -1)\npv = np.sum(y*pvFactors)"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "",
+    "section": "",
+    "text": "1. Present and Future Values  2. Monthly Rates, etc.  3. Mortgage Payments etc.  4. Inflation and Real Returns  5. Retirement Planning  6. Time-Varying Returns\n\n\n\n1. Stock Markets  2. Stock Returns  3. Annual Returns  4. Daily Returns  5. Geometric Average Returns  6. Long-Run Risk\n\n\n\n1. Leverage  2. Short Selling  3. Funds 4. Bonds 5. Bond Prices and Yields  6. Other Assets\n\n\n\n\n1. Diversification  2. More Diversification 3. Saving and Borrowing  4. Mean-Variance Frontier 5. Frontier in Pictures 6. Capital Asset Pricing Model\n\n\n\n1. Preferences  2. Quadratic Programming  3. Frictions and Constraints  4. More Pictures  5. Estimating Parameters  6. Stocks, Bonds, and Gold\n\n\n\n1. Cash Flows and NPV 2. Economic Value Added  3. Financial Accounting  4. Example 1  5. Example 2  6. Example 3\n\n\n\n1. Internal Rate of Return  2. Perpetuities 3. Valuing Companies  4. Weighted Average Cost of Capital  5. Debt and Taxes  6. Debt and Cost of Capital"
+  },
+  {
+    "objectID": "slides.html#slide-decks-data-driven-finance-i-spring-2025",
+    "href": "slides.html#slide-decks-data-driven-finance-i-spring-2025",
+    "title": "",
+    "section": "",
+    "text": "1. Present and Future Values  2. Monthly Rates, etc.  3. Mortgage Payments etc.  4. Inflation and Real Returns  5. Retirement Planning  6. Time-Varying Returns\n\n\n\n1. Stock Markets  2. Stock Returns  3. Annual Returns  4. Daily Returns  5. Geometric Average Returns  6. Long-Run Risk\n\n\n\n1. Leverage  2. Short Selling  3. Funds 4. Bonds 5. Bond Prices and Yields  6. Other Assets\n\n\n\n\n1. Diversification  2. More Diversification 3. Saving and Borrowing  4. Mean-Variance Frontier 5. Frontier in Pictures 6. Capital Asset Pricing Model\n\n\n\n1. Preferences  2. Quadratic Programming  3. Frictions and Constraints  4. More Pictures  5. Estimating Parameters  6. Stocks, Bonds, and Gold\n\n\n\n1. Cash Flows and NPV 2. Economic Value Added  3. Financial Accounting  4. Example 1  5. Example 2  6. Example 3\n\n\n\n1. Internal Rate of Return  2. Perpetuities 3. Valuing Companies  4. Weighted Average Cost of Capital  5. Debt and Taxes  6. Debt and Cost of Capital"
   },
   {
     "objectID": "index.html",
@@ -28,17 +1162,934 @@
     "text": "Kerry Back  J. Howard Creekmore Professor of Finance and Professor of Economics KerryBack@gmail.com\n\n\n\nThis course is an introduction to investments, including the analysis of corporate investment projects, and to derivative securities. It will run on two tracks. The pre-recorded videos and weekly assignments are about investment analysis. The weekly live sessions will be about derivative securities. Grading will be equally weighted between investments assignement and a final exam on derivative securities.\n\n\nWe begin with foundational issues such as retirement planning and mortgage calculations. The next part of the course describes markets, assets, and properties of returns. We then study how to construct efficient portfolios of assets. The final part of the course pertains to the financial analysis of corporate projects.\nAssignments and videos are linked on the course Canvas site. Copies of the slides are at busi721-901.kerryback.com/slides.html. Jupyter notebooks containing the code in the slides are at github.com/kerryback/2023-721-901-binder. As the course progresses, solutions to the assignments will be posted at github.com/kerryback/busi721-901/tree/main/solutions. A good reference for the course material is this free textbook by Ivo Welch of UCLA: [- corpfin.ivo-welch.info/read/]\n\n\n\nWe will follow the free online textbook written by your instructor in conjunction with Hong Liu of Washington University in St. Louis and Mark Loewenstein of the University of Maryland: book.derivative-securities.org. The book provides a link to a NotebookLM notebook that you can query regarding the book (NotebookLM is a RAG app provided free of charge by Google and powered by Google Gemini). It also provides a link to Jupyter notebooks containing all the code in the book. The lecture slides that we will cover in our weekly live sessions are (will be) posted at slides.derivative-securities.org.\nMore information about the final exam will be provided later."
   },
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
+    "objectID": "live_sessions.html",
+    "href": "live_sessions.html",
     "title": "",
     "section": "",
-    "text": "1. Present and Future Values  2. Monthly Rates, etc.  3. Mortgage Payments etc.  4. Inflation and Real Returns  5. Retirement Planning  6. Time-Varying Returns\n\n\n\n1. Stock Markets  2. Stock Returns  3. Annual Returns  4. Daily Returns  5. Geometric Average Returns  6. Long-Run Risk\n\n\n\n1. Leverage  2. Short Selling  3. Funds 4. Bonds 5. Bond Prices and Yields  6. Other Assets\n\n\n\n\n1. Diversification  2. More Diversification 3. Saving and Borrowing  4. Mean-Variance Frontier 5. Frontier in Pictures 6. Capital Asset Pricing Model\n\n\n\n1. Preferences  2. Quadratic Programming  3. Frictions and Constraints  4. More Pictures  5. Estimating Parameters  6. Stocks, Bonds, and Gold\n\n\n\n1. Cash Flows and NPV 2. Economic Value Added  3. Financial Accounting  4. Example 1  5. Example 2  6. Example 3\n\n\n\n1. Internal Rate of Return  2. Perpetuities 3. Valuing Companies  4. Weighted Average Cost of Capital  5. Debt and Taxes  6. Debt and Cost of Capital"
+    "text": "Jan 11"
   },
   {
-    "objectID": "slides.html#slide-decks-data-driven-finance-i-spring-2025",
-    "href": "slides.html#slide-decks-data-driven-finance-i-spring-2025",
+    "objectID": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
+    "href": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
     "title": "",
     "section": "",
-    "text": "1. Present and Future Values  2. Monthly Rates, etc.  3. Mortgage Payments etc.  4. Inflation and Real Returns  5. Retirement Planning  6. Time-Varying Returns\n\n\n\n1. Stock Markets  2. Stock Returns  3. Annual Returns  4. Daily Returns  5. Geometric Average Returns  6. Long-Run Risk\n\n\n\n1. Leverage  2. Short Selling  3. Funds 4. Bonds 5. Bond Prices and Yields  6. Other Assets\n\n\n\n\n1. Diversification  2. More Diversification 3. Saving and Borrowing  4. Mean-Variance Frontier 5. Frontier in Pictures 6. Capital Asset Pricing Model\n\n\n\n1. Preferences  2. Quadratic Programming  3. Frictions and Constraints  4. More Pictures  5. Estimating Parameters  6. Stocks, Bonds, and Gold\n\n\n\n1. Cash Flows and NPV 2. Economic Value Added  3. Financial Accounting  4. Example 1  5. Example 2  6. Example 3\n\n\n\n1. Internal Rate of Return  2. Perpetuities 3. Valuing Companies  4. Weighted Average Cost of Capital  5. Debt and Taxes  6. Debt and Cost of Capital"
+    "text": "Jan 11"
+  },
+  {
+    "objectID": "slides/a02-monthly-rates.html#monthly-rates",
+    "href": "slides/a02-monthly-rates.html#monthly-rates",
+    "title": "Monthly Rates, etc.",
+    "section": "Monthly rates",
+    "text": "Monthly rates\n\nIf we earn \\(r_m\\) each month, then $1 will grow in a year to $\\((1+r_m)^{12}\\).\nSo, the annual return (gain per $1) is \\(r_a = (1+r_m)^{12}-1\\).\nFor example, 1% per month corresponds to 12.68% per year.\nWe can reverse this to compute the monthly return from the annual return as \\(r_m = (1+r_a)^{1/12} - 1\\).\n12% per year corresponds to 0.95% per month."
+  },
+  {
+    "objectID": "slides/a02-monthly-rates.html#bank-rates",
+    "href": "slides/a02-monthly-rates.html#bank-rates",
+    "title": "Monthly Rates, etc.",
+    "section": "Bank rates",
+    "text": "Bank rates\n\nIf a bank says it will loan you money at 12% per year with monthly payments, it will charge you 1% per month.\nBank formula is \\(r_m = r_a/12\\)."
+  },
+  {
+    "objectID": "slides/a02-monthly-rates.html#frequent-compounding-at-bank-rates",
+    "href": "slides/a02-monthly-rates.html#frequent-compounding-at-bank-rates",
+    "title": "Monthly Rates, etc.",
+    "section": "Frequent compounding at bank rates",
+    "text": "Frequent compounding at bank rates\n\n12% per year compounded monthly at the bank formula implies an annual rate of \\(1.01^{12}-1 = 0.1268\\)\n12% per year compounded weekly at the bank formula implies an annual rate of \\((1+0.12/52)^{52}-1 = 0.1273\\)\n12% per year compounded daily at the bank formula implies an annual rate of \\((1+0.12/365)^{365} = 0.12747\\)\nMore frequent compounding \\(\\rightarrow\\) higher effective annual rate"
+  },
+  {
+    "objectID": "slides/a02-monthly-rates.html#continuous-compounding",
+    "href": "slides/a02-monthly-rates.html#continuous-compounding",
+    "title": "Monthly Rates, etc.",
+    "section": "Continuous compounding",
+    "text": "Continuous compounding\n\nA useful fact: as \\(n \\rightarrow \\infty\\), \\[(1+r/n)^n \\rightarrow e^r\\]\n\nWe say that an annual rate of \\(r\\) compounded continuously produces an effective annual rate of \\(e^r-1\\).\nFor example, 12% compounded continuously implies an effective annual rate of \\(e^{0.12}-1 = 0.12750\\).\nGiven an effective annual rate of \\(r_a\\), the corresponding continuously compounded rate is \\(\\log (1+r_a)\\)."
+  },
+  {
+    "objectID": "slides/a04-inflation.html#cpi-and-inflation",
+    "href": "slides/a04-inflation.html#cpi-and-inflation",
+    "title": "Inflation and Real Returns",
+    "section": "CPI and inflation",
+    "text": "CPI and inflation\n\nStandard U.S. price index is the Consumer Price Index for all Urban Consumers.\nBasket of goods with prices sampled monthly in 87 urban areas\n% change in the index is the inflation rate\nInflation in 2021 was 7%, so a typical item that cost $100 on Jan 1 cost $107 on Dec 31.\nWe say that the $107 on Dec 31 is $100 in Jan 1 dollars.\nAny price \\(x\\) on Dec 31 is \\(x/1.07\\) in Jan 1 dollars."
+  },
+  {
+    "objectID": "slides/a04-inflation.html#multiple-years",
+    "href": "slides/a04-inflation.html#multiple-years",
+    "title": "Inflation and Real Returns",
+    "section": "Multiple years",
+    "text": "Multiple years\n\nIf there is 7% inflation in 2021 followed by 5% inflation in 2022, then\n\nthe cost of a $100 item grows to $107 and then another 5%, which is \\(100 \\times 1.07 \\times 1.05\\).\n\nAny price \\(x\\) at the end of 2022 would be\n\n\n\\[\\frac{x}{1.07 \\times 1.05}\\]\nin beginning of 2021 dollars."
+  },
+  {
+    "objectID": "slides/a04-inflation.html#constant-dollars",
+    "href": "slides/a04-inflation.html#constant-dollars",
+    "title": "Inflation and Real Returns",
+    "section": "Constant dollars",
+    "text": "Constant dollars\n\nFor any dates 0, 1, …, T and inflation rates \\(i_1, \\ldots, i_T\\), we say that a price \\(x\\) at date \\(T\\) is\n\n\n\\[\\frac{x}{(1+i_1) \\cdots (1+i_T)}\\] in date 0 dollars.\n\nWe might refer to “date-0 dollars” as “constant dollars.”\nThe denominator in the above expression is \\(\\text{CPI}_T/\\text{CPI}_0\\)."
+  },
+  {
+    "objectID": "slides/a04-inflation.html#real-rate-of-return",
+    "href": "slides/a04-inflation.html#real-rate-of-return",
+    "title": "Inflation and Real Returns",
+    "section": "Real rate of return",
+    "text": "Real rate of return\n\nSuppose you make 10% on your portfolio and there is 7% inflation. Consider an item that cost $100 at the beginning of the year.\nEach $100 of your portfolio at the beginning of the year would buy 1 of them.\n\nThe $100 grows to $110.\nThe cost of the item goes to $107.\nSo you could buy 1 and 3/107 items.\n\n\nYour real rate of return is 3/107."
+  },
+  {
+    "objectID": "slides/a04-inflation.html#general-formula",
+    "href": "slides/a04-inflation.html#general-formula",
+    "title": "Inflation and Real Returns",
+    "section": "General formula",
+    "text": "General formula\n\nThe general formula for the real rate of return \\(r^*\\) is\n\n\n\\[r^* = \\frac{r-i}{1+i}\\]"
+  },
+  {
+    "objectID": "slides/a04-inflation.html#compounding-real-rates-of-return",
+    "href": "slides/a04-inflation.html#compounding-real-rates-of-return",
+    "title": "Inflation and Real Returns",
+    "section": "Compounding real rates of return  ",
+    "text": "Compounding real rates of return  \n\nThe formula \\(r^*=(r-i)/(1+i)\\) implies\n\n\n\\[(1+r_1^*) \\cdots (1+r_n^*) = \\frac{(1+r_1)\\cdots (1+r_T)}{(1+i_1) \\cdots (1+i_T)}\\]\n\nThe denominator is \\(\\text{CPI}_T / \\text{CPI}_0\\), so compounding real rates of return “takes inflation out” of compounded nominal rates.\nIt is the accumulation from $1 in date–0 dollars."
+  },
+  {
+    "objectID": "slides/a06-different-returns.html#retirement-planning-again",
+    "href": "slides/a06-different-returns.html#retirement-planning-again",
+    "title": "Time-Varying Returns",
+    "section": "Retirement planning again",
+    "text": "Retirement planning again\n\nArray of returns \\((r_1, \\ldots, r_T)\\), different return each month\nTo avoid zero indexing, put them in a dictionary\n\n\nimport numpy as np\n\nT = 60*12\nmn = 0.005\nsd = 0.04\n\nr = np.random.normal(loc=mn, scale=sd, size=T)\nr = dict(zip(range(1, T+1), r))"
+  },
+  {
+    "objectID": "slides/a06-different-returns.html#previous-example",
+    "href": "slides/a06-different-returns.html#previous-example",
+    "title": "Time-Varying Returns",
+    "section": "Previous example",
+    "text": "Previous example\n\nR = 30*12      # 30 years until retirement\nT = 60*12      # 60 total years\nB0 = 100000    # initial balance is $100,000\nD1 = 1000      # initial savings is $1,000 (per month)\nW1 = 10000     # withdraw $10,000 first month in retirement\ng = 0.002      # deposit is 0.2% larger each month\nh = 0          # withdrawals are constant\n\nD = D1 * (1+g)**np.arange(R)\nD = dict(zip(range(1, R+1), D))\n\nW = W1 * (1+h)**np.arange(T-R)\nW = dict(zip(range(R, T), W))"
+  },
+  {
+    "objectID": "slides/a06-different-returns.html#account-balance-in-a-loop",
+    "href": "slides/a06-different-returns.html#account-balance-in-a-loop",
+    "title": "Time-Varying Returns",
+    "section": "Account balance in a loop",
+    "text": "Account balance in a loop\n\nOnly change is r[t].\n\n\nB = np.zeros(T+1)\nB[0] = B0\n\nfor t in range(1, R+1) :               \n    B[t] = (1+r[t])*B[t-1] + D[t] \n\nB[R] -= W[R]\n\nfor t in range(R+1, T):\n    B[t] = (1+r[t])*B[t-1] - W[t]\n\nB[T] = (1+r[T])*B[T-1]"
+  },
+  {
+    "objectID": "slides/a06-different-returns.html#account-balance-with-future-value-factors",
+    "href": "slides/a06-different-returns.html#account-balance-with-future-value-factors",
+    "title": "Time-Varying Returns",
+    "section": "account balance with Future value factors",
+    "text": "account balance with Future value factors\n\nFV factor for \\(B_0\\) is \\((1+r_1)\\cdots (1+r_T)\\)\nFV factor for \\(D_1\\) is \\((1+r_2) \\cdots (1+r_T)\\)\nFV factor for any deposit or withdrawal at any date \\(t\\) is \\((1+r_{t+1}) \\cdots (1+r_T)\\)\nTo compute the array of FV factors for dates 0, 1, …, T-1, use  np.flip(np.cumprod(np.flip(1+r)))"
+  },
+  {
+    "objectID": "slides/assignment7.html",
+    "href": "slides/assignment7.html",
+    "title": "",
+    "section": "",
+    "text": "Calculate the net present value of the following project. Submit an Excel workbook.\n\nThe XYZ company is considering launching a new product. Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.\nSales (in millions of dollars) are projected as follows:\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n100\n150\n200\n120\n80\n\n\n\n\nLabor and material costs for the product would be 50% of sales revenue.\nFor the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively. The existing products have the same 50% gross margin.\nIncremental selling, general, and administrative expenses are forecast to be (in millions of dollars):\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n20\n25\n15\n10\n5\n\n\n\n\nThe new product would require an investment of $100 million in 10-year MACRS equipment. The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.\n\nIt is anticipated that the equipment could be sold for $60 million in five years.\n$15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.\n\nAfterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.\n\nAll working capital would be recovered in five years.\n\nThe corporate tax rate is 30%.\nThe cost of capital is 12%."
+  },
+  {
+    "objectID": "slides/assignment7.html#assignment-6-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "href": "slides/assignment7.html#assignment-6-busi-721-data-driven-finance-i-jones-graduate-school-of-business-rice-university",
+    "title": "",
+    "section": "",
+    "text": "Calculate the net present value of the following project. Submit an Excel workbook.\n\nThe XYZ company is considering launching a new product. Sales of the product are expected to rise and then diminish, and it is anticipated that the product will be abandoned after five years.\nSales (in millions of dollars) are projected as follows:\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n100\n150\n200\n120\n80\n\n\n\n\nLabor and material costs for the product would be 50% of sales revenue.\nFor the first two years, the new product would reduce sales of existing products by $20 million and $10 million, respectively. The existing products have the same 50% gross margin.\nIncremental selling, general, and administrative expenses are forecast to be (in millions of dollars):\n\n\n\n\nYear\n0\n1\n2\n3\n4\n5\n\n\n\n\n\n\n20\n25\n15\n10\n5\n\n\n\n\nThe new product would require an investment of $100 million in 10-year MACRS equipment. The depreciation rates for the first five years are 10%, 18%, 14.4%, 11.52%, and 9.22%.\n\nIt is anticipated that the equipment could be sold for $60 million in five years.\n$15 million of materials inventory would be required immediately, and accounts payable would increase by $5 million.\n\nAfterwards, receivables would be 8% of sales, inventory would be 20% of COGS, and accounts payable would be 12% of COGS.\n\nAll working capital would be recovered in five years.\n\nThe corporate tax rate is 30%.\nThe cost of capital is 12%."
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#close-to-close-returns",
+    "href": "slides/b02-stock-returns.html#close-to-close-returns",
+    "title": "Stock Returns",
+    "section": "Close-to-close Returns",
+    "text": "Close-to-close Returns\n\n\n\n\n\nLet’s compute close-to-close daily stock returns. Let \\(P_t\\) denote the price at close on day \\(t\\).\nIf no dividends, the gain on day \\(t\\) is \\(P_t - P_{t-1}\\).\n\n\n\nThe return per $1 invested in a share at close on \\(t-1\\) is\n\n\n\\[(P_t - P_{t-1}) / P_{t-1}\\]"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#what-about-dividends-cvx-in-fall-2021",
+    "href": "slides/b02-stock-returns.html#what-about-dividends-cvx-in-fall-2021",
+    "title": "Stock Returns",
+    "section": "What about dividends?  CVX in Fall 2021",
+    "text": "What about dividends?  CVX in Fall 2021"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#nasdaqs-statement",
+    "href": "slides/b02-stock-returns.html#nasdaqs-statement",
+    "title": "Stock Returns",
+    "section": "Nasdaq’s statement",
+    "text": "Nasdaq’s statement\nChevron Corporation (CVX) will begin trading ex-dividend on August 18, 2021. A cash dividend payment of $1.34 per share is scheduled to be paid on September 10, 2021. Shareholders who purchased CVX prior to the ex-dividend date are eligible for the cash dividend payment. \n\nThree Dates:\n\nAugust 18: (begins trading ex-dividend)\n\nAugust 19: (shareholders of record receive the dividend)\n\nSeptember 10: (dividend is paid)"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#ex-dividend-days",
+    "href": "slides/b02-stock-returns.html#ex-dividend-days",
+    "title": "Stock Returns",
+    "section": "Ex-dividend days",
+    "text": "Ex-dividend days\n\nIf you buy on Aug 18, you are not entitled to the dividend.\nPurchase Aug 17 or before (and hold through Aug 17)\n\n→ will be shareholder of record on Aug 19\n\n→ receive dividend on Sept 10\n\nWhy Aug 17 → Aug 19?\n\nT+2 settlement"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#stock-splits",
+    "href": "slides/b02-stock-returns.html#stock-splits",
+    "title": "Stock Returns",
+    "section": "Stock splits",
+    "text": "Stock splits\n\n\n\nIf a company does an \\(n\\)-for-1 stock split, then each shareholder gets \\(n\\) new shares for each of her existing shares. Shares are worth roughly \\(1/n\\) as much."
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#split-adjusted-prices",
+    "href": "slides/b02-stock-returns.html#split-adjusted-prices",
+    "title": "Stock Returns",
+    "section": "Split adjusted prices",
+    "text": "Split adjusted prices\n\nData vendors routinely compute split-adjusted prices, scaling down old prices by the same factor for comparability to new prices."
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#yahoos-adjusted-prices",
+    "href": "slides/b02-stock-returns.html#yahoos-adjusted-prices",
+    "title": "Stock Returns",
+    "section": "Yahoo’s adjusted prices",
+    "text": "Yahoo’s adjusted prices\n\nfinance.yahoo.com is a good source for data.\nYahoo’s adjusted closing prices are adjusted for splits and also adjusted for dividends on each ex date.\nOn Aug 18, 2021, the Aug 17 price was adjusted as\n\n\n\\[\n  {\\hat{P}_{\\text{Aug17}}}={P_{\\text{Aug17}}}-1.34\n\\]\n\n$1.34 of the value of at close on Aug 17 was the dividend. Adjusted price is the value without dividend."
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#summary-of-yahoo-adjusted-closing-prices",
+    "href": "slides/b02-stock-returns.html#summary-of-yahoo-adjusted-closing-prices",
+    "title": "Stock Returns",
+    "section": "Summary of Yahoo adjusted closing prices",
+    "text": "Summary of Yahoo adjusted closing prices\n\nOn non ex-dividend days, percent change is the return \\(P_t/P_{t-1} - 1\\).\nOn ex-dividend days, percent change is\n\n\n\\[\n  \\frac{P_{t}}{P_{t-1}-D_t} - 1\n\\]"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#cvx-on-aug-18-2021",
+    "href": "slides/b02-stock-returns.html#cvx-on-aug-18-2021",
+    "title": "Stock Returns",
+    "section": "CVX on Aug 18, 2021",
+    "text": "CVX on Aug 18, 2021\n\nThe return calculated the usual way is:\n\\[\n  \\frac{P_{\\text{Aug18}}+1.34}{P_{\\text{Aug17}}} - 1 =-0.0267\n\\]\n\n\nThe % change in Yahoo’s adjusted close is\n\\[\n\\frac{P_{\\text{Aug18}}}{P_{\\text{Aug17}}-1.34} - 1=-0.0271\n\\]"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#getting-returns-from-yahoo",
+    "href": "slides/b02-stock-returns.html#getting-returns-from-yahoo",
+    "title": "Stock Returns",
+    "section": "Getting Returns from Yahoo",
+    "text": "Getting Returns from Yahoo\n\n\nInstall pandas-datareader or, on colab, upgrade it.\n\n\n\n!pip install --upgrade pandas-datareader\n\nfrom pandas_datareader import DataReader as pdr\n\nprice = pdr('cvx', 'yahoo', start=2010)['Close']\nret_daily = price.pct_change()"
+  },
+  {
+    "objectID": "slides/b02-stock-returns.html#compounding-yahoo-returns",
+    "href": "slides/b02-stock-returns.html#compounding-yahoo-returns",
+    "title": "Stock Returns",
+    "section": "Compounding Yahoo returns",
+    "text": "Compounding Yahoo returns\n\nCan get monthly or annual return as % change in monthly or annual Yahoo-adjusted closing prices - equivalent to compounding Yahoo daily returns.\n\n\nprice = pdr('cvx', 'yahoo', start=2010)['Close']\nret_monthly = price.resample('M').last().pct_change()\nret_annual = price.resample('Y').last().pct_change()\n\n# change datetime to monthly or annual (optional)\nret_monthly.index = ret_monthly.index.to_period('M')\nret_annual.index = ret_annual.index.to_period('Y')"
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#daily-spy-returns",
+    "href": "slides/b04-daily-returns.html#daily-spy-returns",
+    "title": "Daily Returns",
+    "section": "Daily SPY returns",
+    "text": "Daily SPY returns"
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#box-and-density-plots-of-daily-spy-returns",
+    "href": "slides/b04-daily-returns.html#box-and-density-plots-of-daily-spy-returns",
+    "title": "Daily Returns",
+    "section": "Box and density plots of daily SPY returns  ",
+    "text": "Box and density plots of daily SPY returns  \n\nBox plotDensity plot\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\n\n\n\n\n\n                            \n                                            \n\n\nNormal distribution has same mean and std dev as actual.x-axis range is minimum to maximum return."
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#autocorrelations-of-daily-spy-returns",
+    "href": "slides/b04-daily-returns.html#autocorrelations-of-daily-spy-returns",
+    "title": "Daily Returns",
+    "section": "Autocorrelations of daily SPY returns",
+    "text": "Autocorrelations of daily SPY returns"
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#does-todays-return-predict-tomorrows",
+    "href": "slides/b04-daily-returns.html#does-todays-return-predict-tomorrows",
+    "title": "Daily Returns",
+    "section": "Does today’s return predict tomorrow’s?",
+    "text": "Does today’s return predict tomorrow’s?\n\n\n\n                            \n                                            \n\n\nNo, the autocorrelation is almost zero."
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#autocorrelations-of-absolute-returns",
+    "href": "slides/b04-daily-returns.html#autocorrelations-of-absolute-returns",
+    "title": "Daily Returns",
+    "section": "Autocorrelations of absolute returns",
+    "text": "Autocorrelations of absolute returns"
+  },
+  {
+    "objectID": "slides/b04-daily-returns.html#does-todays-absolute-return-predict-tomorrows",
+    "href": "slides/b04-daily-returns.html#does-todays-absolute-return-predict-tomorrows",
+    "title": "Daily Returns",
+    "section": "Does today’s absolute return predict tomorrow’s?",
+    "text": "Does today’s absolute return predict tomorrow’s?\n\n\n\n                            \n                                            \n\n\nYes, volatility is persistent."
+  },
+  {
+    "objectID": "slides/b06-long-run-risks.html#is-there-risk-in-the-long-run",
+    "href": "slides/b06-long-run-risks.html#is-there-risk-in-the-long-run",
+    "title": "Long-Run Risk",
+    "section": "Is there risk in the long run?",
+    "text": "Is there risk in the long run?\n\n\n\n\n\nA common belief is that the law of averages will rule in the long run, eliminating risk.\nIt’s true that the average outcome from a gamble should not be risky in the long run.\n\n\n\nBut the gain or loss from gambling is average gain per gamble \\(\\times\\) number of gambles."
+  },
+  {
+    "objectID": "slides/b06-long-run-risks.html#betting-on-the-stock-market",
+    "href": "slides/b06-long-run-risks.html#betting-on-the-stock-market",
+    "title": "Long-Run Risk",
+    "section": "Betting on the stock market ",
+    "text": "Betting on the stock market \n\nBased on history, the bet is definitely in our favor.\nPlay for a long time \\(\\Rightarrow\\) almost certainly come out ahead.\nBut how far ahead is quite uncertain.\n\nIn worst 20-year period in U.S. stock market since 1926, $1 \\(\\rightarrow\\) $1.73, a geometric average return of 2.8% per year (1929-1948).\nIn best 20-year period since 1926, $1 \\(\\rightarrow\\) $24.65, a geometric average return of 17.4% per year (1980-1999)."
+  },
+  {
+    "objectID": "slides/b06-long-run-risks.html#simulate-returns",
+    "href": "slides/b06-long-run-risks.html#simulate-returns",
+    "title": "Long-Run Risk",
+    "section": "Simulate returns",
+    "text": "Simulate returns\n\nMean and std dev of U.S. market return 1970-2021 was 12.5% and 17.4%.\nSimulate 20-year compounded returns.\n\n\nimport numpy as np\n\nmn = 0.125\nsd = 0.174\nnyears = 20\n\nr = np.random.normal(loc=mn, scale=sd, size=nyears)\ncomp_ret = np.prod(1+r)"
+  },
+  {
+    "objectID": "slides/b06-long-run-risks.html#repeat-and-evaluate-the-distribution",
+    "href": "slides/b06-long-run-risks.html#repeat-and-evaluate-the-distribution",
+    "title": "Long-Run Risk",
+    "section": "Repeat and evaluate the distribution",
+    "text": "Repeat and evaluate the distribution\n\nnsims = 1000\n\nr = np.random.normal(loc=mn, scale=sd, size=nyears*nsims)\nr = r.reshape((nyears, nsims))\ncomp_ret = np.prod(1+r, axis=0)\n\n\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nmean     34.54\nstd      38.89\nmin       1.95\n10%       7.97\n25%      13.43\n50%      23.04\n75%      42.67\n90%      73.60\nmax     486.01\ndtype: float64"
+  },
+  {
+    "objectID": "slides/b06-long-run-risks.html#retirement-planning-simulation",
+    "href": "slides/b06-long-run-risks.html#retirement-planning-simulation",
+    "title": "Long-Run Risk",
+    "section": "Retirement Planning Simulation ",
+    "text": "Retirement Planning Simulation \n\n\n\n\nUncertainty about long-run returns \\(\\Rightarrow\\) uncertainty about retirement plans.\n\n\nRevisit the retirement plan\nGenerate random returns and simulate many lifetimes."
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#short-sales",
+    "href": "slides/c02-short-sales.html#short-sales",
+    "title": "Short Selling",
+    "section": "Short Sales",
+    "text": "Short Sales\n\nIt is possible to sell before you buy.\nYou need to borrow the asset the want to sell and return it later.\nThis is called selling short or going short or shorting.\nLong = own something (asset)\nShort = owe something (liability)"
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#example",
+    "href": "slides/c02-short-sales.html#example",
+    "title": "Short Selling",
+    "section": "Example ",
+    "text": "Example \n\nBorrow and sell 100 shares of ABC, which is trading at $60\nABC drops to $40 and you buy back and return the shares (cover the short).\n\nYou bought at $40 and sold at $60, so you made $20 per share.\nRisk is that ABC \\(\\uparrow\\) and you have to buy back at more than $60"
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#relative-performance",
+    "href": "slides/c02-short-sales.html#relative-performance",
+    "title": "Short Selling",
+    "section": "Relative performance",
+    "text": "Relative performance\n\nSometimes short to bet on relative performance.\n\n\n\n\n Example: optimistic that Chevron will do well among oil companies, but not sure what price of oil will do.\n\n\n\n\n\nStrategy: buy CVX and short XOM or oil company index."
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#example-1",
+    "href": "slides/c02-short-sales.html#example-1",
+    "title": "Short Selling",
+    "section": "Example",
+    "text": "Example\n\nInvest $10,000. Buy $10,000 of CVX and short $10,000 of XOM.\n\n\n\n\n\n\nAssets\nLiabilities\n\n\n\n\nCVX 10,000\nXOM 10,000\n\n\nCash 10,000\n\n\n\n\n\n\n\n\n\nEquity\n\n\n\n\n10,000"
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#stock-borrowing-fee",
+    "href": "slides/c02-short-sales.html#stock-borrowing-fee",
+    "title": "Short Selling",
+    "section": "Stock borrowing fee",
+    "text": "Stock borrowing fee\n\nHave to pay stock borrowing fee (usually small).\nHigher for hard to borrow stocks.\nLending stocks for shorts is a regular business for mutual funds and the like."
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#margin-requirements",
+    "href": "slides/c02-short-sales.html#margin-requirements",
+    "title": "Short Selling",
+    "section": "Margin Requirements",
+    "text": "Margin Requirements\n\nSuppose you have a $100,000 portfolio and you want to add long-short bets like the CVX-XOM example.\nYou can add $50,000 long and $50,000 short.\nFed Reg T: sum of long and short positions cannot exceed twice your equity, when the positions are put on.\nReg T is for initial margin. Maintenance margin is up to your broker.\nThis is a 150/50 portfolio (150% long and 50% short)."
+  },
+  {
+    "objectID": "slides/c02-short-sales.html#dividends-and-interest",
+    "href": "slides/c02-short-sales.html#dividends-and-interest",
+    "title": "Short Selling",
+    "section": "Dividends and interest",
+    "text": "Dividends and interest\n\nYou have to pay the lender dividends paid by the stock.\nCash proceeds from a short sale are held as collateral.\nHow much interest you get on the cash collateral depends on your broker. Shop around."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#bonds",
+    "href": "slides/c04-bonds.html#bonds",
+    "title": "Bonds",
+    "section": "Bonds",
+    "text": "Bonds\nPay a specified coupon at regular intervals (usually semi-annually). And pay face value (= par value) at maturity. Last payment is coupon plus face."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#treasury-auctions",
+    "href": "slides/c04-bonds.html#treasury-auctions",
+    "title": "Bonds",
+    "section": "Treasury Auctions",
+    "text": "Treasury Auctions\n\nThe U.S. Treasury borrows money primarily by auctioning bonds of various maturities at regular intervals.\n\nThey solicit bids from primary dealers of the form “I will buy x bonds at face value if the coupon is at least y.”\nBidders willing to accept low coupons get their bids filled, and the coupon set on all of the bonds is the lowest that will sell the entire issue."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#treasury-direct",
+    "href": "slides/c04-bonds.html#treasury-direct",
+    "title": "Bonds",
+    "section": "Treasury Direct",
+    "text": "Treasury Direct\n\nIndividuals can buy bonds at auction via Treasury Direct with simpler bids:\n\n“I want x number of bonds.”\n\nThese “noncompetitive” bids are filled first.\nTreasury Direct also sells U.S. Savings Bonds (EE and I) with rates set by the Treasury rather than by auction."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#treasury-inflation-protected-securities-tips",
+    "href": "slides/c04-bonds.html#treasury-inflation-protected-securities-tips",
+    "title": "Bonds",
+    "section": "Treasury Inflation Protected Securities (TIPS)",
+    "text": "Treasury Inflation Protected Securities (TIPS)\nThe face value of a TIPs is adjusted for inflation.\n\n\n\nThe coupons are a fixed percentage of the face value, so they rise with inflation too.\n\n\n\n\n\n\n\nSo the income you get from a TIPS is fixed in constant dollars."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#how-corporates-and-municipals-are-issued",
+    "href": "slides/c04-bonds.html#how-corporates-and-municipals-are-issued",
+    "title": "Bonds",
+    "section": "How Corporates and Municipals are Issued",
+    "text": "How Corporates and Municipals are Issued\n\nUsually hire an investment bank, who assesses demand from pension funds, insurance companies, brokerages, \\(\\ldots\\)\nInvestment bank advises on the coupon needed to sell the bonds near par.\nInvestment bank will distribute. It may guarantee sale to company or make “best efforts.”"
+  },
+  {
+    "objectID": "slides/c04-bonds.html#bond-indenture",
+    "href": "slides/c04-bonds.html#bond-indenture",
+    "title": "Bonds",
+    "section": "Bond indenture",
+    "text": "Bond indenture\n\nContract between issuer and investor.\nObligations and rights of issuer.\n\nObligation to pay coupons and face\nObligations may include covenants that limit dividend payments, issuance of additional debt, …\nRights may include right to prepay\n\nRights of investor\n\nCould include right to demand payment upon change of control, for example."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#subordination",
+    "href": "slides/c04-bonds.html#subordination",
+    "title": "Bonds",
+    "section": "Subordination",
+    "text": "Subordination\n\nSubordinated (junior) means not getting paid in bankruptcy unless all more senior bonds are paid.\nJunior/senior depends on bond provisions, not time of issue.\nAll bonds are typically subordinated to any bank debt."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#municipal-bonds",
+    "href": "slides/c04-bonds.html#municipal-bonds",
+    "title": "Bonds",
+    "section": "Municipal bonds",
+    "text": "Municipal bonds\n\nMunicipal bonds in the U.S. are exempt from federal income tax.\nMunicipal bonds are also exempt from state income taxes in the state of issue.\nSo, NY investors want to hold NY municipals, California investors want to hold California municipals.\nMunicipals are issued by states, cities, counties, school boards, fire districts, …\nTax increment financing allows limited use of municipal bonds to back private investments: sports stadiums, etc."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#bond-trading",
+    "href": "slides/c04-bonds.html#bond-trading",
+    "title": "Bonds",
+    "section": "Bond trading",
+    "text": "Bond trading\n\nThe bond market is largely an institutional market. Trades are large and made through dealers.\nAn individual can trade bonds through a broker, but it is hard to know if you are getting a good price.\nUsually better to invest through mutual funds or ETFs."
+  },
+  {
+    "objectID": "slides/c04-bonds.html#asset-backed-securities",
+    "href": "slides/c04-bonds.html#asset-backed-securities",
+    "title": "Bonds",
+    "section": "Asset Backed Securities",
+    "text": "Asset Backed Securities\n\nAsset backed securities are bonds that are issued by a trust and are to be repaid from income generated by assets held by the trust.\nA major category is mortgage-backed securities, including those issued by FNMA, GNMA, and FHLMC, also known as Fannie Mae , Ginnie Mae, and Freddie Mac.\nThere are also securities backed by auto loans, credit card receivables, bank loans to companies, and other bonds."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#real-estate",
+    "href": "slides/c06-other-assets.html#real-estate",
+    "title": "Other Assets",
+    "section": "Real Estate",
+    "text": "Real Estate\n\n\n Many people have substantial real estate investments via home ownership or perhaps owning rental properties.\n\n\n\n\n\n\nIt is also possible to invest in real estate in the stock market via REITS (real estate investment trusts)."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#reits",
+    "href": "slides/c06-other-assets.html#reits",
+    "title": "Other Assets",
+    "section": "REITs",
+    "text": "REITs\n\nEquity REITs\n\nOwn or manage properties\nMore than $3 trillion of U.S. real estate\n\nMortgage REITs\nREIT ETFs"
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#commodities",
+    "href": "slides/c06-other-assets.html#commodities",
+    "title": "Other Assets",
+    "section": "Commodities",
+    "text": "Commodities\n\n\n Metals - gold, silver, \\(\\ldots\\)\n\n\n\n\n\n\n\n\n\n\n\nEnergy - crude oil, natural gas, \\(\\ldots\\)\n\n\n\n\n Agriculture - corn, wheat, \\(\\ldots\\)"
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#investing-in-commodities",
+    "href": "slides/c06-other-assets.html#investing-in-commodities",
+    "title": "Other Assets",
+    "section": "Investing in commodities",
+    "text": "Investing in commodities\n\nFutures contracts\nManaged futures fund\nETFs"
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#futures-contracts",
+    "href": "slides/c06-other-assets.html#futures-contracts",
+    "title": "Other Assets",
+    "section": "Futures Contracts",
+    "text": "Futures Contracts\n\nA futures contract is a commitment to buy/sell in the future at a pre-determined price (the futures price).\nThe futures price is determined in the market.\nPeople who buy the futures make a profit when the futures price goes up.\nPeople who sell it make a profit when the futures price falls."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#example",
+    "href": "slides/c06-other-assets.html#example",
+    "title": "Other Assets",
+    "section": "Example",
+    "text": "Example\n\n\n\nIn July, you buy a soybean contract on the CME (Chicago Mercantile Exchange) for November delivery at a price of $15 per bushel.\n\n\n\n\n\nA contract is for 5,000 bushels."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#managed-futures",
+    "href": "slides/c06-other-assets.html#managed-futures",
+    "title": "Other Assets",
+    "section": "Managed Futures",
+    "text": "Managed Futures\n\nManaged futures funds buy and sell contracts based on market conditions and their projections of the market.\nUsually the strategies are based on price momentum, hoping to ride price waves up or down.\nIf you invest in a managed futures fund, you are really investing in traders, not in commodities."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#commodity-etfs",
+    "href": "slides/c06-other-assets.html#commodity-etfs",
+    "title": "Other Assets",
+    "section": "Commodity ETFs",
+    "text": "Commodity ETFs\n\nSome commodity ETFs own the commodity – for example, some gold funds.\nOthers – for example, oil funds – hold futures contracts (they buy the futures so they profit if the futures price increases)."
+  },
+  {
+    "objectID": "slides/c06-other-assets.html#currencies",
+    "href": "slides/c06-other-assets.html#currencies",
+    "title": "Other Assets",
+    "section": "Currencies",
+    "text": "Currencies\n\n\n\n You can invest in foreign currencies by buying futures contracts or through an ETF.\n\n\n\n\n\n\n\nYou can also bet on the dollar by betting against foreign currencies. “Dollar bullish” ETFs are bets on the dollar."
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#more-assets",
+    "href": "slides/d02-more-diversification.html#more-assets",
+    "title": "More Diversification",
+    "section": "More assets",
+    "text": "More assets\n\n\\(n\\) risky assets with returns \\(r_i\\)\nvector \\(\\bar{r}\\) of expected returns\nvector \\(w\\) of portfolio weights \\(w_i\\) with \\(\\sum_{i=1}^n w_i=1\\)\nportfolio expected return = \\(\\sum_{i=1}^n w_i \\bar{r}_i = w^\\top \\bar{r}\\)."
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#portfolio-variance",
+    "href": "slides/d02-more-diversification.html#portfolio-variance",
+    "title": "More Diversification",
+    "section": "Portfolio variance",
+    "text": "Portfolio variance\n\nasset return variances \\(\\sigma_i^2\\)\ncovariances \\(\\sigma_{ij} = \\rho_{ij}\\sigma_i\\sigma_j\\) where \\(\\rho_{ij}=\\) correlation\nportfolio variance is sum of weight squared times variance\n\nplus sum of 2 times weight times weight times covariance for each distinct pair of assets:\n\n\n\n\\[\\sum_{i=1}^n w_i^2 \\sigma_i^2 + 2 \\sum_{i=1}^n \\sum_{j=i+1}^n w_iw_j \\sigma_{ij}\\]"
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#special-case",
+    "href": "slides/d02-more-diversification.html#special-case",
+    "title": "More Diversification",
+    "section": "Special case ",
+    "text": "Special case \n\nSuppose all standard deviations are the same \\(\\sigma\\)\nSuppose all correlations are the same \\(\\rho\\)\nConsider equally weighted portfolio \\(w_i=1/n\\)\nPortfolio variance is\n\n\n\\[\\frac{\\sigma^2}{n} + \\frac{n-1}{n} \\rho \\sigma^2\\]"
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#covariance-matrix-and-portfolio-variance",
+    "href": "slides/d02-more-diversification.html#covariance-matrix-and-portfolio-variance",
+    "title": "More Diversification",
+    "section": "Covariance matrix and portfolio variance",
+    "text": "Covariance matrix and portfolio variance\n\n\\(n\\) risky assets\n\\(C = n \\times n\\) covariance matrix\n\nvariances on diagonal\ncovariances off-diagonal\n\nportfolio variance is \\(w^\\top C w\\)\n\\(C=SRS\\) where\n\n\\(S=\\) diagonal matrix of std devs,\n\\(R=\\) correlation matrix"
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#example",
+    "href": "slides/d02-more-diversification.html#example",
+    "title": "More Diversification",
+    "section": "Example",
+    "text": "Example\n\nimport numpy as np\n\nsd1, sd2, sd3 = 0.1, 0.15, 0.12\ncorr12, corr13, corr23 = 0.5, 0.7, 0.6\nw1, w2, w3 = 0.2, 0.3, 0.5\n\nS = np.diag([sd1, sd2, sd3])\nR = np.identity(3)\nR[0, 1] = R[1, 0] = corr12\nR[0, 2] = R[2, 0] = corr13\nR[1, 2] = R[2, 1] = corr23\nC = S @ R @ S\nw = np.array([w1, w2, w3])\nportvar = w @ C @ w"
+  },
+  {
+    "objectID": "slides/d02-more-diversification.html#mean-standard-deviation-plot",
+    "href": "slides/d02-more-diversification.html#mean-standard-deviation-plot",
+    "title": "More Diversification",
+    "section": "Mean – Standard Deviation Plot ",
+    "text": "Mean – Standard Deviation Plot \n\nSet mn1, mn2, mn3 = 0.06, 0.08, 0.10"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#objective",
+    "href": "slides/d04-frontier.html#objective",
+    "title": "Mean-Variance Frontier",
+    "section": "Objective",
+    "text": "Objective\n\nFor any target expected return, find the least-risk portfolio."
+  },
+  {
+    "objectID": "slides/d04-frontier.html#frontier",
+    "href": "slides/d04-frontier.html#frontier",
+    "title": "Mean-Variance Frontier",
+    "section": "Frontier",
+    "text": "Frontier\n\nFind the least-risk portfolio for various target expected returns.\nThe (expected return, least risk) pairs are called the mean-variance frontier.\nLeast-risk portfolios are frontier portfolios."
+  },
+  {
+    "objectID": "slides/d04-frontier.html#borrow-and-save-at-same-rate",
+    "href": "slides/d04-frontier.html#borrow-and-save-at-same-rate",
+    "title": "Mean-Variance Frontier",
+    "section": "Borrow and save at same rate",
+    "text": "Borrow and save at same rate\n\nAssume \\(r_s=r_b=r_f\\) (risk-free rate).\nSet \\(x_f = x_s - x_b\\).\nportfolio expected return is \\(x_f r_f + w^\\top \\bar{r}\\).\nThe accounting identify \\(x_s + \\sum w_i = 1 + x_b\\) implies \\(x_f = 1-\\sum w_i\\), so portfolio expected return is\n\n\n\\[r_f + w^\\top (\\bar{r}-r_f1_n)\\]"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#no-short-sales-constraints",
+    "href": "slides/d04-frontier.html#no-short-sales-constraints",
+    "title": "Mean-Variance Frontier",
+    "section": "No Short Sales Constraints",
+    "text": "No Short Sales Constraints\n\nAssume short w/o borrowing fee\n\nimplies return on a short is minus the return on the asset\ncontribution of a short to portfolio return is \\(w_i r_i\\) (with \\(w_i&lt;0\\))\n\nAll previous formulas are valid with no sign constraints on \\(w_i\\)."
+  },
+  {
+    "objectID": "slides/d04-frontier.html#no-margin-requirements",
+    "href": "slides/d04-frontier.html#no-margin-requirements",
+    "title": "Mean-Variance Frontier",
+    "section": "No margin requirements",
+    "text": "No margin requirements\n\nAssume no Fed Reg T to limit positions.\nAssume full use of short proceeds to buy other assets or to save (get full interest).\nOnly limit on positions is the accounting identity \\(x_f = 1 - w^\\top 1_n\\), which we’ve built in to the expected return formula:\n\n\n\\[r_f + w^\\top (\\bar{r}-r_f1_n)\\]"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#find-a-frontier-portfolio",
+    "href": "slides/d04-frontier.html#find-a-frontier-portfolio",
+    "title": "Mean-Variance Frontier",
+    "section": "Find a frontier portfolio",
+    "text": "Find a frontier portfolio\n\nLet \\(\\bar{r}_{\\text{targ}}\\) be target expected return.\nMinimize \\(w^\\top C w\\)\n\n\n\nsubject to\n\n\n\n\\[r_f + w^\\top (\\bar{r}-r_f1_n) = \\bar{r}_{\\text{targ}}\\]\n\nThis is like “choose output quantities to minimize production cost subject to achieving target revenue.”"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#optimality-principle",
+    "href": "slides/d04-frontier.html#optimality-principle",
+    "title": "Mean-Variance Frontier",
+    "section": "Optimality principle",
+    "text": "Optimality principle\n\nRatio of marginal benefit to marginal cost must be same for all choice variables.\nMarginal benefit of \\(w_i\\) is the risk premium \\(\\bar{r}_i-r_f\\) that appears in the constraint.\nMarginal cost is how the variance changes with a small change in \\(w_i\\)."
+  },
+  {
+    "objectID": "slides/d04-frontier.html#marginal-cost",
+    "href": "slides/d04-frontier.html#marginal-cost",
+    "title": "Mean-Variance Frontier",
+    "section": "Marginal cost",
+    "text": "Marginal cost\n\nVariance is\n\n\n\\[\\sum_{i=1}^n w_i^2\\sigma_i^2 + 2 \\sum_{i=1}^n \\sum_{j=i+1}^n w_iw_j\\sigma_{ij}\\]\n\nThe terms that involve any given \\(w_i\\) are\n\n\n\n\\[w_i^2\\sigma_i^2 + 2 \\sum_{j \\neq i} w_iw_j\\sigma_{ij}\\]"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#equate-benefit-cost-ratios",
+    "href": "slides/d04-frontier.html#equate-benefit-cost-ratios",
+    "title": "Mean-Variance Frontier",
+    "section": "Equate benefit-cost ratios",
+    "text": "Equate benefit-cost ratios\n\nEqual benefit-cost ratios means \\((\\bar{r}_i-r_f)/C_i^\\top w =k\\).\nRearrange: \\(k C_i^\\top w = \\bar{r}_i - r_f\\)\nStack: \\(k C w = \\bar{r} - r_f 1_n\\)\nSolve:\n\n\n\\[w = (1/k)C^{-1}(\\bar{r}-r_f1_n)\\]"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#find-the-constant",
+    "href": "slides/d04-frontier.html#find-the-constant",
+    "title": "Mean-Variance Frontier",
+    "section": "Find the constant",
+    "text": "Find the constant\n\nThe portfolio expected return is\n\n\n\\[r_f + \\frac{1}{k}(\\bar{r}-r_f1_n)^\\top C^{-1}(\\bar{r}-r_f1_n)\\]\n\nEquating to the target gives\n\n\n\n\\[k = \\frac{(\\bar{r}-r_f1_n)^\\top C^{-1}(\\bar{r}-r_f1_n)}{\\bar{r}_{\\text{targ}}-r_f}\\]"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#example",
+    "href": "slides/d04-frontier.html#example",
+    "title": "Mean-Variance Frontier",
+    "section": "Example",
+    "text": "Example\n\nimport numpy as np\n\nrf = 0.02\nmn1, mn2, mn3 = 0.06, 0.08, 0.10\nsd1, sd2, sd3 = 0.1, 0.15, 0.12\ncorr12, corr13, corr23 = 0.5, 0.7, 0.6\n\ntarg = 0.09"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#solution-of-the-example",
+    "href": "slides/d04-frontier.html#solution-of-the-example",
+    "title": "Mean-Variance Frontier",
+    "section": "Solution of the example",
+    "text": "Solution of the example\n\nS = np.diag([sd1, sd2, sd3])\nR = np.identity(3)\nR[0, 1] = R[1, 0] = corr12\nR[0, 2] = R[2, 0] = corr13\nR[1, 2] = R[2, 1] = corr23\nC = S @ R @ S\n\nrprem = np.array([mn1, mn2, mn3]) - rf\nCinv = np.linalg.inv(C)\nk = (rprem @ Cinv @ rprem) / (targ-rf)\nw = (1/k) * Cinv @ rprem"
+  },
+  {
+    "objectID": "slides/d04-frontier.html#mean-standard-deviation-plot",
+    "href": "slides/d04-frontier.html#mean-standard-deviation-plot",
+    "title": "Mean-Variance Frontier",
+    "section": "Mean – Standard Deviation Plot",
+    "text": "Mean – Standard Deviation Plot\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\nw1=-20.6%, w2=1.7%, w3=96.5%"
+  },
+  {
+    "objectID": "slides/d05-frontier-pictures.html#frontier-is-a-line",
+    "href": "slides/d05-frontier-pictures.html#frontier-is-a-line",
+    "title": "The Frontier in Pictures",
+    "section": "Frontier is a line",
+    "text": "Frontier is a line\n\nThe frontier portfolios are all scalar multiples of the vector \\(C^{-1}(\\bar{r}-r_f1_n)\\).\nThe scalar determines how much is saved or borrowed.\nFor some value of the scalar, there is no saving or borrowing.\nFor this value of the scalar, the portfolio is called the tangency portfolio.\nThe mean-variance frontier is the line from the risk-free rate through the tangency portfolio."
+  },
+  {
+    "objectID": "slides/d05-frontier-pictures.html#tangency",
+    "href": "slides/d05-frontier-pictures.html#tangency",
+    "title": "The Frontier in Pictures",
+    "section": "Tangency",
+    "text": "Tangency\n\nConsider the same minimum variance problem but without saving or borrowing.\nThis adds the constraint \\(1_n^\\top w=1\\).\nThis frontier is a hyperbola.\nThe line through the tangency portfolio just touches the hyperbola. It is tangent to the hyperbola at the tangency portfolio."
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#efficient-and-optimal-portfolios",
+    "href": "slides/e01-borrowing-savings-rate.html#efficient-and-optimal-portfolios",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "Efficient and Optimal Portfolios",
+    "text": "Efficient and Optimal Portfolios\nThe minimum risk portfolio achieving a target expected return minimizes\n\n\\(w^⊤Cw\\) subject to \\(r_{f}+(\\bar{r}-r_{f}1_n)^⊤w=\\text{target}\\)\n\nThe optimal portfolio for an investor with risk aversion \\(\\text{A}\\) maximizes\n\\[r_f + (\\bar{r}-r_f1_n)^⊤w-\\frac{1}{2}\\text{A}w^⊤\\text{C}w\\]\nThese are quadratic programming problems."
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#optimal-portfolios",
+    "href": "slides/e01-borrowing-savings-rate.html#optimal-portfolios",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "Optimal Portfolios",
+    "text": "Optimal Portfolios\nConventional to write it as minimization:\nminimize \\[\\frac{\\text{A}}{2}w^⊤\\text{C}w-r_{f}-(\\bar{r}-r_{f}1_n)^⊤w\\]"
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#solution-from-last-module",
+    "href": "slides/e01-borrowing-savings-rate.html#solution-from-last-module",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "Solution from last module",
+    "text": "Solution from last module\nimport numpy as np\n# standard deviations\nsds = np.array([0.15, 0.25, 0.35])\nS = np.diag(sds)\n# correlations\nr12 = 0.15\nr13 = 0.6\nr23 = 0.3\nR = np.identity(3)\nR[0, 1] = R[1, 0] = r12\nR[0, 2] = R[2, 0] = r13\nR[1, 2] = R[2, 1] = r23\n# covariance matrix\nC = S @ R @ S\n# optimal portfolio\nr = 0.04\nmeans = np.array([0.06, 0.1, 0.09])\nraver = 4\nw = np.linalg.solve(C, (means-r)/raver)\nSolution is \\(\\text{w}_1=0.14\\) \\(\\text{w}_2=0.22\\) \\(\\text{w}_3=0.02\\)  \nsave 0.62"
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#different-borrowing-and-saving-rates",
+    "href": "slides/e01-borrowing-savings-rate.html#different-borrowing-and-saving-rates",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "Different Borrowing and Saving Rates",
+    "text": "Different Borrowing and Saving Rates\n\\(r_{b}=\\) borrowing rate &gt; saving rate \\(= r_{s}\\)  \n\\(x_{b} \\geq 0 =\\) amount borrowed\n\\(x_{s} \\geq 0 =\\) amount saved\n\n\n\n\nPortfolio expected return: \\[\\small x_{s}r_{s}-x_{b}r_{b}+\\bar{r}^⊤w\\]\n\n\n\nAssets=Investments:\n\\[\\tiny x_{s}+\\sum_{i=1}^n w_{i} = 1 + x_{b} \\iff x_{s}+1_{n}^⊤w=1+x_{b}\\]"
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#optimal-portfolios-1",
+    "href": "slides/e01-borrowing-savings-rate.html#optimal-portfolios-1",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "Optimal Portfolios",
+    "text": "Optimal Portfolios\nminimize \\(\\frac{\\text{A}}{2}w^⊤\\text{C}w-x_{s}r_{s}+x_{b}r_{b}-\\bar{r}^⊤w\\)  \nsubject to \\(-x_{s} \\leq 0, -x_{b} \\leq 0, x_{s}-x{b}+1_n^⊤w=1\\)\n\n\n\nchoice vector: \\((x_s,x_b,w)^⊤\\)\n\\((\\text{n}+2)\\times({\\text{n}+2})\\) quadratic term with zeros and \\(\\text{AC}\\) in bottom right\nlinear term: \\((-1,1,-\\bar{r})^⊤\\)\n\\(2 \\times \\text{(n+2)}\\) inequality matrix with rows\n\\((-1,0,\\cdots,0),(0,-1,0,\\cdots,0)\\)\n\\(1 \\times \\text{(n+2)}\\) equality matrix: \\((1,-1,1_n)\\)\nright-hand side of inequality = 0’s, right-hand side of equality=1"
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#cvxopt",
+    "href": "slides/e01-borrowing-savings-rate.html#cvxopt",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "cvxopt",
+    "text": "cvxopt\nfrom cvxopt import matrix\nfrom cvxopt.solvers import qp\nQ = matrix(Q, (5, 5))\np = matrix(p, (5, 1))\nG = matrix(G, (2, 5))\nh = matrix(h, (2, 1))\nA = matrix(A, (1, 5))\nb = matrix(b, (1, 1))\nsol = qp(Q, p, G, h, A, b)\nxs, xb, w1, w2, w3 = np.array(sol[\"x\"])\nSolution is same as in last module for these parameters. Higher borrowing rate doesn’t matter for someone who doesn’t want to borrow at a lower rate."
+  },
+  {
+    "objectID": "slides/e01-borrowing-savings-rate.html#k",
+    "href": "slides/e01-borrowing-savings-rate.html#k",
+    "title": "Portfolios and CAPM: Borrowing and Saving Rates",
+    "section": "3K",
+    "text": "3K"
+  },
+  {
+    "objectID": "slides/e02-quadratic-programming.html#quadratic-program",
+    "href": "slides/e02-quadratic-programming.html#quadratic-program",
+    "title": "Quadratic Programming",
+    "section": "Quadratic Program",
+    "text": "Quadratic Program\n\nChoose \\(x\\) to minimize a quadratic objective\n\n\n\\[\\frac{1}{2}x^\\top P x + q^\\top x\\]\n\nsubject to equality constraints \\(Ax=b\\)\nand inequality constraints \\(Gx \\le h\\)\nfor given \\(P, q, A, b, G\\), and \\(h\\)."
+  },
+  {
+    "objectID": "slides/e02-quadratic-programming.html#example",
+    "href": "slides/e02-quadratic-programming.html#example",
+    "title": "Quadratic Programming",
+    "section": "Example",
+    "text": "Example\n\nminimize \\(x_1^2 + x_2^2 - 2x_1 - x_2\\) subject to \\(x_1 \\ge 0\\), \\(x_2 \\ge 0\\) and \\(x_1+x_2=1\\).\n\n\n\n\n\\[P = \\begin{pmatrix}  2 & 0 \\\\ 0 & 2 \\end{pmatrix}\\] \\[G =\\begin{pmatrix}  -1 & 0 \\\\ 0 & -1 \\end{pmatrix}\\] \\[A = \\begin{pmatrix} 1 & 1 \\end{pmatrix}\\]\n\n\\[ q = \\begin{pmatrix} - 2 \\\\ - 1 \\end{pmatrix}\\] \\[h= \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}\\] \\[b = \\begin{pmatrix} 1 \\end{pmatrix}\\]"
+  },
+  {
+    "objectID": "slides/e02-quadratic-programming.html#solution-with-cvxopt",
+    "href": "slides/e02-quadratic-programming.html#solution-with-cvxopt",
+    "title": "Quadratic Programming",
+    "section": "Solution with cvxopt",
+    "text": "Solution with cvxopt\n\nfrom cvxopt import matrix\nfrom cvxopt.solvers import  qp\n\nP = matrix([[2., 0.], [0., 2.]], (2, 2))\nq = matrix([-2., -1.], (2, 1))\nG = matrix([[-1., 0.], [0., -1.]], (2, 2))\nh = matrix([0., 0.], (2, 1))\nA = matrix([1., 1.], (1, 2))\nb = matrix([1.], (1, 1))\nsol = qp(P=P, q=q, G=G, h=h, A=A, b=b)\nprint(sol[\"x\"])\n\n\n\n\n     pcost       dcost       gap    pres   dres\n 0: -1.1111e+00 -2.2222e+00  1e+00  1e-16  1e+00\n 1: -1.1231e+00 -1.1680e+00  4e-02  1e-16  4e-02\n 2: -1.1250e+00 -1.1261e+00  1e-03  1e-16  3e-04\n 3: -1.1250e+00 -1.1250e+00  1e-05  2e-16  3e-06\n 4: -1.1250e+00 -1.1250e+00  1e-07  1e-16  3e-08\nOptimal solution found.\n[ 7.50e-01]\n[ 2.50e-01]"
+  },
+  {
+    "objectID": "slides/e02-quadratic-programming.html#mean-variance-frontier",
+    "href": "slides/e02-quadratic-programming.html#mean-variance-frontier",
+    "title": "Quadratic Programming",
+    "section": "Mean-Variance Frontier",
+    "text": "Mean-Variance Frontier\n\nminimize \\((1/2)w^\\top C w\\) subject to\n\n\n\\[r_f + (\\bar{r}-r_f1_n)^\\top w = \\bar{r}_{\\text{targ}}\\]\n\n\n\\(P=C\\)\\(q=0\\)\\(G=0\\) \\(h=0\\)\\(A = (\\bar{r}-r_f1_n)^\\top\\)\\(b=(\\bar{r}_{\\text{targ}} - r_f)\\)"
+  },
+  {
+    "objectID": "slides/e02-quadratic-programming.html#optimal-portfolio",
+    "href": "slides/e02-quadratic-programming.html#optimal-portfolio",
+    "title": "Quadratic Programming",
+    "section": "Optimal portfolio",
+    "text": "Optimal portfolio\n\nmaximize expected return minus (1/2)raver times variance\nequivalent to: minimize (1/2)raver times variance minus expected return\n\n\n\\(P=\\text{raver} \\times C\\)\\(q=-(\\bar{r}-r_f1_n)\\)\\(G=0\\) \\(h=0\\)\\(A = 0\\)\\(b=0\\)"
+  },
+  {
+    "objectID": "slides/e04-more-pictures.html#effect-of-short-sales-constraints",
+    "href": "slides/e04-more-pictures.html#effect-of-short-sales-constraints",
+    "title": "More Pictures",
+    "section": "Effect of short sales constraints ",
+    "text": "Effect of short sales constraints \n\nThe effect of short sales constraints depends on correlations and differences in expected returns.\nIf there are assets or portfolios with different expected returns and high correlations, shorting can be useful.\nE.g., if you think CVX will beat XOM, then buy CVX and short XOM."
+  },
+  {
+    "objectID": "slides/e04-more-pictures.html#different-saving-and-borrowing-rates",
+    "href": "slides/e04-more-pictures.html#different-saving-and-borrowing-rates",
+    "title": "More Pictures",
+    "section": "Different saving and borrowing rates ",
+    "text": "Different saving and borrowing rates \n\nTwo tangency portfolios, one at the saving rate and second at the borrowing rate\nFrontier/optimal portfolios are the union of\n\nSave \\(x_s\\) and invest \\(1-x_s\\) in the saving-rate tangency portfolio\nHold a combination of the two tangency portfolios (without saving or borrowing)\nBorrow \\(x_b\\) and invest \\(1+x_b\\) in the borrowing-rate tangency portfolio"
+  },
+  {
+    "objectID": "slides/e06-stocks-bonds-gold.html#reliability-of-parameter-estimates",
+    "href": "slides/e06-stocks-bonds-gold.html#reliability-of-parameter-estimates",
+    "title": "Stocks, Bonds, and Gold",
+    "section": "Reliability of parameter estimates",
+    "text": "Reliability of parameter estimates\n\nLarge standard errors\nParameters may change over time\n\nTurbulent and calm markets\nPast 5-year return is a weak predictor of the mean. Other weak predictors\nCorrelation between Treasuries and stocks seems to have changed over time.\n\nPositive in 1900s (inflation shocks?)\nNegative in 2000s (no inflation shocks?)"
+  },
+  {
+    "objectID": "slides/e06-stocks-bonds-gold.html#optimal-portfolios",
+    "href": "slides/e06-stocks-bonds-gold.html#optimal-portfolios",
+    "title": "Stocks, Bonds, and Gold",
+    "section": "Optimal portfolios",
+    "text": "Optimal portfolios\n\n  Indices\n\n ETFs"
+  },
+  {
+    "objectID": "slides/f01-npv-irr.html#net-present-value-npv",
+    "href": "slides/f01-npv-irr.html#net-present-value-npv",
+    "title": "Internal rate of return",
+    "section": "Net present value (NPV)",
+    "text": "Net present value (NPV)\n\nPresent value of cash flows, some negative and some positive\nCash inflows positive, cash outflows negative\nPositive NPV means that cash inflows could finance cash outflows with something left over - at the given rate of return\nMost important calculation for financial analysis of corporate projects\nPositive NPV \\(\\Rightarrow\\) take project"
+  },
+  {
+    "objectID": "slides/f01-npv-irr.html#required-rate-of-return",
+    "href": "slides/f01-npv-irr.html#required-rate-of-return",
+    "title": "Internal rate of return",
+    "section": "Required rate of return",
+    "text": "Required rate of return\n\nRate of return used to discount cash flows is called required rate\n\nRate the company requires\nRate investors require\nRate investors could earn on their own with comparable risk"
+  },
+  {
+    "objectID": "slides/f01-npv-irr.html#internal-rate-of-return-irr",
+    "href": "slides/f01-npv-irr.html#internal-rate-of-return-irr",
+    "title": "Internal rate of return",
+    "section": "Internal rate of return (IRR)",
+    "text": "Internal rate of return (IRR)\n\nIRR is break-even rate of return, meaning NPV = 0\nUsually, positive NPV \\(\\Leftrightarrow\\) IRR &gt; required rate of return\nCreate value for investors with NPV &gt; 0 \\(\\Leftrightarrow\\) earning more than required rate."
+  },
+  {
+    "objectID": "slides/f01-npv-irr.html#calculating-irr",
+    "href": "slides/f01-npv-irr.html#calculating-irr",
+    "title": "Internal rate of return",
+    "section": "Calculating IRR",
+    "text": "Calculating IRR\n\nCash flows \\(C_0, C_1, \\ldots, C_n\\)\nPV factors depending on \\(r\\):\n\n\n\\[1, \\frac{1}{1+r}, \\ldots, \\frac{1}{(1+r)^n}\\]\n\nSolve\n\n\n\n\\[C_0 + \\frac{C_1}{1+r} + \\cdots + \\frac{C_n}{(1+r)^n} = 0\\]\n\nPolynomial equation in \\(1/(1+r)\\)"
+  },
+  {
+    "objectID": "slides/f01-npv-irr.html#example",
+    "href": "slides/f01-npv-irr.html#example",
+    "title": "Internal rate of return",
+    "section": "Example ",
+    "text": "Example \n\nC0, C1, C2, C3, C4 = -100, 30, 40, 50, 40\n\nimport numpy_financial as npf\nnpf.irr((C0, C1, C2, C3, C4))\n\n\n\n\n0.20496225738868956"
+  },
+  {
+    "objectID": "slides/f03-accounting.html#major-accounting-statments",
+    "href": "slides/f03-accounting.html#major-accounting-statments",
+    "title": "Financial Accounting",
+    "section": "Major accounting statments",
+    "text": "Major accounting statments\n\nIncome statement\n\nRevenue - expenses - taxes = net income\n\nBalance sheet\n\nAssets and liabilities\n\nStatement of cash flows"
+  },
+  {
+    "objectID": "slides/f03-accounting.html#cash-flows",
+    "href": "slides/f03-accounting.html#cash-flows",
+    "title": "Financial Accounting",
+    "section": "Cash flows",
+    "text": "Cash flows\n\nAnything run through the income statement that is not a cash item creates a balance sheet item\nAny cash item that is not run through the income statement also creates a balance sheet item\nIncome minus change in balance sheet = cash"
+  },
+  {
+    "objectID": "slides/f03-accounting.html#timing-of-expenses",
+    "href": "slides/f03-accounting.html#timing-of-expenses",
+    "title": "Financial Accounting",
+    "section": "Timing of expenses",
+    "text": "Timing of expenses\n\nMatch expenses with corresponding sales. Deduct when you record income.\nRaw materials are inventories, not expenses.\nSame for labor cost of goods in process.\nMaterials + labor charged against sales when sales occur.\nBuild-up of inventory is an increase in invested capital and a negative cash flow."
+  },
+  {
+    "objectID": "slides/f03-accounting.html#timing-of-income",
+    "href": "slides/f03-accounting.html#timing-of-income",
+    "title": "Financial Accounting",
+    "section": "Timing of income",
+    "text": "Timing of income\n\nRecord sales when they occur (or on delivery) not when receivable is collected.\nA sale that is not collected is a build-up of invested capital (accounts receivable).\n\nRecord sale in income statement.\nOffset it in cash flows with build-up of invested capital\n\nPre-payment of sales is recorded as a liability.\n\nIncrease in liability is a reduction in invested capital.\nCash from prepayment shows up not in income but as reduction in invested capital."
+  },
+  {
+    "objectID": "slides/f03-accounting.html#property-plant-equipment",
+    "href": "slides/f03-accounting.html#property-plant-equipment",
+    "title": "Financial Accounting",
+    "section": "Property, plant & equipment",
+    "text": "Property, plant & equipment\n\nIRS requires investment in “long-term assets” to be expensed (depreciated) over time.\nNot expensed against corresponding sales. Timing of sales is irrelevant.\nNot expensed according to your own beliefs about how long the assets will last.\nFixed schedules for different types of assets\nMACRS = Modified Accelerated Cost Recovery System: Wikipedia"
+  },
+  {
+    "objectID": "slides/f03-accounting.html#depreciation-and-income",
+    "href": "slides/f03-accounting.html#depreciation-and-income",
+    "title": "Financial Accounting",
+    "section": "Depreciation and income",
+    "text": "Depreciation and income\n\nDepreciation shows up as a cost in the income statement\nReduces taxable income, so reduces taxes\nIt is not a cash outflow.\nDepreciation is a reduction in invested capital, which offsets the cost shown in the income statement.\nOnly effect of depreciation on cash flows is tax shield."
+  },
+  {
+    "objectID": "slides/f03-accounting.html#disposal-of-ppe",
+    "href": "slides/f03-accounting.html#disposal-of-ppe",
+    "title": "Financial Accounting",
+    "section": "Disposal of PP&E",
+    "text": "Disposal of PP&E\n\nSelling equipment produces a taxable gain or loss\nIs also a reduction in invested capital\nSelling price minus book value minus taxes goes in income statement\nSubtracting reduction in invested capital adds back the book value to cash flow\nNet effect on cash flow is selling price minus taxes"
+  },
+  {
+    "objectID": "slides/g01-irr.html#break-even-rate-of-return",
+    "href": "slides/g01-irr.html#break-even-rate-of-return",
+    "title": "Internal Rate of Return",
+    "section": "Break-even rate of return",
+    "text": "Break-even rate of return\n\nWhen calculating an NPV, we usually also calculate a break-even rate of return, called the internal rate of return (IRR).\nFor projects with negative cash flows early and positive cash flows late:\n\nIf IRR &gt; required return, then NPV&gt;0.\nIf IRR &lt; required return, then NPV&lt;0."
+  },
+  {
+    "objectID": "slides/g01-irr.html#interpretation-for-usual-projects",
+    "href": "slides/g01-irr.html#interpretation-for-usual-projects",
+    "title": "Internal Rate of Return",
+    "section": "Interpretation for usual projects",
+    "text": "Interpretation for usual projects\n\nUsual = “negative early and positive late”\nSuppose we invested the negative cash flows in stocks or other assets rather than the project.\nWe want to pull out the positive cash flows later from the stock account.\nWhat rate of return would we have to earn on the stocks for this to be feasible?\nAnswer is IRR."
+  },
+  {
+    "objectID": "slides/g01-irr.html#usefulness-of-the-irr",
+    "href": "slides/g01-irr.html#usefulness-of-the-irr",
+    "title": "Internal Rate of Return",
+    "section": "Usefulness of the IRR",
+    "text": "Usefulness of the IRR\n\nIf IRR is very high or very low, then the required return doesn’t matter much.\n\nFor usual projects, very high \\(\\Rightarrow\\) “take.”\nFor usual projects, very low \\(\\Rightarrow\\) “reject”.\n\nWhen there is limited capital, we can sometimes calculate the best portfolio of projects by starting with the highest IRR projects and working down the list."
+  },
+  {
+    "objectID": "slides/g01-irr.html#example",
+    "href": "slides/g01-irr.html#example",
+    "title": "Internal Rate of Return",
+    "section": "Example",
+    "text": "Example\n\nCash flows = [-100, 30, 30, 30, 30]\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\nIRR is 7.71%"
+  },
+  {
+    "objectID": "slides/g01-irr.html#calculating-irr",
+    "href": "slides/g01-irr.html#calculating-irr",
+    "title": "Internal Rate of Return",
+    "section": "Calculating IRR",
+    "text": "Calculating IRR\n\n\\[\\text{NPV} = c_0 + \\frac{c_1}{1+r} + \\frac{c_2}{(1+r)^2}+ \\cdots + \\frac{c_n}{(1+r)^n}\\]\n\nSo, NPV = 0 is a polynomial equation in the variable \\(1/(1+r)\\).\nFor usual projects (negative early and positive late):\n\nIf sum of positive cash flows \\(\\le\\) sum of negative cash flows, no positive IRR.\nOtherwise, unique positive IRR."
+  },
+  {
+    "objectID": "slides/g01-irr.html#numpy-financial-or-excel",
+    "href": "slides/g01-irr.html#numpy-financial-or-excel",
+    "title": "Internal Rate of Return",
+    "section": "numpy financial or excel",
+    "text": "numpy financial or excel\n\n\nimport numpy_financial as npf\n\ncash_flows = [-100, 30, 30, 30, 30]\nirr = npf.irr(cash_flows)\n\n\nOr, in Excel, =IRR(range) computes the IRR.\n\nFirst element of the range is date-0 cash flow, next element is date-1 cash flow, etc."
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#equity-value-or-enterprise-value",
+    "href": "slides/g03-valuing-companies.html#equity-value-or-enterprise-value",
+    "title": "Valuing Companies",
+    "section": "Equity value or enterprise value?",
+    "text": "Equity value or enterprise value?\n\nCan forecast cash flows after net payments to lenders.\n\nThese are equity cash flows.\nDiscount at an appropriate rate, given stock risk.\n\nOr, can forecast total cash flows to shareholders and lenders.\n\nDiscount at a blended rate, given equity and debt risk.\nPresent value is enterprise value (debt + equity value).\nSubtract value of debt to get equity value."
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#equity-cash-flow",
+    "href": "slides/g03-valuing-companies.html#equity-cash-flow",
+    "title": "Valuing Companies",
+    "section": "Equity cash flow",
+    "text": "Equity cash flow\n\nSubtract interest expense in income statement.\nForecast future growth in invested capital.\nForecast how much of the growth will be debt financed.\nSubtract change in IC not debt financed and also subtract any net debt redemptions from income to get equity cash flows."
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#free-cash-flow",
+    "href": "slides/g03-valuing-companies.html#free-cash-flow",
+    "title": "Valuing Companies",
+    "section": "Free cash flow",
+    "text": "Free cash flow\n\nTotal cash flows to shareholders and lenders is called free cash flow.\nDon’t deduct interest expense in income statement.\nSubtract change in invested capital without worrying aobut how much will be funded by debt or equity.\nTaxes will be overstated (because interest reduces taxable income). Fix that in cost of capital (more later)."
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#perpetuities",
+    "href": "slides/g03-valuing-companies.html#perpetuities",
+    "title": "Valuing Companies",
+    "section": "Perpetuities",
+    "text": "Perpetuities\n\nA company has no definite ending date, so a perpetuity model is reasonable.\nWhat cash flow will be generated next year?\nBy how much will it grow or decline each year afterwards?\nIf growth is constant at rate \\(g\\), then value of the company today is \\(c_1 / (r-g)\\)."
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#two-stage-growth-model",
+    "href": "slides/g03-valuing-companies.html#two-stage-growth-model",
+    "title": "Valuing Companies",
+    "section": "Two-stage growth model",
+    "text": "Two-stage growth model\n\nInstead of constant growth beginning next year, forecast cash flows year-by-year for \\(n\\) years.\nAssume constant growth beginning in year \\(n+1\\).\nTerminal value at year \\(n\\) is\n\n\n\\[\\text{TV} = \\frac{c_{n+1}}{r-g}\\]"
+  },
+  {
+    "objectID": "slides/g03-valuing-companies.html#example",
+    "href": "slides/g03-valuing-companies.html#example",
+    "title": "Valuing Companies",
+    "section": "Example",
+    "text": "Example\n\nForecast cash flows \\(c_1=100, c_2=150, c_3= 180, c_4=200\\).\nAfterward grow at 5% per year forever.\nRequired rate of return is 12%.\n\\(c_5 = 200 \\times 1.05 = 210\\), so terminal value at year 4 is \\(210/0.07\\)."
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#how-much-debt-should-a-company-have",
+    "href": "slides/g05-debt-taxes.html#how-much-debt-should-a-company-have",
+    "title": "Debt and Taxes",
+    "section": "How much debt should a company have?",
+    "text": "How much debt should a company have?\n\nCompanies have a wide range of debt levels.\n\nPublic companies usually relatively low.\nPrivate equity/leveraged buyout funds relatively high.\n\nWhat are the pluses and minuses?"
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#hold-investments-and-operations-constant",
+    "href": "slides/g05-debt-taxes.html#hold-investments-and-operations-constant",
+    "title": "Debt and Taxes",
+    "section": "Hold investments and operations constant",
+    "text": "Hold investments and operations constant\nConsider a financial structuring with no effect on investments or operations. For example, \n\nCompany is going to invest and can issue shares or borrow money.\nCompany could issue shares to pay down debt.\nCompany could borrow money to repurchase shares."
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#goal-is-to-increase-enterprise-value",
+    "href": "slides/g05-debt-taxes.html#goal-is-to-increase-enterprise-value",
+    "title": "Debt and Taxes",
+    "section": "Goal is to increase enterprise value",
+    "text": "Goal is to increase enterprise value\n\nAnything that increases enterprise value is good for shareholders. Example:\n\n\nSuppose EV = 300, debt=100, equity=200\nSuppose we can borrow 20 more to repurchase shares and increase EV to 310.\n\nNow debt = 120\nEquity = 190\nShareholders get 20 in share repurchases, so 210 total."
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#governments-share",
+    "href": "slides/g05-debt-taxes.html#governments-share",
+    "title": "Debt and Taxes",
+    "section": "Government’s share",
+    "text": "Government’s share\n\nThere are three claims on a company: shareholders, lenders, and the IRS.\nValue of company = enterprise value (debt + equity) + IRS claim.\nReducing IRS claim will increase enterprise value and therefore benefit shareholders.\nReducing IRS share is a positive NPV activity just like a good investment project."
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#example",
+    "href": "slides/g05-debt-taxes.html#example",
+    "title": "Debt and Taxes",
+    "section": "Example",
+    "text": "Example\n\nAll equity company with 100 in pre-tax income in perpetuity. Tax rate is 30%. Invested capital constant forever.\nSuppose equity value is 500.\nCompany issues 200 in perpetual debt @ 5% and repurchases shares.\n\nTaxes are reduced by 200 times 5% times 30% = 3\nPV of tax savings is 3/0.05 = 60.\nEnterprise value \\(\\rightarrow\\) 560. Shareholders benefit."
+  },
+  {
+    "objectID": "slides/g05-debt-taxes.html#trade-off-theory",
+    "href": "slides/g05-debt-taxes.html#trade-off-theory",
+    "title": "Debt and Taxes",
+    "section": "Trade-off theory",
+    "text": "Trade-off theory\n\nCompanies should borrow to get tax savings up to the point that the marginal cost of potential financial distress equals the marginal benefit of tax savings."
   }
 ]

@@ -12,7 +12,10 @@
       "Bash(git pull:*)",
       "Bash(git stash:*)",
       "Bash(index.tex)",
-      "Bash(RiceBusiness-transparent-logo-sm.png)"
+      "Bash(RiceBusiness-transparent-logo-sm.png)",
+      "Bash(\"c:\\Users\\kerry\\repos\\busi721-901\\slides\\RiceBusiness-transparent-logo-sm.png\")",
+      "Bash(\"c:\\Users\\kerry\\repos\\busi721-901\\slides\\Rice_Owl.jpg\")",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []

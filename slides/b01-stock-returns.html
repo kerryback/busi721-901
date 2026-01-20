@@ -565,7 +565,7 @@
 </div></div></section><section data-id="9784f58180ca490d6f77e0896a2f4c41"><div class="sl-block" data-block-type="code" data-name="code-c3b05b" data-block-id="e86b0f75f9f7e12454e55c38ff320013" style="width: 866.479px; height: 366.044px; left: 206.761px; top: 255.324px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 10;"><pre style="font-size: 24px; line-height: 29px;"><code data-line-numbers="">!pip install --upgrade pandas-datareader
 
 from pandas_datareader import DataReader as pdr
-price = pdr('cvx', 'yahoo', start=2010)['Adj Close']
+price = pdr('cvx', 'yahoo', start=2010)['Close']
 
 ret_daily = price.pct_change()
 

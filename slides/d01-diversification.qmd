@@ -171,14 +171,13 @@ $$\frac{\text{cov}(r_1, r_2)}{\text{var}(r_1)} = \text{corr}(r_1, r_2) \times \f
 ::: {.column width="55%"}
 
 ```{python}
-from pandas_datareader import DataReader as pdr
+import yfinance as yf
 import plotly.express as px
-rets = pdr(
-  ['cvx', 'AAPL'], 
-  "yahoo", 
-  start="2016-12-01", 
+rets = yf.download(
+  ['CVX', 'AAPL'],
+  start="2016-12-01",
   end="2021-12-31"
-)['Adj Close']  
+)['Close']  
 rets = rets.resample('M').last().pct_change().dropna() 
 rets.index = rets.index.to_period('M').astype(str)
 rets = rets.reset_index()
@@ -232,12 +231,11 @@ print(f"beta is {rets.AAPL.cov(rets.CVX)/rets.CVX.var(): .2f}")
 ::: {.column width="55%"}
 
 ```{python}
-rets = pdr(
-  ['cvx', 'xom'], 
-  "yahoo", 
-  start="2016-12-01", 
+rets = yf.download(
+  ['CVX', 'XOM'],
+  start="2016-12-01",
   end="2021-12-31"
-)['Adj Close']  
+)['Close']  
 rets = rets.resample('M').last().pct_change().dropna() 
 rets.index = rets.index.to_period('M').astype(str)
 rets = rets.reset_index()
