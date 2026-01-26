@@ -1166,14 +1166,14 @@
     "href": "live_sessions.html",
     "title": "",
     "section": "",
-    "text": "Jan 11"
+    "text": "Jan 11\nJan 19"
   },
   {
     "objectID": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
     "href": "live_sessions.html#live-session-recordings-data-driven-finance-i-spring-2026",
     "title": "",
     "section": "",
-    "text": "Jan 11"
+    "text": "Jan 11\nJan 19"
   },
   {
     "objectID": "slides/a02-monthly-rates.html#monthly-rates",
@@ -1432,7 +1432,7 @@
     "href": "slides/b06-long-run-risks.html#repeat-and-evaluate-the-distribution",
     "title": "Long-Run Risk",
     "section": "Repeat and evaluate the distribution",
-    "text": "Repeat and evaluate the distribution\n\nnsims = 1000\n\nr = np.random.normal(loc=mn, scale=sd, size=nyears*nsims)\nr = r.reshape((nyears, nsims))\ncomp_ret = np.prod(1+r, axis=0)\n\n\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nmean     34.54\nstd      38.89\nmin       1.95\n10%       7.97\n25%      13.43\n50%      23.04\n75%      42.67\n90%      73.60\nmax     486.01\ndtype: float64"
+    "text": "Repeat and evaluate the distribution\n\nnsims = 1000\n\nr = np.random.normal(loc=mn, scale=sd, size=nyears*nsims)\nr = r.reshape((nyears, nsims))\ncomp_ret = np.prod(1+r, axis=0)\n\n\n\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nmean     34.66\nstd      35.44\nmin       2.14\n10%       7.56\n25%      13.53\n50%      25.19\n75%      43.05\n90%      70.67\nmax     433.06\ndtype: float64"
   },
   {
     "objectID": "slides/b06-long-run-risks.html#retirement-planning-simulation",
