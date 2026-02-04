@@ -5,6 +5,7 @@ __pycache__/
 
 docs/CNAME
 
+
 # C extensions
 *.so
 
@@ -131,3 +132,9 @@ dmypy.json
 .pyre/
 
 /.quarto/
+
+# Grades
+grades/
+
+# Solutions
+solutions/
