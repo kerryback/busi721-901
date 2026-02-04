@@ -136,8 +136,8 @@ dmypy.json
 # Grades
 grades/
 
-# Solutions
-solutions/
+# Solutions (root folder only, not docs/solutions)
+/solutions/
 
 # Jupyter cache
 .jupyter_cache/
