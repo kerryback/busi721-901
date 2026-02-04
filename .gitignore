@@ -138,3 +138,7 @@ grades/
 
 # Solutions
 solutions/
+
+# Jupyter cache
+.jupyter_cache/
+*/.jupyter_cache/
