@@ -36,8 +36,8 @@ website:
       - text: Live Session Recordings
         file: live_sessions.qmd
 
-      - text: Solutions 
-        href: https://github.com/kerryback/busi721-901/tree/main/solutions
+      - text: Solutions
+        file: solutions.qmd
 
 
       - text: Learn Investments
