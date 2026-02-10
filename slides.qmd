@@ -47,7 +47,7 @@
 
 #### 5. Portfolios B
 
-[1. Preferences](slides/e01new-preferences.html){target="_blank"} <br>
+[1. Preferences](slides/e01-preferences.html){target="_blank"} <br>
 [2. Quadratic Programming](slides/e02new-quadratic-programming.html){target="_blank"} <br>
 [3. Frictions and Constraints](slides/e03new-frictions-constraints.html){target="_blank"} <br>
 [4. More Pictures](slides/e04-more-pictures.html){target="_blank"} <br>
