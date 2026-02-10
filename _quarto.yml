@@ -9,6 +9,8 @@ project:
 
   resources:
     - slides/*.html
+    - solutions/module1.ipynb
+    - solutions/module2.ipynb
     - CNAME
     - .nojekyll
     - RiceBusiness-transparent-logo-sm.png
