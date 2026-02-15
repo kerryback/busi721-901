@@ -1,4 +1,7 @@
 ## Solutions<br>Data Driven Finance I<br>Spring 2025<br><br>![](RiceBusiness-transparent-logo-sm.png){height="60"}<br>
 
 [Module 1](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module1.ipynb){target="_blank"} <br>
-[Module 2](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module2.ipynb){target="_blank"}
+[Module 2](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module2.ipynb){target="_blank"}<br>
+[Module 3](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module3.ipynb){target="_blank"}<br>
+[Module 4](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module4.ipynb){target="_blank"}<br>
+
