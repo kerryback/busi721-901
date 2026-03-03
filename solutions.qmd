@@ -4,4 +4,6 @@
 [Module 2](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module2.ipynb){target="_blank"}<br>
 [Module 3](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module3.ipynb){target="_blank"}<br>
 [Module 4](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module4.ipynb){target="_blank"}<br>
+[Module 5](https://colab.research.google.com/github/kerryback/busi721-901/blob/main/docs/solutions/module5.ipynb){target="_blank"}<br>
+[Module 6](solutions/module6.xlsx)<br>
 

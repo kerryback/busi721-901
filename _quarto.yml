@@ -13,6 +13,8 @@ project:
     - solutions/module2.ipynb
     - solutions/module3.ipynb
     - solutions/module4.ipynb
+    - solutions/module5.ipynb
+    - solutions/module6.xlsx
     - CNAME
     - .nojekyll
     - RiceBusiness-transparent-logo-sm.png
